@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 332132177.77777785,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 335864000.00000006,
+    "drilling_signal_raw": -0.1111111111111111,
+    "drilling_signal_clipped": -0.1111111111111111,
+    "production_boe_d": 52528.81874365799,
+    "wti_avg": 75.52384615384615,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources operated 4 active drilling sites as of mid-July 2021, with a 50% decline in relative drilling activity compared to recent trends, driven by only one newly active pad. This suggests near-term production stabilization or slight contraction heading into Q3 2021. Despite a modest WTI environment averaging $75.52 and full exposure to the Permian segment, the weak drilling momentum tempers growth expectations. Revenue is forecast at approximately $332.1M, reflecting constrained operational activity despite stable realized pricing at a 92% WTI discount.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_new_activity",
+    "stable_wti",
+    "full_segment_exposure",
+    "mature_pad_concentration"
+  ]
+}

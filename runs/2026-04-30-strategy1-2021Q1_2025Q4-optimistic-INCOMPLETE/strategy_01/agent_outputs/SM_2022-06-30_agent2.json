@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 780282608.6956521,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 715000000.0,
+    "drilling_signal_raw": 0.9130434782608695,
+    "drilling_signal_clipped": 0.9130434782608695,
+    "production_boe_d": 61782.20891606522,
+    "wti_avg": 86.74153846153847,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows 11 active sites at decision date, with a relative increase of 5.2 compared to recent history and a high share of active pads at 68.8%, indicating strong operational momentum heading into Q2 2022. The company's production is partially exposed to the Permian via a 55% segment fraction, with WTI averaging $86.74 and realized prices running at a discount. Despite the moderate production volume and price lag, elevated and growing drilling activity supports the deterministic revenue forecast of $780.3M.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "high_share_active",
+    "elevated_wti",
+    "partial_segment_exposure",
+    "new_pad_activity"
+  ]
+}

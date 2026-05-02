@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 871656140.3508773,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 892000000.0,
+    "drilling_signal_raw": -0.22807017543859648,
+    "drilling_signal_clipped": -0.22807017543859648,
+    "production_boe_d": 25646.467309734166,
+    "wti_avg": 85.85923076923078,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY's drilling activity shows a decline, with only 11 active sites at decision date and a negative relative activity delta of -3.2, indicating reduced operational momentum heading into Q2 2025. Despite a stable WTI environment near $85.86/bbl, the company's realized price is approximately 13% below benchmark, and its exposure is limited to just 20% of the core segment. The deterministic revenue forecast of $871.7M reflects these headwinds, anchored slightly below consensus due to weakening satellite-derived activity signals.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_segment_exposure",
+    "below_benchmark_realized_price",
+    "reduced_active_sites",
+    "stable_wti"
+  ]
+}

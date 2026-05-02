@@ -1,0 +1,43 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags elevated_drilling_delta with 4 active sites, 80% above recent trends",
+      "Agent 3 divergence_class is modest_beat at +7.58% with medium confidence across 14 analysts",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Realized prices at 12% discount to benchmark and only partial segment exposure may limit upside"
+    ],
+    "reasoning_short": "Material increase in drilling activity with new pad activation signals operational momentum, supported by a consensus-beating revenue forecast and clean news backdrop. Despite moderate commodity prices, the combination of observable field expansion and no public disclosure risk favors a high-conviction long position into earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on stable production in a mid-tier commodity environment, which may not be sufficient to drive significant growth, given the elevated drilling delta and moderate WTI prices",
+      "Agent 2's partial segment exposure may limit the impact of observed momentum",
+      "Agent 4's low conviction modifier and lack of disclosed news suggests a lack of information edge"
+    ],
+    "counter_evidence": [
+      "Agent 3's modest beat divergence class and 7.58% divergence percentage suggests some potential for positive surprise"
+    ],
+    "reasoning_short": "While Agent 3's modest beat divergence class suggests some potential for positive surprise, the overall evidence suggests a lack of compelling reason to take a long position, given the stable production environment and partial segment exposure."
+  },
+  "arbiter_reasoning": "Bull's case for a long position is supported by Agent 2's elevated_drilling_delta and new pad activation, indicating operational momentum, and Agent 3's modest_beat divergence_class at +7.58% with medium confidence, which suggests a positive earnings surprise. Agent 4's gdelt_disclosed=false reduces concern about information leakage. However, conviction is tempered by Agent 2's partial segment exposure and moderate WTI environment, limiting upside visibility. While Bull has stronger narrative support, the divergence class is only modest_beat and confidence from Agent 3 is medium, preventing a high conviction tier. Bear correctly notes limited growth catalysts but underweights the significance of field-level momentum. Conviction tier set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

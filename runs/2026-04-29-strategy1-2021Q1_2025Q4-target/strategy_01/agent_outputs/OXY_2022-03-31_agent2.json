@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 7778158065.517241,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7751429000.0,
+    "drilling_signal_raw": 0.034482758620689655,
+    "drilling_signal_clipped": 0.034482758620689655,
+    "production_boe_d": 299215.5413265368,
+    "wti_avg": 91.16846153846154,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows moderate expansion with 15 active sites at decision date, up 50% from the prior period, driven by six newly active pads. With WTI averaging over $91/bbl and realized prices at a 6% discount, revenue is supported by strong macro conditions. However, only 30% of operations are in the high-activity segment captured by satellite monitoring, suggesting the majority of production is outside the observed drilling trend. The deterministic forecast of $7.78B reflects this mixed signal: rising activity in monitored areas but limited segment exposure.",
+  "key_drivers": [
+    "moderate_drilling_growth",
+    "high_wti",
+    "partial_segment_exposure",
+    "new_pad_activation",
+    "stable_realized_pricing"
+  ]
+}

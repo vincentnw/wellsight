@@ -1,0 +1,13 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 38,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "-continues-to-climb-16177581.php",
+    "-us-shale-production/ar-BB1gomOA",
+    "-evident-in-rig-count/ar-AAM1MXL",
+    "-recovery-of-permian-oil-industry-evident-in-rig-count/7925527002/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Four GDELT-indexed articles describe drilling expansion at Permian sites consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 589187777.7777778,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 590500000.0,
+    "drilling_signal_raw": -0.022222222222222223,
+    "drilling_signal_clipped": -0.022222222222222223,
+    "production_boe_d": 15794.616025315496,
+    "wti_avg": 94.23538461538462,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY's drilling activity shows a decline relative to recent trends, with only 11 active sites at decision date and a 20% drop in relative activity compared to the trailing average. The low number of newly active pads (1) and high continuity (10 continuously active) suggest limited expansion and possible production plateauing into Q1 2024. Despite strong WTI averaging near $94, CRGY's realized prices are notably lower, and its partial exposure to the Permian (20% segment fraction) limits upside. The deterministic revenue forecast of $589.2M reflects these headwinds, anchored near consensus but tempered by weakening drilling momentum.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_new_activity",
+    "high_wti",
+    "discounted_realized_price",
+    "partial_permian_exposure"
+  ]
+}

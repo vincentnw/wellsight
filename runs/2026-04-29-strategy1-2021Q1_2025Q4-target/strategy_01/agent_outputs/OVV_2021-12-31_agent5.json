@@ -1,0 +1,44 @@
+{
+  "ticker": "OVV",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_delta with 7 active sites, 20% above recent historical levels",
+      "Agent 2 reports consistent_pad_activity and one newly activated pad indicating growing momentum",
+      "Agent 3 divergence_class is in_line with only +1.83% variance, suggesting stable expectations and low surprise risk"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is not a strong beat, limiting upside acceleration signal",
+      "Agent 2 notes only partial_WTI_exposure, which may cap leverage to potential oil price spikes"
+    ],
+    "reasoning_short": "Modest but above-trend drilling expansion and stable pricing environment support a steady in-line earnings outcome. With no news leaks (Agent 4 gdelt_disclosed=false) and consistent pad activity, OVV presents a controlled-risk long opportunity ahead of earnings, positioned to benefit from operational continuity and potential sentiment lift on clarity."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling delta and partial WTI exposure suggest a balanced but not overly aggressive drilling strategy, which may not justify the current price level",
+      "Agent 2's revenue forecast of $1.76B reflects mid-tier commodity pricing, which may not be sufficient to drive significant price appreciation",
+      "Agent 4's low conviction modifier and lack of disclosed news indicate a lack of catalysts to drive the stock higher"
+    ],
+    "counter_evidence": [
+      "Agent 3's in-line divergence class and modest 1.83% divergence percentage suggest that the stock is fairly valued"
+    ],
+    "reasoning_short": "The evidence suggests that Ovintiv's drilling activity and revenue forecast are not sufficient to drive significant price appreciation, and the lack of disclosed news and catalysts supports a cautious approach."
+  },
+  "arbiter_reasoning": "Bear's opinion that Ovintiv's drilling activity and revenue forecast are not sufficient to drive significant price appreciation, combined with the lack of disclosed news and catalysts, prevails. Bull's evidence of modest drilling expansion and stable pricing environment is not enough to overcome the Bear's concerns.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

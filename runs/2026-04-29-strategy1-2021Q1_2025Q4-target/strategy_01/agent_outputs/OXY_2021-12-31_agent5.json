@@ -1,0 +1,41 @@
+{
+  "ticker": "OXY",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_growth with 18 active sites, 6.2% above recent trends",
+      "Agent 3 divergence_class is modest_beat at +5.38% with medium confidence across 13 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Agent 2 notes low_segment_exposure with only 30% of operations in monitored basin, limiting direct revenue impact"
+    ],
+    "reasoning_short": "Moderate but clear drilling expansion supports above-trend production outlook, paired with a modest-beat revenue forecast of $7.52B in a stable WTI environment. Clean news backdrop enhances earnings surprise potential, justifying a high-conviction long position ahead of the event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is highly sensitive to WTI prices, with a 6% discount contributing to a $7.52B Q4 2021 forecast, implying a significant risk to earnings if prices decline",
+      "Agent 2's drilling activity shows moderate expansion, but only 30% of operations are in the monitored segment, limiting revenue exposure",
+      "Agent 3's medium confidence and modest beat divergence_class suggest a cautious outlook, with only 5.38% above consensus"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "High sensitivity to WTI prices and limited revenue exposure due to low segment exposure make OXY a high-risk long position."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with medium confidence and no GDELT disclosure; Bear's objections were based on sensitivity to WTI prices and limited revenue exposure, but the Bull's evidence of moderate drilling growth and a clean news backdrop prevails. Conviction tier set to medium due to modest beat and medium confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.2
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 2 outlook shows the addition of 5 newly active sites, suggesting ongoing expansion",
+      "Agent 2 deterministic revenue forecast for Q3 2024 is approximately $2.21B, indicating a stable revenue environment"
+    ],
+    "counter_evidence": [
+      "Agent 2 reports a negative_drilling_delta of -0.5 sites from the trailing-4-quarter average",
+      "Agent 3 divergence_class is modest_miss at -6.67%",
+      "Agent 4 reports gdelt_disclosed=true, indicating potential information leakage"
+    ],
+    "reasoning_short": "While there are signs of ongoing expansion and a stable revenue environment, the negative drilling delta, modest miss forecast, and potential information leakage suggest a cautious approach, arguing against a full-conviction long position before earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook notes a decline in drilling activity and lower WTI, suggesting a cautious revenue environment",
+      "Agent 4 gdelt_disclosed=true with 32 articles, indicating the market may have already priced in the news",
+      "Agent 3 divergence_class is a modest_miss, implying potential downward pressure on the stock"
+    ],
+    "counter_evidence": [
+      "Agent 3 has high confidence, which could suggest a more stable outlook"
+    ],
+    "reasoning_short": "Decline in drilling activity, lower WTI, and potential market pricing of news suggest a cautious approach, recommending no entry."
+  },
+  "arbiter_reasoning": "Both Bull and Bear opinions suggest a cautious approach due to decline in drilling activity, lower WTI, and potential market pricing of news. Although Agent 2's outlook shows ongoing expansion and a stable revenue environment, the negative drilling delta, modest miss forecast, and potential information leakage outweigh the positive evidence. Information edge is unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

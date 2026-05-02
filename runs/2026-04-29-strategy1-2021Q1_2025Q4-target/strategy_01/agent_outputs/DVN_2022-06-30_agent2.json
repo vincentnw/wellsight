@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3551022222.222222,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3512000000.0,
+    "drilling_signal_raw": 0.1111111111111111,
+    "drilling_signal_clipped": 0.1111111111111111,
+    "production_boe_d": 266560.4620013341,
+    "wti_avg": 88.47846153846154,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a relative increase, with 15 active sites at decision date and a relative activity delta of 1.5, driven by both newly active and continuously active pads. This suggests sustained operational momentum heading into the target quarter. With WTI averaging nearly $88.50 and Devon realizing approximately 91% of that price, revenue is supported by strong macro conditions. At 55% segment fraction, the company captures slightly more than half of the broader basin's activity trend. The deterministic revenue forecast is set at $3.55B, reflecting stable production and favorable price realizations.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "high_wti_avg",
+    "moderate_segment_fraction",
+    "new_and_continuous_activity",
+    "favorable_price_realization"
+  ]
+}

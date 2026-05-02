@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 4189495999.9999995,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4098420000.0,
+    "drilling_signal_raw": 0.2222222222222222,
+    "drilling_signal_clipped": 0.2222222222222222,
+    "production_boe_d": 457342.4328796779,
+    "wti_avg": 60.84153846153846,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows strong momentum heading into Q4 2024, with 22 active sites at decision date and a relative activity delta of +4.0, driven by 8 newly active pads. This uplift in satellite-observed operations, concentrated in core regions, supports continued production growth near 457k boe/d. At a segment fraction of 55%, Devon benefits from a balanced portfolio with partial exposure to higher-margin plays. With WTI averaging around $60.84 and realized prices at a 9% discount, the deterministic revenue forecast is set at approximately $4.19B. The mix of stable commodity levels and increasing operational activity underpins confidence in near-term performance.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "new_pad_activation",
+    "balanced_portfolio",
+    "moderate_wti",
+    "operational_momentum"
+  ]
+}

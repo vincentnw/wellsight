@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1518000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.0,
+    "consensus_anchor_usd": 1518000000.0,
+    "drilling_signal_raw": -0.01639344262295082,
+    "drilling_signal_clipped": -0.01639344262295082,
+    "production_boe_d": 109890.1098901099,
+    "wti_avg": 77.84615384615384,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Chesapeake Energy's drilling activity shows a decline heading into Q4 2023, with satellite data indicating a 20% drop in relative activity and no newly active sites at decision date, suggesting waning operational momentum. The company's production is partially exposed to the broader market with a segment fraction of 0.4, and realized prices are running below WTI average. Despite stable WTI prices near $77.85/bbl, the lack of new drilling activity and reduced operational footprint point to constrained volume growth, aligning with the deterministic revenue forecast of $1.518B.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "no_new_pads",
+    "sub_wti_realized_price",
+    "partial_segment_exposure",
+    "stable_wti"
+  ]
+}

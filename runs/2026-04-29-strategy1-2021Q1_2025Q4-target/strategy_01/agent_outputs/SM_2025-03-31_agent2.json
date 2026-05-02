@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 826925925.925926,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 830000000.0,
+    "drilling_signal_raw": -0.037037037037037035,
+    "drilling_signal_clipped": -0.037037037037037035,
+    "production_boe_d": 66632.37726988789,
+    "wti_avg": 85.23538461538462,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows a decline, with only 13 active sites at decision date and a 50% drop in relative activity compared to recent trends, driven by a low number of newly active pads. Despite a modest realized price discount and exposure to higher WTI levels near $85/boe, the company's partial segment fraction (55%) and weakening drilling momentum suggest constrained production growth into Q1 2025. The deterministic revenue forecast is set at approximately $827M, slightly below consensus anchor, reflecting near-term operational softness.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "modest_realized_discount",
+    "mid_wti_environment",
+    "partial_segment_exposure",
+    "low_new_pad_activity"
+  ]
+}

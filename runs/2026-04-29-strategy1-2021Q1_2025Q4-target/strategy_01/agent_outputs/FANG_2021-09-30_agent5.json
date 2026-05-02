@@ -1,0 +1,42 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with a 10% increase in drilling activity and three newly active pads",
+      "Agent 3 divergence_class is modest_beat at +8.45% with high confidence and input from 23 analysts",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leak across 51 news articles"
+    ],
+    "counter_evidence": [
+      "Divergence magnitude is modest_beat rather than strong_beat",
+      "Moderate WTI environment at $45/bbl pressures sector-wide margins"
+    ],
+    "reasoning_short": "Sustained drilling expansion in the high-productivity Permian Basin, combined with strong price realization and a clean news backdrop, supports a likely upside surprise relative to consensus. The modest but confident analyst beat forecast reinforces conviction in a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on a 93% realized price capture, but this may not be sustainable in a low WTI environment, averaging $45/bbl",
+      "Agent 2's drilling activity shows a 10% increase, but this may not be enough to offset potential declines in oil prices",
+      "Agent 3's high confidence is based on a modest beat, but this may not be enough to justify a long position in the current market"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of a low WTI environment and a high share of continuously active sites may not be enough to support a long position in FANG. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with high confidence and no GDELT disclosure; Bear's objections were based on potential declines in oil prices and sustainability of realized price capture. Strength of upstream evidence from Agent 2 and Agent 3, combined with a clean news backdrop from Agent 4, prevails. Conviction tier set to medium due to modest beat.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.2
+  }
+}

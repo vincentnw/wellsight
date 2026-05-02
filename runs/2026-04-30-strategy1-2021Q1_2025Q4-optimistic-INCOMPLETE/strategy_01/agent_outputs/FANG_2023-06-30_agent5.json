@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class is modest_beat at +21%",
+      "Agent 2 outlook shows stable_production near 325 thousand boe/d with high_continuity_active_pads of 23",
+      "Agent 4 reports gdelt_disclosed=false so no information leak"
+    ],
+    "counter_evidence": [
+      "Agent 2 outlook flagged negative_drilling_delta of -1.5 sites"
+    ],
+    "reasoning_short": "Despite a minor slowdown in drilling, Diamondback maintains strong operational continuity and stable production in the core Permian basin. A high-confidence modest beat forecast, combined with no pre-release news risk, supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's drilling activity delta is -1.5, indicating a slight pullback in operational momentum, suggesting potential for decreased production",
+      "Agent 2's revenue forecast is based on a 7% discount to WTI, indicating potential for decreased revenue",
+      "Agent 3's high confidence is based on modest beat expectations, but this may not be enough to offset potential production and revenue declines"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Drilling activity delta and revenue forecast suggest potential for decreased production and revenue, outweighing modest beat expectations."
+  },
+  "arbiter_reasoning": "Bull prevailed with evidence of stable production and high operational continuity in the Permian, coupled with a high-confidence modest_beat divergence from Agent 3 and no GDELT disclosure. While Bear highlighted a slight pullback in drilling activity and pricing discount, these were not sufficient to offset the positive fundamentals. Conviction tier is medium due to modest_beat classification despite high confidence and no GDELT risk.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.25,
+    "agent3_weight": 0.6,
+    "agent4_weight": 0.15
+  }
+}

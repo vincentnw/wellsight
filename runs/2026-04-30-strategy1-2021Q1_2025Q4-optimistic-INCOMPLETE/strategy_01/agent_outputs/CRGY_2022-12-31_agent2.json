@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 596228571.4285715,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 564000000.0,
+    "drilling_signal_raw": 0.5714285714285714,
+    "drilling_signal_clipped": 0.5714285714285714,
+    "production_boe_d": 22321.424810945584,
+    "wti_avg": 67.47769230769231,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows moderate drilling activity with 11 active sites at decision date, 4.0 above the recent average, indicating a pickup in operational momentum heading into year-end 2022. The relatively low segment fraction of 20% implies only partial exposure to the observed Permian activity, tempering the revenue upside despite positive drilling signals. With WTI averaging near $67.50 and realized prices at an 87% discount factor, the deterministic revenue forecast settles at approximately $596.2M for the quarter. Newly active pads suggest some expansion, though activity remains concentrated in a limited subset of sites.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "low_segment_exposure",
+    "moderate_wti",
+    "partial_realized_pricing",
+    "new_pad_activation"
+  ]
+}

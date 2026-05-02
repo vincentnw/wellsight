@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 7831616196.5517235,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7751429000.0,
+    "drilling_signal_raw": 0.10344827586206896,
+    "drilling_signal_clipped": 0.10344827586206896,
+    "production_boe_d": 301272.0055280938,
+    "wti_avg": 91.16846153846154,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows moderate expansion with 16 active sites at decision date, 50% above the recent baseline, driven by 3 newly active pads. With WTI averaging over $91/bbl and realized prices at a 6% discount, revenue is supported by strong macro conditions. However, only 30% of operations are in the high-activity segment, limiting full exposure to the observed drilling momentum. The deterministic revenue forecast is $7.83B for the quarter ending March 2022, reflecting solid activity growth within a constrained portion of the asset base.",
+  "key_drivers": [
+    "moderate_drilling_delta",
+    "high_wti",
+    "partial_segment_exposure",
+    "new_pad_activation",
+    "stable_production"
+  ]
+}

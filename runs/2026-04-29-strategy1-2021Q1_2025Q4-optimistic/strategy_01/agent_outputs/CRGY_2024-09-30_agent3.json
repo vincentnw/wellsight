@@ -1,0 +1,11 @@
+{
+  "ticker": "CRGY",
+  "our_estimate_usd": 815625000.0,
+  "consensus_median_usd": 783000000.0,
+  "consensus_dispersion_usd": 88167368.13171145,
+  "n_analysts_at_T_minus_14": 11,
+  "divergence_pct": 4.23,
+  "divergence_class": "modest_beat",
+  "confidence": "medium",
+  "reasoning": "Our $815.6M estimate is 4.2% above $783M consensus. With 11 analysts and moderate dispersion (11% of consensus), confidence is medium."
+}

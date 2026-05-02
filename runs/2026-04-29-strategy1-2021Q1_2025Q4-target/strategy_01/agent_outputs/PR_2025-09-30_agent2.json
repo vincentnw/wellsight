@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1321590361.4457831,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1320000000.0,
+    "drilling_signal_raw": 0.012048192771084338,
+    "drilling_signal_clipped": 0.012048192771084338,
+    "production_boe_d": 252788.35497271433,
+    "wti_avg": 61.77538461538462,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's operations show 21 active drilling sites at the decision date, with a 20% increase in relative activity compared to recent trends, driven by three newly active pads. This modest expansion, combined with stable WTI prices near $61.80 and a realized price differential of 93%, supports a deterministic revenue forecast of approximately $1.32B for Q3 2025. The company's full exposure to the Permian segment reinforces revenue sensitivity to regional drilling momentum and infrastructure dynamics.",
+  "key_drivers": [
+    "modest_drilling_growth",
+    "stable_wti",
+    "pure_play_permian",
+    "new_pad_activation",
+    "consistent_realized_pricing"
+  ]
+}

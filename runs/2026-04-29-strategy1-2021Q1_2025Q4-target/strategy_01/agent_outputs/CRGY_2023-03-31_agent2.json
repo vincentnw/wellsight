@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 526335008.8235294,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 505519500.0,
+    "drilling_signal_raw": 0.4117647058823529,
+    "drilling_signal_clipped": 0.4117647058823529,
+    "production_boe_d": 17079.0774992322,
+    "wti_avg": 77.85153846153845,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows elevated drilling activity with 12 active sites at decision date, 3.5 above the recent average, driven by 7 newly active pads—indicating fresh development momentum into Q1 2023. Despite only 20% exposure to the active segment, this drilling surge supports higher production expectations. With WTI averaging near $77.85 and realized prices at a slight discount, the deterministic revenue forecast reaches approximately $526.3M. Continuous activity on half of the active sites reinforces operational consistency within the core area.",
+  "key_drivers": [
+    "elevated_new_activity",
+    "positive_drilling_delta",
+    "modest_segment_exposure",
+    "favorable_wti_environment",
+    "operational_continuity"
+  ]
+}

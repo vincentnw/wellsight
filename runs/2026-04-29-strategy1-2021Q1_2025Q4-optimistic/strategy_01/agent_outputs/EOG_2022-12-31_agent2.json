@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 6385353333.333333,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 6219500000.0,
+    "drilling_signal_raw": 0.26666666666666666,
+    "drilling_signal_clipped": 0.26666666666666666,
+    "production_boe_d": 515948.7252646285,
+    "wti_avg": 64.42076923076924,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows moderate drilling momentum with 19 active sites at decision date, 4.0 above the recent baseline, driven by 5 newly active pads. With a segment fraction of 45%, EOG's revenue is partially exposed to current drilling trends, which are positive but not dominant across its full portfolio. The deterministic forecast of $6.39B reflects solid production levels and a WTI environment near $64.42, with realized prices slightly below benchmark. Activity concentration suggests selective ramp-up rather than broad expansion.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "moderate_segment_exposure",
+    "new_pad_infill",
+    "stable_production",
+    "slightly_discounted_realized_price"
+  ]
+}

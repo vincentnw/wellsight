@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3465173333.3333335,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3512000000.0,
+    "drilling_signal_raw": -0.13333333333333333,
+    "drilling_signal_clipped": -0.13333333333333333,
+    "production_boe_d": 260116.14313976344,
+    "wti_avg": 88.47846153846154,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a decline in satellite-derived rig counts, with only 13 active sites at decision date—2 fewer than recent averages—indicating softening operational momentum heading into Q2 2022. Despite a strong WTI environment averaging nearly $88.50/bbl, the negative drilling delta and modestly low share of active pads suggest constrained production growth. With realized prices running at a 9% discount to benchmark and just over half of operations in the targeted segment, the deterministic revenue forecast is set at approximately $3.47B.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "high_wti",
+    "partial_segment_exposure",
+    "low_new_activity",
+    "price_discount"
+  ]
+}

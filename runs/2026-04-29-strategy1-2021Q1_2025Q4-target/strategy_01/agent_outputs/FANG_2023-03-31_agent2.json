@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 2003852631.5789473,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2036000000.0,
+    "drilling_signal_raw": -0.15789473684210525,
+    "drilling_signal_clipped": -0.15789473684210525,
+    "production_boe_d": 309520.0146249613,
+    "wti_avg": 76.49846153846154,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback Energy's drilling activity shows a decline in satellite-derived rig counts, with only 24 active sites at decision date and a relative activity delta of -4.5, indicating reduced operational momentum heading into Q1 2023. Despite stable realized pricing at a 7% discount to WTI and full exposure to the Permian segment, the drop in newly active and continuously active pads points to near-term production headwinds. The deterministic revenue forecast of approximately $2.00B reflects this weakening drilling trend, even as base production remains resilient.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "stable_wti",
+    "pure_play_permian",
+    "low_new_activity",
+    "production_resilience"
+  ]
+}

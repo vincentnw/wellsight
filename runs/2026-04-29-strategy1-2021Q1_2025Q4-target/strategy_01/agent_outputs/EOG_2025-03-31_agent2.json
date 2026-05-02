@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5751381000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5751381000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 351236.5715653681,
+    "wti_avg": 85.23538461538462,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows stable drilling activity with 21 active sites at decision date, in line with historical averages, as indicated by a zero relative activity delta. The mix of 18 continuously active and 3 newly active sites suggests sustained operational continuity without significant expansion. With a segment fraction of 45%, EOG's revenue is moderately exposed to current WTI levels averaging $85.24, and realized prices tracking at a 5% discount. The deterministic revenue forecast for the quarter ending March 2025 is $5.75B, reflecting stable production and pricing conditions.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "moderate_segment_exposure",
+    "high_wti_avg",
+    "realized_price_discount",
+    "operational_continuity"
+  ]
+}

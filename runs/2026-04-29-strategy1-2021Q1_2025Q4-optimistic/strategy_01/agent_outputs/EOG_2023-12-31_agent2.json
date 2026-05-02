@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 6095223456.790123,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 6043000000.0,
+    "drilling_signal_raw": 0.08641975308641975,
+    "drilling_signal_clipped": 0.08641975308641975,
+    "production_boe_d": 407567.91517661087,
+    "wti_avg": 77.84615384615384,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows stable drilling activity with 22 active sites at decision date, including 21 continuously active and 1 newly active pad, reflecting sustained operational execution. The relative activity delta of +1.8 indicates slight expansion compared to recent trends. With a segment fraction of 45%, EOG's revenue is moderately exposed to current Permian dynamics, where WTI averages near $77.85 and realized prices hold at a 5% discount. Drilling concentration suggests efficiency focus, supporting a deterministic revenue forecast of $6.095B for Q4 2023.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "slight_positive_drilling_delta",
+    "moderate_segment_exposure",
+    "efficient_pad_utilization",
+    "stable_wti_environment"
+  ]
+}

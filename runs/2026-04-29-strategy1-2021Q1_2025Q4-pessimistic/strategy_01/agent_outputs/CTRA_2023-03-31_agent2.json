@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1682190428.5714285,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1670260000.0,
+    "drilling_signal_raw": 0.07142857142857142,
+    "drilling_signal_clipped": 0.07142857142857142,
+    "production_boe_d": 122690.19576144085,
+    "wti_avg": 77.26615384615386,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Chesapeake Energy's drilling activity shows 15 active sites at decision date, with a relative activity delta of 1.0 and 3 newly active pads, indicating stable but unsurging operational momentum into Q1 2023. The company's realized price remains below WTI average at a 78% differential, and its 40% segment fraction suggests only partial exposure to the most active basins. Given stable WTI conditions near $77/boe and modest drilling signals, the deterministic revenue forecast is set at approximately $1.68B. Activity is fairly distributed, with no sharp concentration indicating major new development zones.",
+  "key_drivers": [
+    "neutral_drilling_delta",
+    "moderate_wti",
+    "partial_basin_exposure",
+    "stable_activity_level",
+    "price_discount_to_wti"
+  ]
+}

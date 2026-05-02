@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 667153658.5365853,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 689000000.0,
+    "drilling_signal_raw": -0.3170731707317073,
+    "drilling_signal_clipped": -0.3170731707317073,
+    "production_boe_d": 144242.95264917496,
+    "wti_avg": 55.24615384615385,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources shows reduced satellite-derived drilling activity with only 7 active sites at decision date, all of which are continuously active and none newly activated, resulting in a sharp negative relative activity delta of -3.2. This suggests waning operational momentum heading into Q3 2023. Combined with a modest WTI environment averaging around $55 and realized prices at a 8% discount to benchmark, revenue is forecast just under $667.2M. The company's full exposure to the drilling segment amplifies the impact of declining activity trends.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_new_activity",
+    "modest_wti",
+    "full_segment_exposure",
+    "no_new_pads"
+  ]
+}

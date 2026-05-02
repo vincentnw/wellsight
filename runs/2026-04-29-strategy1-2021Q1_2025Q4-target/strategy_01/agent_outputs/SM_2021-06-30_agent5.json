@@ -1,0 +1,44 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flagged positive_drilling_delta of +3.0 sites with continuous_pad_activity indicating sustained operational momentum",
+      "Agent 3 divergence_class is modest_beat at +10.04% with medium confidence across 15 analysts, signaling upside to consensus",
+      "Agent 4 reports gdelt_disclosed=false, confirming no pre-earnings information leakage and clean event setup"
+    ],
+    "counter_evidence": [
+      "Only partial_segment_exposure to high-margin areas limits full leverage to Permian pricing",
+      "Realized prices at 88% of WTI benchmark reflect ongoing discounting pressure"
+    ],
+    "reasoning_short": "Moderate but sustained drilling expansion, combined with a clear modest beat signal and absence of news leaks, supports a high-conviction long position ahead of SM's earnings. Operational continuity and revenue visibility outweigh segment exposure constraints."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling delta and midstream exposure suggest a potential for increased costs and decreased efficiency",
+      "Agent 2's stable WTI environment is already reflected in the current price, leaving little room for upside",
+      "Agent 2's partial segment exposure and continuous pad activity indicate a lack of diversification and potential for production disruptions"
+    ],
+    "counter_evidence": [
+      "Agent 3's modest beat with a 10.04% divergence suggests some upside potential, but with low confidence"
+    ],
+    "reasoning_short": "SM's drilling activity and revenue forecast indicate a stable but unexciting growth trajectory, while midstream exposure and partial segment exposure raise concerns about efficiency and diversification. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with medium confidence and no GDELT disclosure; Bear's objections were based on potential increased costs and decreased efficiency, but the strength of the upstream evidence, including Agent 2's positive drilling delta and Agent 3's modest beat signal, prevails. Conviction tier set to medium due to modest beat and medium confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

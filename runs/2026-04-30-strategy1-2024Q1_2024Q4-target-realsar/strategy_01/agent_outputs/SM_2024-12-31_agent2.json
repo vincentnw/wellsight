@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 782100000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 869000000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 74629.79955204944,
+    "wti_avg": 71.97615384615385,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Satellite data shows zero active drilling sites for SM at the decision date, with a relative activity delta of -1.5, indicating a sharp decline in operational momentum heading into Q4 2024. The company's production is partially exposed to the Permian (segment_fraction 55%), but lack of current drilling activity suggests limited near-term production growth. With WTI averaging around $72 and realized prices at a discount, revenue is expected to reflect constrained output. The deterministic forecast of $782.1M aligns with reduced activity and moderate price assumptions.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "low_production_momentum"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1723890425.531915,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1691500000.0,
+    "drilling_signal_raw": 0.19148936170212766,
+    "drilling_signal_clipped": 0.19148936170212766,
+    "production_boe_d": 110383.82238472102,
+    "wti_avg": 88.00923076923075,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Chesapeake Energy's drilling activity shows moderate expansion with 14 active sites at decision date, 2.2 above the regional baseline, driven by 2 newly active pads alongside 12 continuously active ones. With a segment fraction of 40%, the company has partial exposure to the observed Permian activity, supporting a production base of approximately 110,400 boe/d. Elevated WTI prices near $88/boe and a realized price differential of 78% contribute to a deterministic revenue forecast of $1.72B for Q1 2022. The relatively concentrated share of active sites (48.3%) suggests focused operational execution.",
+  "key_drivers": [
+    "moderate_drilling_growth",
+    "elevated_wti",
+    "partial_segment_exposure",
+    "focused_pad_activity",
+    "strong_price_realization"
+  ]
+}

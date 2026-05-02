@@ -1,0 +1,43 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 12 active sites, 4.2 above recent average",
+      "Agent 2 highlights high_wti near $91/bbl and pure_play_permian exposure, amplifying revenue leverage",
+      "Agent 3 divergence_class is modest_beat at +5.59% with high confidence and 23 analysts, indicating consensus upside"
+    ],
+    "counter_evidence": [
+      "Agent 3 shows modest_beat rather than strong_beat, implying limited surprise magnitude"
+    ],
+    "reasoning_short": "Sustained drilling acceleration in the Permian, combined with elevated WTI and a clean news backdrop (gdelt_disclosed=false), supports a materially above-consensus revenue print. Diamondback's operational efficiency and pure-play exposure position FANG for strong earnings outperformance, warranting a high-conviction long."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is highly dependent on stable realized pricing, which is uncertain as per the outlook paragraph",
+      "Agent 2's positive drilling delta and high WTI environment may have already been priced in by the market, as suggested by Agent 4's 69 articles on the topic",
+      "Agent 3's high confidence is based on modest beat expectations, which may not be sufficient to justify a long position"
+    ],
+    "counter_evidence": [
+      "Agent 3's modest beat divergence_class"
+    ],
+    "reasoning_short": "Uncertainty around realized pricing and potential market overpricing of positive drilling activity and high WTI environment justify caution and recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with high confidence and no GDELT disclosure; Bear's objections included uncertainty around realized pricing and potential market overpricing. Strength of upstream evidence from Agent 2 and Agent 3, including positive drilling delta and high WTI environment, prevails. Conviction tier set to medium due to modest beat expectations.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

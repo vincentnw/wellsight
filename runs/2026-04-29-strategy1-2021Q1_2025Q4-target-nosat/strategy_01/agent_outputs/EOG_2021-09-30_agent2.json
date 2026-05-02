@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 3724000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3724000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 441253.7208895115,
+    "wti_avg": 43.93076923076923,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows no active drilling sites in the satellite-derived SAR summary as of the decision date, with zero newly or continuously active pads, indicating a pause in near-term drilling activity. Despite low WTI prices averaging around $44, the deterministic revenue forecast holds at $3.72B, anchored to consensus estimates. The company's revenue is supported by a diversified asset base, with only 45% exposure to the currently subdued segment, and a realized price slightly below benchmark. The lack of observable drilling momentum suggests stable but flat production into the final quarter of 2021.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "consensus_anchored_revenue",
+    "low_wti_environment",
+    "partial_segment_exposure",
+    "stable_production"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 558796511.627907,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 557500000.0,
+    "drilling_signal_raw": 0.023255813953488372,
+    "drilling_signal_clipped": 0.023255813953488372,
+    "production_boe_d": 54624.68187159983,
+    "wti_avg": 70.25923076923077,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows moderate expansion with 11 active sites at decision date, 20% above recent trends, driven by four newly active pads. With half of production tied to the Permian segment and a stable WTI environment near $70/boe, the company is positioned for steady revenue performance. Realized prices at an 88% discount to WTI reflect ongoing basis challenges, but continuous activity on seven pads supports production reliability. The deterministic revenue forecast for the quarter ending June 2023 is $558.8M.",
+  "key_drivers": [
+    "moderate_drilling_growth",
+    "stable_wti",
+    "midland_basis_discount",
+    "mixed_new_and_continuous_pads",
+    "partial_segment_exposure"
+  ]
+}

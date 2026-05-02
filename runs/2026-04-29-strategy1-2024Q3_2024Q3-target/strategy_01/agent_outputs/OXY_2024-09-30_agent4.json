@@ -1,0 +1,11 @@
+{
+  "ticker": "OXY",
+  "n_articles_in_window": 58,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "t-for-Slower-Growth-in-2025.html",
+    "uce-more-crude-using-fewer-rigs"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (t-for-Slower-Growth-in-2025.html, uce-more-crude-using-fewer-rigs) describe drilling activity changes consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

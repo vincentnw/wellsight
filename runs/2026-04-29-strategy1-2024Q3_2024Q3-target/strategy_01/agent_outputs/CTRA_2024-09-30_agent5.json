@@ -1,0 +1,45 @@
+{
+  "ticker": "CTRA",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 4 reports gdelt_disclosed=false so no information leak",
+      "Agent 3 divergence_class is in_line with only -1.05% deviation from consensus",
+      "Agent 2 outlook notes maintenance_mode_operations suggesting stable, predictable output"
+    ],
+    "counter_evidence": [
+      "Agent 2 outlook flags negative_drilling_delta with only 2 newly active pads",
+      "Agent 2 highlights low_wti_environment at $45.60 average WTI price",
+      "Agent 2 notes partial_segment_exposure and muted_new_activity"
+    ],
+    "reasoning_short": "While news is clean and expectations are aligned with consensus, the satellite-derived drilling activity shows contraction and unfavorable price environment, undermining the case for a long position. No catalysts for upside surprise evident."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook indicates restrained production growth into Q3 2024 due to weakening drilling signal and low WTI environment",
+      "Agent 2 key drivers include negative drilling delta, low WTI environment, and maintenance-mode operations, suggesting limited growth potential",
+      "Agent 3 divergence class is in_line with a divergence percentage of -1.05%, indicating no significant upside"
+    ],
+    "counter_evidence": [
+      "Agent 3 has high confidence in their estimate"
+    ],
+    "reasoning_short": "The combination of a weakening drilling signal, low WTI environment, and maintenance-mode operations suggests limited growth potential for CTRA, making a long position unattractive."
+  },
+  "arbiter_reasoning": "Both Bull and Bear opinions point towards a no_trade decision, with the Bull citing a lack of catalysts for upside surprise and the Bear highlighting limited growth potential due to a weakening drilling signal and low WTI environment. The in_line divergence class from Agent 3 with a low divergence percentage of -1.05% further supports this decision.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.2
+  }
+}

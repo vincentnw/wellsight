@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 6228927413.793103,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 6165150000.0,
+    "drilling_signal_raw": 0.10344827586206896,
+    "drilling_signal_clipped": 0.10344827586206896,
+    "production_boe_d": 537848.3409854685,
+    "wti_avg": 60.28384615384615,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows moderate drilling activity with 16 active sites at decision date, 1.5x the relative activity delta compared to recent trends, driven by one newly active pad alongside 15 continuously active ones. With a segment fraction of 45%, EOG's revenue exposure is anchored in a stable but modest WTI environment averaging $60.28/bbl and realized prices at a 5% discount. The deterministic revenue forecast for the quarter ending September 2022 is $6.23B, reflecting steady operational execution and slight volume expansion from recent drilling momentum.",
+  "key_drivers": [
+    "moderate_drilling_momentum",
+    "slight_production_growth",
+    "stable_wti_environment",
+    "partial_segment_exposure",
+    "continuous_pad_activity"
+  ]
+}

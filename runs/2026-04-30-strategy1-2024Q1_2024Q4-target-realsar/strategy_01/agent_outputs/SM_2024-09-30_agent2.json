@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 657033000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 657033000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 60172.17719660459,
+    "wti_avg": 74.99461538461539,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows no active drilling sites in the satellite data as of the decision date, with zero newly or continuously active pads, indicating stalled near-term production growth. The company's revenue forecast of $657 million for Q3 2024 is anchored in consensus estimates and reflects moderate WTI prices around $75/boe and a realized price discount. With only 55% exposure to the active segment and no current drilling momentum, revenue performance will rely on existing production sustainment rather than new output. The lack of observable SAR-detected activity suggests limited operational expansion heading into the quarter.",
+  "key_drivers": [
+    "no_active_drilling",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "reliance_on_existing_production",
+    "zero_new_activity"
+  ]
+}

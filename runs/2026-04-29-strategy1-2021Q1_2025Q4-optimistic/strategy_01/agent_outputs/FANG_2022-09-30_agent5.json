@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 7 newly active sites and relative activity delta of +7.5%",
+      "Agent 2 highlights new_pad_development and continuous activity on 24 pads, signaling sustained production growth",
+      "Agent 3 divergence_class is modest_beat at +3.29% with high confidence and 21 analysts, indicating upside to consensus"
+    ],
+    "counter_evidence": [
+      "Agent 3 shows only a modest_beat divergence, not a strong_beat, limiting magnitude of potential upside"
+    ],
+    "reasoning_short": "Accelerating drilling momentum with new pad development and a high share of active sites in the Permian, combined with a modest but confident earnings beat forecast and no news leaks, supports a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's positive outlook may be overly optimistic given the high analyst dispersion from Agent 3, with a modest beat divergence of only 3.29% and low confidence, suggesting a potential for underperformance.",
+      "Agent 2's revenue forecast of $2.42B is based on a stable realized price discount, but this assumption may be uncertain given the volatile WTI prices.",
+      "Agent 4's lack of disclosed news via GDELT may indicate that the market has already priced in the company's drilling activity and pad development, reducing the potential for further upside."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "High analyst dispersion and uncertain realized price assumptions suggest a potential for underperformance, while the lack of disclosed news may indicate that the market has already priced in the company's drilling activity."
+  },
+  "arbiter_reasoning": "Bull's case prevailed due to Agent 2's strong operational indicators—positive_drilling_delta, new_pad_development, and high share of active sites—supporting sustained production growth. Agent 3's modest_beat divergence_class (+3.29%) with high confidence adds meaningful upside conviction. Bear raised concerns about analyst dispersion and pricing assumptions, but these were not substantiated with strong counter-evidence. No GDELT disclosure mitigates news leakage risk. However, divergence magnitude is only modest, limiting conviction to medium. Conviction tier set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1311971641.7910447,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1287000000.0,
+    "drilling_signal_raw": 0.19402985074626866,
+    "drilling_signal_clipped": 0.19402985074626866,
+    "production_boe_d": 244073.80672230342,
+    "wti_avg": 63.51538461538462,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's fully Permian-focused operations show strong drilling momentum heading into Q4 2024, with 20 active sites at decision date and a relative activity increase of 3.2 compared to recent trends. The emergence of 8 newly active pads suggests near-term production growth, supported by stable realized pricing at a 7% discount to WTI. With average WTI prices projected near $63.50 and solid operational continuity across 12 long-running sites, the deterministic revenue forecast is set at approximately $1.31B. The high share of active sites (41%) reflects efficient capital allocation and sustained drilling intensity.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "new_pad_infill",
+    "pure_play_permian",
+    "efficient_operations",
+    "moderate_wti_environment"
+  ]
+}

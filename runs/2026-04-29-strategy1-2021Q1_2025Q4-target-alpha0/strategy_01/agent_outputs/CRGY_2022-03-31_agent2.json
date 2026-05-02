@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 400000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.0,
+    "consensus_anchor_usd": 400000000.0,
+    "drilling_signal_raw": 0.75,
+    "drilling_signal_clipped": 0.75,
+    "production_boe_d": 11083.698814838097,
+    "wti_avg": 91.16846153846154,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows moderate drilling activity with 7 active sites at decision date, including 3 newly active pads, reflecting a positive relative activity delta of +3.0. The company's operations represent only 20% of its segment, limiting full exposure to the strong WTI environment averaging $91.17/bbl. Despite solid drilling momentum and a realized price at 87% of benchmark, revenue is constrained by partial segment participation. The deterministic forecast for the quarter ending March 2022 is $400M, anchored to consensus with no alpha adjustment.",
+  "key_drivers": [
+    "moderate_drilling_activity",
+    "positive_relative_delta",
+    "partial_segment_exposure",
+    "high_wti_environment",
+    "consensus_anchored_forecast"
+  ]
+}

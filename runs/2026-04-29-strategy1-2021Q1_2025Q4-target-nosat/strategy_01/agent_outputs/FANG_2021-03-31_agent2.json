@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 982236000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 982236000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 127080.24660426972,
+    "wti_avg": 91.33,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback Energy shows no active drilling sites at the decision date, with zero newly or continuously active pads according to satellite data, suggesting minimal near-term production growth into Q1 2021. Despite stable WTI prices around $91/bbl and full exposure to the Permian segment, the absence of current drilling activity indicates operations are likely maintaining existing output levels. The deterministic revenue forecast of $982.2M reflects this plateau, anchored to consensus estimates rather than upward drilling momentum.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "stable_wti",
+    "pure_play_permian",
+    "no_production_growth",
+    "consensus_anchored_forecast"
+  ]
+}

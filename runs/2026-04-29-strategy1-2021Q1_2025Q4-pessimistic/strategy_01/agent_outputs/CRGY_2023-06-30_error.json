@@ -1,0 +1,4 @@
+{
+  "error": "LLM call failed after 2 attempts: Error code: 429 - {'message': 'Tokens per day limit exceeded - too many tokens processed.', 'type': 'too_many_tokens_error', 'param': 'quota', 'code': 'token_quota_exceeded'}",
+  "type": "RuntimeError"
+}

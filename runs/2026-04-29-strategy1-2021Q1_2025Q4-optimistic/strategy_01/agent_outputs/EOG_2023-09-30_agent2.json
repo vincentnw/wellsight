@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5695032000.000001,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5598000000.0,
+    "drilling_signal_raw": 0.17333333333333334,
+    "drilling_signal_clipped": 0.17333333333333334,
+    "production_boe_d": 539571.4339402685,
+    "wti_avg": 54.940769230769234,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows solid drilling momentum with 22 active sites at decision date, 3.2 above recent norms, driven by five newly active pads and strong continuity on 17 existing ones. This elevated satellite-derived activity, combined with a moderate WTI environment near $55/barrel and a realized price at a 5% discount, supports a revenue forecast just above $5.69B for Q3 2023. However, EOG's revenue base is tempered by its 45% segment fraction, indicating less than half of operations are captured in this Permian-focused assessment. The concentration of new and sustained activity suggests targeted development in core areas rather than broad expansion.",
+  "key_drivers": [
+    "elevated_drilling_delta",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "new_pad_infill",
+    "core_area_focus"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "ticker": "SM",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_growth with 13 active sites, 50% above recent baseline",
+      "Agent 2 reports stable_continuous_activity supporting reliable production output",
+      "Agent 3 divergence_class is in_line at +1.32%, indicating consensus stability with room for upside revision"
+    ],
+    "counter_evidence": [
+      "Agent 4 reports gdelt_disclosed=true with 11 articles, suggesting potential information leakage",
+      "Agent 2 notes below_benchmark_pricing at 12% under benchmark, pressuring revenue",
+      "Agent 4 conviction_modifier is downgrade_one_tier, implying reduced market confidence pre-earnings"
+    ],
+    "reasoning_short": "Moderate drilling expansion and stable operational activity provide a solid foundation for in-line earnings with potential upside, especially if WTI tailwinds materialize. Despite news overhang and pricing headwinds, the stable drilling profile supports a measured long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 11 matching articles, suggesting market may have priced in the activity",
+      "Agent 3 confidence is medium due to modest divergence of 1.32% and high analyst dispersion with 14 analysts",
+      "Agent 2 outlook acknowledges below benchmark pricing and mixed segment exposure"
+    ],
+    "counter_evidence": [
+      "Agent 2 outlook suggests moderate drilling growth and stable operational performance"
+    ],
+    "reasoning_short": "Information edge is questionable: news has flagged the same drilling pattern, and the consensus comparison is only modestly above with medium confidence. Recommend no entry due to potential pricing in of activity and below benchmark pricing."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 4 gdelt_disclosed=true with 11 matching articles, suggesting the market may have priced in the activity, and Agent 3 confidence is medium due to modest divergence of 1.32% and high analyst dispersion with 14 analysts. Bull's evidence, although suggesting moderate drilling expansion and stable operational activity, is countered by the potential information leakage and below benchmark pricing. Information edge is unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.45
+  }
+}

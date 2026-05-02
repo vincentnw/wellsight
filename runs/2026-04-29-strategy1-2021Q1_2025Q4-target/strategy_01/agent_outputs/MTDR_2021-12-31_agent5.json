@@ -1,0 +1,42 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +2.5 sites",
+      "Agent 2 reports stable_operations with 8 continuously active drilling sites and no new pad disruptions",
+      "Agent 2 highlights pure_play_permian exposure, amplifying leverage to rising oil prices"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is modest_miss at -4.59%",
+      "Agent 3 confidence is low with only 13 analysts sampled"
+    ],
+    "reasoning_short": "Despite modest analyst divergence expectations, sustained and stable drilling activity in the high-margin Permian basin with no operational disruptions or news leaks supports a long position. Operational consistency and full basin exposure position MTDR to potentially outperform if actual results exceed muted analyst expectations."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook acknowledges uncertain realized-price assumption, with revenue forecasted at $421.3M, but this may not account for potential price volatility",
+      "Agent 3 low confidence and modest miss divergence_class suggests analyst uncertainty and potential for downward revision",
+      "Agent 4 gdelt_disclosed=false, indicating no disclosed news that may have already moved the price"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Uncertainty around realized price and analyst consensus, combined with lack of disclosed news, make a long position in MTDR a high-risk bet. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 3 low confidence and modest miss divergence_class, suggesting analyst uncertainty and potential for downward revision. Bull's evidence was modest at best, and the lack of disclosed news from Agent 4, combined with the uncertainty around realized price, makes the information edge unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.3
+  }
+}

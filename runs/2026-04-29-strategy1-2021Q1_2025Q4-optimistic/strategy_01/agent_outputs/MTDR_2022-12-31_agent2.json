@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 666472533.3333334,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 638112000.0,
+    "drilling_signal_raw": 0.4444444444444444,
+    "drilling_signal_clipped": 0.4444444444444444,
+    "production_boe_d": 123574.0071996893,
+    "wti_avg": 64.42076923076924,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources shows elevated drilling activity with 13 active sites at decision date, 4.0 above the recent average, driven by both newly active and continuously active pads. This upward momentum in the Permian, combined with full segment exposure and a stable WTI environment near $64/boe, supports a deterministic revenue forecast of approximately $666.5M for Q4 2022. The company's realized pricing remains slightly below benchmark, but consistent drilling execution suggests reliable production throughput.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "stable_wti",
+    "pure_play_permian",
+    "new_pad_activity",
+    "continuous_operations"
+  ]
+}

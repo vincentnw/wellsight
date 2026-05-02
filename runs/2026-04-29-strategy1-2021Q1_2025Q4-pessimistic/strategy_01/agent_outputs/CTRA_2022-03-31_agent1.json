@@ -1,0 +1,129 @@
+{
+  "ticker": "CTRA",
+  "decision_date_T": "2022-04-18",
+  "fiscal_quarter_end": "2022-03-31",
+  "n_newly_active": 4,
+  "n_continuously_active": 11,
+  "n_idle": 14,
+  "absolute_active": 15,
+  "share_active": 0.5172413793103449,
+  "relative_activity_delta": 3.25,
+  "pad_classifications": [
+    {
+      "pad_id": "PAD_00237",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00238",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00240",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00241",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00244",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00247",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00249",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "PAD_00251",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00252",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00253",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00254",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00259",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "PAD_00267",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00270",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00272",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00273",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00274",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00275",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00277",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "PAD_00278",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00279",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00280",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00281",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00282",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00285",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00287",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00288",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00289",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00290",
+      "state": "newly_active"
+    }
+  ]
+}

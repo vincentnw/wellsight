@@ -1,0 +1,42 @@
+{
+  "ticker": "OXY",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 18 active sites, 6.5 above peer-group average",
+      "Agent 3 divergence_class is modest_beat at +5.73% with medium confidence across 13 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Only 30% segment exposure factored in limiting revenue upside",
+      "WTI averaging $65.05 constrains price-driven revenue expansion"
+    ],
+    "reasoning_short": "Sustained drilling expansion well above peer average signals strong production momentum into earnings, supporting a modest revenue beat. Absence of news leaks and consensus-beating analyst alignment justify high-conviction long position ahead of event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's drilling activity expansion is constrained by only 30% segment exposure, limiting revenue growth despite a strong drilling signal",
+      "Agent 2's revenue forecast of $7.54B reflects a blend of consensus anchoring and moderate operational momentum, but realized prices are slightly below benchmark",
+      "Agent 3's medium confidence is accompanied by a modest beat divergence class of 5.73%"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Constrained revenue growth and modest operational momentum suggest limited upside potential. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull prevailed with evidence of positive drilling delta well above peer average and a modest_beat divergence_class supported by medium confidence across 13 analysts. Although Agent 2's revenue forecast is consensus-anchored and constrained by partial segment exposure and moderate WTI, the absence of GDELT disclosure (gdelt_disclosed=false) preserves information edge. However, conviction is limited to medium due to Agent 3's medium confidence and the modest_beat classification, despite Bull's high confidence. No decisive risk flags from Bear beyond growth constraints already priced in.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

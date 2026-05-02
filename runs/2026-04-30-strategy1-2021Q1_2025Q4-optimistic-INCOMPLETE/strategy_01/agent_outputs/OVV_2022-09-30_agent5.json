@@ -1,0 +1,44 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flagged positive_drilling_delta of +4.0 sites above recent trend",
+      "Agent 3 divergence_class is modest_beat at +4.12%",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leak"
+    ],
+    "counter_evidence": [
+      "Only partial segment exposure limits full revenue upside",
+      "Moderate drilling delta suggests growth is not aggressive"
+    ],
+    "reasoning_short": "A clear uptick in drilling activity above trend, combined with a modest expected beat relative to analyst consensus and absence of news leaks, supports a long position. Though growth is tempered by partial segment exposure, the fundamental momentum is constructive for a positive earnings reaction."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on a 10% discount to WTI, indicating a potential revenue risk, despite moderate drilling activity",
+      "Agent 2's production trend is stable but unspectacular, suggesting limited growth potential",
+      "Agent 4's low conviction modifier and lack of disclosed news may indicate a lack of market-moving information"
+    ],
+    "counter_evidence": [
+      "Agent 3's modest beat divergence class and 4.12% divergence percentage suggest some upside potential"
+    ],
+    "reasoning_short": "Revenue risk and limited growth potential outweigh potential upside, recommending no entry."
+  },
+  "arbiter_reasoning": "Bull's case prevailed due to a modest_beat divergence_class (+4.12%) with medium confidence and a positive drilling delta (+4.0 sites above trend), supported by absence of GDELT disclosure. Bear raised valid concerns about revenue risk from WTI discounting and limited segment exposure, but did not identify a GDELT downgrade or low confidence. Given the modest beat and medium confidence with no GDELT-related red flags, conviction tier is set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

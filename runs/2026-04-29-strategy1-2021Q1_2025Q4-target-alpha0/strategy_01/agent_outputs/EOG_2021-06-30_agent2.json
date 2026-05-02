@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 3345600000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.0,
+    "consensus_anchor_usd": 3345600000.0,
+    "drilling_signal_raw": 1.064516129032258,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 238885.29715040047,
+    "wti_avg": 72.90076923076923,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows elevated drilling activity with 16 active sites at decision date, 8.2% above recent trends, driven by six newly active pads. This suggests sustained production momentum into the final months of Q2 2021. With WTI averaging near $72.90 and realized prices at a 5% discount, revenue is supported by stable commodity conditions. However, only 45% of operations are in high-activity segments, tempering full-scale volume leverage. The deterministic revenue forecast is set at $3.35B, anchored to consensus.",
+  "key_drivers": [
+    "elevated_drilling_activity",
+    "moderate_new_pad_activation",
+    "stable_wti_environment",
+    "partial_segment_exposure",
+    "consensus_anchored_forecast"
+  ]
+}

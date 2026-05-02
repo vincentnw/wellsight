@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 3930888888.888889,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3724000000.0,
+    "drilling_signal_raw": 0.5555555555555556,
+    "drilling_signal_clipped": 0.5555555555555556,
+    "production_boe_d": 465767.8164944844,
+    "wti_avg": 43.93076923076923,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows moderate drilling activity with 14 active sites at decision date, including 4 newly active pads, reflecting a positive relative activity delta of 5.0. The company's production base remains strong at nearly 466,000 boe/d, though segment exposure is partial at 45%, limiting full leverage to the Permian operating environment. With WTI averaging around $44 and realized prices at a 5% discount, revenue is supported by stable drilling momentum and operational continuity. The deterministic forecast for the quarter ending September 2021 is $3.93B, reflecting balanced activity and mid-tier commodity prices.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "new_pad_activation",
+    "operational_continuity"
+  ]
+}

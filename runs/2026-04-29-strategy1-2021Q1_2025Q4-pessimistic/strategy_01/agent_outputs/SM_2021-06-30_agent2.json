@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 383611600.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 356848000.0,
+    "drilling_signal_raw": 0.75,
+    "drilling_signal_clipped": 0.75,
+    "production_boe_d": 34885.604866813046,
+    "wti_avg": 75.52384615384615,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows elevated satellite-derived drilling activity with 7 active sites at decision date, a relative increase of 3.0 compared to recent history, driven largely by 6 newly active pads. This suggests near-term production growth momentum into the final month of Q2 2021. The company's realized price remains below WTI average, and with only 55% exposure to the actively expanding segment, revenue growth is partially constrained. Despite moderate commodity prices around $75.50/bbl, the deterministic forecast settles at $383.6M, reflecting solid operational activity within a limited segment footprint.",
+  "key_drivers": [
+    "elevated_new_activity",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "recent_ramp_up",
+    "below_parity_pricing"
+  ]
+}

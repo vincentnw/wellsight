@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3250198617.977528,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3313490000.0,
+    "drilling_signal_raw": -0.19101123595505617,
+    "drilling_signal_clipped": -0.19101123595505617,
+    "production_boe_d": 339049.7922895975,
+    "wti_avg": 63.66875,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a decline, with 18 active sites at decision date—4.2 below the trailing average—indicating reduced operational momentum heading into Q4 2025. Although the company maintains a stable realized price at a 9% discount to WTI, its 55% segment exposure limits full commodity upside. The satellite data reveals modest pad turnover, with only 7 newly active sites, suggesting cautious capital allocation. These factors contribute to a deterministic revenue forecast of approximately $3.25B.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "moderate_realized_discount",
+    "partial_segment_exposure",
+    "low_new_activity",
+    "cautious_capex_signal"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "ticker": "DVN",
+  "decision_date_T": "2021-04-20",
+  "fiscal_quarter_end": "2021-03-31",
+  "n_newly_active": 1,
+  "n_continuously_active": 8,
+  "n_idle": 8,
+  "absolute_active": 9,
+  "share_active": 0.5294117647058824,
+  "relative_activity_delta": 3.5,
+  "pad_classifications": [
+    {
+      "pad_id": "PAD_00174",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00176",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00186",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00198",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00199",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00207",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00208",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00214",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00219",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "PAD_00222",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00223",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00226",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00227",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00229",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00232",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00233",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00235",
+      "state": "continuously_active"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "ticker": "PR",
+  "n_articles_in_window": 9,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "uce-more-crude-using-fewer-rigs/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "One GDELT-indexed article (uce-more-crude-using-fewer-rigs/) describes US shale companies producing more crude using fewer rigs, which is consistent with the satellite-detected pattern of increased activity. Determination is about GDELT-indexed news only, not about full market awareness."
+}

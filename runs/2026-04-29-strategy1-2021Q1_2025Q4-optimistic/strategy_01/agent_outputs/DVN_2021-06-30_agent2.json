@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 2029894350.0000002,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1845358500.0,
+    "drilling_signal_raw": 1.2,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 184935.90150806727,
+    "wti_avg": 72.90076923076923,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows 11 active sites at decision date, all of which are continuously active, with no new sites activated recently. The relative activity delta of +6.0 indicates a meaningful increase compared to recent quarters, supporting stable production levels into the June 2021 quarter. With WTI averaging around $72.90 and realized prices at a slight discount, combined with exposure to about 55% of the target segment, the deterministic revenue forecast is approximately $2.03B. The absence of newly active pads suggests focus on optimizing existing operations rather than expansion.",
+  "key_drivers": [
+    "high_relative_activity_delta",
+    "no_newly_active_pads",
+    "moderate_segment_exposure",
+    "stable_production",
+    "slight_price_discount"
+  ]
+}

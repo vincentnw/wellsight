@@ -1,0 +1,11 @@
+{
+  "ticker": "CTRA",
+  "our_estimate_usd": 1812021428.5714285,
+  "consensus_median_usd": 1786500000.0,
+  "consensus_dispersion_usd": 109927788.18896362,
+  "n_analysts_at_T_minus_14": 18,
+  "divergence_pct": 1.73,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our $1.81B estimate is within 1.7% of $1.79B consensus; 18 analysts with moderate dispersion (~62% of consensus) yields medium confidence."
+}

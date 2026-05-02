@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 508000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 508000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 53635.8338049345,
+    "wti_avg": 65.05,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows no active drilling sites in the satellite data as of the decision date, with zero newly or continuously active pads, indicating stalled field-level activity heading into the target quarter. Despite a moderate WTI environment near $65/boe and a realized price discount typical for its segment, the company's revenue forecast of $508M is fully anchored to consensus due to absence of positive drilling signals. With only 55% exposure to the active segment and no recent operational momentum, near-term revenue is expected to remain flat, supported by legacy production rather than new output.",
+  "key_drivers": [
+    "no_active_drilling",
+    "consensus_anchored_forecast",
+    "modest_wti",
+    "partial_segment_exposure",
+    "lack_of_operational_momentum"
+  ]
+}

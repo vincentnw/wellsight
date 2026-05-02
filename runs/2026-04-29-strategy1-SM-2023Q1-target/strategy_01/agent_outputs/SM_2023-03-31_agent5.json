@@ -1,0 +1,44 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags increased_drilling_activity with 12 active sites, including 4 newly active sites, representing a 2.2 increase over the historical average",
+      "Agent 3 divergence_class is strong_beat at +234.29%, indicating a significant upside potential",
+      "Agent 2 revenue_forecast_usd of $2.01B for the quarter ending March 31, 2023, supported by moderate WTI prices and steady production growth"
+    ],
+    "counter_evidence": [
+      "Agent 4 gdelt_disclosed=true, suggesting potential information leaks that could impact market sentiment",
+      "Agent 4 conviction_modifier is downgrade_one_tier, which may indicate some risk factors not fully captured in the positive outlook"
+    ],
+    "reasoning_short": "The significant increase in drilling activity and a strong revenue forecast, coupled with a material divergence from analyst expectations, support a long position. However, potential information leaks and a slight downgrade in conviction temper the overall confidence level."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 10 matching articles, suggesting market may have priced in the activity",
+      "Agent 3 confidence is medium due to high analyst dispersion (13 analysts)",
+      "Agent 2 outlook acknowledges uncertain realized-price assumption with moderate WTI prices"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is strong_beat at +234.29%"
+    ],
+    "reasoning_short": "Information edge is questionable: news has flagged the same drilling pattern, and the consensus comparison is significantly above but with medium confidence. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a strong_beat divergence_class with medium confidence and a significant increase in drilling activity; Bear's objections included Agent 4's gdelt_disclosed=true and medium confidence from Agent 3, but the strength of the Bull's evidence prevails. Conviction tier set to medium due to medium confidence and potential information leaks.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

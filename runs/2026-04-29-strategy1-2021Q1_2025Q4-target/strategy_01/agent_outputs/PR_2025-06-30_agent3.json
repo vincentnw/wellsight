@@ -1,0 +1,11 @@
+{
+  "ticker": "PR",
+  "our_estimate_usd": 1259115789.4736843,
+  "consensus_median_usd": 1246000000.0,
+  "consensus_dispersion_usd": 62361509.55937331,
+  "n_analysts_at_T_minus_14": 15,
+  "divergence_pct": 1.04,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our $1.26B estimate is within 1% of $1.25B consensus; 15 analysts with moderate dispersion (~5% of consensus) yields medium confidence."
+}

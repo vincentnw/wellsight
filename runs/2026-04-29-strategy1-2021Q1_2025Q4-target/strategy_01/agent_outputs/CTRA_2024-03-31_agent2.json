@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1428892750.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1408767500.0,
+    "drilling_signal_raw": 0.14285714285714285,
+    "drilling_signal_clipped": 0.14285714285714285,
+    "production_boe_d": 85449.51883645498,
+    "wti_avg": 94.23538461538462,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Chesapeake Energy's drilling activity shows moderate expansion with 18 active sites at decision date, 2.2 above the recent average, driven by both newly active and continuously operating pads. The company's partial exposure to the active segment (40%) combined with strong WTI prices averaging $94.24 and a realized price differential of $74.50 per barrel suggests solid revenue performance for Q1 2024. The deterministic forecast of $1.43B reflects this positive drilling momentum and favorable price environment, though revenue is tempered by less than full segment exposure.",
+  "key_drivers": [
+    "moderate_drilling_growth",
+    "high_wti_avg",
+    "partial_segment_exposure",
+    "positive_relative_activity_delta",
+    "new_pad_activation"
+  ]
+}

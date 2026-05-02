@@ -1,0 +1,41 @@
+{
+  "ticker": "DVN",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags elevated_drilling_activity with 18 active sites, 8.0% above recent trends",
+      "Agent 3 divergence_class is modest_beat at +7.93% with medium confidence across 17 analysts",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leak"
+    ],
+    "counter_evidence": [
+      "Agent 3 confidence is only medium, suggesting some analyst uncertainty"
+    ],
+    "reasoning_short": "Elevated drilling activity and new pad activation signal strong production momentum, while the modest-beat divergence and clean news environment support a favorable earnings surprise. Core basin exposure and stable operations reinforce revenue visibility, justifying a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's outlook acknowledges uncertain realized-price assumption, which may impact revenue forecast of $2.79B",
+      "Agent 3's medium confidence is tempered by modest beat divergence of 7.93% among 17 analysts",
+      "Agent 4's 75 articles may not be disclosed, limiting market impact assessment"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Uncertainty around realized prices and modest analyst beat divergence suggest caution: recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited elevated drilling activity and new pad activation, while Bear's objections were based on uncertain realized prices and modest analyst beat divergence. The strength of the Bull's evidence, including a clean news environment and stable operations, prevails. However, the medium confidence from Agent 3 and modest beat divergence lead to a medium conviction tier.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

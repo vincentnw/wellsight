@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 732600000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 666000000.0,
+    "drilling_signal_raw": 1.0,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 57171.200823090505,
+    "wti_avg": 88.00923076923075,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows elevated satellite-derived drilling activity with a relative activity delta of +4.0 and 8 active sites at decision date, half of which are newly active, indicating recent operational ramp-up. With WTI averaging near $88/bbl and realized prices at a slight discount, the company is positioned for strong revenue performance. However, exposure is only partial (55%) to the high-activity segment, tempering full upstream leverage. The deterministic revenue forecast for the quarter ending March 2022 is $732.6M.",
+  "key_drivers": [
+    "elevated_drilling_delta",
+    "new_pad_activation",
+    "high_wti_environment",
+    "partial_segment_exposure",
+    "recent_operational_ramp"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "ticker": "DVN",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_growth with 17 active sites, 4.2% above recent trends",
+      "Agent 3 divergence_class is modest_beat at +3.43% with medium confidence across 16 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Divergence magnitude is modest_beat rather than strong_beat",
+      "Segment exposure is mixed, limiting full leverage to high WTI"
+    ],
+    "reasoning_short": "Moderate but clear drilling expansion combined with favorable exposure to high WTI prices near $88/bbl supports revenue upside. A clean news environment and modest consensus beat signal low risk and positive surprise potential, justifying a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling growth may not sustain, as only 4.2% above recent trends, and high WTI environment is not guaranteed to persist, with realized prices holding at a 9% discount",
+      "Agent 3's medium confidence is tempered by modest beat divergence of only 3.43% among 16 analysts",
+      "Agent 4's lack of disclosed news and zero articles suggests market may not have fully priced in potential risks"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Drilling growth is moderate, and high WTI environment is uncertain. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull's case for a long position prevailed due to Agent 2's evidence of moderate drilling growth and favorable exposure to high WTI prices, combined with Agent 3's modest_beat divergence at 3.43% and medium confidence. Although the divergence is not strong, the absence of GDELT disclosure (gdelt_disclosed=false) and clean news backdrop support upside potential. However, conviction is tempered by the modest magnitude of the beat and only moderate drilling expansion, preventing a high tier. Conviction set to medium per guidance.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.1
+  }
+}

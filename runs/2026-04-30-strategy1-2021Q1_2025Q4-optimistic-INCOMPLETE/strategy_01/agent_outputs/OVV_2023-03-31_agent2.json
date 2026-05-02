@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2631440000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2540000000.0,
+    "drilling_signal_raw": 0.36,
+    "drilling_signal_clipped": 0.36,
+    "production_boe_d": 206353.75462610734,
+    "wti_avg": 77.85153846153845,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows moderate drilling activity with 17 active sites at decision date, 4.5 above the recent average, indicating a modest expansion in operations ahead of Q1 2023. Satellite data reveals high continuity, with 15 of 17 sites continuously active and only 2 newly activated, suggesting stable production rather than sharp growth. At 63% of sites active and with half of output exposed to WTI-linked pricing, the company benefits from stable realized prices near $70/boe. These factors support a deterministic revenue forecast of $2.63B, slightly above consensus, driven by consistent operational execution in core regions.",
+  "key_drivers": [
+    "moderate_drilling_delta",
+    "high_continuity_active_sites",
+    "stable_production_trend",
+    "partial_wti_exposure",
+    "consensus_beat"
+  ]
+}

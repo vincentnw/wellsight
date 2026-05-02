@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 975923529.4117646,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 959000000.0,
+    "drilling_signal_raw": 0.17647058823529413,
+    "drilling_signal_clipped": 0.17647058823529413,
+    "production_boe_d": 191595.9753155897,
+    "wti_avg": 60.84153846153846,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources maintains full exposure to the Permian Basin with stable drilling activity, showing 15 active sites at decision date and a positive relative activity delta of +2.2, driven by three newly active pads. With WTI averaging around $60.84 and realized prices at a 8% discount, production levels support a deterministic revenue forecast near $976M for Q4 2024. The high share of continuously active sites (12 of 15) indicates operational consistency, suggesting reliable production throughput into quarter-end.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "high_continuity_ratio",
+    "pure_play_permian",
+    "stable_wti_environment",
+    "consistent_pad_activity"
+  ]
+}

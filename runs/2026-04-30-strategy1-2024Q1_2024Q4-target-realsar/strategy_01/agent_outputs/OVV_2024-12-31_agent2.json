@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2062667666.666667,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1996130000.0,
+    "drilling_signal_raw": 0.3333333333333333,
+    "drilling_signal_clipped": 0.3333333333333333,
+    "production_boe_d": 174925.23702386394,
+    "wti_avg": 71.98846153846154,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows stable drilling activity with 2 active sites at decision date, both continuously active, resulting in a 50% relative increase compared to recent trends. The company's production is partially exposed to current drilling momentum with a segment fraction of 0.5, implying moderate volume responsiveness. With WTI averaging around $72/bbl and realized prices at a 10% discount, revenue is forecast near $2.06B for the final quarter of 2024. Limited new pad activation suggests steady but unspectacular production growth.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "moderate_relative_activity_delta",
+    "partial_segment_exposure",
+    "mild_price_discount",
+    "steady_production_base"
+  ]
+}

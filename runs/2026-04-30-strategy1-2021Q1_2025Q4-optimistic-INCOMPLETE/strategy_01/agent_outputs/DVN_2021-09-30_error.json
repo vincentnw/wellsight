@@ -1,0 +1,4 @@
+{
+  "error": "No JSON object found in response: {\n  \"ticker\": \"DVN\",\n  \"n_articles_in_window\": 35,\n  \"gdelt_disclosed\": true,\n  \"matching_article_ids\": [\"or-six-new-drilling-permits.html\", \"l-prices-remain-above-key-level/\", \"aintains-Spending-Rest",
+  "type": "ValueError"
+}

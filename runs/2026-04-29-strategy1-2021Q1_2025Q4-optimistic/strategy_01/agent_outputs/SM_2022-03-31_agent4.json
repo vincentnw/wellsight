@@ -1,0 +1,8 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 0,
+  "gdelt_disclosed": false,
+  "matching_article_ids": [],
+  "conviction_modifier": "none",
+  "reasoning": "No GDELT-indexed articles for this ticker in the window."
+}

@@ -1,0 +1,41 @@
+{
+  "ticker": "PR",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +1.5 sites with new_pad_activation detected",
+      "Agent 2 reports full_permian_exposure (segment fraction = 1.0) supporting production stability",
+      "Agent 3 divergence_class is modest_beat at +10% with medium confidence across 14 analysts"
+    ],
+    "counter_evidence": [
+      "Agent 3 confidence is only medium, indicating some analyst dispersion"
+    ],
+    "reasoning_short": "Positive drilling momentum with new pad activation and full Permian exposure provides strong operational tailwinds, while revenue forecast implies a modest beat ahead of earnings. Absence of news leaks (gdelt_disclosed=false) preserves upside potential, supporting a high-conviction long."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's positive drilling delta and full Permian exposure are already priced in, as indicated by the high share of active sites (60%) and stable WTI environment, suggesting limited upside potential",
+      "Agent 3's medium confidence and modest beat divergence_class (+10%) indicate a cautious outlook, which may not justify a long position",
+      "Agent 4's low conviction modifier and undisclosed GDelt activity suggest a lack of new information to drive the stock price"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Parsley Energy's operations and market conditions are already well-represented in the current stock price, making a long position less attractive."
+  },
+  "arbiter_reasoning": "Bull's case for a long position is supported by Agent 2's positive drilling delta and full Permian exposure, indicating operational strength, and Agent 3's modest_beat divergence_class (+10%) with medium confidence, suggesting upside relative to expectations. However, conviction is tempered by Agent 3's medium confidence and the absence of a strong_beat signal. Bear argues the information is already priced in, but does not identify new negative catalysts or GDELT disclosure. Given the modest_beat with medium confidence and no GDELT downgrade, conviction tier is set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.05
+  }
+}

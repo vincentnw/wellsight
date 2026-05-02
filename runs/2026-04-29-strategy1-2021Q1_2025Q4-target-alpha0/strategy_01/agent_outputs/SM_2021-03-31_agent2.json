@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 340080000.00000006,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.0,
+    "consensus_anchor_usd": 340080000.00000006,
+    "drilling_signal_raw": -0.1111111111111111,
+    "drilling_signal_clipped": -0.1111111111111111,
+    "production_boe_d": 25574.44745115829,
+    "wti_avg": 91.33,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows low satellite-derived drilling activity with only 2 active sites at decision date, a 20% decline relative to recent trends, and no newly active pads, suggesting constrained production growth into Q1 2021. The company's realized prices are at a discount to WTI, and with only 55% exposure to the high-performing segment, revenue remains limited despite relatively strong WTI averages. The deterministic forecast of $340.08M reflects these headwinds in activity and segment leverage.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "no_new_pads",
+    "wti_premium_not_fully_captured",
+    "partial_segment_exposure"
+  ]
+}

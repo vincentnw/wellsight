@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 4819810000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4819810000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 184380.33955781357,
+    "wti_avg": 91.67846153846153,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows zero active sites at the decision date, with no newly or continuously active pads, indicating a significant drawdown in near-term operational momentum heading into Q2 2021. Despite a relatively strong WTI environment averaging $91.68/bbl and a realized price at a 6% discount, the company's revenue contribution from the monitored segment is limited to 30% of total operations. The deterministic revenue forecast of $4.82B is anchored to consensus estimates rather than current drilling signals, suggesting it reflects broader portfolio performance or non-operated assets not captured in satellite monitoring.",
+  "key_drivers": [
+    "zero_active_pads",
+    "high_wti_environment",
+    "low_segment_exposure",
+    "consensus_anchored_forecast",
+    "no_operational_momentum"
+  ]
+}

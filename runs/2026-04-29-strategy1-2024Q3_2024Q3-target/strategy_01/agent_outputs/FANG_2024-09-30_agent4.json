@@ -1,0 +1,12 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 32,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "rify-permian-fracing-operations/",
+    "ming-last-permian-sandbox-210384",
+    "cus-on-permian-shale-operations/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Three GDELT-indexed articles describe drilling-activity changes consistent with the satellite-detected pattern, specifically regarding Permian operations and shale activity. Determination is about GDELT-indexed news only, not about full market awareness."
+}

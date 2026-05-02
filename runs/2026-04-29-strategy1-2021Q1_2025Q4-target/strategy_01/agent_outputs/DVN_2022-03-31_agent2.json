@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3021350735.7142854,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2978796500.0,
+    "drilling_signal_raw": 0.14285714285714285,
+    "drilling_signal_clipped": 0.14285714285714285,
+    "production_boe_d": 228009.43757187555,
+    "wti_avg": 88.00923076923075,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows 14 active sites at decision date, all of which are continuously active, with no new sites activated recently. The relative activity delta of +1.8 indicates above-average operational continuity, supporting stable production volumes into the final quarter of the Permian and non-Permian operations, with slightly over half of activity concentrated in high-margin segments. Elevated WTI prices around $88/boe and a realized price differential of 91% bolster revenue potential. The deterministic forecast of $3.02B reflects this balanced activity and favorable price environment.",
+  "key_drivers": [
+    "stable_continuous_drilling",
+    "elevated_wti",
+    "moderate_segment_exposure",
+    "no_new_pad_activation",
+    "strong_price_realization"
+  ]
+}

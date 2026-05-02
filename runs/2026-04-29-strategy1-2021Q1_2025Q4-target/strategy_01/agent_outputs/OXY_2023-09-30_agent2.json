@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 7102397000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7102397000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 454015.52430662734,
+    "wti_avg": 54.863846153846154,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows 19 active sites at the decision date, with a stable relative activity delta and no change in overall intensity compared to recent trends. The mix of newly active and continuously active sites suggests steady operational execution without significant acceleration. With WTI averaging around $54.90 and a realized price at a slight discount, revenue is supported by solid production volumes. However, only 30% of revenue is tied to this onshore segment, limiting the impact of drilling momentum. The deterministic revenue forecast for the quarter ending September 2023 is $7.10B.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "moderate_wti_environment",
+    "limited_segment_exposure",
+    "consistent_operational_pace",
+    "price_discount_to_wti"
+  ]
+}

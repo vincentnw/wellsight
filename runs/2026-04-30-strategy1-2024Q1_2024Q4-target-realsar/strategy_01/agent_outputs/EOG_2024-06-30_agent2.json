@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5955000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5955000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 380770.97686103196,
+    "wti_avg": 81.4076923076923,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows no active drilling sites detected via satellite at the decision date, with zero newly or continuously active pads, indicating a pause in near-term drilling activity. Despite this, the deterministic revenue forecast remains at $5.955B for Q2 2024, anchored to consensus and supported by stable WTI prices around $81.40 and a realized price differential of 95%. The company's revenue is partially insulated by its 45% segment fraction, suggesting diversified operations across multiple basins, which may buffer against localized inactivity. The lack of current drilling momentum implies reliance on existing production rather than new output growth in the quarter.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "consensus_anchored_forecast",
+    "stable_wti",
+    "diversified_segment_exposure",
+    "no_production_growth_signals"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "ticker": "CTRA",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [],
+    "counter_evidence": [],
+    "reasoning_short": "short_circuit_no_beat_divergence"
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [],
+    "counter_evidence": [],
+    "reasoning_short": "short_circuit_no_beat_divergence"
+  },
+  "arbiter_reasoning": "short_circuit_no_beat_divergence (DL #61): Agent 3 emitted divergence_class=modest_miss; Investment Board LLM calls skipped because the locked guardrail forces no_trade regardless of LLM debate.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.0,
+    "agent3_weight": 1.0,
+    "agent4_weight": 0.0
+  }
+}

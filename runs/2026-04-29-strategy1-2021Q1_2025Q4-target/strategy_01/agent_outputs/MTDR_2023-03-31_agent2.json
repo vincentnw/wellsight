@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 564676190.4761904,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 562000000.0,
+    "drilling_signal_raw": 0.047619047619047616,
+    "drilling_signal_clipped": 0.047619047619047616,
+    "production_boe_d": 88169.33299080963,
+    "wti_avg": 76.49846153846154,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources maintained 11 active drilling sites as of the decision date, with a 50% increase in relative activity compared to recent trends, driven by three newly active pads. This uptick in satellite-observed activity supports modest production growth into the final weeks of Q1 2023. With full exposure to the Permian segment and realized prices at a 8% discount to WTI, revenue is expected to slightly exceed the consensus anchor. The deterministic forecast for the quarter is $564.7M, reflecting stable drilling momentum and a favorable WTI environment near $76.50/bbl.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "new_pad_activation",
+    "pure_play_permian",
+    "stable_wti",
+    "modest_production_growth"
+  ]
+}

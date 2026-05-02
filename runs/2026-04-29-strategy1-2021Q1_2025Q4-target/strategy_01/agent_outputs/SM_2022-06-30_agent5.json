@@ -1,0 +1,42 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags strong_relative_activity_delta of +6.5 with 12 active sites",
+      "Agent 3 divergence_class is modest_beat at +9.93% with medium confidence across 13 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leak"
+    ],
+    "counter_evidence": [
+      "Realized price discount at 88% of benchmark may compress margins",
+      "Partial segment exposure limits full upside capture from high-performing areas"
+    ],
+    "reasoning_short": "Robust drilling momentum and strong relative activity delta signal operational outperformance, supported by favorable WTI pricing and a clean news environment. Modest-beat divergence suggests upside potential relative to consensus, warranting a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's outlook acknowledges uncertain realized-price assumption, which may impact revenue forecast of $786.5M, and the company operates partially in a high-price environment with WTI averaging near $86.74, though its realized prices are discounted at 88% of benchmark",
+      "Agent 3's medium confidence is due to modest beat of +9.93% with 13 analysts, but this may not be enough to justify a long position considering the risks",
+      "Agent 4 has not disclosed any relevant news, but the lack of conviction modifier suggests a neutral stance"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Uncertainty around realized prices and modest beat may not justify a long position in SM, especially considering the risks associated with the high-price environment and partial segment exposure."
+  },
+  "arbiter_reasoning": "Bull's case for a long position is supported by Agent 2's strong_relative_activity_delta and favorable macro conditions, combined with Agent 3's modest_beat divergence_class (+9.93%) and medium confidence. Although Agent 3's confidence is only medium and the beat is modest, there is no GDELT disclosure (gdelt_disclosed=false), preserving information edge. Bear raised valid concerns about realized price uncertainty and partial segment exposure, but these were already acknowledged in Agent 2's outlook and do not negate the positive operational signals. The preponderance of evidence supports a long, but conviction is capped at medium due to the modest_beat and medium confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.1
+  }
+}

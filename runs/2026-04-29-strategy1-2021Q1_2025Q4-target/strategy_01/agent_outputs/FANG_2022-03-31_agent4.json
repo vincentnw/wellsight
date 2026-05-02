@@ -1,0 +1,12 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 35,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "Permits-Reach-All-Time-High.html",
+    "uction-surge-on-the-horizon-0001",
+    "production-surge-on-the-horizon/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Three GDELT-indexed articles (Permits-Reach-All-Time-High.html, uction-surge-on-the-horizon-0001, production-surge-on-the-horizon/) describe drilling expansion at Permian sites consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

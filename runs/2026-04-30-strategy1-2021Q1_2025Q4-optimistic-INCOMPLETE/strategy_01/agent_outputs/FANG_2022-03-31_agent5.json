@@ -1,0 +1,44 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags elevated_drilling_activity with 25 active sites, +9.0 above baseline",
+      "Agent 2 highlights new_pad_activation of 4 pads, signaling near-term production growth",
+      "Agent 3 divergence_class is modest_beat at +5.73%, indicating likely upside to consensus"
+    ],
+    "counter_evidence": [
+      "Agent 4 reports gdelt_disclosed=true with 35 articles, raising potential for information leakage",
+      "Agent 4 conviction_modifier is downgrade_one_tier, suggesting reduced confidence in surprise potential"
+    ],
+    "reasoning_short": "Sustained drilling momentum with new pad activations and strong production volumes, combined with a favorable WTI backdrop, supports a modest revenue beat. Despite news leakage concerns, fundamental drilling indicators justify a medium-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 35 matching articles, suggesting market may have priced in the activity, and conviction modifier is downgrade_one_tier",
+      "Agent 2 outlook acknowledges uncertain realized-price assumption, and revenue is supported by a 7% discount, which may not be sustainable",
+      "Agent 3 divergence_class is modest_beat at +5.73%, but confidence is only medium"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is modest_beat at +5.73%"
+    ],
+    "reasoning_short": "Market may have already priced in the activity, and revenue is supported by a discount that may not be sustainable. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear correctly emphasizes that Agent 4's gdelt_disclosed=true with 35 articles indicates likely information leakage, reducing the surprise potential of the modest_beat divergence_class (+5.73%). Although Bull highlights strong drilling activity and production growth, the market may have already priced in these fundamentals. Agent 3's medium confidence further limits conviction. Per guidance, a GDELT disclosure triggers at least a downgrade to low conviction, but since divergence is only modest_beat and not strong_beat, no long position is justified. Decision is no_trade with conviction_tier none.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.25,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.4
+  }
+}

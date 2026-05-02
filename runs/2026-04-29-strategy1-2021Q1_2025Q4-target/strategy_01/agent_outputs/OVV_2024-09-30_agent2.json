@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1989638867.9245284,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1993400000.0,
+    "drilling_signal_raw": -0.018867924528301886,
+    "drilling_signal_clipped": -0.018867924528301886,
+    "production_boe_d": 273419.2971112788,
+    "wti_avg": 44.425384615384615,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows reduced drilling activity heading into Q3 2024, with satellite data indicating a 20% decline in relative activity and only 13 active sites at decision date. The company's operations are split across segments, with only half tied to the actively monitored drilling regions, limiting exposure to current momentum. With WTI averaging around $44 and realized prices at a 10% discount, revenue is expected to slightly trail the consensus anchor. The modest negative drilling signal reflects cautious capital deployment, likely in response to weaker near-term price conditions.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "modest_wti",
+    "partial_segment_exposure",
+    "conservative_capital_spending",
+    "realized_price_discount"
+  ]
+}

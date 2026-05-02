@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 620927027.027027,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 603000000.0,
+    "drilling_signal_raw": 0.2972972972972973,
+    "drilling_signal_clipped": 0.2972972972972973,
+    "production_boe_d": 55747.64010076937,
+    "wti_avg": 76.49846153846154,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows moderate expansion with 12 active sites at decision date, 2.8 above the recent average, driven by both newly active and continuously active pads. With half of production tied to this growing segment and WTI averaging near $76.50, the company is positioned for solid revenue performance in Q1 2023. The realized price remains slightly below benchmark, but stable commodity prices and sustained drilling momentum support the deterministic forecast of $620.9M.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "moderate_new_activity",
+    "mid_wti_environment",
+    "partial_segment_exposure",
+    "stable_operations"
+  ]
+}

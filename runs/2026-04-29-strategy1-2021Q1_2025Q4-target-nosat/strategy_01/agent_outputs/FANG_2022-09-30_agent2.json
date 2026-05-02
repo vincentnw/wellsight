@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 2341700000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2341700000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 458992.89428351074,
+    "wti_avg": 60.28384615384615,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback's drilling activity shows zero active sites at the decision date, with no newly or continuously active pads, indicating a significant pause in field operations heading into Q3 2022. Despite full exposure to the Permian segment and a stable realized price differential, the complete absence of current drilling activity suggests limited near-term production growth. Revenue is supported primarily by baseline production and the anchored WTI environment, resulting in a deterministic forecast of $2.34B.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "consensus_anchored_revenue",
+    "pure_play_permian",
+    "stable_price_diff",
+    "paused_operations"
+  ]
+}

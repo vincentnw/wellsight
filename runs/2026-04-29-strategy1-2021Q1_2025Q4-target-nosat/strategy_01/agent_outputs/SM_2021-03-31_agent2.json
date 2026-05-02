@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 340080000.00000006,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 340080000.00000006,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 25574.44745115829,
+    "wti_avg": 91.33,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows no active drilling sites at the decision date, with zero newly or continuously active pads according to satellite SAR data, suggesting stagnant near-term production growth into Q1 2021. Despite elevated WTI prices averaging $91.33/bbl and a realized price discount of 12%, revenue remains constrained by limited operational activity. With only 55% exposure to the active segment, the deterministic revenue forecast is anchored at $340.08M, reflecting minimal drilling momentum and reliance on legacy production.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "elevated_wti",
+    "partial_segment_exposure",
+    "no_production_growth",
+    "consensus_anchored_forecast"
+  ]
+}

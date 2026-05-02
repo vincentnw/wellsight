@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 1450000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.0,
+    "consensus_anchor_usd": 1450000000.0,
+    "drilling_signal_raw": 0.8333333333333334,
+    "drilling_signal_clipped": 0.8333333333333334,
+    "production_boe_d": 380573.1725939232,
+    "wti_avg": 45.019999999999996,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback Energy's drilling activity shows 22 active sites at the decision date, with a 10% increase in relative activity compared to recent trends, driven by three newly active pads. This suggests stable production levels heading into Q3 2021. The company's full exposure to the Permian Basin and a realized price that is 7% below the average WTI price contribute to a deterministic revenue forecast of $1.45B. Despite modest drilling expansion, low WTI prices during the period constrain revenue upside.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "low_wti_environment",
+    "pure_play_permian",
+    "modest_new_activity",
+    "price_discount_to_wti"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 663617850.0000001,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 645756500.0,
+    "drilling_signal_raw": 0.2765957446808511,
+    "drilling_signal_clipped": 0.2765957446808511,
+    "production_boe_d": 99888.0504231431,
+    "wti_avg": 45.629230769230766,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows 15 active sites at decision date, all of which are continuously active, with no new sites activated recently. The relative activity delta of +3.2 indicates a meaningful increase in operational intensity compared to recent quarters, supporting stable production volumes into the September 2024 quarter. However, with only 55% exposure to the segment and WTI averaging below $46, revenue is constrained despite efficient pad utilization. The deterministic forecast of $663.6M reflects moderate drilling momentum offset by lower realized prices and partial segment exposure.",
+  "key_drivers": [
+    "elevated_relative_activity_delta",
+    "no_new_pad_activation",
+    "low_wti_environment",
+    "partial_segment_exposure",
+    "efficient_continuous_operations"
+  ]
+}

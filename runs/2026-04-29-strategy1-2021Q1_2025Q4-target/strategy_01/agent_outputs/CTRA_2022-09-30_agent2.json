@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 2349458333.3333335,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2370250000.0,
+    "drilling_signal_raw": -0.08771929824561403,
+    "drilling_signal_clipped": -0.08771929824561403,
+    "production_boe_d": 219629.55967473064,
+    "wti_avg": 60.28384615384615,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources (CTRA) shows reduced drilling activity heading into Q3 2022, with only 13 active sites detected via SAR and a negative relative activity delta of -1.2, indicating a pullback compared to recent trends. The company's drilling pattern reflects limited new activation, with just one newly active pad, suggesting restrained near-term production growth. At 40% of active sites in its core segment, operational focus remains partial, and combined with a WTI environment averaging ~$60 and realized prices at a discount, revenue is forecast just below consensus at ~$2.35B. The outlook reflects cautious capital deployment and moderate exposure to current drilling momentum.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_new_activations",
+    "moderate_segment_fraction",
+    "discounted_realized_price",
+    "sub_consensus_revenue"
+  ]
+}

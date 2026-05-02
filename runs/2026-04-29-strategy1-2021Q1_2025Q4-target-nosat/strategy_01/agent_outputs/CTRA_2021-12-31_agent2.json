@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1851021500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1851021500.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 160357.08708800413,
+    "wti_avg": 65.05,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources shows zero active drilling sites at the decision date, with no newly or continuously active pads detected via SAR, indicating a pause in field activity heading into Q4 2021. Despite low WTI averaging $65.05 and a realized price discount, the deterministic revenue forecast holds at $1.85B due to consensus anchoring. The company's 40% segment fraction suggests less exposure to the most active basins, which, combined with current drilling inactivity, implies flat near-term production. Revenue is being sustained by legacy output rather than new development.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "low_wti_environment",
+    "consensus_anchored_forecast",
+    "limited_basin_exposure",
+    "reliance_on_legacy_production"
+  ]
+}

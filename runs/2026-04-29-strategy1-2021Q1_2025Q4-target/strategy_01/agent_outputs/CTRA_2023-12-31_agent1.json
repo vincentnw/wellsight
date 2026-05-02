@@ -1,0 +1,169 @@
+{
+  "ticker": "CTRA",
+  "decision_date_T": "2024-02-08",
+  "fiscal_quarter_end": "2023-12-31",
+  "n_newly_active": 0,
+  "n_continuously_active": 15,
+  "n_idle": 24,
+  "absolute_active": 15,
+  "share_active": 0.38461538461538464,
+  "relative_activity_delta": -0.25,
+  "pad_classifications": [
+    {
+      "pad_id": "PAD_00236",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00237",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00238",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00240",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00241",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00243",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00244",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00245",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00246",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00247",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00248",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00249",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00251",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00252",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00253",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00254",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00255",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00259",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00262",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00263",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00267",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00270",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00271",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00272",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00273",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00274",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00275",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00277",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00278",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00279",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00280",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00281",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00282",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00283",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00285",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00287",
+      "state": "idle"
+    },
+    {
+      "pad_id": "PAD_00288",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00289",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "PAD_00290",
+      "state": "continuously_active"
+    }
+  ]
+}

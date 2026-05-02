@@ -1,0 +1,42 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +4.0 sites with new_pad_activation",
+      "Agent 2 reports full_segment_exposure to Permian and high_wti_avg at $91.33",
+      "Agent 2 deterministic revenue forecast is $284.3M, indicating strong operational execution"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is modest_miss at -9.93%",
+      "Agent 3 confidence is low with only 12 analysts polled"
+    ],
+    "reasoning_short": "Despite a modest analyst revenue miss expectation, satellite data shows meaningful drilling expansion and full exposure to high WTI prices, supporting strong realized revenues. Clean news backdrop suggests no leak, creating upside surprise potential. Positional bias favors long with moderate conviction."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's positive outlook is based on stable drilling activity, but this may not be sustainable given the low confidence from Agent 3, who expects a modest miss in earnings. Additionally, Agent 4's lack of disclosed news suggests that the market may not have fully priced in the risks associated with Matador Resources' operations.",
+      "Agent 3's low confidence is due to high analyst dispersion, which indicates a lack of consensus on the company's future performance.",
+      "Agent 2's revenue forecast is based on a deterministic model, which may not account for potential risks and uncertainties in the market."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Stable drilling activity may not be sustainable, and the market may not have fully priced in the risks associated with Matador Resources' operations. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 3's low confidence due to high analyst dispersion and a modest miss in earnings, while Bull's evidence was based on a deterministic revenue forecast and stable drilling activity. However, the lack of consensus on the company's future performance and the potential risks associated with Matador Resources' operations outweigh the positive outlook. Information edge is unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 528497659.09090906,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 505519500.0,
+    "drilling_signal_raw": 0.45454545454545453,
+    "drilling_signal_clipped": 0.45454545454545453,
+    "production_boe_d": 17149.253472521286,
+    "wti_avg": 77.85153846153845,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows moderate drilling activity with 12 active sites at decision date, 3.8 above the recent average, driven by three newly active pads. With only 20% exposure to the current high-activity segment and a realized price at a discount to WTI, revenue growth is constrained despite positive drilling momentum. The deterministic forecast of $528.5M reflects this partial exposure and stable WTI environment near $77.85, suggesting modest outperformance relative to peers with broader segment participation.",
+  "key_drivers": [
+    "moderate_drilling_increase",
+    "limited_segment_exposure",
+    "wti_stability",
+    "new_pad_activation",
+    "price_discount_to_wti"
+  ]
+}

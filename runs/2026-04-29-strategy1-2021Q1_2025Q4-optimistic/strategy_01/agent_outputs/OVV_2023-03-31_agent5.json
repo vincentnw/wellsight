@@ -1,0 +1,42 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_delta with 17 active sites, 4.5 above recent average",
+      "Agent 2 reports high_continuity_active_sites with 15 of 17 sites continuously active, supporting stable production visibility",
+      "Agent 2 deterministic revenue forecast of $2.63B is above consensus, driven by stable WTI exposure and operational consistency"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is only modest_beat, not strong_beat, limiting magnitude of expected surprise",
+      "Partial WTI exposure caps upside from recent oil price strength"
+    ],
+    "reasoning_short": "Modest operational expansion, high site continuity, and a clean news backdrop support a high-conviction long. Revenue forecast above consensus, combined with no public disclosure risk, creates favorable risk/reward ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is slightly above consensus, but the moderate drilling delta and stable production trend suggest a limited upside potential, which may already be priced in by the market",
+      "Agent 3's modest beat with a divergence class of 3.93% indicates a relatively small difference from consensus, which may not justify a long position",
+      "Agent 4's lack of disclosed news and zero articles suggest that there may be no significant catalysts driving the stock price"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The evidence suggests that Ovintov's moderate drilling activity and stable production trend may have already been priced in by the market, and the modest beat from consensus does not justify a long position."
+  },
+  "arbiter_reasoning": "Bull highlighted Agent 2's above-consensus revenue forecast supported by moderate drilling expansion and high site continuity, with no GDELT disclosure risk. However, Agent 3's divergence_class is only modest_beat (3.93%) and confidence is medium, limiting the strength of the signal. Bear correctly noted limited upside catalysts and potential price-in of stable operations. While evidence supports a long position, conviction is tempered by modest divergence and medium confidence. Conviction tier set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

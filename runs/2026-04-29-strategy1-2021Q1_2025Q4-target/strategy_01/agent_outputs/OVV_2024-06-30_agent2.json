@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2390500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.0,
+    "consensus_anchor_usd": 2390500000.0,
+    "drilling_signal_raw": 0.17647058823529413,
+    "drilling_signal_clipped": 0.17647058823529413,
+    "production_boe_d": 187706.25702180804,
+    "wti_avg": 77.74923076923076,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows moderate drilling activity with 15 active sites at decision date, 2.2 above the trailing average, driven by three newly active pads. With half of production tied to the Permian segment and stable WTI averaging near $77.75, the company is positioned for steady performance into Q2 2024. The satellite data indicates continuous activity on 12 pads, suggesting operational consistency, while the 45.5% share of active sites reflects focused development. Realized prices at a 10% discount to benchmark are factored into the deterministic revenue forecast of $2.39B.",
+  "key_drivers": [
+    "moderate_drilling_delta",
+    "stable_wti",
+    "half_permian_exposure",
+    "consistent_pad_activity",
+    "realized_price_discount"
+  ]
+}

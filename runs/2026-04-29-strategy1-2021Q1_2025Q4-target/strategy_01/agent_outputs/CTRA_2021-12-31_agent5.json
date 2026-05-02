@@ -1,0 +1,42 @@
+{
+  "ticker": "CTRA",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flagged positive_drilling_delta of +2.5 sites above recent average",
+      "Agent 3 divergence_class is in_line with only +2.38% consensus deviation, indicating stable expectations",
+      "Agent 4 reports gdelt_disclosed=false, confirming no pre-earnings information leak"
+    ],
+    "counter_evidence": [
+      "Only 40% of production exposed to current drilling signal limits near-term revenue impact",
+      "Agent 3 divergence_class is not a strong beat, suggesting limited upside surprise potential"
+    ],
+    "reasoning_short": "Moderate but positive drilling expansion and stable consensus outlook support a cautious long position. Clean news environment and anchored expectations reduce downside risk ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling activity may not translate to significant revenue growth, as only 40% of production is tied to the current drilling signal",
+      "Agent 2's stable WTI environment is not a guarantee, and a decline could impact revenue",
+      "Agent 3's medium confidence and in-line divergence class suggest a lack of clear direction in the stock"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Drilling activity and revenue growth are not strongly correlated, and a decline in WTI prices could impact Continental Resources' revenue. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a moderate drilling expansion and stable consensus outlook, while Bear flagged a lack of clear correlation between drilling activity and revenue growth. However, the clean news environment and anchored expectations reduce downside risk, prevailing in favor of a cautious long position. Conviction tier set to low due to medium confidence and in-line divergence class.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

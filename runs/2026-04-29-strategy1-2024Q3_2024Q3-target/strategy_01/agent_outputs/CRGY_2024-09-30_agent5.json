@@ -1,0 +1,44 @@
+{
+  "ticker": "CRGY",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +2.0 sites",
+      "Agent 2 reports stable_continuous_operations with majority of sites continuously active, supporting output reliability",
+      "Agent 4 reports gdelt_disclosed=false so no information leak, preserving event integrity"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is in_line at +1.68%, indicating no strong beat expectation",
+      "Sector faces wti_discount_environment with realized prices at 13% discount to WTI"
+    ],
+    "reasoning_short": "Moderate but positive drilling expansion and stable operational activity support reliable production into earnings, while clean news context preserves upside potential. Though consensus is not pricing a strong beat, operational fundamentals provide a solid foundation for confidence in meeting or slightly exceeding expectations, warranting a measured long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook notes a 13% discount to WTI, indicating potential pricing pressure",
+      "Agent 3 confidence is medium, suggesting uncertainty in estimates",
+      "Agent 4 has 8 articles but gdelt_disclosed is false, implying potential lack of market reaction to disclosed information"
+    ],
+    "counter_evidence": [
+      "Agent 2 summary mentions positive drilling delta and stable continuous operations"
+    ],
+    "reasoning_short": "Pricing discount and medium confidence in estimates raise concerns about CRGY's potential for growth, making a long position risky."
+  },
+  "arbiter_reasoning": "Bull cited a positive drilling delta and stable continuous operations, while Bear's concerns about pricing pressure and medium confidence in estimates are noted but do not outweigh the Bull's evidence. The lack of GDELT disclosure and stable operational activity support the Bull's position.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": false,
+    "agent4_decisive": false,
+    "agent2_weight": 0.6,
+    "agent3_weight": 0.2,
+    "agent4_weight": 0.2
+  }
+}

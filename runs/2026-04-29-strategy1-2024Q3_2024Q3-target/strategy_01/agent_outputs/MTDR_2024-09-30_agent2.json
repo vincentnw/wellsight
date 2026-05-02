@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 901655724.4444444,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 857812000.0,
+    "drilling_signal_raw": 0.5111111111111111,
+    "drilling_signal_clipped": 0.5111111111111111,
+    "production_boe_d": 228578.09192196853,
+    "wti_avg": 47.11692307692307,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources shows elevated drilling activity with 17 active sites at decision date, 5.8 above the trailing average, driven by 6 newly active pads—indicating strong operational ramp-up into the final quarter of 2024. Despite a relatively low WTI environment averaging $47.12, the company's full exposure to the core segment and stable realized price discount support a deterministic revenue forecast of approximately $901.7M. The high share of active sites and recent activation suggest sustained production momentum.",
+  "key_drivers": [
+    "elevated_drilling_delta",
+    "new_pad_activation",
+    "full_segment_exposure",
+    "moderate_wti",
+    "high_share_active"
+  ]
+}

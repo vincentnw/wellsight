@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 715000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 715000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 56613.17948484065,
+    "wti_avg": 86.74153846153847,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows no active drilling sites at the decision date, with zero newly or continuously active pads according to satellite SAR data, suggesting stagnation or completion of recent development cycles. Despite elevated WTI averages near $86.74, the company's realized prices are discounted by 12%, and it operates with only 55% exposure to the high-activity segment. Revenue for the quarter ending June 2022 is anchored at $715M based on consensus inputs, with no current drilling momentum to suggest near-term production growth.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "elevated_wti",
+    "price_discount",
+    "partial_segment_exposure",
+    "no_production_momentum"
+  ]
+}

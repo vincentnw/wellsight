@@ -1,0 +1,43 @@
+{
+  "ticker": "CRGY",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +4.0 sites, indicating accelerating field development",
+      "Agent 3 divergence_class is modest_beat at +5.58%, signaling upside to consensus estimates",
+      "Agent 4 reports gdelt_disclosed=false with n_articles=0, confirming no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Agent 3 confidence is low due to limited analyst coverage (n_analysts=6)",
+      "CRGY has partial basin exposure (20%), limiting full leverage to WTI gains",
+      "Realized prices are discounted despite moderate WTI at $67.50/bbl"
+    ],
+    "reasoning_short": "Accelerating drilling activity with high operational stability, combined with a modest expected beat and clean news backdrop, supports a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's outlook acknowledges uncertain realized-price assumption, indicating potential for price volatility",
+      "Agent 3's low confidence and modest beat divergence_class suggest limited upside potential",
+      "Agent 4's gdelt_disclosed=false and n_articles=0 indicate lack of recent news or market activity"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Uncertainty around realized prices, limited upside potential, and lack of recent news or market activity justify caution and recommend no entry."
+  },
+  "arbiter_reasoning": "Bear highlighted Agent 3's low confidence and modest_beat divergence_class, which limits upside conviction, despite Bull citing positive drilling delta and clean GDELT backdrop. The modest_beat combined with low confidence and uncertain realized pricing undermines sufficient information edge for a trade. Decision tilted to no_trade due to insufficient conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.6,
+    "agent4_weight": 0.1
+  }
+}

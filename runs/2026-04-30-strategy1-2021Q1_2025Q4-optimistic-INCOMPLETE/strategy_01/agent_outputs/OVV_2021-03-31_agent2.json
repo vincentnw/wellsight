@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1611500000.0000002,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1465000000.0,
+    "drilling_signal_raw": 1.6666666666666667,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 107721.63952936974,
+    "wti_avg": 91.33,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows moderate drilling activity with 8 active sites at decision date, 5.0 above the peer-relative baseline, driven by 2 newly active pads. With half of production exposed to WTI-linked prices and a stable realized price differential near $82/boe, the company is positioned for solid revenue performance in Q1 2021. The satellite data indicates sustained operational continuity on core pads, supporting the deterministic forecast of approximately $1.61B despite only partial exposure to the strong WTI environment.",
+  "key_drivers": [
+    "positive_relative_activity_delta",
+    "moderate_new_activity",
+    "partial_wti_exposure",
+    "stable_realized_pricing",
+    "continuous_pad_operations"
+  ]
+}

@@ -1,0 +1,5 @@
+pad_id,target_quarter_end,sar_state,trc_state_truth,sar_event_date,trc_event_date,matched
+PAD_FANG_001,2024-09-30,newly_active,positive,2024-09-30,2024-07-20,True
+PAD_MTDR_002,2024-09-30,continuously_active,positive,,2024-08-05,False
+PAD_PR_003,2024-09-30,idle,negative,,,True
+PAD_OXY_004,2024-09-30,newly_active,positive,2024-09-30,2024-09-01,True

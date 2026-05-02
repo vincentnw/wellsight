@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2373450000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.0,
+    "consensus_anchor_usd": 2373450000.0,
+    "drilling_signal_raw": 0.6774193548387096,
+    "drilling_signal_clipped": 0.6774193548387096,
+    "production_boe_d": 167047.14946174985,
+    "wti_avg": 86.74153846153847,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows moderate drilling activity with 13 active sites at decision date, 5.2% above recent trends, driven by both newly active and continuously operating pads. The company's operations are split across segments, with only half tied to the high-activity areas observed in satellite data. Despite a strong WTI environment averaging $86.74/bbl and solid production levels, realized prices are 10% below benchmark. The deterministic revenue forecast for the June 2022 quarter is $2.37B, reflecting stable activity and partial exposure to premium-producing regions.",
+  "key_drivers": [
+    "moderate_drilling_delta",
+    "elevated_wti",
+    "partial_segment_exposure",
+    "below_parity_pricing",
+    "balanced_new_and_continuous_pads"
+  ]
+}

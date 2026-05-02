@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1561626315.7894735,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1491000000.0,
+    "drilling_signal_raw": 0.47368421052631576,
+    "drilling_signal_clipped": 0.47368421052631576,
+    "production_boe_d": 126234.80764224041,
+    "wti_avg": 75.52384615384615,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows moderate drilling activity with 7 active sites at decision date, 2.2 above recent average, driven by 3 newly active pads. With half of production tied to the current drilling signal and WTI averaging around $75.50, realized prices are expected at a 10% discount to benchmark. The deterministic revenue forecast for the quarter ending June 2021 is approximately $1.56B, reflecting stable operational performance and modest activity uptick in key regions.",
+  "key_drivers": [
+    "moderate_drilling_delta",
+    "mid_wti_environment",
+    "partial_segment_exposure",
+    "new_pad_activation",
+    "stable_production_trend"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 23 active sites, 13.5% above recent trends",
+      "Agent 2 reports new_pad_activation of 9 newly active pads indicating expansion",
+      "Agent 3 divergence_class is modest_beat at +9.66% with medium confidence across 23 analysts"
+    ],
+    "counter_evidence": [
+      "Moderate WTI exposure at $45/bbl may constrain revenue upside",
+      "Agent 3 confidence is only medium, not high"
+    ],
+    "reasoning_short": "Satellite-confirmed drilling acceleration and new pad activations signal strong operational momentum. Combined with a modest expected beat and clean news backdrop, Diamondback is positioned to outperform consensus despite moderate oil prices, supporting a high-conviction long."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on a relatively low WTI environment averaging $45/bbl, which may not be sustainable in the long term",
+      "Agent 2's pure-play Permian exposure may be a double-edged sword, as it limits the company's diversification and makes it vulnerable to regional market fluctuations",
+      "Agent 3's medium confidence and modest beat divergence_class suggest that the market may have already priced in the company's strong drilling activity"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The company's reliance on a low WTI environment and limited diversification make it vulnerable to market fluctuations, and the market may have already priced in the strong drilling activity."
+  },
+  "arbiter_reasoning": "Bull's case prevailed, citing Agent 2's positive_drilling_delta and new_pad_activation as evidence of operational momentum, supported by Agent 3's modest_beat divergence_class (+9.66%) across 23 analysts. Although Agent 3 confidence is only medium and WTI assumptions are moderate, there is no GDELT disclosure or negative sentiment to downgrade conviction. Bear raised valid concerns about Permian concentration and limited upside from oil prices, but these are structural rather than immediate informational disadvantages. Conviction tier is medium due to modest_beat with medium confidence and no GDELT-related downgrades.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.1
+  }
+}

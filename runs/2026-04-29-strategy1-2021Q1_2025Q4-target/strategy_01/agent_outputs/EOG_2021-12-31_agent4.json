@@ -1,0 +1,28 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 71,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "ocks-to-Buy-in-2022-16790040.php",
+    "sion-20-jan-2022-167646-article/",
+    "s_it-07-jan-2022-167522-article/",
+    "jor-lift-for-u-s-shale-1.1715036",
+    "cent-31-jan-2022-167756-article/",
+    "Stocks-Of-January-2022&source=25",
+    "Stocks-Of-January-2022&source=22",
+    "Stocks-Of-January-2022&source=28",
+    "Stocks-Of-January-2022&source=26",
+    "Stocks-Of-January-2022&source=24",
+    "tocks-Of-January-2022&source=138",
+    "Analysis : supermajors lag independents in Permian Basin",
+    "Analysis : supermajors lag independents in Permian Basin",
+    "Shale oil slower investment sparks new tension with White House By Reuters",
+    "Shale oil slower investment sparks new tension with White House",
+    "Shale oil slower investment sparks new tension with White House",
+    "Running Out Of Sweet Spots : Shale Growth May Not Materialize",
+    "Running Out Of Sweet Spots : Shale Growth May Not Materialize",
+    "EOG ready to raise shale oil output to meet market demand"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "At least 10 GDELT-indexed articles (listed above) describe drilling activity changes consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

@@ -1,0 +1,50 @@
+{
+  "run_id": "2026-04-29-strategy5-2021Q1_2025Q4-target",
+  "started_at": "2026-04-30T01:13:50.055036+00:00",
+  "completed_at": "2026-04-30T01:13:50.064153+00:00",
+  "code_state": {
+    "fin580_dir_sha": "1518461cb607de1ab3b6f7feecf0c8d9091269b50ff452d10981216e13cb6032",
+    "phase1_dir_sha": "8eb6c6585887688788eb305dd4dd4dbff6643f6b39ba05a011367caee8185109",
+    "docs_specs_sha": "6d0651687a0328ccd2ac405c6a3c287d4b459a712e5baa222bd22fa8a115ceb3",
+    "docs_plans_sha": "736ccc61256d20af37893e12c4acf3ed18fa99d81027e92287bcd16a9a4cce57",
+    "spec_sha": "306583db0c8769365a8ab8ae7b73ebe5d62709de2f82ded281603e7e62ca3bfb",
+    "plan_sha": "26a6c81df6bcd6c85ace0343877bab70f6bf6e0dec1ccf71d9a01fef5b2a60ae",
+    "requirements_lock_sha": "8ae572e707ac66055d7cf7d3e737bbcda595556da80d5fa0c35b0f96e265a05f",
+    "modules_used": [
+      "fin580.agents.orchestrator",
+      "fin580.backtest.runner",
+      "fin580.backtest.strategies.s01_full_system"
+    ]
+  },
+  "data_state": {
+    "ibes_revenue_panel_sha": "b458e92fd3a36036201a58ad69e295446b022921562618f30981ee2e3d0c8ce2",
+    "compustat_fundq_sha": "b99c7f2e4c8269b877e2d4833754e98402a05601ce2b799c7279538d6c048b3b",
+    "crsp_daily_sha": "b4ae8a66a634351bb5a5349ddbcbf0810193a574ba76fcfb86127a3dcfa55975",
+    "permian_fraction_sha": "64289f52e1be776d08d6ff8087cdc0579f49df8934f4f8f57e0bb688a6ce59d8",
+    "earnings_dates_sha": "1212400a3f09f22c6781a4bb3247c09b479f50ca2b62eed60519fdc2153d5382",
+    "trc_permits_sha": "",
+    "yahoo_2025_supplement_sha": "7b3afae7f6b9140755cc74482b3aec6fd9a7250ec8d12931fd40bf6be3f864ce",
+    "wti_cache_sha": "60cbb388fd6cb74e6c5832cfff1f6e1c557f4934b4f11712f225192f873d6736",
+    "synthetic_sar_confusion_matrix_label": "target",
+    "synthetic_sar_seed_function": "sha256(ticker|q_end|pad_id|cm_label)",
+    "synthetic_sar_seed_function_sha": "b4357b94455388bffd463c6a40184f3d56e9336095767bcd44e8a6308c1d943b"
+  },
+  "llm_state": {},
+  "prompt_shas": {
+    "agent2_revenue": "c02fcc9b638eb73713a1c4a0111c878b3856f0b852f092d77b771fc38650c518",
+    "agent3_consensus": "0bae6f20f76a415488b538ff7887dfe16a90aa8ebe0d95646f9f9ac0248bdafb",
+    "agent4_news": "3e6290af1f83afb404e58cb6074b1a6200930e791b40deb462d51e8d0c7d6c6c",
+    "agent5_arbiter": "ff41025cca2be985d3862f1e261d9ce6cd8a942cf7d8140dfc3f033bf694a4c8",
+    "agent5_bear": "4c113f231e308602ee8f6108311fdc7c88d1498939066e89384ddc8021409b3c",
+    "agent5_bull": "447fc8da1dda436d1504deba80914a1a1d983f075ba2826dce88750e9ec770c8"
+  },
+  "env": {
+    "python_version": "3.13.3 (v3.13.3:6280bb54784, Apr  8 2025, 10:47:54) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O"
+  },
+  "parameters": {
+    "threshold_pct": 10,
+    "transaction_cost_bps": 30
+  },
+  "warnings": []
+}

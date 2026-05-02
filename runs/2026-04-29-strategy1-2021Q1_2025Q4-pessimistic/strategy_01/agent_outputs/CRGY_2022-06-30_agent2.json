@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 561284615.3846154,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 557000000.0,
+    "drilling_signal_raw": 0.07692307692307693,
+    "drilling_signal_clipped": 0.07692307692307693,
+    "production_boe_d": 16712.74903671245,
+    "wti_avg": 84.84076923076924,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY's drilling activity shows moderate expansion with a 50% increase in relative activity and two newly active sites identified via satellite, indicating early-stage production ramp-up. The company's operations represent only 20% of its parent segment, limiting full exposure to the favorable WTI environment averaging $84.84/bbl. Despite solid drilling momentum, realized prices remain below benchmark due to regional differentials. The deterministic revenue forecast for the June 2022 quarter is approximately $561.3 million.",
+  "key_drivers": [
+    "moderate_drilling_growth",
+    "favorable_wti_environment",
+    "limited_segment_exposure",
+    "new_pad_activation",
+    "realized_price_discount"
+  ]
+}

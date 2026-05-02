@@ -1,0 +1,22 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 52,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "ved-for-93-drilling-permits.html",
+    "inc-approved-for-13-permits.html",
+    "production-set-hit-120012840.html",
+    "ount-for-about-half-16536560.php",
+    "ount-for-about-half-16536560.php",
+    "new-wells-against-higher-prices/",
+    "th-42-billion-of-bonds-1.1638632",
+    "rket-10-aug-2021-166147-article/",
+    "roduction-set-hit-120012840.html",
+    "t-toward-pandemic-recovery/53722",
+    "g-report-sept-9-2021/5756043001/",
+    "-fifth-week-in-six-baker-hughes/",
+    "ale-drillers-and-local-economies"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Six GDELT-indexed articles (ved-for-93-drilling-permits.html, inc-approved-for-13-permits.html, production-set-hit-120012840.html, ount-for-about-half-16536560.php, ount-for-about-half-16536560.php, new-wells-against-higher-prices/) describe drilling activity consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

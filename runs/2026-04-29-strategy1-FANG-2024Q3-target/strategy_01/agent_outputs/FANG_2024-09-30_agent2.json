@@ -1,0 +1,17 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 2207291588.88,
+  "components": {
+    "production_boe_d": 571600.0,
+    "wti_avg": 45.629230769230766,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback Energy's Permian-focused operations show a slight decline in drilling activity, with 29 active sites at the decision date, down 0.5 from the trailing-4-quarter average. Despite this, the addition of 5 newly active sites suggests some ongoing expansion. With realized prices around $42.50/boe and full Permian exposure, the deterministic revenue forecast for Q3 2024 is approximately $2.21B. The lower WTI price and the mix of continuous and new activity indicate a cautious but stable revenue environment.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "lower_wti",
+    "pure_play_permian",
+    "mixed_activity"
+  ]
+}

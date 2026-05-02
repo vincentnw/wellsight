@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 9.8 percentage point increase in relative activity",
+      "Agent 2 reports high_new_activity with 9 out of 27 pads newly active, signaling fresh production growth",
+      "Agent 3 divergence_class is modest_beat at +5.83% with high confidence and 20 analysts, indicating upside to consensus"
+    ],
+    "counter_evidence": [
+      "Agent 3 shows only a modest beat, not a strong beat, limiting magnitude of potential upside surprise"
+    ],
+    "reasoning_short": "Sustained drilling momentum and high new pad activity in the Permian directly support production growth and revenue outperformance. Combined with a clean news backdrop (gdelt_disclosed=false) and a consensus-beating forecast, Diamondback is positioned for a positive earnings reaction."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is highly sensitive to WTI prices, which are only moderately high at $65.05, and may not fully capture potential price volatility",
+      "Agent 2's production growth signal is based on a relatively short-term drilling activity trend, which may not be indicative of long-term production growth",
+      "Agent 3's high confidence is based on modest analyst beat, which may not be sufficient to justify a long position in the current market"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "High sensitivity to WTI prices and short-term drilling activity trend suggest potential risks to revenue forecast and production growth. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull prevailed with evidence of positive_drilling_delta and high_new_activity from Agent 2, supporting production growth, combined with Agent 3's modest_beat divergence_class at +5.83% and high confidence. GDELT disclosure is false, preserving information edge. However, divergence magnitude is only modest, not strong, limiting conviction tier to medium despite high confidence and clean news backdrop.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

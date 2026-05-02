@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1079100000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1199000000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 158375.32715820725,
+    "wti_avg": 80.51,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's operations show zero active drilling sites at decision date, with a sharp decline in relative activity compared to recent quarters, indicating halted or significantly reduced drilling momentum heading into Q1 2024. Despite stable WTI prices around $80.50 and full exposure to the Permian segment, the absence of active and newly active pads points to constrained production growth. This subdued drilling activity aligns with the downward-adjusted deterministic revenue forecast of $1.079B, reflecting limited near-term operational expansion.",
+  "key_drivers": [
+    "zero_active_sites",
+    "negative_drilling_delta",
+    "stable_wti",
+    "full_segment_exposure",
+    "production_contraction_signals"
+  ]
+}

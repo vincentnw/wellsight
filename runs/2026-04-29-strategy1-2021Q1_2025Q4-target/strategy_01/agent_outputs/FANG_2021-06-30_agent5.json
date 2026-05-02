@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 8.0 increase in active sites and 4 newly active pads",
+      "Agent 2 revenue_forecast_usd is $1.41B, driven by stable_wti and pure_play_permian exposure",
+      "Agent 3 divergence_class is modest_beat at +8.93% with high confidence and 23 analysts sampled"
+    ],
+    "counter_evidence": [
+      "Agent 4 conviction_modifier is downgrade_one_tier due to gdelt_disclosed=true with 38 articles indicating potential news overhang"
+    ],
+    "reasoning_short": "Satellite-confirmed drilling acceleration and strong operational continuity in the Permian, paired with a clear revenue beat expectation, support a high-conviction long despite elevated media coverage. Fundamental momentum outweighs sentiment noise ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 38 matching articles, suggesting market may have priced in the activity, and a downgrade in conviction modifier",
+      "Agent 3 high confidence is contradicted by modest_beat divergence_class at +8.93% with 23 analysts, indicating a limited upside potential",
+      "Agent 2 outlook acknowledges uncertain realized-price assumption and relies on stable WTI environment, which may not be sustainable"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Market may have already priced in the positive drilling activity and the stable WTI environment, and the modest beat in analyst estimates does not justify a long position. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 4 gdelt_disclosed=true plus modest_beat divergence_class from Agent 3. Bull's evidence, although strong, is countered by the potential news overhang and limited upside potential. Information edge is unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

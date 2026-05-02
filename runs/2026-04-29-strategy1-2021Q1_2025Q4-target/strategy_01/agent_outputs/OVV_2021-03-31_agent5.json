@@ -1,0 +1,45 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_delta with 7 active sites, 4.2 above peer group average",
+      "Agent 2 reports new_pad_activation contributing to operational uptick and revenue support",
+      "Agent 3 divergence_class is modest_beat at +10.03%, indicating likely upside to consensus"
+    ],
+    "counter_evidence": [
+      "Agent 3 confidence is low due to limited analyst coverage (n_analysts=9)",
+      "Realized price discount of 10% may pressure margins despite elevated WTI at $91.33",
+      "Diversified segment exposure (50% fraction) limits full upstream leverage"
+    ],
+    "reasoning_short": "Moderate but strong-relative drilling expansion and new pad activation support a modest revenue beat, while clean news backdrop preserves surprise potential. Diversified segments and price discount temper upside, but satellite and consensus signals favor a measured long position into earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on a 10% discount to realized prices, indicating potential upside risk if prices recover",
+      "Agent 2's moderate drilling activity may not be sufficient to meet growing demand, given the elevated WTI prices",
+      "Agent 3's low confidence and modest beat divergence_class suggest a cautious outlook"
+    ],
+    "counter_evidence": [
+      "Agent 3's divergence_class is modest_beat at +10.03%"
+    ],
+    "reasoning_short": "Upside risk from high WTI prices and potential drilling activity shortfall outweighs modest beat, recommending no entry."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with moderate confidence and no GDELT disclosure; Bear's objections were based on potential upside risk and drilling activity shortfall. Strength of upstream evidence from Agent 2 and modest beat divergence_class from Agent 3 prevail, but low confidence from Agent 3 limits conviction tier to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.2
+  }
+}

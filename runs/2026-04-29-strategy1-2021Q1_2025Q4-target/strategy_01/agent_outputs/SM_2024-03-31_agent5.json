@@ -1,0 +1,44 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_growth with 14 active sites, 3.5 above recent average",
+      "Agent 2 highlights partial_segment_exposure to high WTI environment near $94/boe, supporting revenue upside",
+      "Agent 3 divergence_class is modest_beat at +3.38% with medium confidence across 12 analysts, indicating consensus outperformance"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is only modest_beat, not strong_beat",
+      "Agent 2 notes realized pricing at 12% discount to benchmark"
+    ],
+    "reasoning_short": "Moderate but clear drilling expansion, combined with favorable exposure to elevated WTI prices and a modest revenue beat expectation, supports a long position. Clean news context (no disclosure per Agent 4) reduces event risk ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling growth and high WTI environment may not be sustainable, as drilling activity is driven by both newly active and continuously operating pads, which could lead to a decline in growth rates.",
+      "Agent 2's revenue forecast of $588M is based on a deterministic forecast, which may not account for potential risks and uncertainties.",
+      "Agent 4's lack of disclosed news and zero articles suggests that the market may not have fully priced in the risks associated with SM's drilling activity."
+    ],
+    "counter_evidence": [
+      "Agent 3's modest beat divergence class and 3.38% divergence percentage suggest that the market's expectations are not overly optimistic."
+    ],
+    "reasoning_short": "While Agent 3's modest beat divergence class suggests some upside potential, the risks associated with SM's drilling activity and revenue forecast outweigh the potential benefits, recommending no entry."
+  },
+  "arbiter_reasoning": "Bull's case prevailed due to moderate drilling expansion, favorable WTI exposure, and a modest revenue beat expectation with medium confidence. Although divergence_class is only modest_beat and not strong_beat, Agent 4 shows no GDELT disclosure or news, reducing event risk. Bear raised valid concerns about sustainability and forecast determinism, but no strong countervailing risk was identified. Conviction tier is medium per guidance for modest_beat with medium confidence and no GDELT downgrade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.1
+  }
+}

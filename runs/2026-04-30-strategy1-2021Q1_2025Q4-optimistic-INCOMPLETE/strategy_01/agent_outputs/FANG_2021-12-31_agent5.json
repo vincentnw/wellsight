@@ -1,0 +1,44 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 5.2% increase in active sites to 19, indicating operational expansion",
+      "Agent 3 divergence_class is modest_beat at +3.93% with high confidence and input from 20 analysts, signaling upside to consensus",
+      "Agent 4 reports gdelt_disclosed=false with 0 articles, confirming no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Modest_beat divergence suggests upside is limited compared to strong_beat scenarios",
+      "WTI discount realized at 7% pressures per-unit margins"
+    ],
+    "reasoning_short": "Drilling expansion in the high-margin Permian Basin, combined with a clear modest revenue beat and absence of news leaks, supports a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on stable production trend and modest new activity, but this may not be enough to justify a long position given the sector's beta concerns",
+      "Agent 3's high confidence is based on modest beat, but this may not be sustainable in the long term",
+      "Agent 4's lack of disclosed news suggests that the market may not have fully priced in the activity"
+    ],
+    "counter_evidence": [
+      "Agent 3's modest beat divergence_class"
+    ],
+    "reasoning_short": "While Diamondback Energy shows solid drilling activity, the sector's beta concerns and the modest nature of the beat suggest that a long position may not be justified. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull prevailed with evidence of a modest_beat divergence_class (+3.93%) supported by high confidence and 20 analysts, positive_drilling_delta indicating operational expansion, and no GDELT disclosure. While the divergence is not strong, the absence of news leaks and solid upstream fundamentals justify a long. However, conviction is medium due to the modest_beat classification rather than strong_beat.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

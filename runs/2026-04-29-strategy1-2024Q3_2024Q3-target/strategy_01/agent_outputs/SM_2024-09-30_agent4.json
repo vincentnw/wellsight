@@ -1,0 +1,12 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 11,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "s-away-from-permian-rystad-says/",
+    "cus-on-permian-shale-operations/",
+    "lezard.com/en/news-21505747.html"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Three GDELT-indexed articles (s-away-from-permian-rystad-says/, cus-on-permian-shale-operations/, lezard.com/en/news-21505747.html) describe drilling-activity changes (shifts away from Permian, focus on Permian shale operations, expansion in Permian Basin) consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

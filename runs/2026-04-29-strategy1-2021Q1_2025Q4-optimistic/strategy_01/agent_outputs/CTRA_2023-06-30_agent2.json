@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1263860745.762712,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1270320000.0000002,
+    "drilling_signal_raw": -0.05084745762711865,
+    "drilling_signal_clipped": -0.05084745762711865,
+    "production_boe_d": 101372.42390828155,
+    "wti_avg": 70.25923076923077,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources (CTRA) shows reduced drilling activity heading into Q2 2023, with only 14 active sites detected via SAR and no newly active pads, resulting in a sharp negative relative activity delta of -0.8. This suggests a pullback in operational momentum, likely contributing to constrained production growth. With WTI averaging around $70.26 and a realized price differential of 78%, revenue is further moderated by only 40% exposure to the high-activity segment captured in the satellite data. The deterministic revenue forecast for the quarter ending June 2023 is $1.264B, reflecting these combined headwinds.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "no_newly_active_pads",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "low_operational_momentum"
+  ]
+}

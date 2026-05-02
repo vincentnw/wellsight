@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6937808823.529411,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 6817500000.0,
+    "drilling_signal_raw": 0.17647058823529413,
+    "drilling_signal_clipped": 0.17647058823529413,
+    "production_boe_d": 346314.7160486874,
+    "wti_avg": 70.25923076923077,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows 20 active sites as of July 2023, with a relative increase of 3.0 compared to recent trends and 7 newly active pads, signaling modest operational expansion into the quarter ending June 2023. The company's production is partially concentrated in high-activity regions, though its segment fraction of 0.3 indicates diversified exposure beyond core Permian operations. With WTI averaging around $70 and realized prices at a 6% discount, revenue is supported by stable macro conditions and recent drilling momentum, leading to a deterministic forecast near $6.94B.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "moderate_new_activity",
+    "stable_wti",
+    "partial_permian_exposure",
+    "recent_operational_growth"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ticker": "OXY",
+  "our_estimate_usd": 10082380000.0,
+  "consensus_median_usd": 9820500000.0,
+  "consensus_dispersion_usd": 1469990489.0957496,
+  "n_analysts_at_T_minus_14": 14,
+  "divergence_pct": -2.45,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our $10.08B estimate is within 2.5% of $9.82B consensus; 14 analysts with high dispersion (~150% of consensus) yields medium confidence."
+}

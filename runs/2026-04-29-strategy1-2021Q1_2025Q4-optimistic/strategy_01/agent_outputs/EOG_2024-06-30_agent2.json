@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5999000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5999000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 401633.8211815627,
+    "wti_avg": 77.74923076923076,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows stable drilling activity with 21 active sites at the decision date, in line with historical averages, as indicated by a zero relative activity delta. The majority of activity is sustained, with 18 continuously active and only 3 newly active sites, suggesting steady but unsurging production growth into Q2 2024. With a realized price differential near 95% of WTI and exposure to core shale plays representing less than half of its segment fraction, revenue is anchored at $5.999B. The flat drilling signal and moderate WTI environment support a stable outlook without significant upside or downside momentum.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "neutral_relative_delta",
+    "moderate_wti",
+    "substantial_realized_pricing",
+    "partial_segment_exposure"
+  ]
+}

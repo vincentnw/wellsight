@@ -1,0 +1,44 @@
+{
+  "ticker": "OVV",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 3 divergence_class is in_line at -0.19%, indicating no strong beat expectation",
+      "Agent 4 reports gdelt_disclosed=true with 19 articles, suggesting potential information leakage",
+      "Agent 2 outlook flagged negative_drilling_delta of -20% and only 13 active sites"
+    ],
+    "counter_evidence": [
+      "Partial segment exposure may limit downside",
+      "Conservative capital spending could signal financial discipline"
+    ],
+    "reasoning_short": "Negative drilling momentum, in-line analyst expectations, and news disclosure ahead of earnings reduce upside catalysts. Limited operational exposure provides only minor insulation. Insufficient evidence for long position; lean toward no_trade."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook acknowledges a 20% decline in relative drilling activity and only 13 active sites, indicating reduced operations",
+      "Agent 2 revenue forecast suggests trailing the consensus anchor due to a 10% realized price discount",
+      "Agent 4 gdelt_disclosed=true with 19 matching articles, suggesting market may have already priced in the activity"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is in_line, suggesting no significant deviation from expectations"
+    ],
+    "reasoning_short": "Reduced drilling activity, conservative capital spending, and a realized price discount may negatively impact revenue, making a long position less attractive."
+  },
+  "arbiter_reasoning": "Both Bull and Bear opinions lean towards no_trade, citing reduced drilling activity, conservative capital spending, and a realized price discount as negative factors. Agent 3's in_line divergence_class and Agent 4's gdelt_disclosed=true with 19 matching articles further support the no_trade decision. Insufficient evidence for a long position.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

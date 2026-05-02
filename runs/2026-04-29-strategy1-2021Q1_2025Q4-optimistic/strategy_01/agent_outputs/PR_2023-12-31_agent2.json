@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1056504865.6716416,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1074139999.9999998,
+    "drilling_signal_raw": -0.16417910447761194,
+    "drilling_signal_clipped": -0.16417910447761194,
+    "production_boe_d": 155785.48970226405,
+    "wti_avg": 80.13461538461539,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's operations show 14 active drilling sites as of February 2024, with only 3 newly active, representing a decline of 2.8 from the recent average. This negative drilling momentum suggests modest production pressure heading into Q4 2023. Despite a stable WTI environment near $80/boe and full exposure to the Permian segment, the contraction in active sites implies constrained output growth. The deterministic revenue forecast is set at approximately $1.057B, reflecting these headwinds.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "stable_wti",
+    "pure_play_permian",
+    "low_new_activity",
+    "production_pressure"
+  ]
+}

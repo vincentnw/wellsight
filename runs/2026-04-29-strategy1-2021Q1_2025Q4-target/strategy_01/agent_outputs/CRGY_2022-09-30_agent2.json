@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 691333333.3333333,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 680000000.0,
+    "drilling_signal_raw": 0.16666666666666666,
+    "drilling_signal_clipped": 0.16666666666666666,
+    "production_boe_d": 29623.295519639385,
+    "wti_avg": 58.95538461538461,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows moderate drilling activity with 7 active sites at decision date, 100% increase compared to recent trends, driven by 3 newly active pads. The company's production is partially exposed to the Permian (20% segment fraction), limiting full leverage to basin-level momentum. With WTI averaging near $59 and realized prices at a slight discount, revenue is forecast just above $691M for Q3 2022. The mix of new and continuous activity suggests stable execution, though concentrated exposure caps upside potential.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "moderate_new_activity",
+    "limited_basin_exposure",
+    "stable_wti",
+    "operational_continuity"
+  ]
+}

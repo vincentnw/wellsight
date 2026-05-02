@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6853810526.31579,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 6644000000.0,
+    "drilling_signal_raw": 0.3157894736842105,
+    "drilling_signal_clipped": 0.3157894736842105,
+    "production_boe_d": 254006.40747019585,
+    "wti_avg": 94.63230769230769,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows strong momentum heading into Q1 2024, with 25 active sites at decision date—6.0 above the recent average—driven by both 22 continuously active and 3 newly active pads. This elevated satellite-derived activity, combined with a high WTI environment averaging $94.63 and a realized price at a 6% discount, supports a deterministic revenue forecast of $6.85B. However, only 30% of revenue is tied to upstream production, tempering the impact of drilling gains. The concentration of activity suggests focused execution on core assets.",
+  "key_drivers": [
+    "elevated_drilling_delta",
+    "high_wti_environment",
+    "limited_upstream_exposure",
+    "core_asset_focus",
+    "continuous_activity_strength"
+  ]
+}

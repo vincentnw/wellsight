@@ -1,0 +1,45 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags elevated_drilling_delta with 5.8 above trailing average and 6 newly active pads",
+      "Agent 2 reports full_segment_exposure and high_share_active, indicating sustained production momentum",
+      "Agent 3 divergence_class is modest_beat at +5.13% with medium confidence across 14 analysts"
+    ],
+    "counter_evidence": [
+      "Agent 4 reports gdelt_disclosed=true with 16 articles, indicating potential information leakage and downgrade_one_tier conviction modifier",
+      "moderate_wti at $47.12 presents headwind for energy sector"
+    ],
+    "reasoning_short": "Despite moderate oil prices and news leakage, Matador shows strong operational ramp-up with elevated drilling activity and full core segment exposure, supporting a modest revenue beat. Operational momentum justifies long position with medium conviction ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 16 matching articles, suggesting market may have priced in the activity",
+      "Agent 3 confidence is medium due to modest divergence class and relatively low divergence percentage of 5.13%",
+      "Agent 2 outlook acknowledges moderate WTI environment, which may impact revenue forecast"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is modest_beat at +5.13%",
+      "Agent 2 outlook suggests strong operational ramp-up into the final quarter of 2024"
+    ],
+    "reasoning_short": "Information edge is questionable: news has flagged the same drilling pattern, and the consensus comparison is only modestly above with medium confidence. Recommend no entry due to potential market pricing and moderate WTI environment."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 4 gdelt_disclosed=true plus low Agent 3 confidence. Bull's evidence was modest at best (modest_beat divergence_class). Information edge is unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.4
+  }
+}

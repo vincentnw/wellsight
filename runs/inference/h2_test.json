@@ -1,0 +1,11 @@
+{
+  "n_iter": 1000,
+  "obs_hit_rate_strategy1": 0.7142857142857143,
+  "obs_hit_rate_strategy3": 0.4342105263157895,
+  "obs_diff": 0.2800751879699248,
+  "threshold_pct": 0.03,
+  "p_one_sided_diff_le_threshold": 0.019,
+  "reject_null_at_5pct": true,
+  "ci_95_diff_low": 0.06576789315553357,
+  "ci_95_diff_high": 0.5096202547328774
+}

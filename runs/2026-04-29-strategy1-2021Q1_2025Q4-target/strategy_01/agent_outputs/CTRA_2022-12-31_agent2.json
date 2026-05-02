@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 2117758771.9298246,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2136500000.0,
+    "drilling_signal_raw": -0.08771929824561403,
+    "drilling_signal_clipped": -0.08771929824561403,
+    "production_boe_d": 185256.9796873222,
+    "wti_avg": 64.42076923076924,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources (CTRA) shows below-average drilling activity with only 13 active sites at decision date, 1.2 standard deviations below the trailing norm, and minimal new pad activation. This suggests constrained near-term production growth into Q4 2022. With WTI averaging $64.42 and realized prices at a discount (78% of benchmark), revenue is further pressured. The company's 40% segment fraction indicates partial exposure to the monitored activity, limiting visibility into full operations. The deterministic revenue forecast is set at $2.12B.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_new_activity",
+    "price_discount",
+    "partial_segment_exposure",
+    "moderate_wti"
+  ]
+}

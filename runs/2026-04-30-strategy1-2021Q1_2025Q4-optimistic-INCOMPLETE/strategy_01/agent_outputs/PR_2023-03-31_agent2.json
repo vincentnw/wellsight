@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 708320634.9206349,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 694000000.0,
+    "drilling_signal_raw": 0.20634920634920634,
+    "drilling_signal_clipped": 0.20634920634920634,
+    "production_boe_d": 108321.89738231922,
+    "wti_avg": 77.26615384615386,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's drilling activity shows 19 active sites at decision date, with a relative activity delta of +3.2 and nearly half of sites newly active, indicating strong operational ramp-up heading into Q1 2023. The company's full exposure to the Permian segment, combined with stable WTI prices near $77.30 and realized prices at a 7% discount, supports a deterministic revenue forecast of approximately $708.3 million. Elevated new activity suggests near-term production growth is likely, reinforcing confidence in the upward revision from consensus.",
+  "key_drivers": [
+    "high_new_activity",
+    "positive_drilling_delta",
+    "pure_play_permian",
+    "stable_wti",
+    "production_growth_signal"
+  ]
+}

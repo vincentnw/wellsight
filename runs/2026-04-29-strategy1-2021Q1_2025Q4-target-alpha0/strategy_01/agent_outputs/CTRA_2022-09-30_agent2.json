@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 2370250000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.0,
+    "consensus_anchor_usd": 2370250000.0,
+    "drilling_signal_raw": -0.08771929824561403,
+    "drilling_signal_clipped": -0.08771929824561403,
+    "production_boe_d": 221573.18409663087,
+    "wti_avg": 60.28384615384615,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Chesapeake Energy's drilling activity shows a decline relative to recent trends, with only 13 active sites at decision date and a negative relative activity delta of -1.2, indicating reduced operational momentum heading into Q3 2022. The company's production is partially exposed to the broader market through a segment fraction of 0.4, with realized prices running below WTI average. Despite moderate absolute activity levels, the drop in newly active sites suggests constrained near-term volume growth. With WTI averaging around $60.30 and limited pricing leverage, the deterministic revenue forecast stands at $2.37B.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_segment_exposure",
+    "below_avg_realized_price",
+    "reduced_new_activity",
+    "moderate_wti"
+  ]
+}

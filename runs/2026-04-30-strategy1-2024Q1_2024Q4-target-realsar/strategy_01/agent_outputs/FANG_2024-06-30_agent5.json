@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_delta with 60% of sites active and continuous_operations across three sites",
+      "Agent 3 divergence_class is modest_beat at +10% with medium confidence based on 16 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "No new pads came online, limiting near-term production growth potential"
+    ],
+    "reasoning_short": "Steady operational activity in the high-margin Permian basin, combined with a clean news environment and expected revenue beat, supports a long position ahead of earnings despite lack of expansion."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling delta and stable WTI environment may not justify the current price, as the company's production remains consistent with prior quarters",
+      "Agent 3's medium confidence and modest beat divergence_class suggest a cautious outlook, with only 10% above consensus",
+      "Agent 4's lack of disclosed news and zero articles indicate a lack of market-moving information"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Diamondback Energy's drilling activity and revenue forecast do not support a long position, given the stable WTI environment and consistent production levels."
+  },
+  "arbiter_reasoning": "Bull's case prevailed due to Agent 2's moderate_drilling_delta and continuous_operations supporting a modest_beat divergence_class from Agent 3, with medium confidence and no GDELT disclosure. However, the absence of new pads and only modest production momentum limits upside, preventing high conviction. Bear highlighted stable fundamentals but did not refute the beat. Conviction tier set to medium per guidance.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

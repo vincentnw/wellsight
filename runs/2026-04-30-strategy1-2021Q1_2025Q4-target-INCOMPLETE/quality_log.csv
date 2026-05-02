@@ -1,0 +1,5 @@
+ticker,fiscal_quarter_end,low_quality_flag,reason
+FANG,2021-03-31,True,LLM call failed after 2 attempts: Error code: 429 - {'message': "We're experienc
+EOG,2021-03-31,True,LLM call failed after 2 attempts: Error code: 429 - {'message': "We're experienc
+DVN,2021-03-31,False,short_circuit_in_line
+OXY,2021-03-31,False,short_circuit_in_line

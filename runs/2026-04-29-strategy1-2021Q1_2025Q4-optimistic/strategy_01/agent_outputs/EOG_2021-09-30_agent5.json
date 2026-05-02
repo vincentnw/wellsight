@@ -1,0 +1,44 @@
+{
+  "ticker": "EOG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +5.0 sites",
+      "Agent 3 divergence_class is modest_beat at +5.73%",
+      "Agent 2 reports new_pad_activation with 4 newly active pads indicating growth momentum"
+    ],
+    "counter_evidence": [
+      "Agent 4 conviction_modifier is downgrade_one_tier due to gdelt_disclosed=true with 52 articles suggesting potential news overhang",
+      "Segment exposure is partial at 45%, limiting full upside capture from Permian tailwinds"
+    ],
+    "reasoning_short": "Positive drilling delta and new pad activations signal operational expansion, while revenue forecast aligns with a modest beat expectation. Despite news noise and partial segment exposure, drilling momentum supports a medium-conviction long position into earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 52 matching articles, suggesting market may have priced in the activity",
+      "Agent 3 medium confidence is tempered by modest_beat divergence_class at +5.73%",
+      "Agent 2 outlook acknowledges partial segment exposure and uncertain realized-price assumption"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is modest_beat at +5.73%"
+    ],
+    "reasoning_short": "Market may have already priced in the positive drilling activity, and the company's partial segment exposure and uncertain realized-price assumption limit full leverage to the Permian operating environment. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 4 gdelt_disclosed=true with 52 articles, indicating potential market awareness and pricing in of the positive drilling activity. Although Bull cited a modest_beat divergence_class and positive drilling momentum, the combination of medium confidence, partial segment exposure, and GDELT disclosure leads to a downgrade in conviction. Information edge is insufficient to justify a trade. Decision set to no_trade with none conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.2,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.5
+  }
+}

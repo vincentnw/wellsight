@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1900872456.7164178,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1920942000.0,
+    "drilling_signal_raw": -0.1044776119402985,
+    "drilling_signal_clipped": -0.1044776119402985,
+    "production_boe_d": 125677.35992374078,
+    "wti_avg": 85.23538461538462,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources (CTRA) shows reduced satellite-derived drilling activity heading into Q1 2025, with only 15 active sites at decision date and a relative activity delta of -1.8, indicating a contraction compared to recent trends. The company's drilling pattern reflects limited new activation, with just one newly active pad, suggesting restrained near-term production growth. Despite a relatively strong WTI environment averaging $85.24, CTRA's realized price remains below benchmark due to a discount of $18.60/boe. With only 40% exposure to the most active segment, revenue is further constrained. The deterministic forecast of $1.90B reflects these headwinds, anchored near consensus but pulled down by weak drilling momentum.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "high_wti",
+    "price_discount",
+    "partial_segment_exposure",
+    "low_new_activity"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 513000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 570000000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 44240.125397040036,
+    "wti_avg": 79.64153846153846,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows zero active drilling sites at decision date, with a sharp decline in relative activity compared to recent quarters, indicating halted or significantly reduced operational momentum heading into Q1 2024. The company's revenue forecast of $513M reflects this weak drilling signal, tempered by stable WTI prices near $80 and a realized price discount typical for its segment. With only 55% exposure to the active segment and no newly active or continuously active pads, production is likely flat to down. The absence of current drilling activity raises concerns about near-term volume growth.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "moderate_segment_exposure",
+    "stable_wti",
+    "no_production_momentum"
+  ]
+}

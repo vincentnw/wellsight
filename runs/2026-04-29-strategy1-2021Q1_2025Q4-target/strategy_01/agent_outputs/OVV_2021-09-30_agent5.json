@@ -1,0 +1,42 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_relative_delta of +2.0 with 2 newly active pads",
+      "Agent 3 divergence_class is modest_beat at +3.83% with medium confidence across 11 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Only partial_segment_exposure limits full leverage to drilling momentum",
+      "Low_WTI_environment at $44/bbl may constrain margin expansion"
+    ],
+    "reasoning_short": "Positive drilling momentum, a clean news backdrop, and a consensus-beating revenue forecast support a long position ahead of earnings, despite moderate commodity prices and partial operational exposure."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling activity and partial segment exposure may not translate to significant revenue growth, given the low WTI environment and stable production levels.",
+      "Agent 3's modest beat with a divergence class of 3.83% and medium confidence suggests a limited upside potential.",
+      "Agent 4's lack of disclosed news and zero articles in GDELT database indicate a lack of market-moving information."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Moderate drilling activity and partial segment exposure may not lead to significant revenue growth, while the modest beat and low WTI environment suggest limited upside potential. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with medium confidence and no GDELT disclosure; Bear's objections were based on moderate drilling activity and low WTI environment, but the positive relative activity delta and clean news backdrop prevail. Conviction tier set to medium due to modest beat and medium confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.2
+  }
+}

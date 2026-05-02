@@ -1,0 +1,42 @@
+{
+  "ticker": "OXY",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_growth with 14 active sites, +3.5 above recent average",
+      "Agent 3 divergence_class is modest_beat at +3.38% with medium confidence across 14 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Low WTI environment caps near-term pricing upside",
+      "Only 30% operational exposure in high-activity segments limits full-sector leverage"
+    ],
+    "reasoning_short": "Moderate but clear drilling expansion supports volume stability, while consensus points to a modest revenue beat. Absence of news leaks and consistent operations bolster confidence in positive earnings surprise, justifying a long position despite muted macro tailwinds."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's outlook acknowledges uncertain realized-price assumption, given the low WTI environment during the period",
+      "Agent 2's revenue forecast reflects stable production with a realized price slightly below WTI average",
+      "Agent 3's medium confidence is tempered by a modest beat divergence class of 3.38%"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Uncertainty around realized price and modest drilling growth in a low WTI environment outweigh potential upside, recommending no entry."
+  },
+  "arbiter_reasoning": "Bull prevailed with evidence of moderate_drilling_growth and a modest_beat divergence_class (+3.38%) supported by medium confidence across 14 analysts. Agent 4 confirmed no GDELT disclosure, preserving information edge. However, the low WTI environment and tempered pricing outlook limit upside, preventing high conviction. Conviction tier set to medium per guidance.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

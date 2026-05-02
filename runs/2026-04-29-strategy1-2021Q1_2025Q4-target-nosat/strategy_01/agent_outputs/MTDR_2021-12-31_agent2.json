@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 403000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 403000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 73999.45574593838,
+    "wti_avg": 65.05,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "MTDR shows no active drilling sites in the satellite data at decision date, with zero newly or continuously active pads, indicating stalled field-level activity heading into the final quarter of 2021. Despite full exposure to the targeted segment and a stable WTI environment near $65/boe, the absence of detectable drilling momentum suggests constrained production growth. Revenue is forecasted at $403M, anchored to consensus estimates rather than positive operational signals, with realized prices slightly below benchmark.",
+  "key_drivers": [
+    "no_active_drilling",
+    "consensus_anchored_forecast",
+    "stable_wti",
+    "full_segment_exposure",
+    "lack_of_operational_momentum"
+  ]
+}

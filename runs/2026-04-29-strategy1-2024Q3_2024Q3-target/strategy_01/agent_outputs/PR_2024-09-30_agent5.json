@@ -1,0 +1,44 @@
+{
+  "ticker": "PR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +2.5 sites",
+      "Agent 2 reports new_pad_activation with 6 newly active pads indicating expansion",
+      "Agent 2 deterministic revenue forecast is $1.24B with stable production at 331,000 boe/d"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is in_line at +1.59%, indicating no strong beat expectation",
+      "Agent 4 reports gdelt_disclosed=true with 9 articles, suggesting potential information leakage and downgrade_one_tier conviction modifier"
+    ],
+    "reasoning_short": "Operational expansion signaled by rising drilling activity and new pad activations supports sustained production and revenue stability. Although sentiment is neutral and news leakage present, fundamental momentum justifies a measured long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 9 matching articles, suggesting market may have already priced in the activity",
+      "Agent 3 divergence_class is in_line, indicating no significant surprise in earnings",
+      "Low WTI environment averaging around $44.40 may negatively impact revenue"
+    ],
+    "counter_evidence": [
+      "Agent 2 outlook acknowledges stable production and sustained drilling momentum"
+    ],
+    "reasoning_short": "Market may have already accounted for the drilling activity, and the low WTI environment poses a risk to revenue. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 4 gdelt_disclosed=true plus in_line divergence_class from Agent 3. Bull's evidence, although indicating operational expansion, is countered by potential information leakage and low WTI environment risks. Information edge is unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.2,
+    "agent4_weight": 0.4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3512000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3512000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 263631.22615516564,
+    "wti_avg": 88.47846153846154,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's revenue forecast for Q2 2022 is anchored at $3.51B, reflecting stable WTI prices near $88.50 and a realized price discount of about 9%. Satellite data shows zero active drilling sites at decision date, with no newly or continuously active pads, indicating a pause in near-term drilling activity. However, the company's 55% exposure to high-performing segments supports revenue resilience despite the current lull in observable drilling. The forecast relies heavily on consensus baselines rather than active momentum signals.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "high_wti_environment",
+    "consensus_anchored_forecast",
+    "moderate_realized_discount",
+    "partial_segment_exposure"
+  ]
+}

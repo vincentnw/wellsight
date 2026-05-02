@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 4129946307.6923075,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4098420000.0,
+    "drilling_signal_raw": 0.07692307692307693,
+    "drilling_signal_clipped": 0.07692307692307693,
+    "production_boe_d": 450841.7461246992,
+    "wti_avg": 60.84153846153846,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows 21 active sites at decision date, with a relative activity delta of +1.5 and 4 newly active pads, indicating modest expansion in operations heading into Q4 2024. The company's production is partially exposed to the Permian via a 55% segment fraction, with the remainder in other basins. With WTI averaging around $60.84 and realized prices at a 9% discount, revenue is supported by stable drilling momentum and a balanced exposure strategy. The deterministic forecast of $4.13B reflects this moderate growth trajectory and current commodity environment.",
+  "key_drivers": [
+    "modest_drilling_growth",
+    "mixed_basin_exposure",
+    "stable_wti_environment",
+    "recent_pad_activation",
+    "realized_price_discount"
+  ]
+}

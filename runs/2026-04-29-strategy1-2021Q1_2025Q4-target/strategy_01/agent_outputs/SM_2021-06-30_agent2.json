@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 392532800.00000006,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 356848000.0,
+    "drilling_signal_raw": 1.5,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 35696.898003250564,
+    "wti_avg": 75.52384615384615,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows moderate expansion with 5 active sites at decision date, 3.0 above the recent baseline, driven by one newly activated pad and four continuing operations. With half of production tied to the Permian segment and WTI averaging $75.52, realized prices are slightly discounted at 88% of benchmark. The deterministic revenue forecast for the quarter ending June 2021 is $392.5M, reflecting stable operational performance and modest activity growth. Satellite data indicates focused, continuous development rather than broad ramp-up.",
+  "key_drivers": [
+    "moderate_drilling_delta",
+    "midstream_exposure",
+    "stable_wti_environment",
+    "partial_segment_exposure",
+    "continuous_pad_activity"
+  ]
+}

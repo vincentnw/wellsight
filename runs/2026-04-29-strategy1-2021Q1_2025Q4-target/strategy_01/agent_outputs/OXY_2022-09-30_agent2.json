@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 9422760000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 9238000000.0,
+    "drilling_signal_raw": 0.2,
+    "drilling_signal_clipped": 0.2,
+    "production_boe_d": 560540.0675100252,
+    "wti_avg": 58.95538461538461,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows strong momentum heading into Q3 2022, with 21 active sites and a relative activity delta of +3.5, driven by seven newly active pads. This suggests accelerating production growth, particularly in its core Permian operations. However, the company's segment fraction of 30% indicates only partial exposure to these high-activity regions, tempering overall revenue sensitivity. With WTI averaging near $59 and realized prices at a 6% discount, the deterministic revenue forecast is set at $9.42B. Satellite data reflects sustained operational execution, though revenue impact is moderated by asset mix.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "new_pad_activation",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "operational_continuity"
+  ]
+}

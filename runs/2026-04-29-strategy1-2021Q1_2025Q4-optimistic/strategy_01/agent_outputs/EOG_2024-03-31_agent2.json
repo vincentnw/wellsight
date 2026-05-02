@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5729957142.857143,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5813000000.0,
+    "drilling_signal_raw": -0.14285714285714285,
+    "drilling_signal_clipped": -0.14285714285714285,
+    "production_boe_d": 316508.1390257166,
+    "wti_avg": 94.23538461538462,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows 18 active drilling sites as of mid-April 2024, with a relative activity delta of -3.0 compared to recent trends, indicating a notable pullback in operational momentum. Only 3 newly active pads suggest limited expansion, while the majority of activity remains on continuously active sites. Despite strong WTI averaging near $94.24 and a favorable realized price differential, EOG's revenue forecast of approximately $5.73B is constrained by reduced drilling intensity and a segment fraction of just 45%, reflecting diversified exposure that dilutes full upside from current oil prices. The company's drilling pattern points to a cautious near-term capital posture.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "high_wti",
+    "moderate_realized_pricing",
+    "partial_segment_exposure",
+    "low_new_activity"
+  ]
+}

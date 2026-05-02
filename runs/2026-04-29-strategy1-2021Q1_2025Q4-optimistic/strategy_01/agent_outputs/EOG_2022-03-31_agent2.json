@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5205648000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5205648000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 302023.33345065947,
+    "wti_avg": 89.71846153846153,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows stable satellite-derived drilling activity with 13 active sites at decision date, matching recent trends and indicating consistent operational execution. The company's revenue forecast of $5.21B for Q1 2022 reflects strong WTI prices near $89.70 and a realized price close to benchmark. With only 45% of activity concentrated in high-margin shale segments, revenue is supported by broader portfolio exposure rather than pure-play intensity. Continuous activity on 10 pads suggests discipline in well completion pacing.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "high_wti_environment",
+    "moderate_segment_concentration",
+    "consistent_pad_execution",
+    "broad_portfolio_exposure"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "ticker": "CTRA",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +3.8 with 13 active sites and 3 newly active pads",
+      "Agent 3 divergence_class is modest_beat at +4.03% with medium confidence across 17 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Only 40% revenue exposure to active drilling segment",
+      "Realized prices are below benchmark due to price discount"
+    ],
+    "reasoning_short": "Material increase in drilling activity with strong WTI tailwinds supports near-term production growth. Modest-beat consensus divergence, combined with clean news backdrop, favors upside surprise on earnings. Despite partial segment exposure, operational momentum justifies long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2's drilling activity shows a notable increase in operational momentum, but with only 40% of revenue tied to this active segment and realized prices running below benchmark, revenue contribution is partially constrained",
+      "Agent 3's medium confidence is tempered by a modest beat divergence of +4.03% among 17 analysts",
+      "Agent 4's lack of disclosed news via GDELT suggests market may not have fully priced in the activity"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Mixed signals from drilling activity, segment exposure, and pricing differentials outweigh potential upside, recommending no entry."
+  },
+  "arbiter_reasoning": "Bull's case prevailed due to a modest_beat divergence_class supported by medium confidence from Agent 3 and no GDELT disclosure, indicating a clean news environment. While Agent 2's positive drilling delta signals operational momentum, partial segment exposure and pricing headwinds temper the strength of the signal. The Bear acknowledged mixed signals but did not present material disconfirming evidence. Conviction tier is medium due to the modest_beat with medium confidence and no GDELT downgrade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

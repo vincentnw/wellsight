@@ -1,0 +1,45 @@
+{
+  "ticker": "CTRA",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_growth with 4 newly activated pads and 13 active sites, 4.8% above recent trends",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leakage",
+      "Despite low confidence, Agent 3 divergence_class is modest_miss at -5.85%, suggesting only a small expected shortfall, which may be priced in"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is modest_miss, indicating expected revenue below consensus",
+      "Agent 2 notes realized price at 22% discount to WTI, constraining revenue upside",
+      "Low WTI environment averaging $43.93/bbl limits sector-wide profitability"
+    ],
+    "reasoning_short": "Modest drilling expansion with new pad activation signals operational momentum, while clean news backdrop and limited expected miss create asymmetric upside potential if Chesapeake narrows the gap to consensus or benefits from short-term price recovery."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling growth is constrained by low WTI environment and partial segment exposure, limiting revenue potential",
+      "Agent 2's price discount to WTI is 22%, indicating a significant revenue constraint",
+      "Agent 2's new pad activation is only 4.8% above recent trends, suggesting limited upside"
+    ],
+    "counter_evidence": [
+      "Agent 3's modest miss divergence class is low-confidence and driven by 6 analysts"
+    ],
+    "reasoning_short": "Drilling growth is constrained by low WTI environment and partial segment exposure, limiting revenue potential. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 2's moderate drilling growth as constrained by low WTI environment and partial segment exposure, limiting revenue potential. Bull's evidence was modest at best (modest_miss divergence_class). Information edge is unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.6,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.1
+  }
+}

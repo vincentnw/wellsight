@@ -1,0 +1,41 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_delta with 14 active sites, +5.8 percentage points above recent trends",
+      "Agent 3 divergence_class is modest_beat at +6.93% with medium confidence across 10 analysts",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leak"
+    ],
+    "counter_evidence": [
+      "Only partial price exposure to elevated WTI near $86.74 limits full commodity upside"
+    ],
+    "reasoning_short": "Moderate but above-trend drilling activity combined with a modest revenue beat expectation and clean news backdrop supports a long position. OVV's midstream stability and timely production response to strong oil prices enhance earnings visibility ahead of the event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling delta and partial price exposure suggest a balanced but not aggressive momentum, which may not justify a long position",
+      "Agent 3's modest beat with a divergence class of 6.93% and medium confidence indicates a cautious outlook, not a strong buy signal",
+      "Agent 4's low conviction modifier and lack of disclosed news in GDELT database imply a lack of significant market-moving information"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The overall evidence suggests a stable but not aggressive momentum, which may not justify a long position in Ovintiv. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull's case for a long position is supported by Agent 2's moderate_drilling_delta showing above-trend activity, Agent 3's modest_beat divergence_class (6.93%) with medium confidence, and Agent 4's gdelt_disclosed=false indicating no negative news leakage. While the divergence is not strong and confidence is only medium, there is no GDELT disclosure or downgrade to suppress conviction. Bear acknowledges stable momentum but views it as insufficient for a strong buy, yet does not refute the cleanliness of the setup. The balance of evidence favors a long with medium conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.2
+  }
+}

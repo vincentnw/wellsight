@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 469580000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 443000000.0,
+    "drilling_signal_raw": 0.6,
+    "drilling_signal_clipped": 0.6,
+    "production_boe_d": 71637.88011189169,
+    "wti_avg": 45.019999999999996,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows moderate drilling activity with 4 active sites at decision date, all continuously active and none newly activated, resulting in a relative activity delta of +1.5. The company operates with partial exposure to the targeted basin (segment_fraction = 0.55) and faces a modest realized price discount. With WTI averaging around $45/bbl in the period, revenue is supported by stable production and a slight uplift from recent drilling momentum. The deterministic forecast for the quarter ending September 2021 is $469.58M.",
+  "key_drivers": [
+    "moderate_relative_activity_delta",
+    "no_newly_active_pads",
+    "partial_basin_exposure",
+    "low_wti_environment",
+    "stable_continuous_activity"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 694800769.2307693,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 659300000.0,
+    "drilling_signal_raw": 0.5384615384615384,
+    "drilling_signal_clipped": 0.5384615384615384,
+    "production_boe_d": 89128.27045176225,
+    "wti_avg": 43.93076923076923,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources shows moderate drilling activity with 10 active sites at decision date, 3.5 above the recent average, driven by both newly active and continuously active pads. This suggests stable production growth into Q4 2021. However, with only 40% exposure to the current drilling segment and a relatively low WTI environment averaging $43.93/bbl, revenue is constrained despite operational momentum. The deterministic forecast of $694.8M reflects this balance between positive drilling trends and segment-limited exposure.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "low_wti_environment",
+    "partial_segment_exposure",
+    "moderate_production_growth",
+    "stable_operational_activity"
+  ]
+}

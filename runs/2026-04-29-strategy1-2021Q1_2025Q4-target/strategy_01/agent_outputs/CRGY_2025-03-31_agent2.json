@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 965050557.6923076,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 943282500.0,
+    "drilling_signal_raw": 0.23076923076923078,
+    "drilling_signal_clipped": 0.23076923076923078,
+    "production_boe_d": 28602.203454399307,
+    "wti_avg": 85.23538461538462,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows elevated drilling activity with 16 active sites at decision date, 3.0 above recent average, driven by 6 newly active pads—indicating renewed operational momentum heading into Q1 2025. With WTI averaging $85.24 and realized prices at a slight discount, revenue is supported by strong commodity levels. However, only 20% of the company's operations are tied to this active segment, tempering overall growth impact. The deterministic revenue forecast is $965.05M, reflecting solid activity within a limited exposure footprint.",
+  "key_drivers": [
+    "elevated_drilling_delta",
+    "new_pad_activation",
+    "limited_segment_exposure",
+    "high_wti_environment",
+    "modest_realized_pricing"
+  ]
+}

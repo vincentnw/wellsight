@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 662882666.6666667,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 662000000.0,
+    "drilling_signal_raw": 0.013333333333333334,
+    "drilling_signal_clipped": 0.013333333333333334,
+    "production_boe_d": 111483.0730359469,
+    "wti_avg": 70.25923076923077,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's operations show 19 active drilling sites as of mid-July 2023, with a 20% increase in relative activity compared to recent trends, driven by six newly active pads. This uptick in satellite-observed activity, combined with stable WTI prices near $70.26/bbl and full exposure to the Permian segment, supports a deterministic revenue forecast of approximately $662.9 million for Q2 2023. The majority of activity is sustained across core pads, indicating continued operational focus and modest production growth momentum.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "stable_wti",
+    "pure_play_permian",
+    "new_pad_activation",
+    "continuous_activity_base"
+  ]
+}

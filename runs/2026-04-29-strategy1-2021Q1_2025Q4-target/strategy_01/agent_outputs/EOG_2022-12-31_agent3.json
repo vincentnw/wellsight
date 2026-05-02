@@ -1,0 +1,11 @@
+{
+  "ticker": "EOG",
+  "our_estimate_usd": 6313734848.484848,
+  "consensus_median_usd": 6219500000.0,
+  "consensus_dispersion_usd": 1131029837.917727,
+  "n_analysts_at_T_minus_14": 20,
+  "divergence_pct": -1.53,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our $6.31B estimate is within 1.5% of $6.22B consensus; 20 analysts with moderate dispersion (~18% of consensus) yields medium confidence."
+}

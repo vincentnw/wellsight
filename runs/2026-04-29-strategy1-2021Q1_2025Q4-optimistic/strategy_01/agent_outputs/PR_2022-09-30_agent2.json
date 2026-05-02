@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 532290909.0909091,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 520000000.0,
+    "drilling_signal_raw": 0.23636363636363636,
+    "drilling_signal_clipped": 0.23636363636363636,
+    "production_boe_d": 106684.47666269969,
+    "wti_avg": 58.95538461538461,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's operations show 17 active drilling sites as of the decision date, with a relative activity increase of 3.2 compared to recent trends, driven by two newly active pads. The company maintains full exposure to the Permian segment, where WTI is projected to average $59/bbl and realized prices are expected to hold near 93% of benchmark. This elevated drilling momentum supports a deterministic revenue forecast of $532.3M for Q3 2022, slightly above consensus anchor, reflecting continued operational consistency and stable price realization.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "stable_wti",
+    "pure_play_permian",
+    "high_price_realization",
+    "continuous_activity_base"
+  ]
+}

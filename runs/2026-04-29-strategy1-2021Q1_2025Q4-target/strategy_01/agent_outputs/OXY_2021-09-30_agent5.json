@@ -1,0 +1,42 @@
+{
+  "ticker": "OXY",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags strong_drilling_delta with +9.0 site increase",
+      "Agent 3 divergence_class is modest_beat at +9.93% with medium confidence across 14 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Modest WTI environment at $43.93 presents headwind for broader sector",
+      "Only 30% revenue tied to segment may limit upside leverage"
+    ],
+    "reasoning_short": "Robust drilling expansion signals operational strength and execution in core areas, supporting resilient production and a revenue forecast that modestly beats consensus. Absence of news leaks enhances catalyst integrity, favoring a high-conviction long position into earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's strong drilling delta and core area focus suggest a potential for increased costs or decreased efficiency, which could negatively impact OXY's production and revenue",
+      "Agent 2's revenue forecast is based on stable operations, but this may not be sustainable given the modest WTI environment",
+      "Agent 3's medium confidence and modest beat divergence_class indicate that the market may have already priced in OXY's strong drilling activity"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "OXY's strong drilling activity and core area focus may lead to increased costs or decreased efficiency, and the modest WTI environment could negatively impact production and revenue. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with medium confidence and no GDELT disclosure; Bear's objections were based on potential increased costs or decreased efficiency, but the strength of upstream evidence from Agent 2 and Agent 3 prevails. Conviction tier set to medium due to modest beat and medium confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

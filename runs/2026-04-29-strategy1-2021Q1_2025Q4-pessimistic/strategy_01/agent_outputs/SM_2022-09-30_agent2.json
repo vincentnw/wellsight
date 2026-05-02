@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 750802110.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 736080500.0,
+    "drilling_signal_raw": 0.2,
+    "drilling_signal_clipped": 0.2,
+    "production_boe_d": 85538.80064639263,
+    "wti_avg": 60.28384615384615,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows moderate drilling activity with 9 active sites at decision date, 1.5 above the regional baseline, driven by 2 newly active pads alongside 7 continuously active ones. With half of production tied to the Permian segment and a realized price at an 12% discount to WTI, revenue is supported by stable operational momentum. The deterministic forecast of $750.8M reflects this balanced activity and moderate commodity environment.",
+  "key_drivers": [
+    "moderate_drilling_delta",
+    "new_pad_activation",
+    "midstream_exposure",
+    "wti_discount_realized",
+    "stable_continuity"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 8838450000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 9820500000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 283888.83447564737,
+    "wti_avg": 109.18923076923078,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental Petroleum faces a challenging start to Q3 2022, with satellite data showing zero active drilling sites at decision date—marking a sharp decline from prior quarters and indicating stalled operational momentum. Despite elevated WTI prices averaging near $109/bbl, the company's realized prices remain slightly discounted, and its limited exposure to high-growth segments (30% segment fraction) constrains revenue upside. The complete absence of newly or continuously active pads suggests deferred activity, likely weighing on near-term production volumes and supporting the deterministic forecast of $8.84B.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "high_wti",
+    "limited_segment_exposure",
+    "production_deferral"
+  ]
+}

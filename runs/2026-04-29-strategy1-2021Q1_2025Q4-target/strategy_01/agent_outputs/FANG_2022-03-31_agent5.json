@@ -1,0 +1,43 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 8.0 above baseline and 3 newly activated pads",
+      "Agent 2 deterministic revenue forecast is $1.93B, supported by high WTI environment near $88/bbl",
+      "Agent 3 divergence_class is modest_beat at +4.55% with medium confidence across 19 analysts"
+    ],
+    "counter_evidence": [
+      "Agent 4 reports gdelt_disclosed=true with 35 articles, indicating potential information leakage and downgrade_one_tier conviction modifier"
+    ],
+    "reasoning_short": "Sustained drilling acceleration in the core Permian region, combined with favorable oil prices and a clear path to outperformance relative to consensus, supports a long position despite elevated news visibility."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 35 matching articles, suggesting market may have priced in the activity",
+      "Agent 3 medium confidence is tempered by modest_beat divergence_class at +4.55%",
+      "Agent 2 outlook acknowledges uncertain realized-price assumption and stable pricing at a 7% discount to WTI"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is modest_beat at +4.55%"
+    ],
+    "reasoning_short": "Market may have already priced in the activity: 35 disclosed articles and modest beat expectations. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with medium confidence and a deterministic revenue forecast of $1.93B, supported by high WTI environment and positive_drilling_delta. Bear's objection was based on potential information leakage due to 35 disclosed articles, but the Bull's evidence of sustained drilling acceleration and favorable oil prices prevails. Conviction tier set to medium due to modest_beat divergence_class and medium confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

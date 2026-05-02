@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 7326062500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7005000000.0,
+    "drilling_signal_raw": 0.4583333333333333,
+    "drilling_signal_clipped": 0.4583333333333333,
+    "production_boe_d": 295863.4196366395,
+    "wti_avg": 86.8423076923077,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows strong momentum heading into Q1 2025, with 35 active sites and an 11% increase in relative activity compared to recent trends. The high share of continuously active (26) and newly active (9) pads suggests sustained operational execution across its core areas. Despite only 30% exposure to the Permian segment, the combination of elevated WTI prices near $87/boe and solid drilling continuity supports a revenue forecast of $7.33B. The satellite data reflects broad-based activity rather than isolated pad development, indicating confidence in near-term production growth.",
+  "key_drivers": [
+    "elevated_wti",
+    "positive_drilling_delta",
+    "high_continuity_activity",
+    "broad_pad_development",
+    "moderate_segment_exposure"
+  ]
+}

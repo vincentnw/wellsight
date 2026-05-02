@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3646390000.0000005,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3646390000.0000005,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 327015.4982864871,
+    "wti_avg": 74.05846153846154,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity as of October 2024 shows no currently active sites and no new or continuous activity, indicating a pause in field-level operations that may reflect completion timing or strategic idling. Despite this, the company's revenue forecast for Q3 2024 remains near $3.65B, supported by stable WTI prices around $74/boe and a realized price differential of 91%. With only 55% of production exposed to the current drilling segment, the impact of halted activity is partially buffered, allowing reliance on broader production basins and pricing fundamentals.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "stable_wti",
+    "partial_segment_exposure",
+    "consensus_anchored_forecast",
+    "completion_timing"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ticker": "MTDR",
+  "our_estimate_usd": 843288372.0930233,
+  "consensus_median_usd": 826000000.0,
+  "consensus_dispersion_usd": 39258714.55947887,
+  "n_analysts_at_T_minus_14": 14,
+  "divergence_pct": -2.21,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our $843M is within 2.2% of $826M consensus; 14 analysts with moderate dispersion (~5% of consensus) yields medium confidence."
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 709094117.6470588,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 666000000.0,
+    "drilling_signal_raw": 0.6470588235294118,
+    "drilling_signal_clipped": 0.6470588235294118,
+    "production_boe_d": 55336.83074320524,
+    "wti_avg": 88.00923076923075,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows moderate drilling activity with 7 active sites at decision date, 2.8 above the recent average, driven by one newly active and six continuously active pads. With WTI averaging near $88/bbl and realized prices at a slight discount, revenue is supported by stable commodity levels. The company's 55% segment fraction indicates partial exposure to the monitored basin, tempering the impact of local drilling momentum. The deterministic revenue forecast for the quarter ending March 2022 is $709.09M, reflecting a blend of consensus anchor and positive satellite-derived drilling signals.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "elevated_wti",
+    "partial_basin_exposure",
+    "moderate_new_activity",
+    "consensus_anchored_forecast"
+  ]
+}

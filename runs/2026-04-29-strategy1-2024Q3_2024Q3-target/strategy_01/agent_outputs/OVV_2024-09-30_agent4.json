@@ -1,0 +1,14 @@
+{
+  "ticker": "OVV",
+  "n_articles_in_window": 19,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "t-on-unexpected-permian-success/",
+    "t-on-unexpected-permian-success/",
+    "cus-on-permian-shale-operations/",
+    "cus-on-permian-shale-operations/",
+    "wing-unexpected-permian-success/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Multiple GDELT-indexed articles (t-on-unexpected-permian-success/, t-on-unexpected-permian-success/, cus-on-permian-shale-operations/, cus-on-permian-shale-operations/, wing-unexpected-permian-success/) describe drilling expansion and increased production targets in the Permian basin consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

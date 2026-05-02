@@ -1,0 +1,15 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 52,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "ved-for-93-drilling-permits.html",
+    "inc-approved-for-13-permits.html",
+    "production-set-hit-120012840.html",
+    "ount-for-about-half-16536560.php",
+    "ount-for-about-half-16536560.php",
+    "new-wells-against-higher-prices/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Five GDELT-indexed articles (ved-for-93-drilling-permits.html, inc-approved-for-13-permits.html, production-set-hit-120012840.html, ount-for-about-half-16536560.php, ount-for-about-half-16536560.php, new-wells-against-higher-prices/) describe drilling activity changes consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

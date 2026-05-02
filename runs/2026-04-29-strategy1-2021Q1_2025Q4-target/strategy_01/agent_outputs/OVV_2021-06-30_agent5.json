@@ -1,0 +1,44 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 2.8 more active sites than recent average",
+      "Agent 3 divergence_class is modest_beat at +6.55% with stable analyst count of 9",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Agent 3 confidence is low due to moderate divergence magnitude",
+      "Only partial segment exposure limits full upside capture"
+    ],
+    "reasoning_short": "Positive drilling momentum and above-consensus revenue forecast supported by stable pricing environment and clean news backdrop justify a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on stable realized pricing, but this assumption may be overly optimistic given the current WTI environment (mid_wti_environment) and partial segment exposure (partial_segment_exposure)",
+      "Agent 2's drilling activity is driven by 3 newly active pads, but this may not be sustainable (moderate_new_activity)",
+      "Agent 4 has 37 articles, but none of them are disclosed (gdelt_disclosed=false)"
+    ],
+    "counter_evidence": [
+      "Agent 3's modest beat (modest_beat) with a divergence of 6.55% may indicate some upside potential"
+    ],
+    "reasoning_short": "The revenue forecast is based on stable pricing, but the current environment and partial exposure may be a concern. Drilling activity is driven by new pads, but this may not be sustainable. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with a divergence of 6.55% and high confidence, supported by Agent 2's positive drilling delta and stable pricing environment. Bear's concerns about the sustainability of drilling activity and potential pricing risks are noted, but the strength of the Bull's evidence prevails. Conviction tier set to medium due to modest beat and low Agent 3 confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

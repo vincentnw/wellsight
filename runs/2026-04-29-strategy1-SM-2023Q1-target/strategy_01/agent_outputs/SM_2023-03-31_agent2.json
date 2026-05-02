@@ -1,0 +1,17 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 2013782220.8,
+  "components": {
+    "production_boe_d": 180800.0,
+    "wti_avg": 76.49846153846154,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM Energy's drilling activity as of the decision date shows 12 active sites, with 4 newly active and 8 continuously active sites, representing a 2.2 increase over the historical average. This uptick in activity, combined with a WTI price averaging around $76.50/boe and a significant but not total exposure to the Permian Basin, supports a revenue forecast of approximately $2.01B for the quarter ending March 31, 2023. The company's balanced approach to drilling, with a mix of new and ongoing projects, indicates steady production growth and operational efficiency.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "moderate_wti_prices",
+    "mixed_segment_exposure",
+    "steady_production_growth"
+  ]
+}

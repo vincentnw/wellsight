@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 654179410.8695651,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 645756500.0,
+    "drilling_signal_raw": 0.13043478260869565,
+    "drilling_signal_clipped": 0.13043478260869565,
+    "production_boe_d": 98467.37241730487,
+    "wti_avg": 45.629230769230766,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows moderate expansion with 13 active sites at decision date, 50% above the recent baseline, driven by one newly activated pad alongside sustained operations on 12 others. With half of production exposed to the current WTI environment at an average of $45.63/bbl and realized prices running 12% below benchmark, revenue is supported by stable operational performance in a mid-tier commodity price environment. The deterministic forecast of $654.2M reflects this balanced profile, with drilling momentum suggesting slight volume uptick in the quarter ended September 2024.",
+  "key_drivers": [
+    "moderate_drilling_growth",
+    "below_benchmark_pricing",
+    "mid_wti_environment",
+    "mixed_segment_exposure",
+    "stable_continuous_activity"
+  ]
+}

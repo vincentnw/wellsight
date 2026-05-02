@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 921386241.5254238,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 913643500.0,
+    "drilling_signal_raw": 0.0847457627118644,
+    "drilling_signal_clipped": 0.0847457627118644,
+    "production_boe_d": 126130.54319098225,
+    "wti_avg": 87.25538461538461,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources maintains full exposure to the Permian Basin with stable drilling activity, showing 16 active sites at decision date and a 2.5% increase in relative activity. The presence of 3 newly active pads suggests modest production growth into Q2 2025. With WTI averaging near $87.26 and realized prices holding at a 92% discount factor, revenue is supported by consistent operational execution. The deterministic forecast of $921.4M reflects slight upside to consensus, driven by incremental drilling momentum and stable commodity conditions.",
+  "key_drivers": [
+    "modest_drilling_growth",
+    "stable_wti",
+    "pure_play_permian",
+    "consistent_pad_activity",
+    "slight_upside_to_consensus"
+  ]
+}

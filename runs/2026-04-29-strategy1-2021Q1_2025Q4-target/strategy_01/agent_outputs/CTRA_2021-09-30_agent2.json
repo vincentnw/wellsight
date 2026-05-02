@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 697259696.969697,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 659300000.0,
+    "drilling_signal_raw": 0.5757575757575758,
+    "drilling_signal_clipped": 0.5757575757575758,
+    "production_boe_d": 89443.69896917614,
+    "wti_avg": 43.93076923076923,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Chesapeake Energy's drilling activity shows moderate expansion with 13 active sites at decision date, 4.8% above recent trends, driven by 4 newly activated pads. With only 40% exposure to current drilling zones and a realized price at a 22% discount to WTI, revenue is constrained despite stable production near 89.4k boe/d. The deterministic forecast of $697.3M reflects limited segment leverage and modest activity gains in a low-price environment averaging $43.93/bbl WTI.",
+  "key_drivers": [
+    "moderate_drilling_growth",
+    "low_wti_environment",
+    "partial_segment_exposure",
+    "price_discount_to_wti",
+    "new_pad_activation"
+  ]
+}

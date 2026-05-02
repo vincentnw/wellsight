@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5371052744.444445,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5383015000.0,
+    "drilling_signal_raw": -0.022222222222222223,
+    "drilling_signal_clipped": -0.022222222222222223,
+    "production_boe_d": 331661.61461544473,
+    "wti_avg": 84.29692307692306,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows 22 active drilling sites as of the decision date, with a relative activity delta of -50% compared to recent trends, indicating a notable pullback in operational momentum. Only 10 sites are continuously active, suggesting limited sustained pad development, while 12 newly active sites point to some new initiation. With WTI averaging around $84.30 and EOG realizing approximately 95% of that price, revenue is supported by strong macro conditions. However, the company's exposure to only 45% of the segment under analysis—combined with declining drilling activity—implies constrained production growth into Q2 2025, aligning with the deterministic forecast near $5.37B.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "moderate_new_activity",
+    "high_wti",
+    "partial_segment_exposure",
+    "reduced_operational_momentum"
+  ]
+}

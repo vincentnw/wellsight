@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 1932222222.2222223,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1850000000.0,
+    "drilling_signal_raw": 0.4444444444444444,
+    "drilling_signal_clipped": 0.4444444444444444,
+    "production_boe_d": 259420.62813900082,
+    "wti_avg": 88.00923076923075,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback Energy's drilling activity shows strong momentum heading into Q1 2022, with 26 active sites detected via SAR, 8.0 above the recent baseline, driven by 3 newly activated pads. The company's full exposure to the Permian basin and stable realized pricing at a 7% discount to WTI support solid production growth. With average WTI prices near $88/bbl during the period, the deterministic revenue forecast is set at approximately $1.93B, reflecting both elevated drilling intensity and favorable macro conditions.",
+  "key_drivers": [
+    "positive_drilling_delta",
+    "high_wti_environment",
+    "pure_play_permian",
+    "new_pad_activation",
+    "stable_realized_pricing"
+  ]
+}

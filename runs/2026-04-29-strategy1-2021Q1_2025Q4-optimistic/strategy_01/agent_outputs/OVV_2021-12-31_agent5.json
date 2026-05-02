@@ -1,0 +1,45 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flagged positive_drilling_delta of +2.5 sites above recent average",
+      "Agent 3 divergence_class is modest_beat at +3.73% with medium confidence across 11 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Realized price maintained at 10% discount to benchmark, limiting margin expansion",
+      "Divergence magnitude is modest_beat rather than strong_beat",
+      "Only half of production exposed to high-activity segment"
+    ],
+    "reasoning_short": "Moderate but positive drilling delta and sustained pad activity support stable production growth, while consensus points to a modest revenue beat. Absence of news leaks enhances integrity of earnings surprise potential. Warranted long position with moderate conviction ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling activity may not justify the current price, as only 2.5 sites above the recent average are active, and half of production is tied to this segment",
+      "Agent 2's stable WTI environment is not a guarantee of future growth, and the company is still at a 10% discount to benchmark",
+      "Agent 4's 46 articles suggest a lack of significant news that would justify a long position"
+    ],
+    "counter_evidence": [
+      "Agent 3's modest beat with a divergence class of 3.73% may indicate some upside potential"
+    ],
+    "reasoning_short": "The information suggests that Ovintiv's drilling activity and WTI environment are not strong enough to justify a long position, and the lack of significant news may have already priced in the activity."
+  },
+  "arbiter_reasoning": "Bull's case prevailed due to Agent 3's modest_beat divergence_class at 3.73% with medium confidence and Agent 2's positive_drilling_delta of +2.5 sites above average, indicating constructive operational momentum. Agent 4's gdelt_disclosed=false supports clean information integrity. However, the divergence is not strong and only half of production is exposed to the active segment, tempering conviction. No GDELT downgrade, but not a high-conviction setup. Conviction tier set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

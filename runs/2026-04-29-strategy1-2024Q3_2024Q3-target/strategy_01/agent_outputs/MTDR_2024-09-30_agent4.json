@@ -1,0 +1,14 @@
+{
+  "ticker": "MTDR",
+  "n_articles_in_window": 16,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "s-on-permian-drilling-surprises/",
+    "s-on-permian-drilling-surprises/",
+    "t-on-unexpected-permian-success/",
+    "t-on-unexpected-permian-success/",
+    "wing-unexpected-permian-success/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Multiple GDELT-indexed articles describe drilling expansion and increased production plans in the Permian region consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

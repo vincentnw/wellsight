@@ -1,0 +1,42 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_growth with 15 active sites, 4.8 above recent average",
+      "Agent 2 highlights high_wti_environment near $94/boe with half of production exposed, supporting revenue",
+      "Agent 3 divergence_class is modest_beat at +4.58% with medium confidence across 12 analysts"
+    ],
+    "counter_evidence": [
+      "Agent 2 notes partial_upstream_exposure, not full Bakken or Permian concentration",
+      "Agent 3 confidence is only medium, not high"
+    ],
+    "reasoning_short": "Moderate but clear drilling expansion, favorable exposure to elevated WTI prices, and a modest expected beat relative to consensus—combined with clean news sentiment—support a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast of $595.4M is highly dependent on the current high WTI environment, which may not be sustainable, and the company's partial upstream exposure to this environment",
+      "Agent 2's drilling activity shows moderate expansion, but with only 4.8 sites above the recent average, suggesting limited growth potential",
+      "Agent 3's medium confidence and modest beat divergence_class of +4.58% indicate a cautious outlook from analysts"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "High WTI environment and partial upstream exposure create a vulnerable revenue stream, and moderate drilling growth may not be enough to offset potential declines."
+  },
+  "arbiter_reasoning": "Bull's case for a long position is supported by Agent 2's evidence of moderate drilling growth and favorable exposure to high WTI prices, combined with Agent 3's modest_beat divergence_class (+4.58%) and medium confidence. While the Bear correctly notes reliance on a potentially unsustainable WTI environment and limited drilling acceleration, the overall outlook remains positive with no GDELT disclosure or negative sentiment. The modest_beat with medium confidence prevents high conviction, but suffices for a medium-conviction long. Agent 3 and Agent 2 provided the most decisive inputs.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.1
+  }
+}

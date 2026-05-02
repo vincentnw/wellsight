@@ -1,0 +1,11 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 10,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "orts-2022-results-211500882.html",
+    "results-and-2023-operating-plan/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (orts-2022-results-211500882.html, results-and-2023-operating-plan/) describe drilling expansion and operating plans consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1269481500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1410535000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 89827.7934710411,
+    "wti_avg": 79.64153846153846,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources (CTRA) shows zero active drilling sites at decision date, with a relative activity delta of -1.5 compared to recent history, indicating a significant pullback in operational momentum heading into Q1 2024. Despite a stable WTI environment near $79.64/boe, the lack of active and newly active pads suggests constrained production growth. With only 40% segment exposure to the monitored region and realized prices at a discount, revenue is expected to reflect limited near-term output gains. The deterministic forecast stands at $1.269B.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "zero_active_sites",
+    "modest_segment_exposure",
+    "stable_wti",
+    "production_contraction_signals"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "ticker": "SM",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags elevated_new_activity with 7 active drilling sites and a +3.0 delta from recent history",
+      "Agent 3 divergence_class is modest_beat at +7.58% with medium confidence across 15 analysts",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Company's realized price remains below WTI average",
+      "Only 55% exposure to the actively expanding segment limits full revenue upside"
+    ],
+    "reasoning_short": "Elevated satellite-detected drilling activity signals strong near-term production growth, supported by a consensus-beating revenue forecast and clean news environment. Despite partial segment exposure, momentum and operational ramp justify a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's outlook acknowledges uncertain realized-price assumption, and the company's realized price remains below WTI average",
+      "Agent 2's revenue forecast is partially constrained due to only 55% exposure to the actively expanding segment",
+      "Agent 2's drilling activity is driven largely by 6 newly active pads, which may not be sustainable"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is modest_beat at +7.58%"
+    ],
+    "reasoning_short": "Uncertainty around realized price and limited segment exposure outweighs modest beat in consensus comparison. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear correctly emphasizes that Agent 3's divergence_class is only modest_beat (+7.58%) with medium confidence, and despite Agent 2's elevated drilling activity, key risks around realized pricing and limited (55%) segment exposure constrain revenue upside. Bull's high-confidence long thesis overreaches given the modest earnings beat and partial operational visibility. No clear information edge; declining to trade. Conviction tier set to none.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.6,
+    "agent4_weight": 0.1
+  }
+}

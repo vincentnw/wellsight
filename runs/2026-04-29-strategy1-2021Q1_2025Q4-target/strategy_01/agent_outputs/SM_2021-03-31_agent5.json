@@ -1,0 +1,45 @@
+{
+  "ticker": "SM",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 4 reports gdelt_disclosed=false so no information leak",
+      "Agent 2 notes moderate_WTI at $91.33, providing favorable price environment"
+    ],
+    "counter_evidence": [
+      "Agent 2 outlook flags negative_drilling_delta with 20% decline in activity",
+      "Agent 2 highlights low_new_activity with zero newly active pads",
+      "Agent 3 divergence_class is in_line at -0.71%, indicating no meaningful upside surprise expected"
+    ],
+    "reasoning_short": "Despite clean news backdrop and supportive WTI prices, lack of drilling momentum, no new activity, and in-line analyst expectations argue against a compelling long thesis ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's outlook paragraph indicates reduced operational momentum with only 2 active sites and a 20% decline in relative activity, suggesting near-term volume constraints",
+      "Agent 2's revenue forecast reflects moderate production levels and a realized price discount, with only 55% of operations in high-activity segments",
+      "Agent 2's drilling activity delta is negative, indicating reduced drilling activity"
+    ],
+    "counter_evidence": [
+      "Agent 3's divergence class is in_line with a low divergence_pct of -0.71",
+      "Agent 4's gdelt_disclosed is false, indicating no disclosed news that may have already moved the price"
+    ],
+    "reasoning_short": "Reduced operational momentum, near-term volume constraints, and negative drilling activity delta outweigh any potential upside, recommending no entry."
+  },
+  "arbiter_reasoning": "Both Bull and Bear opinions converge on a no_trade decision, citing reduced operational momentum, near-term volume constraints, and lack of drilling activity as key evidence. The Bull's low confidence and in-line analyst expectations further support this decision.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.6,
+    "agent3_weight": 0.2,
+    "agent4_weight": 0.2
+  }
+}

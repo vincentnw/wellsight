@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 5954400000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 6616000000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 259382.21114187097,
+    "wti_avg": 80.51,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows zero active sites and no newly or continuously active pads at decision date, with a sharply negative relative activity delta of -1.5, indicating a significant pullback in field operations heading into Q1 2024. Despite a relatively stable WTI environment near $80.50 and realized prices at a 6% discount, the company's limited exposure to high-activity segments—only 30% segment fraction—amplifies the impact of operational slowdown. The deterministic revenue forecast is set at $5.95B, reflecting constrained production momentum and minimal near-term drilling recovery.",
+  "key_drivers": [
+    "zero_active_pads",
+    "negative_drilling_delta",
+    "low_segment_exposure",
+    "moderate_price_discount",
+    "stable_wti"
+  ]
+}

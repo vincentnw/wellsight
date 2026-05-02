@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 638112000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 638112000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 118315.53880821314,
+    "wti_avg": 64.42076923076924,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources shows zero active drilling sites in the satellite-derived SAR summary as of the decision date, with no newly or continuously active pads, indicating a significant pause in field activity. Despite this, the deterministic revenue forecast remains at $638.1M for Q4 2022, supported by stable WTI prices around $64.42 and a full upstream segment focus. The lack of current drilling activity may reflect operational timing or completion bottlenecks, but revenue is sustained by existing production and a realized price close to benchmark levels.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "stable_wti",
+    "full_upstream_exposure",
+    "existing_production_base",
+    "completion_timing_delay"
+  ]
+}

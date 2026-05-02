@@ -1,0 +1,94 @@
+{
+  "run_id": "2026-04-30-strategy1-2024Q1_2024Q4-target-realsar",
+  "started_at": "2026-05-01T14:40:10.158945+00:00",
+  "completed_at": "2026-05-01T14:40:10.321787+00:00",
+  "code_state": {
+    "fin580_dir_sha": "69b34500c7375f16d3c2435d34cbf6ebf824a8243ac5ea48cac057215bac3661",
+    "phase1_dir_sha": "465604ba7d9fd8803409d36d0064f80628775ac7bb19e4d97d34cc612ca37403",
+    "docs_specs_sha": "6d0651687a0328ccd2ac405c6a3c287d4b459a712e5baa222bd22fa8a115ceb3",
+    "docs_plans_sha": "736ccc61256d20af37893e12c4acf3ed18fa99d81027e92287bcd16a9a4cce57",
+    "spec_sha": "306583db0c8769365a8ab8ae7b73ebe5d62709de2f82ded281603e7e62ca3bfb",
+    "plan_sha": "26a6c81df6bcd6c85ace0343877bab70f6bf6e0dec1ccf71d9a01fef5b2a60ae",
+    "requirements_lock_sha": "8ae572e707ac66055d7cf7d3e737bbcda595556da80d5fa0c35b0f96e265a05f",
+    "modules_used": [
+      "fin580.agents.orchestrator",
+      "fin580.agents.agent1_gis",
+      "fin580.agents.agent2_revenue",
+      "fin580.agents.agent3_consensus",
+      "fin580.agents.agent4_news",
+      "fin580.agents.agent5_board",
+      "fin580.data.sentinel1_sar",
+      "fin580.data.sentinel1_firm_quarter",
+      "fin580.data.trc_permits",
+      "fin580.data.ibes_pit"
+    ]
+  },
+  "data_state": {
+    "ibes_revenue_panel_sha": "b458e92fd3a36036201a58ad69e295446b022921562618f30981ee2e3d0c8ce2",
+    "ibes_detail_history_sha": "62c7bc2f4fec607056073147d5005cfaf05a4cf8212e750cbff122a9f8dca82e",
+    "compustat_fundq_sha": "b99c7f2e4c8269b877e2d4833754e98402a05601ce2b799c7279538d6c048b3b",
+    "crsp_daily_sha": "b4ae8a66a634351bb5a5349ddbcbf0810193a574ba76fcfb86127a3dcfa55975",
+    "permian_fraction_sha": "64289f52e1be776d08d6ff8087cdc0579f49df8934f4f8f57e0bb688a6ce59d8",
+    "earnings_dates_sha": "1212400a3f09f22c6781a4bb3247c09b479f50ca2b62eed60519fdc2153d5382",
+    "fracfocus_permit_dump_sha": "27299e5a4436aabd4d442f5e3eb007b331a3b92af8448be3b83ab16e4ef8f1fa",
+    "fracfocus_permit_dump_provenance": "fracfocus_bulk_csv_2026_04_30",
+    "yahoo_2025_supplement_sha": "7b3afae7f6b9140755cc74482b3aec6fd9a7250ec8d12931fd40bf6be3f864ce",
+    "wti_cache_sha": "3b6aaaffac789d08301fd7d0ff716a94b93e2daff5feb4df000bc7e366d84eff",
+    "wti_provenance": "eia_rwtcw_xls",
+    "bhi_rigcount_sha": "ef1aef44d9cf31f1019d4160c9968ae815caaceed3e6674faeae1d0556e566f7",
+    "bhi_rigcount_provenance": "eia_dpr_permian_monthly_carryforward",
+    "sar_mode": "real_sentinel1",
+    "sar_change_detection_thresholds": {
+      "activation_db": 1.5,
+      "sustained_db": 0.5,
+      "trailing_baseline_coefficient": 0.3
+    },
+    "gdelt_cache_index_sha": "ff0190093a73a98df246b9cf23a53f986f259c1952d6ff6cf3a3cf4a1b0c1921",
+    "sentinel1_firm_quarter_cache_index_sha": "febe700c7c31b3d51d968d6218c72a1c85ae346a620e5c34915f416cbcdae6b8",
+    "sentinel1_per_pad_cache_index_sha": "2a5ba4a6936482b148c2c7d2260f98cc5401d48380e4e7b95b4cdffe78f08c29",
+    "synthetic_sar_confusion_matrix_label_legacy": "target",
+    "synthetic_sar_seed_function_legacy": "sha256(ticker|q_end|pad_id|cm_label)",
+    "synthetic_sar_seed_function_sha_legacy": "b4357b94455388bffd463c6a40184f3d56e9336095767bcd44e8a6308c1d943b"
+  },
+  "llm_state": {
+    "agent2": {
+      "model_id": "qwen-3-235b-a22b-instruct-2507"
+    },
+    "agent3": {
+      "model_id": "llama3.1-8b"
+    },
+    "agent4": {
+      "model_id": "llama3.1-8b"
+    },
+    "agent5_bull": {
+      "model_id": "qwen-3-235b-a22b-instruct-2507"
+    },
+    "agent5_bear": {
+      "model_id": "llama3.1-8b"
+    },
+    "agent5_arbiter": {
+      "model_id": "qwen-3-235b-a22b-instruct-2507"
+    }
+  },
+  "prompt_shas": {
+    "agent2_revenue": "c02fcc9b638eb73713a1c4a0111c878b3856f0b852f092d77b771fc38650c518",
+    "agent3_consensus": "0bae6f20f76a415488b538ff7887dfe16a90aa8ebe0d95646f9f9ac0248bdafb",
+    "agent4_news": "3e6290af1f83afb404e58cb6074b1a6200930e791b40deb462d51e8d0c7d6c6c",
+    "agent5_arbiter": "ff41025cca2be985d3862f1e261d9ce6cd8a942cf7d8140dfc3f033bf694a4c8",
+    "agent5_bear": "4c113f231e308602ee8f6108311fdc7c88d1498939066e89384ddc8021409b3c",
+    "agent5_bull": "447fc8da1dda436d1504deba80914a1a1d983f075ba2826dce88750e9ec770c8"
+  },
+  "env": {
+    "python_version": "3.13.3 (v3.13.3:6280bb54784, Apr  8 2025, 10:47:54) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O"
+  },
+  "parameters": {
+    "window": "2024Q1-2024Q4",
+    "sar_activation_threshold_db": 1.5,
+    "sar_sustained_threshold_db": 0.5,
+    "sar_trailing_baseline_coefficient": 0.3,
+    "consensus_anchor_alpha": 0.1,
+    "transaction_cost_bps": 30
+  },
+  "warnings": []
+}

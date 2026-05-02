@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 263003758.82352936,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 258442999.99999997,
+    "drilling_signal_raw": 0.17647058823529413,
+    "drilling_signal_clipped": 0.17647058823529413,
+    "production_boe_d": 34396.897965130745,
+    "wti_avg": 91.33,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "MTDR shows elevated drilling activity with a relative activity delta of 0.8 and 5 active sites at decision date, 3 of which are newly active, indicating recent operational ramp-up. With full exposure to the segment (segment_fraction = 1.0) and a strong WTI environment averaging $91.33, the company is positioned for solid revenue performance in Q1 2021. The deterministic forecast of $263.0M reflects this positive momentum, supported by stable realized pricing at a 92% discount factor. Activity concentration suggests focused development rather than broad expansion.",
+  "key_drivers": [
+    "elevated_drilling_delta",
+    "newly_active_pads",
+    "high_wti_environment",
+    "full_segment_exposure",
+    "focused_activity_concentration"
+  ]
+}

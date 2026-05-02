@@ -1,0 +1,44 @@
+{
+  "ticker": "EOG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags elevated_drilling_activity with 16 active sites, 8.2% above recent trends",
+      "Agent 3 divergence_class is modest_beat at +9.83% with medium confidence across 18 analysts",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Only 45% of activity in high-margin shale segments limits full upstream leverage",
+      "Sector-wide beta exposure remains a macro risk"
+    ],
+    "reasoning_short": "Elevated drilling activity with new pad infill and production momentum, combined with a modest revenue beat expectation and clean news backdrop, supports a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on a 5% discount on realized prices, indicating potential for reduced revenue if prices drop",
+      "Only 45% of EOG's drilling activity is in high-margin shale segments, limiting full upstream exposure",
+      "Agent 3's medium confidence is tempered by a modest beat divergence of 9.83%"
+    ],
+    "counter_evidence": [
+      "Agent 3's divergence_class is modest_beat"
+    ],
+    "reasoning_short": "High risk of reduced revenue due to discount on realized prices and limited shale exposure. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull cited elevated drilling activity and a modest_beat divergence_class with medium confidence, while Bear's objections were based on potential reduced revenue and limited shale exposure. The strength of the Bull's evidence, including a clean news backdrop, prevails. Conviction tier set to medium due to modest beat divergence and medium confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

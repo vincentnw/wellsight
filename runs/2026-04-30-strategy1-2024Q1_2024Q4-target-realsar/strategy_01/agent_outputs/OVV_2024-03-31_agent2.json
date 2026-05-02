@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2045859300.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2273177000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 155135.80321057653,
+    "wti_avg": 80.51,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows zero active drilling sites at decision date, with no newly or continuously active pads and a sharply negative relative activity delta of -1.5, indicating a significant pullback in drilling activity heading into Q1 2024. The company's revenue forecast of $2.05B reflects this stagnation, supported by a WTI average near $80.50 but tempered by a realized price differential of 10% below benchmark and only partial exposure across segments. The lack of current drilling momentum suggests limited near-term production growth.",
+  "key_drivers": [
+    "zero_active_pads",
+    "negative_drilling_delta",
+    "moderate_wti",
+    "price_discount",
+    "partial_segment_exposure"
+  ]
+}

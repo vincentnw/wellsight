@@ -1,0 +1,43 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 5.8% relative activity increase and 21 active sites",
+      "Agent 2 highlights pure_play_permian exposure with stable_production_trend and deterministic revenue forecast of $1.63B",
+      "Agent 3 divergence_class is modest_beat at +3.93% with high confidence and 20 analysts sampled"
+    ],
+    "counter_evidence": [
+      "Divergence magnitude is modest_beat rather than strong_beat, implying limited upside surprise potential"
+    ],
+    "reasoning_short": "Sustained and expanding drilling activity in the high-margin Permian Basin, combined with a stable production profile and clean news environment, supports a clear beat on consensus. The deterministic revenue forecast aligns with upward operational momentum, warranting a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on a 7% discount to realized prices, indicating potential upside risk if prices increase",
+      "Agent 3's high confidence is based on a modest beat of 3.93%, which may not be sufficient to justify a long position",
+      "Agent 4's lack of disclosed news and zero articles suggests that the market may not have fully priced in the company's activity"
+    ],
+    "counter_evidence": [
+      "Agent 3's divergence_class is modest_beat at +3.93%"
+    ],
+    "reasoning_short": "Upside risk and modest beat expectations suggest that the market may have already priced in the company's activity, and a long position may not be justified."
+  },
+  "arbiter_reasoning": "Bull cited a modest_beat divergence_class with high confidence and no GDELT disclosure; Bear's objections included upside risk and modest beat expectations. Strength of upstream evidence from Agent 2 and Agent 3 prevails, but conviction tier is set to medium due to modest beat divergence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.1
+  }
+}

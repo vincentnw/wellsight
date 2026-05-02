@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1664500482.7586207,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1670260000.0,
+    "drilling_signal_raw": -0.034482758620689655,
+    "drilling_signal_clipped": -0.034482758620689655,
+    "production_boe_d": 121399.9833824382,
+    "wti_avg": 77.26615384615386,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources shows 14 active drilling sites as of decision date, with a 50% decline in relative activity compared to recent trends, driven by only 2 newly active pads. This suggests slowing near-term production momentum. At 40% exposure to the current WTI environment and a realized price differential of $60/boe, revenue is constrained despite stable oil prices around $77. The deterministic forecast of $1.66B reflects this reduced drilling intensity and moderate segment exposure.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_new_activity",
+    "moderate_segment_exposure",
+    "stable_wti",
+    "reduced_operational_momentum"
+  ]
+}
