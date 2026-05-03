@@ -1,0 +1,41 @@
+{
+  "ticker": "CTRA",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_drilling_delta with 3 active sites, 50% above recent trend",
+      "Agent 3 divergence_class is modest_beat at +10% with medium confidence across 14 analysts",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Only 40% of production has exposure to active drilling segment, limiting full upside capture"
+    ],
+    "reasoning_short": "Elevated drilling activity relative to trend, combined with strong WTI pricing and a clean news environment, supports a modest revenue beat. Despite partial segment exposure, the fundamental momentum and lack of negative sentiment signals justify a high-conviction long position into earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is tempered by only 40% of production tied to the active drilling segment, limiting top-line growth potential",
+      "Agent 2's realized price differential of $0.78 below benchmark may impact revenue, despite strong oil prices",
+      "Agent 3's medium confidence and modest beat divergence_class of +10% suggests limited upside potential"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Drilling activity is moderate, and revenue growth is limited by partial segment exposure and a realized price differential below benchmark. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull prevailed with evidence of moderate drilling delta above trend, strong oil prices, and a modest_beat divergence_class supported by medium confidence across 14 analysts. Although Agent 2 highlights partial segment exposure limiting growth and a slight price differential drag, these are already factored into the forecast. Agent 4 confirms no GDELT disclosure, preserving information edge. However, conviction is capped at medium due to Agent 3's medium confidence and the modest_beat classification, preventing high-tier conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.15
+  }
+}
