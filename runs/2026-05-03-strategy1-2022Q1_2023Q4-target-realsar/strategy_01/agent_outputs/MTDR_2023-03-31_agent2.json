@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 652500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 652500000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 101940.69460655139,
+    "wti_avg": 76.4546153846154,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "MTDR's drilling activity as of April 2023 shows zero active sites, with no newly or continuously active pads detected via satellite, indicating a significant pause in field operations heading into Q2 2023. Despite stable WTI prices near $76.50 and a full upstream segment focus, the absence of observable drilling activity suggests constrained production growth. Revenue is anchored to consensus estimates at $652.5M, supported by historical production levels and pricing realizations near 92% of WTI, but near-term operational inactivity presents a headwind to upside momentum.",
+  "key_drivers": [
+    "zero_active_pads",
+    "stable_wti",
+    "full_upstream_exposure",
+    "paused_drilling_activity",
+    "consensus_anchored_revenue"
+  ]
+}
