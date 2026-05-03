@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 2868853500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3187615000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 257452.94963925952,
+    "wti_avg": 74.01,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows zero active sites and no newly or continuously active pads at decision date, with a sharply negative relative activity delta of -1.5, indicating a significant pullback in field operations heading into Q4 2023. Despite a stable WTI environment near $74/boe and a realized price discount of about 9%, the lack of observable drilling activity suggests constrained production growth. With only 55% segment exposure reflected in the model, the deterministic revenue forecast is set at $2.87B, reflecting both operational retrenchment and partial asset focus.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "zero_active_pads",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "reduced_operational_momentum"
+  ]
+}

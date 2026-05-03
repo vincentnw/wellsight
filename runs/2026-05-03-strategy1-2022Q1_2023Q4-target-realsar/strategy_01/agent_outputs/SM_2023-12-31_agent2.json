@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 612900000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 612900000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 56707.9940784604,
+    "wti_avg": 74.23076923076923,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows no active drilling sites at decision date, with satellite data indicating a complete halt in activity compared to prior periods, reflected in a 100% drop in relative activity. The company's revenue forecast of $612.9M for Q4 2023 is anchored to consensus and driven primarily by legacy production and exposure to a stable WTI environment near $74/bbl. With only 55% segment fraction in active basins and no new or continuous drilling detected, near-term revenue is expected to be flat to declining, supported entirely by existing output and pricing differentials.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "consensus_anchored_forecast",
+    "moderate_segment_fraction",
+    "stable_wti",
+    "no_production_growth_signal"
+  ]
+}

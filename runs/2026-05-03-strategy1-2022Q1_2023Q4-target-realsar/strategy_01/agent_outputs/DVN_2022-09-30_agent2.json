@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3548725000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3735500000.0,
+    "drilling_signal_raw": -0.5,
+    "drilling_signal_clipped": -0.5,
+    "production_boe_d": 259482.5904791898,
+    "wti_avg": 90.83307692307692,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity as of October 2022 shows only 2 active sites, with a relative decline of 2.0 compared to recent trends, indicating reduced operational momentum heading into the final quarter of 2022. Despite strong WTI prices averaging nearly $91/bbl and a realized price discount of 9%, revenue is constrained by lower drilling activity and only partial exposure to active segments, with segment fraction at 55%. The deterministic revenue forecast is set at $3.55B, reflecting these headwinds against an otherwise favorable price environment.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "high_wti",
+    "partial_segment_exposure",
+    "low_absolute_activity",
+    "recent_drilling_slowdown"
+  ]
+}

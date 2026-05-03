@@ -1,0 +1,11 @@
+{
+  "ticker": "CRGY",
+  "our_estimate_usd": 8737275254.4,
+  "consensus_median_usd": 0.0,
+  "consensus_dispersion_usd": 0.0,
+  "n_analysts_at_T_minus_14": 0,
+  "divergence_pct": 0.0,
+  "divergence_class": "in_line",
+  "confidence": "low",
+  "reasoning": "No I/B/E/S coverage at T-14; in_line by default."
+}

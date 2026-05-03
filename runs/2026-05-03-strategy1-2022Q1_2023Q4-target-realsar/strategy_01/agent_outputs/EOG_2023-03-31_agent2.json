@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5324000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5324000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 360746.8625502957,
+    "wti_avg": 76.82153846153847,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows zero active drilling sites at the decision date, with a 70% decline in relative drilling activity compared to recent trends, indicating a significant near-term pullback in operational momentum heading into Q1 2023. Despite stable WTI prices around $76.82 and a realized price discount of only 5%, the company's revenue forecast of $5.32B is driven primarily by consensus-based production assumptions rather than current satellite-observed activity. EOG's exposure to only 45% of the core growth segments further limits immediate growth visibility, suggesting revenue is being sustained by legacy production rather than new development.",
+  "key_drivers": [
+    "zero_active_sites",
+    "negative_drilling_delta",
+    "consensus_anchored_forecast",
+    "partial_segment_exposure",
+    "stable_wti"
+  ]
+}

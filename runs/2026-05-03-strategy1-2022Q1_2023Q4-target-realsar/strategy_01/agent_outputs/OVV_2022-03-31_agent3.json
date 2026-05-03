@@ -1,0 +1,11 @@
+{
+  "ticker": "OVV",
+  "our_estimate_usd": 1754955000.0,
+  "consensus_median_usd": 1949950000.0,
+  "consensus_dispersion_usd": 368049342.3951468,
+  "n_analysts_at_T_minus_14": 9,
+  "divergence_pct": -10.0,
+  "divergence_class": "modest_miss",
+  "confidence": "medium",
+  "reasoning": "Our $1.75B estimate is 10.0% below $1.99B consensus. With 9 analysts and high dispersion (189% of consensus), confidence is low."
+}

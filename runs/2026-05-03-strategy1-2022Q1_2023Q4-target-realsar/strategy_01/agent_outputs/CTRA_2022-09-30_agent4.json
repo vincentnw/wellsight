@@ -1,0 +1,8 @@
+{
+  "ticker": "CTRA",
+  "n_articles_in_window": 9,
+  "gdelt_disclosed": false,
+  "matching_article_ids": [],
+  "conviction_modifier": "none",
+  "reasoning": "Agent 4 LLM fallback (JSONDecodeError): no disclosure assumed."
+}

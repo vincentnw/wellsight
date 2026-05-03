@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2653500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2653500000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 190737.55159833538,
+    "wti_avg": 84.93153846153847,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv's revenue forecast for Q3 2023 is anchored at $2.65B, reflecting stable WTI prices near $85/boe and a realized price differential of 90% of benchmark. Satellite data shows zero active drilling sites at decision date, with no newly or continuously active pads, indicating a pause in field-level activity. The company's 50% segment fraction suggests diversified exposure, limiting direct leverage to near-term drilling rebounds. Despite the lack of current drilling momentum, production levels remain supported by existing output, sustaining revenue in the near term.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "stable_wti",
+    "consensus_anchored_forecast",
+    "half_segment_exposure",
+    "no_new_activity"
+  ]
+}

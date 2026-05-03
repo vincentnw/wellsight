@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 620076500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 620076500.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 50714.00600379753,
+    "wti_avg": 83.97615384615385,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity on decision date shows only 2 active sites, with no newly active pads and a relative activity delta of +2.0, indicating stabilization after prior declines. The company's production is partially exposed to the Permian via a 55% segment fraction, with realized prices running below WTI average. Despite modest activity uptick, lack of new drilling momentum and mid-tier oil prices lead to a revenue forecast of $620.1M for Q3 2023, anchored to consensus.",
+  "key_drivers": [
+    "low_absolute_activity",
+    "no_new_pads",
+    "modest_relative_recovery",
+    "sub_wti_pricing",
+    "partial_segment_exposure"
+  ]
+}

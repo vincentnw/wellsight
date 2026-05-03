@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 671446666.6666666,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 694600000.0,
+    "drilling_signal_raw": -0.3333333333333333,
+    "drilling_signal_clipped": -0.3333333333333333,
+    "production_boe_d": 58562.660191555384,
+    "wti_avg": 78.74615384615385,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows limited drilling activity with only one active site at decision date, representing a 50% drop in relative activity compared to recent trends, suggesting constrained production growth into Q4 2022. With half of operations exposed to the Permian and realized prices at a discount to WTI, revenue is expected to reflect both subdued activity and segment exposure. The deterministic forecast of $671.4M aligns with reduced satellite-derived momentum and moderate oil price assumptions.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "partial_permian_exposure",
+    "wti_discount_realization",
+    "minimal_new_activity"
+  ]
+}

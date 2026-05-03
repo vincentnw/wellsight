@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5730250000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5730250000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 378784.09514065523,
+    "wti_avg": 78.74615384615385,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows minimal satellite-detected drilling activity with only one continuously active site and no newly active pads at the decision date, indicating stagnant near-term production growth. The company's revenue forecast of $5.73B for Q4 2022 is primarily anchored to consensus estimates rather than current drilling momentum. With a realized price differential near 95% of WTI and exposure to only 45% of the core growth segment, EOG's revenue outlook remains stable but lacks upside catalysts from recent operational activity.",
+  "key_drivers": [
+    "neutral_drilling_delta",
+    "consensus_anchored_forecast",
+    "low_satellite_activity",
+    "moderate_segment_exposure",
+    "stable_price_realization"
+  ]
+}

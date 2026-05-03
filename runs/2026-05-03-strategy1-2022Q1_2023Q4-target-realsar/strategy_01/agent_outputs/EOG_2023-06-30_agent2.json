@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5116000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5116000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 368077.70849163213,
+    "wti_avg": 72.35,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows limited near-term drilling acceleration, with only 2 active sites detected via SAR at decision date and no newly active pads, resulting in a muted drilling signal. Despite a relative activity delta of 1.3, the low absolute activity and stable satellite footprint suggest flat production growth into Q2 2023. The company's realized price remains strong at a 5% discount to WTI, but with only 45% exposure to the most active segments, revenue is anchored near consensus at $5.12B. Current activity patterns indicate maintenance-mode operations rather than expansion.",
+  "key_drivers": [
+    "low_absolute_drilling",
+    "no_new_pads",
+    "moderate_relative_delta",
+    "segment_exposure_limitation",
+    "stable_realized_pricing"
+  ]
+}
