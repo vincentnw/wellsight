@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 3575410000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3698700000.0,
+    "drilling_signal_raw": -0.3333333333333333,
+    "drilling_signal_clipped": -0.3333333333333333,
+    "production_boe_d": 484519.95112443174,
+    "wti_avg": 38.411538461538456,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows minimal satellite-detected drilling activity at the decision date, with only one active site and no continuously active pads, reflecting a 50% drop in relative activity. This sharp decline suggests near-term production pressure, particularly in non-core segments where EOG has partial exposure. Despite low WTI averages around $38/boe and weak drilling momentum, the deterministic revenue forecast holds near $3.58B due to pricing resilience and a moderate production base. The low segment fraction further insulates overall performance from full commodity volatility.",
+  "key_drivers": [
+    "sharply_negative_drilling_delta",
+    "low_wti_environment",
+    "partial_segment_exposure",
+    "pricing_resilience",
+    "minimal_active_pads"
+  ]
+}

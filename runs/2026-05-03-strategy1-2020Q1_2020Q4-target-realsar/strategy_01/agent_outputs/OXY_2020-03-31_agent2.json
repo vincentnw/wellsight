@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 5570950000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5064500000.0,
+    "drilling_signal_raw": 1.0,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 508650.60749186715,
+    "wti_avg": 38.411538461538456,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows moderate intensity with 3 active sites at decision date, all continuously active and representing 60% of recent operational footprint, indicating stable but not expanding operations into Q1 2020. The relative activity delta of +1.5 suggests improved utilization compared to historical patterns, though no new pads came online. With WTI averaging $38.41 and realized prices at a 6% discount, revenue is supported by a consensus-anchored production outlook. However, only 30% segment fraction reflects partial exposure to current drilling momentum, tempering top-line sensitivity to near-term field activity.",
+  "key_drivers": [
+    "moderate_active_sites",
+    "positive_relative_delta",
+    "no_new_pads",
+    "low_segment_fraction",
+    "discounted_realized_price"
+  ]
+}

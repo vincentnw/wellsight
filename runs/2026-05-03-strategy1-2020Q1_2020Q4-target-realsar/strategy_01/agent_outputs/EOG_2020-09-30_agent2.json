@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 2033110000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2033110000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 259876.9780514755,
+    "wti_avg": 40.723076923076924,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows minimal satellite-detected drilling activity with only one continuously active site and no new activations, resulting in a neutral to slightly positive relative activity delta of 0.5. The company's revenue forecast of $2.03B for Q3 2020 is anchored to consensus, reflecting stable production levels at approximately 260,000 boe/d and a realized price discount typical for its mix. With WTI averaging around $40.72 and only 45% of operations in the observed segment, broader market conditions and pricing dynamics outweigh muted drilling signals in shaping expected revenue performance.",
+  "key_drivers": [
+    "minimal_drilling_activity",
+    "consensus_anchored_forecast",
+    "moderate_wti_environment",
+    "low_segment_exposure",
+    "stable_production"
+  ]
+}

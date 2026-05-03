@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1417140000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1574600000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 225235.6635054142,
+    "wti_avg": 38.411538461538456,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows zero active drilling sites at decision date, with a sharp decline in relative activity compared to recent quarters, indicating halted or significantly reduced operations heading into Q1 2020. The company's revenue forecast of $1.42B reflects constrained production and exposure to only half of its core segments being active. With WTI averaging below $39 and realized prices further discounted, the current drilling freeze suggests near-term revenue pressure. The lack of newly or continuously active pads underscores minimal operational momentum.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "low_wti",
+    "partial_segment_exposure",
+    "no_operational_momentum"
+  ]
+}

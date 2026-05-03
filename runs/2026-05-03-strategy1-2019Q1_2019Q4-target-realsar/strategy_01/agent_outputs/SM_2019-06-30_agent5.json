@@ -1,0 +1,41 @@
+{
+  "ticker": "SM",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta with 2.5 above recent average, driven by new_pad_activation",
+      "Agent 3 divergence_class is modest_beat at +10% with medium confidence across 18 analysts",
+      "Agent 2 revenue_forecast_usd is $446.7M, supported by continuous_activity_base and partial_segment_exposure to $59/bbl WTI"
+    ],
+    "counter_evidence": [
+      "Agent 4 conviction_modifier is downgrade_one_tier due to gdelt_disclosed=true with 36 articles indicating potential negative news overhang"
+    ],
+    "reasoning_short": "Modest operational expansion signaled by new pad activation and above-trend drilling activity supports a modest revenue beat expectation. Despite news-related downgrade pressure, fundamentals point to upside relative to consensus, warranting a medium-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 36 matching articles, suggesting market may have priced in the activity",
+      "Agent 3 medium confidence with modest_beat divergence_class at +10% and 18 analysts, indicating a cautious outlook",
+      "Agent 2's positive_drilling_delta and moderate_wti exposure may be offset by partial_segment_exposure and new_pad_activation uncertainty"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Market may have already priced in the drilling activity, and the consensus comparison is only modestly above with medium confidence. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 4 gdelt_disclosed=true with 36 matching articles, indicating potential market awareness and pricing-in of the drilling activity. Bull acknowledged this headwind, noting downgrade pressure from news overhang. Agent 3's modest_beat divergence_class (+10%) and medium confidence, combined with partial_segment_exposure and uncertainty around new_pad_activation, fail to establish a strong information edge. Information clarity is insufficient for entry. Decision: no_trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.25,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.4
+  }
+}

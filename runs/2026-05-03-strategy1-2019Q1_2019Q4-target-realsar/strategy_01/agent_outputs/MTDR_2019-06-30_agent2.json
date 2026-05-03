@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 217700000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 217700000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 43987.44024214308,
+    "wti_avg": 59.11538461538461,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources shows zero active drilling sites at decision date, with no newly or continuously active pads, indicating a pause in field-level activity heading into Q2 2019. Despite minimal near-term drilling momentum, the deterministic revenue forecast holds at $217.7M, supported by stable WTI prices around $59/bbl and full exposure to the Permian segment. Realized prices are slightly discounted to WTI, consistent with regional differentials. The forecast reflects baseline production without uplift from recent drilling activity.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "stable_wti",
+    "full_permian_exposure",
+    "no_new_activity",
+    "realized_price_discount"
+  ]
+}

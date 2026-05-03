@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 685173333.3333334,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 708800000.0,
+    "drilling_signal_raw": -0.3333333333333333,
+    "drilling_signal_clipped": -0.3333333333333333,
+    "production_boe_d": 111697.36611276415,
+    "wti_avg": 40.74153846153847,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity as of October 2020 shows only one actively developing site, with a 50% decline in relative activity compared to recent trends, indicating constrained near-term production growth into the September 2020 quarter. The company's revenue forecast of $685.2M reflects low WTI prices averaging around $40.74/bbl and a realized price discount, compounded by only partial exposure to the most active drilling segments. Minimal new and continuous pad activity suggests limited operational momentum during the decision period.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_wti_environment",
+    "partial_segment_exposure",
+    "minimal_active_pads",
+    "realized_price_discount"
+  ]
+}

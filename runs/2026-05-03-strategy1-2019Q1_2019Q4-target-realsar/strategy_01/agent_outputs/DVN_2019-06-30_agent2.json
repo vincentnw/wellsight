@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 1313635950.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1459595500.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 148957.5754878058,
+    "wti_avg": 58.572307692307696,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy faces a challenging outlook for Q2 2019, with satellite data showing zero active drilling sites and a sharp decline in relative activity, suggesting halted operations or significant drawdown in drilling momentum. The company's revenue forecast of $1.31B reflects this weak activity, compounded by a realized price that is 9% below benchmark and only partial exposure to the most active segments. With WTI averaging under $59, and no signs of near-term operational rebound, revenue performance is expected to lag the broader peer group.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "subpar_realized_pricing",
+    "moderate_segment_exposure",
+    "low_wti_environment"
+  ]
+}

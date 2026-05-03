@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 2362500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2362500000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 390113.27733682666,
+    "wti_avg": 31.523076923076925,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows zero active drilling sites at the decision date, with no newly or continuously active pads, indicating a complete halt in drilling activity compared to prior periods. This sharp decline, reflected in a relative activity delta of -1.0, suggests minimal near-term production growth into the June 2020 quarter. With WTI averaging around $31.50 and EOG realizing approximately 95% of that price, revenue is further constrained by its 45% segment fraction, likely reflecting portfolio diversification or reduced operational focus in monitored regions. The deterministic revenue forecast stands at $2.36B, anchored to consensus estimates amid limited satellite-observed activity.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_activity_delta",
+    "low_wti_environment",
+    "partial_segment_exposure",
+    "consensus_anchored_forecast"
+  ]
+}

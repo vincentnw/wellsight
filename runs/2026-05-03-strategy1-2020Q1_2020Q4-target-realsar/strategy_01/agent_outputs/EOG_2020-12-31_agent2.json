@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 2322000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2322000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 251308.0090027384,
+    "wti_avg": 48.095384615384624,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows limited near-term drilling activity with only 2 active sites detected via satellite at decision date, both of which have been continuously active and no new sites initiated. The relative activity delta of 2.0 suggests slight improvement compared to recent history, but overall activity remains low. With a realized price slightly below WTI average and less than half of production concentrated in high-activity segments, revenue for Q4 2020 is expected to align with the consensus-anchored forecast of $2.32B. The stable but subdued drilling pattern indicates cautious capital allocation amid a recovering price environment.",
+  "key_drivers": [
+    "low_absolute_activity",
+    "no_newly_active_pads",
+    "modest_relative_improvement",
+    "sub_wti_realized_price",
+    "partial_segment_exposure"
+  ]
+}

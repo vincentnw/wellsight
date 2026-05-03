@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 711700000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 711700000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 206505.69841985565,
+    "wti_avg": 40.723076923076924,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback's operations show zero active drilling sites at the decision date, with no newly or continuously active pads, indicating a complete halt in drilling activity heading into the end of Q3 2020. This inactivity, combined with a low WTI average of $40.72 and full exposure to the Permian segment, suggests constrained production growth and operational pause. Despite the weak drilling signal, the deterministic revenue forecast remains at $711.7M, anchored to consensus estimates, likely reflecting production from prior activity or inventory drawdown.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "low_wti",
+    "pure_play_permian",
+    "consensus_anchored_forecast",
+    "no_operational_momentum"
+  ]
+}

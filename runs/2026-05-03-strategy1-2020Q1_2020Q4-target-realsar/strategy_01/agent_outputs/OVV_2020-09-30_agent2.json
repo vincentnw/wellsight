@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1338060000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1384200000.0,
+    "drilling_signal_raw": -0.3333333333333333,
+    "drilling_signal_clipped": -0.3333333333333333,
+    "production_boe_d": 200504.56554497033,
+    "wti_avg": 40.74153846153847,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows minimal satellite-detected drilling activity with only one active site at decision date, representing a 50% drop from recent levels, indicating constrained production momentum heading into Q3 2020. The company's revenue forecast of $1.34B reflects a moderate WTI environment and a realized price at a 10% discount to benchmark, with exposure split across multiple basins. Low new pad activation and declining activity trends suggest limited near-term volume growth, consistent with industry-wide pullbacks during the period.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "moderate_wti",
+    "price_discount",
+    "multi_basin_exposure"
+  ]
+}

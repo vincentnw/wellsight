@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 3161926549.9999995,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3270958499.9999995,
+    "drilling_signal_raw": -0.3333333333333333,
+    "drilling_signal_clipped": -0.3333333333333333,
+    "production_boe_d": 240188.7637359716,
+    "wti_avg": 68.52461538461537,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows minimal satellite-detected drilling activity with only one newly active site and no continuously active sites at decision date, reflecting a 50% drop in relative activity. This weak operational signal, combined with a modest realized price discount and less than half exposure to the targeted segment, suggests constrained production growth into Q2 2021. With WTI averaging near $68.50 and drilling momentum well below recent trends, the deterministic revenue forecast settles at approximately $3.16B.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "partial_segment_exposure",
+    "modest_price_discount",
+    "weak_operational_momentum"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "ticker": "OXY",
+  "decision_date_T": "2021-10-21",
+  "fiscal_quarter_end": "2021-09-30",
+  "n_newly_active": 1,
+  "n_continuously_active": 4,
+  "n_idle": 0,
+  "absolute_active": 5,
+  "share_active": 1.0,
+  "relative_activity_delta": 3.5,
+  "pad_classifications": [
+    {
+      "pad_id": "30015479720000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015408210000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015431230000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015479740000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015415960000",
+      "state": "continuously_active"
+    }
+  ]
+}

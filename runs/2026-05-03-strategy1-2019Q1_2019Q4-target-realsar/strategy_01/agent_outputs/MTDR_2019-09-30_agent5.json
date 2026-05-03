@@ -1,0 +1,42 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags elevated_drilling_delta with relative activity delta of 1.5 and three newly active sites",
+      "Agent 2 reports full_segment_exposure and focused_operations with 60% share of active pads indicating high-intensity development",
+      "Agent 3 divergence_class is modest_beat at +10% with medium confidence across 14 analysts, signaling upside to consensus"
+    ],
+    "counter_evidence": [
+      "Agent 3 confidence is only medium, not high",
+      "Absolute drilling activity levels described as moderate"
+    ],
+    "reasoning_short": "Elevated drilling momentum and new pad development indicate strong operational execution ahead of earnings. Full core segment exposure and focused operations support revenue visibility, while a modest-beat divergence suggests positive earnings surprise potential. No news leaks (gdelt_disclosed=false) preserve informational edge, favoring a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast of $259.7M is based on moderate WTI, which may not hold given current market volatility",
+      "Agent 2's focused operations may not translate to sustained growth, as indicated by the absence of continuously active sites",
+      "Agent 3's modest beat with a 10% divergence may not be enough to justify a long position, especially with a medium confidence level"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Elevated drilling activity and strong operational ramp-up may not be enough to justify a long position, given the moderate WTI environment and focused operations."
+  },
+  "arbiter_reasoning": "Bull cited elevated drilling activity and full segment exposure with a modest_beat divergence_class, but Agent 3 confidence is only medium and Bear correctly emphasizes that modest_beat with medium confidence is insufficient for a high-conviction long. Although gdelt_disclosed=false, the upstream evidence lacks strong divergence or high confidence needed for a trade. Information edge is not compelling; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.6,
+    "agent4_weight": 0.1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 421177000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 421177000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 40784.66149593757,
+    "wti_avg": 70.92615384615387,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows a relative increase, with two newly active sites and no continuously active ones, indicating a recent ramp-up in operations as of October 2021. Despite low absolute activity levels, the positive relative delta suggests emerging momentum. The company's revenue forecast of $421.2M reflects half-exposure to the current segment, with WTI averaging around $70.93 and realized prices discounted at 88%. This limited but growing activity, combined with moderate oil prices, supports the consensus-anchored revenue outlook for the quarter ended September 2021.",
+  "key_drivers": [
+    "newly_active_ramp",
+    "low_absolute_activity",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "recent_operational_startups"
+  ]
+}

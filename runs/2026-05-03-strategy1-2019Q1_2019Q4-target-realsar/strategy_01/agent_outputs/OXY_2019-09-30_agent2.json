@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 5142000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5142000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 325653.13233727583,
+    "wti_avg": 55.37692307692308,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity as of October 2019 shows minimal near-term expansion, with only one active site and no newly activated pads, resulting in a stagnant relative activity delta. The company's revenue forecast of $5.14B for Q3 2019 is anchored to consensus, reflecting stable production and a realized price slightly below WTI average. With only 30% of operations in the observed segment—likely concentrated in mature areas—growth momentum is limited. Low satellite-derived activity suggests maintenance-mode operations rather than aggressive ramp-up.",
+  "key_drivers": [
+    "minimal_drilling_activity",
+    "consensus_anchored_forecast",
+    "low_segment_exposure",
+    "stable_production",
+    "mature_field_operations"
+  ]
+}

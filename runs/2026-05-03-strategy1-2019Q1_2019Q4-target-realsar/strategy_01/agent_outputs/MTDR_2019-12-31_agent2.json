@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 246500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 255000000.0,
+    "drilling_signal_raw": -0.3333333333333333,
+    "drilling_signal_clipped": -0.3333333333333333,
+    "production_boe_d": 50955.027444191735,
+    "wti_avg": 57.783076923076926,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources shows minimal satellite-detected drilling activity with only one active site at decision date, representing a 50% drop in relative activity compared to recent trends. This low and declining operational footprint, combined with a WTI environment near $58/barrel and realized prices at a 8% discount, suggests constrained production growth into Q4 2019. Despite full exposure to the core segment, the lack of newly active pads points to limited near-term volume expansion, aligning with the deterministic revenue forecast of $246.5M.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "mild_wti_headwind",
+    "single_active_pad",
+    "full_segment_exposure"
+  ]
+}

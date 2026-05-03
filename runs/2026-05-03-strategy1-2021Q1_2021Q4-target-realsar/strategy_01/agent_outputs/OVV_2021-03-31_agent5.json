@@ -1,0 +1,42 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flagged positive_drilling_delta of +3.5 sites with 5 fully active sites at decision date",
+      "Agent 3 divergence_class is modest_beat at +10% with medium confidence across 8 analysts",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Only partial segment exposure limits full upside capture from growing areas",
+      "Moderate WTI assumptions at $59/boe constrain revenue tailwinds"
+    ],
+    "reasoning_short": "Positive drilling momentum with full operational continuity, combined with a consensus-beating revenue forecast and clean news environment, supports a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's outlook acknowledges uncertain realized-price assumption, which may impact revenue forecast of $1.71B",
+      "Agent 3's medium confidence is tempered by modest_beat divergence_class at +10% with 8 analysts, indicating limited consensus",
+      "Agent 4's gdelt_disclosed=false with 26 articles, suggesting no disclosed news that may have already moved the price"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Uncertainty around realized-price assumption and modest consensus among analysts suggest caution. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull's case for a long position prevailed due to Agent 2's positive drilling delta and operational continuity, supported by Agent 3's modest_beat divergence_class at +10% with medium confidence and Agent 4's gdelt_disclosed=false indicating no pre-earnings news leakage. However, conviction is tempered by Agent 3's medium confidence and only partial segment exposure limiting upside, preventing a high tier. No material bear objection invalidates the edge. Conviction tier set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

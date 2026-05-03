@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6523336600.000002,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5930306000.000001,
+    "drilling_signal_raw": 1.0,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 395932.4826406859,
+    "wti_avg": 57.783076923076926,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows moderate intensity with 3 active sites at decision date, all continuously active and representing 60% of its monitored assets, indicating stable but unsurging operational momentum into Q4 2019. The relative activity delta of +1.5 suggests slight expansion compared to recent trends. However, with only 30% segment fraction in the observed regions, the broader company performance relies significantly on unobserved operations. At an average WTI price of ~$57.8 and realized prices at a 6% discount, the deterministic revenue forecast reaches approximately $6.52B for the quarter.",
+  "key_drivers": [
+    "moderate_absolute_activity",
+    "positive_relative_delta",
+    "low_segment_fraction",
+    "stable_continuous_activity",
+    "wti_sub_60"
+  ]
+}

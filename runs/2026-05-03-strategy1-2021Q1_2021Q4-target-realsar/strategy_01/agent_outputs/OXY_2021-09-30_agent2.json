@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6831239250.000001,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 6210217500.0,
+    "drilling_signal_raw": 2.3333333333333335,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 334886.6994093435,
+    "wti_avg": 71.54076923076924,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows full utilization with all five monitored sites active and a positive relative delta of 3.5, indicating strong operational continuity and recent ramp-up. Despite only 30% exposure to the observed Permian segment, this sustained activity supports stable production volumes near 335k boe/d. With WTI averaging around $71.50 and realized prices at a slight discount, the deterministic revenue forecast reaches approximately $6.83B for Q3 2021. The concentration of activity suggests efficient pad development and minimal downtime.",
+  "key_drivers": [
+    "full_site_utilization",
+    "positive_drilling_delta",
+    "efficient_pad_development",
+    "moderate_wti",
+    "partial_segment_exposure"
+  ]
+}

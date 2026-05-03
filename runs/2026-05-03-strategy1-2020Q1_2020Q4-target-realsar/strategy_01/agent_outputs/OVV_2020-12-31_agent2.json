@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1357554600.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1508394000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 177336.27719308145,
+    "wti_avg": 46.73538461538462,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows zero active drilling sites at decision date, with no newly or continuously active pads and a sharply negative relative activity delta of -1.5, indicating a significant pullback in field operations heading into Q4 2020. The company's revenue forecast of $1.36B reflects these depressed drilling levels, combined with a realized price discount and only partial exposure to the broader market via a 50% segment fraction. With WTI averaging below $47, and no near-term signs of operational rebound, revenue performance is expected to remain subdued despite modest production volumes.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "low_wti",
+    "realized_price_discount",
+    "partial_segment_exposure"
+  ]
+}

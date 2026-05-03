@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 1458960000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1458960000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 174982.44021769118,
+    "wti_avg": 55.37692307692308,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's revenue forecast for Q3 2019 is anchored at $1.46B, reflecting stable production and a moderate realized price discount to WTI. Satellite data shows zero active drilling sites at decision date, with no newly or continuously active pads, indicating a pause in field-level activity. Despite minimal near-term drilling momentum, the company's partial exposure to active basins (55% segment fraction) and consistent production levels support revenue stability. Lower average WTI prices in the period weigh on overall revenue compared to stronger commodity environments.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "low_wti_environment",
+    "partial_basin_exposure",
+    "stable_production",
+    "realized_price_discount"
+  ]
+}

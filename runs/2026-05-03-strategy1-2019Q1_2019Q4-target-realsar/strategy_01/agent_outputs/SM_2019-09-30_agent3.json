@@ -1,0 +1,11 @@
+{
+  "ticker": "SM",
+  "our_estimate_usd": 374020050.0,
+  "consensus_median_usd": 404346000.0,
+  "consensus_dispersion_usd": 27126898.997120917,
+  "n_analysts_at_T_minus_14": 20,
+  "divergence_pct": -7.5,
+  "divergence_class": "modest_miss",
+  "confidence": "medium",
+  "reasoning": "Our $374M estimate is 7.6% above $404M consensus; 20 analysts with moderate dispersion (~6.7% of consensus) yields medium confidence."
+}

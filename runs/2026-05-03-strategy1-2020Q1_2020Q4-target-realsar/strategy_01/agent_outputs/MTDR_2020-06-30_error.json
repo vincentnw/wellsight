@@ -1,0 +1,4 @@
+{
+  "error": "LLM call failed after 2 attempts: Error code: 429 - {'message': \"We're experiencing high traffic right now! Please try again soon.\", 'type': 'too_many_requests_error', 'param': 'queue', 'code': 'queue_exceeded'}",
+  "type": "RuntimeError"
+}

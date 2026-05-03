@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 3730095000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4144550000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 336021.25137653097,
+    "wti_avg": 57.783076923076926,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows zero active drilling sites at the decision date, with no newly or continuously active pads and a sharply negative relative activity delta of -1.5, indicating a significant pullback in field operations heading into Q4 2019. Despite a moderate realized price discount and exposure to only 45% of the broader segment's activity, the complete halt in observed drilling activity raises concerns about near-term production growth. With WTI averaging around $57.80 and production volumes steady, the deterministic revenue forecast is set at $3.73B, reflecting constrained operational momentum during the period.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_relative_activity_delta",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "production_stability"
+  ]
+}

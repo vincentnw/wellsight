@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 321300000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 357000000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 47217.55875962868,
+    "wti_avg": 46.73538461538462,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows zero active drilling sites at decision date, with no newly or continuously active pads and a sharp negative relative activity delta of -3.0, indicating a near-term halt in drilling momentum heading into Q4 2020. With WTI averaging around $46.74 and realized prices discounted at 88% of benchmark, revenue is further constrained by only 55% exposure to the most active segment. These factors collectively underpin the deterministic revenue forecast of $321.3M, reflecting limited operational activity and moderate price conditions.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "substantial_realized_discount",
+    "partial_segment_exposure",
+    "moderate_wti"
+  ]
+}

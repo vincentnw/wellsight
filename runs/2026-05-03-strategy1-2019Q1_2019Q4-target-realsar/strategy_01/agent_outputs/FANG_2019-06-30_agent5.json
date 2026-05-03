@@ -1,0 +1,42 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags high_relative_activity_delta of +3.0, indicating stronger operational engagement",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting upside to consensus revenue estimates",
+      "Agent 2 deterministic forecast of $1.15B aligns with stable production and full segment exposure in Permian Basin"
+    ],
+    "counter_evidence": [
+      "Agent 4 reports gdelt_disclosed=true with 75 articles, indicating potential information leakage and reduced surprise potential",
+      "Agent 4 conviction_modifier is downgrade_one_tier, implying reduced confidence in earnings surprise"
+    ],
+    "reasoning_short": "Despite news leakage concerns, strong relative drilling activity and a modest-beat revenue divergence support a long position. Operational consistency in the Permian Basin underpins reliable execution into earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 75 matching articles, suggesting market may have priced in the activity",
+      "Agent 3 medium confidence with modest_beat divergence_class at +10% indicates limited upside potential",
+      "Agent 2 outlook acknowledges uncertain realized-price assumption and moderate WTI environment"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Market may have already priced in the activity, and the modest beat expectation with low confidence suggests limited upside potential. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear flagged Agent 4 gdelt_disclosed=true with 75 articles, indicating likely information leakage and reduced surprise potential. Although Bull cited Agent 2's high_relative_activity_delta and Agent 3's modest_beat divergence_class, the medium confidence and downgrade_one_tier modifier limit upside conviction. Information edge is eroded; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.25,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.4
+  }
+}

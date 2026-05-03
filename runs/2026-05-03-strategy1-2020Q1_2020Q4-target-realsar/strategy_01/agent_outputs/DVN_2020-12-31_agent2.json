@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 761630000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 761630000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 108237.59303627255,
+    "wti_avg": 46.73538461538462,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows only two active sites at decision date, both of which were continuously active with no new sites activated, resulting in a low absolute count but a positive relative activity delta of 2.0. With WTI averaging around $46.74 and realized prices at a 9% discount, revenue is supported by stable operations in core areas. The company's 55% segment fraction indicates partial exposure to the observed activity, tempering volume growth potential. The deterministic revenue forecast for the quarter ending December 2020 is $761.63M, reflecting stable production rather than expansionary drilling trends.",
+  "key_drivers": [
+    "low_absolute_activity",
+    "stable_operations",
+    "moderate_wti",
+    "partial_segment_exposure",
+    "no_new_activations"
+  ]
+}

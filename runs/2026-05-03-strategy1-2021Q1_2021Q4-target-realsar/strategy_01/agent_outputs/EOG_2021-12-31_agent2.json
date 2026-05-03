@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 4392800000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4624000000.0,
+    "drilling_signal_raw": -0.5,
+    "drilling_signal_clipped": -0.5,
+    "production_boe_d": 292110.161806119,
+    "wti_avg": 78.27846153846154,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources shows minimal satellite-detected drilling activity at decision date, with only one active site and no newly active pads, resulting in a sharp negative relative activity delta. This suggests near-term production headwinds, particularly in non-core segments where EOG has partial exposure (45% segment fraction). With WTI averaging $78.28 and realized prices slightly below benchmark, the deterministic revenue forecast for Q4 2021 is $4.39B. The lack of drilling momentum implies limited volume growth contribution from new wells in the target quarter.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "partial_segment_exposure",
+    "stable_wti",
+    "no_new_pads"
+  ]
+}

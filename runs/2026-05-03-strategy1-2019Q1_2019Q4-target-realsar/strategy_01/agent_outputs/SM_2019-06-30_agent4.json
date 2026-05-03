@@ -1,0 +1,24 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 36,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "-new-well-results-300869775.html",
+    "s-operators-raising-14056716.php",
+    "ital-expenditures-300887130.html",
+    "ricing-and-capital-expenditures/",
+    "ot-permian-basin-beginning-flame",
+    "og-highlights-eog-141102022.html",
+    "d-permian-focus-4-134001765.html",
+    "bal-Market-Oil-Shale-2017-2026--",
+    "sell-06-may-2019-158766-article/",
+    "_sell-06-may-2019-158766-article",
+    "ian-Is-Slowing-Down-14090615.php",
+    "rmian-promise-slowing-shale-boom",
+    "-in-the-permian-is-slowing-down/",
+    "m-in-the-permian-is-slowing-down",
+    "n-is-slowing-down/comment-page-1"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Eight GDELT-indexed articles describe drilling slowdown or boom slowing down in the Permian consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

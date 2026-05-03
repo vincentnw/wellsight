@@ -1,0 +1,43 @@
+{
+  "ticker": "OXY",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_relative_delta of +1.5, indicating improved operational utilization",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting revenue will exceed consensus estimates",
+      "Agent 2 reports moderate_active_sites (3) with 60% of recent operational footprint, signaling stable production into Q1 2020"
+    ],
+    "counter_evidence": [
+      "Agent 4 conviction_modifier is downgrade_one_tier due to gdelt_disclosed=true with 75 articles, indicating potential news overhang",
+      "Only 30% segment fraction in Agent 2 analysis implies limited exposure to current drilling momentum",
+      "Realized prices at 6% discount to benchmark may constrain margin upside"
+    ],
+    "reasoning_short": "Despite limited segment exposure and news overhang, stable drilling activity with improved utilization and a modest revenue beat expectation support a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 75 matching articles, suggesting market may have priced in the activity",
+      "Agent 2 outlook acknowledges uncertain realized-price assumption and only 30% segment fraction reflects partial exposure to current drilling momentum",
+      "Agent 3 medium confidence with modest_beat divergence_class at +10%"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Market may have already priced in the activity, and the company's revenue is supported by a consensus-anchored production outlook with uncertain realized-price assumption and limited exposure to current drilling momentum. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bear correctly emphasizes that Agent 4's gdelt_disclosed=true with 75 articles indicates likely market awareness, and Bull concedes this point as a news overhang. Although Agent 2 shows a positive_relative_delta and Agent 3 forecasts a modest_beat, the medium confidence and limited segment exposure (30%) reduce revenue sensitivity. With no strong divergence and potential pricing-in of catalysts, the information edge is insufficient. Decision is no_trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.25,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.4
+  }
+}

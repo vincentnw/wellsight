@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 1072494000.0000001,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1072494000.0000001,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 185444.12288565407,
+    "wti_avg": 38.411538461538456,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity as of April 2020 shows zero active sites detected via satellite, with no newly or continuously active pads, indicating a complete halt in near-term drilling momentum heading into the end of Q1 2020. This aligns with the broader industry pullback during the oil price collapse, where WTI averaged just under $38.50. With only 55% segment exposure reflected in the model and realized prices at a 9% discount to benchmark, revenue is constrained despite stable production volumes. The deterministic forecast of approximately $1.07B reflects these depressed conditions and lack of operational activity.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "low_wti_environment",
+    "partial_segment_exposure",
+    "price_realization_discount",
+    "market_disruption_response"
+  ]
+}

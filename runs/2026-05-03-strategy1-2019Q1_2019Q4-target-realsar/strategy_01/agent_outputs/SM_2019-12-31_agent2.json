@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 453901800.00000006,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 412638000.0,
+    "drilling_signal_raw": 1.0,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 53500.21310421175,
+    "wti_avg": 58.269999999999996,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows moderate drilling activity with 3 active sites at decision date, all continuously active and none newly activated, resulting in a relative activity delta of 1.5. With WTI averaging around $58 and realized prices at a discount of 12%, revenue is further influenced by only partial exposure to the targeted segment (55%). The deterministic revenue forecast for the quarter ending December 2019 is approximately $453.9 million, reflecting stable but unsurging operational momentum and mid-tier commodity pricing conditions.",
+  "key_drivers": [
+    "moderate_relative_activity",
+    "no_new_activations",
+    "stable_wti",
+    "segment_exposure_limitation",
+    "continuous_operations"
+  ]
+}

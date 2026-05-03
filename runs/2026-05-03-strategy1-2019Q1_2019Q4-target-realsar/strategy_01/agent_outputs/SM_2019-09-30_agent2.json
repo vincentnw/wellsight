@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 374020050.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 404346000.0,
+    "drilling_signal_raw": -0.75,
+    "drilling_signal_clipped": -0.75,
+    "production_boe_d": 46179.41965211724,
+    "wti_avg": 55.62692307692308,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows minimal satellite-detected drilling activity with only one active site at decision date, representing a sharp decline of 3.0 standard deviations below the historical average. This weak drilling signal, combined with below-average WTI prices around $55.63 and a realized price discount, suggests constrained production growth heading into Q3 2019. The company's revenue is further limited by exposure to only 55% of the segment's activity, resulting in a deterministic revenue forecast of $374.02M. The single newly active pad with no continuously active sites indicates limited operational continuity.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "below_trend_wti",
+    "partial_segment_exposure",
+    "no_continuous_pads"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +2.5 sites",
+      "Agent 3 divergence_class is modest_beat at +10%",
+      "Agent 4 reports gdelt_disclosed=false so no information leak"
+    ],
+    "counter_evidence": [
+      "Only partial segment exposure limits full operational leverage",
+      "Modest realized price discount of 10%"
+    ],
+    "reasoning_short": "Moderate drilling momentum with a +2.5 activity delta indicates accelerating operations, supported by stable continuity and a deterministic revenue forecast of $1.87B. A modest-beat divergence of +10% across 10 analysts, combined with no pre-release news leaks, creates a favorable asymmetric opportunity for a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's moderate drilling momentum and stable continuity may be priced in, as Agent 4's 29 articles suggest significant market awareness (gdelt_disclosed=false, but n_articles=29)",
+      "Agent 3's medium confidence and modest beat divergence_class (+10%) indicate a limited upside potential",
+      "Agent 2's partial segment exposure and modest realized price discount (10%) temper overall growth leverage"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Market may have already priced in Ovintiv's moderate drilling activity and stable continuity, limiting potential upside."
+  },
+  "arbiter_reasoning": "Bull's case for a modest_beat divergence_class (+10%) with medium confidence from Agent 3, combined with Agent 2's positive drilling momentum (delta +2.5) and stable continuity, outweighs Bear's concern about potential price incorporation due to 29 GDELT articles. Although Agent 4 shows gdelt_disclosed=false, the high article count (29) introduces some uncertainty, preventing a high conviction tier. No GDELT disclosure and constructive fundamentals support a long, but with medium conviction due to partial segment exposure and modest price discount.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

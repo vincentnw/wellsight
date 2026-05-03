@@ -1,0 +1,11 @@
+{
+  "ticker": "DVN",
+  "our_estimate_usd": 685173333.3333334,
+  "consensus_median_usd": 708800000.0,
+  "consensus_dispersion_usd": 306540952.657589,
+  "n_analysts_at_T_minus_14": 18,
+  "divergence_pct": -3.33,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our $685M estimate is 3.4% below $708M consensus. With 18 analysts and moderate dispersion (43% of consensus), confidence is low."
+}

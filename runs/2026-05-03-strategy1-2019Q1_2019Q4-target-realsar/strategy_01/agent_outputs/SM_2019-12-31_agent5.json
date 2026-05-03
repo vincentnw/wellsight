@@ -1,0 +1,42 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook flags moderate_relative_activity with a delta of +1.5 and 3 continuously active drilling sites",
+      "Agent 3 divergence_class is modest_beat at +10% with consensus from 21 analysts",
+      "Agent 4 reports gdelt_disclosed=false, indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Only partial segment exposure (55%) limits upside capture",
+      "Realized prices at 12% discount to benchmark WTI"
+    ],
+    "reasoning_short": "Stable drilling operations with moderate positive activity delta, combined with a modest expected beat over consensus estimates and no news leaks, support a long position. Though segment exposure and pricing headwinds exist, the earnings surprise potential outweighs risks."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast is based on moderate drilling activity with only 3 active sites, which may not be sufficient to drive significant growth, and a partial exposure to the targeted segment (55%) that limits revenue potential",
+      "Agent 2's revenue forecast is also influenced by stable but unsurging operational momentum and mid-tier commodity pricing conditions, which may not be favorable for growth",
+      "Agent 3's medium confidence and modest beat divergence_class (+10%) suggests that the market may have already priced in the expected growth"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Moderate drilling activity, partial segment exposure, and stable commodity pricing conditions limit revenue potential and growth prospects. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull's case for a long position prevailed due to Agent 3's modest_beat divergence_class (+10%) with medium confidence and 21 analysts in consensus, supported by Agent 4's gdelt_disclosed=false indicating no pre-earnings leakage. While Agent 2's outlook reflects moderate activity and partial segment exposure, it does not negate upside potential. Bear raised valid concerns about limited growth catalysts and pricing headwinds, but did not identify disqualifying risks. Conviction tier is medium due to modest_beat divergence and medium confidence, with no GDELT downgrade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.25,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.25
+  }
+}

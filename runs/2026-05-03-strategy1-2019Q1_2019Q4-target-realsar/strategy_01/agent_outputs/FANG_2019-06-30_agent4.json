@@ -1,0 +1,11 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 75,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "e/4264337-diamondback-energy-buy",
+    "n-turning-atm-oil-233400434.html"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (e/4264337-diamondback-energy-buy, n-turning-atm-oil-233400434.html) describe drilling expansion at Permian sites consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

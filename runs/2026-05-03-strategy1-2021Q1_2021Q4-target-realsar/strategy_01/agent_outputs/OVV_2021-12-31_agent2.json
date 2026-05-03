@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1525662000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1695180000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 118987.72205173415,
+    "wti_avg": 78.27846153846154,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows zero active drilling sites at decision date, with no newly or continuously active pads and a sharply negative relative activity delta of -1.5, indicating a significant pullback in drilling activity heading into Q4 2021. With WTI averaging near $78 and realized prices at a 10% discount, revenue is further constrained by only 50% exposure to the targeted segment. The complete absence of current drilling activity suggests limited near-term production growth, aligning with the deterministic forecast of $1.53B.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "half_segment_exposure",
+    "moderate_wti",
+    "price_discount"
+  ]
+}

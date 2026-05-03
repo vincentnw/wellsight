@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 5659188466.666667,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5476634000.0,
+    "drilling_signal_raw": 0.3333333333333333,
+    "drilling_signal_clipped": 0.3333333333333333,
+    "production_boe_d": 289640.6807729964,
+    "wti_avg": 68.52461538461537,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows moderate expansion with 2 active sites at decision date, up 50% from the prior observation, driven by one newly active pad. The company's production base remains stable, with a realized price slightly below WTI average and only 30% exposure to the most active segment. Despite modest drilling momentum and a relatively low WTI environment near $68.50, the deterministic revenue forecast for Q2 2021 is approximately $5.66B, anchored to consensus estimates and tempered by partial segment exposure.",
+  "key_drivers": [
+    "moderate_drilling_growth",
+    "low_segment_exposure",
+    "below_avg_realized_price",
+    "consensus_anchored_forecast",
+    "stable_production_base"
+  ]
+}

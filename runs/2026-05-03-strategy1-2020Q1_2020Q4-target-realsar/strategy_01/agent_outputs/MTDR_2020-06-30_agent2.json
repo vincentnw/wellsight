@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 202099333.33333334,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 195580000.0,
+    "drilling_signal_raw": 0.3333333333333333,
+    "drilling_signal_clipped": 0.3333333333333333,
+    "production_boe_d": 80600.70388588932,
+    "wti_avg": 29.950000000000006,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "MTDR's drilling activity shows a stable footprint with 4 active sites at decision date, including one newly activated pad, maintaining an 80% share of active sites. The relative activity delta of 1.0 indicates consistent operational tempo compared to recent quarters. Despite a low WTI environment averaging near $30/bbl, the company's full exposure to the segment and realized pricing at a 92% discount factor anchor revenue expectations. The deterministic forecast of approximately $202.1M reflects resilience amid constrained macro conditions and steady drilling momentum.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "low_wti_environment",
+    "full_segment_exposure",
+    "recent_pad_activation",
+    "consistent_operational_tempo"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +3.0 with three newly active sites",
+      "Agent 3 divergence_class is modest_beat at +10%",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leak"
+    ],
+    "counter_evidence": [
+      "Agent 3 confidence is only medium with 13 analysts polled"
+    ],
+    "reasoning_short": "Sustained full operational activity and new pad activations signal strong production continuity, while satellite-derived drilling momentum supports an above-consensus revenue outcome. Combined with clean news sentiment and no disclosure leaks, this creates a favorable risk/reward for a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's revenue forecast of $404M is based on sustained operational activity, which may not be sustainable given the modest drilling delta of +3.0 and stable WTI environment, suggesting limited upside potential",
+      "Agent 3's medium confidence and modest beat divergence_class of +10% indicate a cautious outlook, which may not justify a long position",
+      "Agent 4's lack of disclosed news and low conviction modifier suggest a lack of catalysts for price appreciation"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Sustained operational activity and stable WTI environment may not support significant upside potential, and cautious outlook from Agent 3 and lack of catalysts from Agent 4 suggest a no-trade recommendation."
+  },
+  "arbiter_reasoning": "Bear highlighted Agent 3's medium confidence and modest_beat divergence_class, which lacks sufficient upside conviction, while Bull's case relied on incremental drilling momentum without strong divergence or high confidence. Agent 4 showed no GDELT disclosure, but this alone is insufficient to justify a long position given the modest beat and lack of strong catalysts. Information edge is unclear; declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.6,
+    "agent4_weight": 0.1
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "ticker": "OVV",
+  "decision_date_T": "2020-07-14",
+  "fiscal_quarter_end": "2020-06-30",
+  "n_newly_active": 0,
+  "n_continuously_active": 0,
+  "n_idle": 5,
+  "absolute_active": 0,
+  "share_active": 0.0,
+  "relative_activity_delta": -1.5,
+  "pad_classifications": [
+    {
+      "pad_id": "42227401720000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42173381580000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227401730000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42173381610000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227405770000",
+      "state": "idle"
+    }
+  ]
+}

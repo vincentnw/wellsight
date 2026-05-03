@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 3861630000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4290700000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 281591.32181995903,
+    "wti_avg": 48.095384615384624,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental Petroleum faces a challenging outlook for Q4 2020, with satellite data showing zero active drilling sites and a sharp decline in relative activity, indicating a near-term halt in operational momentum. The company's revenue forecast of $3.86B reflects limited exposure to high-activity segments, with only 30% segment fraction tied to the observed drilling patterns. Low WTI averages and a realized price discount further constrain revenue, despite stable pricing discipline. The absence of newly or continuously active pads suggests deferred development activity during the period.",
+  "key_drivers": [
+    "zero_active_sites",
+    "negative_drilling_delta",
+    "low_segment_exposure",
+    "weak_wti_environment",
+    "production_halt_signals"
+  ]
+}

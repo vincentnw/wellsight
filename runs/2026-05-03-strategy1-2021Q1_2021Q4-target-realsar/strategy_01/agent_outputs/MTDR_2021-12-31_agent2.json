@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 406500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 406500000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 62028.18145518205,
+    "wti_avg": 78.27846153846154,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "MTDR's drilling activity as of early February 2022 shows no active sites detected via satellite, with zero newly or continuously active pads, indicating a significant pause in field operations heading into the end of Q4 2021. Despite this lack of observable drilling momentum, the revenue forecast is anchored to consensus at $406.5M, supported by stable WTI prices near $78.30 and a full segment exposure. The company's realized price remains slightly below benchmark, but production volumes are sufficient to sustain revenue under current market conditions. The absence of SAR-detected activity raises questions about near-term growth, though the deterministic forecast holds steady based on prior performance.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "consensus_anchored_forecast",
+    "stable_wti",
+    "full_segment_exposure",
+    "paused_operations"
+  ]
+}
