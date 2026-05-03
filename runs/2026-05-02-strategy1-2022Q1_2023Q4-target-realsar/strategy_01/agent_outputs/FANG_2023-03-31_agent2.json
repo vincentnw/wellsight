@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 2135000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2135000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 328390.46466066386,
+    "wti_avg": 76.82153846153847,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback's drilling activity shows zero active sites at the decision date, with no newly or continuously active pads, indicating a significant pause in field operations heading into Q1 2023. Despite stable WTI prices near $76.82 and full exposure to the Permian segment, the absence of detectable SAR activity raises concerns about near-term production continuity. However, the deterministic revenue forecast remains anchored at $2.135B, likely supported by inventory drawdowns or non-operational factors not reflected in satellite data.",
+  "key_drivers": [
+    "zero_active_pads",
+    "stable_wti",
+    "pure_play_permian",
+    "consensus_anchored_forecast",
+    "paused_drilling_activity"
+  ]
+}

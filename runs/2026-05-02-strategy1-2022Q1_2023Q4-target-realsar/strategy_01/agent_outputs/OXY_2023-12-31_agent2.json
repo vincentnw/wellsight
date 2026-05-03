@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6405300000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7117000000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 300691.8734437401,
+    "wti_avg": 74.70846153846153,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental's drilling activity shows zero active sites at decision date, with a sharp decline in relative activity compared to recent quarters, indicating a significant drawdown in operational momentum heading into Q4 2023. Despite a stable WTI environment near $74.70/bbl and realized prices at a 6% discount, the company's limited exposure to active growth segments—just 30% segment fraction—amplifies the impact of stalled drilling. The deterministic revenue forecast of $6.41B reflects this constrained activity and lack of near-term production catalysts.",
+  "key_drivers": [
+    "zero_active_sites",
+    "negative_drilling_delta",
+    "low_segment_fraction",
+    "stable_wti",
+    "reduced_operational_momentum"
+  ]
+}

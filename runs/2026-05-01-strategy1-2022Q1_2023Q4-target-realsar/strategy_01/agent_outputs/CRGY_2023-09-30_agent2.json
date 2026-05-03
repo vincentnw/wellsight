@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 601461500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 601461500.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 17889.91152463495,
+    "wti_avg": 84.93153846153847,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows no active drilling sites at the decision date, with satellite data indicating zero newly or continuously active pads and a 30% decline in relative drilling activity. Despite a strong WTI environment averaging $84.93/bbl and a realized price at a 13% discount, the lack of current drilling activity suggests limited near-term production growth. With only 20% exposure to the active segment, revenue for the quarter ending September 2023 is driven primarily by legacy performance rather than new output, aligning with the deterministic forecast of $601.5M.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "low_segment_exposure",
+    "high_wti",
+    "legacy_production_dependence"
+  ]
+}

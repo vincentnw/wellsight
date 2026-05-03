@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1363971000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1363971000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 90502.40952859352,
+    "wti_avg": 84.93153846153847,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "Continental Resources shows minimal satellite-derived drilling activity with only one active site at decision date, unchanged from prior observation, indicating stable but unsustained growth momentum into Q3 2023. With WTI averaging around $85/boe and a realized price differential of $0.78 below benchmark, revenue is largely anchored to consensus expectations. The company's 40% segment fraction suggests partial exposure to the observed activity, limiting direct upside from current drilling patterns. Operations appear focused on a single, continuously active pad, reflecting efficiency over expansion.",
+  "key_drivers": [
+    "neutral_drilling_delta",
+    "high_wti",
+    "partial_segment_exposure",
+    "single_active_pad",
+    "consensus_anchored_revenue"
+  ]
+}

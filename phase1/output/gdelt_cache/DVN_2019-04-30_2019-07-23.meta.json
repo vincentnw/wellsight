@@ -1,0 +1,9 @@
+{
+  "ticker": "DVN",
+  "prev_earnings_date": "2019-04-30",
+  "T_minus_14": "2019-07-23",
+  "n_articles": 75,
+  "fetch_status": "ok",
+  "fetch_error": null,
+  "query_term": "Devon Energy"
+}

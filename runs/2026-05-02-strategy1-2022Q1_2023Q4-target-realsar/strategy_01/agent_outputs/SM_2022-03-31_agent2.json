@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 552599549.9999999,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 613999499.9999999,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 39249.08958516108,
+    "wti_avg": 96.69846153846153,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM shows zero active drilling sites at decision date, with a sharp decline in relative activity compared to recent history, indicating halted or suspended operations heading into Q1 2022. Despite a strong WTI environment averaging nearly $96.70/bbl and a realized price at an 88% discount factor, the complete absence of current drilling activity suggests constrained production growth. With only 55% exposure to the active segment, revenue is expected to reflect limited output responsiveness, resulting in a deterministic forecast just above $552.6M.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_relative_delta",
+    "high_wti_avg",
+    "partial_segment_exposure",
+    "halted_operational_momentum"
+  ]
+}

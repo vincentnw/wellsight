@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 768000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 768000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 123579.95687574423,
+    "wti_avg": 74.23076923076923,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources shows zero active drilling sites at decision date, with no newly or continuously active pads, indicating a complete halt in near-term drilling activity heading into Q4 2023. Despite stable WTI assumptions near $74/boe and full exposure to the segment, the absence of current drilling suggests production may plateau or decline. Revenue is anchored to consensus at $768M, supported by realized pricing at a slight discount, but lack of operational momentum implies limited upside risk.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "stable_wti",
+    "full_segment_exposure",
+    "no_operational_momentum",
+    "consensus_anchored_revenue"
+  ]
+}

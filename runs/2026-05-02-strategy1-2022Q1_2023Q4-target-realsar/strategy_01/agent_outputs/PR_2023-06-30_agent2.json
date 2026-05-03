@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 596414700.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 662683000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 97405.94470291062,
+    "wti_avg": 72.35,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's operations show zero active drilling sites at the decision date, with no newly or continuously active pads and a sharply negative relative activity delta of -1.5, indicating a significant pullback in field activity heading into Q2 2023. Despite stable WTI prices around $72/boe and realized prices at a 7% discount, the complete halt in observed drilling suggests constrained production growth. With full exposure to the affected segment, the deterministic revenue forecast is set at $596.4M, reflecting current operational inactivity.",
+  "key_drivers": [
+    "zero_active_pads",
+    "negative_drilling_delta",
+    "stable_wti",
+    "full_segment_exposure",
+    "production_contraction_signals"
+  ]
+}

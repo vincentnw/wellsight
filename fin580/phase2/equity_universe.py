@@ -65,7 +65,9 @@ def load_crsp_daily(path: Path = PHASE1_OUTPUT / "crsp_daily.csv") -> dict[str, 
 
     Legacy tickers (COG, CDEV, ECA) are remapped to current names (CTRA, PR, OVV)
     so that price history is continuous across corporate actions. AMR is a
-    name-search false positive and is dropped.
+    name-search false positive and is dropped. CTRA rows from CONTURA ENERGY
+    (a coal company that previously held the ticker) are filtered out by COMNAM
+    so they don't contaminate Coterra's series.
     """
     legacy_remap = {"COG": "CTRA", "CDEV": "PR", "ECA": "OVV"}
     drop = {"AMR"}
@@ -74,6 +76,9 @@ def load_crsp_daily(path: Path = PHASE1_OUTPUT / "crsp_daily.csv") -> dict[str, 
         for row in csv.DictReader(f):
             t = row["TICKER"]
             if t in drop:
+                continue
+            # Drop Contura Energy rows (coal company, ticker reuse before Coterra)
+            if t == "CTRA" and "CONTURA" in (row.get("COMNAM") or "").upper():
                 continue
             current = legacy_remap.get(t, t)
             if current not in CANDIDATES:
@@ -99,7 +104,13 @@ def load_permian_fraction(path: Path | None = None) -> dict[tuple[str, int], flo
     if path.exists():
         with open(path) as f:
             for row in csv.DictReader(f):
-                out[(row["ticker"], int(row["fiscal_year"]))] = float(row["permian_fraction_ttm"])
+                v = row.get("permian_production_fraction_ttm") or row.get("permian_fraction_ttm") or ""
+                if not v.strip():
+                    continue
+                try:
+                    out[(row["ticker"], int(row["fiscal_year"]))] = float(v)
+                except (ValueError, KeyError):
+                    continue
         return out
     pure_play = {"FANG", "MTDR", "PR"}
     multi_basin = {"EOG", "DVN", "CTRA", "OXY", "OVV", "SM", "CRGY"}

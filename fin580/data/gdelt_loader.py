@@ -87,29 +87,47 @@ def fetch_articles(
     }
     url = f"https://api.gdeltproject.org/api/v2/doc/doc?{urlencode(params)}"
     out: list[GdeltArticle] = []
-    try:
-        req = Request(url, headers={"User-Agent": "FIN580/1.0"})
-        with urlopen(req, timeout=30, context=_SSL_CTX) as r:
-            payload = json.loads(r.read())
-        for a in payload.get("articles", []):
-            try:
-                pd = datetime.strptime(a["seendate"], "%Y%m%dT%H%M%SZ").date()
-            except (KeyError, ValueError):
-                continue
-            if pd > T_minus_14:
-                continue  # Hard cutoff
-            out.append(
-                GdeltArticle(
-                    article_id=a.get("url", "")[-32:] or str(len(out)),
-                    publish_date=pd,
-                    title=a.get("title", ""),
-                    url=a.get("url", ""),
+    fetch_status = "ok"
+    fetch_error: str | None = None
+    # Retry-with-backoff on 429 / network errors.
+    import time as _t
+    backoffs = [5, 15, 45, 120]
+    last_err: Exception | None = None
+    for attempt in range(len(backoffs) + 1):
+        try:
+            req = Request(url, headers={"User-Agent": "FIN580/1.0"})
+            with urlopen(req, timeout=30, context=_SSL_CTX) as r:
+                payload = json.loads(r.read())
+            for a in payload.get("articles", []):
+                try:
+                    pd_dt = datetime.strptime(a["seendate"], "%Y%m%dT%H%M%SZ").date()
+                except (KeyError, ValueError):
+                    continue
+                if pd_dt > T_minus_14:
+                    continue  # Hard cutoff
+                out.append(
+                    GdeltArticle(
+                        article_id=a.get("url", "")[-32:] or str(len(out)),
+                        publish_date=pd_dt,
+                        title=a.get("title", ""),
+                        url=a.get("url", ""),
+                    )
                 )
-            )
-    except Exception:
-        # Synthetic fallback: empty list if network fails
+            last_err = None
+            break
+        except Exception as e:
+            last_err = e
+            if attempt < len(backoffs):
+                _t.sleep(backoffs[attempt])
+                continue
+    if last_err is not None:
+        fetch_status = "error"
+        fetch_error = f"{type(last_err).__name__}: {str(last_err)[:200]}"
         out = []
 
+    # Persist articles array (legacy schema, list of article dicts).
+    # Sidecar metadata file records fetch status so callers can distinguish
+    # "API failed" (out=[] but error logged) from "API succeeded with zero hits".
     cache_file.write_text(
         json.dumps(
             [
@@ -124,4 +142,14 @@ def fetch_articles(
             indent=2,
         )
     )
+    meta_file = cache_file.with_suffix(".meta.json")
+    meta_file.write_text(json.dumps({
+        "ticker": ticker,
+        "prev_earnings_date": prev_earnings_date.isoformat(),
+        "T_minus_14": T_minus_14.isoformat(),
+        "n_articles": len(out),
+        "fetch_status": fetch_status,
+        "fetch_error": fetch_error,
+        "query_term": query_term,
+    }, indent=2))
     return out

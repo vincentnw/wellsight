@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 2911281300.0000005,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2817369000.0,
+    "drilling_signal_raw": 0.3333333333333333,
+    "drilling_signal_clipped": 0.3333333333333333,
+    "production_boe_d": 251981.3517667568,
+    "wti_avg": 76.73538461538462,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a moderate increase with two newly active sites and a 50% rise in relative activity, though total active sites remain low at two. The company's production is partially exposed to the Permian via a 55% segment fraction, with average WTI prices near $76.74 and realized prices at a 9% discount. These factors support a deterministic revenue forecast of approximately $2.91B for Q1 2023, reflecting modest operational expansion and stable commodity pricing.",
+  "key_drivers": [
+    "moderate_drilling_increase",
+    "low_absolute_activity",
+    "midstream_wti",
+    "partial_permian_exposure",
+    "realized_price_discount"
+  ]
+}

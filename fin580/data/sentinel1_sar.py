@@ -23,13 +23,33 @@ phase1/output/sentinel1_cache/.
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
+# GDAL/rasterio HTTP timeouts — applied BEFORE rasterio is imported anywhere.
+# Without these, a single slow Microsoft Planetary Computer COG range-read can
+# hang indefinitely (we've seen >30 min hangs). With these, any single read
+# that stalls for >30s of low traffic, or exceeds 60s total, is killed and
+# the per-scene try/except in fetch_pad_backscatter skips that scene.
+os.environ.setdefault("GDAL_HTTP_TIMEOUT", "60")          # max 60s per HTTP request
+os.environ.setdefault("GDAL_HTTP_LOW_SPEED_TIME", "30")   # kill if <1KB/s for 30s
+os.environ.setdefault("GDAL_HTTP_LOW_SPEED_LIMIT", "1000")
+os.environ.setdefault("GDAL_HTTP_CONNECTTIMEOUT", "20")   # max 20s to establish
+
 PHASE1_OUTPUT = Path(__file__).resolve().parents[2] / "phase1" / "output"
 SAR_CACHE_DIR = PHASE1_OUTPUT / "sentinel1_cache"
 SAR_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def _bind_timeout(method, default_timeout: float):
+    """Wrap a requests.Session.request method to inject a default timeout.
+    Used so pystac_client's HTTP calls can't hang forever."""
+    def wrapped(*args, **kwargs):
+        kwargs.setdefault("timeout", default_timeout)
+        return method(*args, **kwargs)
+    return wrapped
 
 
 @dataclass(frozen=True)
@@ -65,42 +85,92 @@ def fetch_pad_backscatter(
     )
     cache_path = SAR_CACHE_DIR / f"{cache_key}.json"
     if cache_path.exists():
-        data = json.loads(cache_path.read_text())
-        return [
-            SarObservation(
-                pad_id=d["pad_id"],
-                lat=d["lat"],
-                lon=d["lon"],
-                scene_id=d["scene_id"],
-                acquisition_date=date.fromisoformat(d["acquisition_date"]),
-                vv_mean_linear=d["vv_mean_linear"],
-                vv_mean_db=d["vv_mean_db"],
-                vh_mean_linear=d.get("vh_mean_linear"),
-            )
-            for d in data
-        ]
+        try:
+            data = json.loads(cache_path.read_text())
+            return [
+                SarObservation(
+                    pad_id=d["pad_id"],
+                    lat=d["lat"],
+                    lon=d["lon"],
+                    scene_id=d["scene_id"],
+                    acquisition_date=date.fromisoformat(d["acquisition_date"]),
+                    vv_mean_linear=d["vv_mean_linear"],
+                    vv_mean_db=d["vv_mean_db"],
+                    vh_mean_linear=d.get("vh_mean_linear"),
+                )
+                for d in data
+            ]
+        except (json.JSONDecodeError, KeyError, ValueError) as e:
+            # Corrupt cache — fall through to fresh fetch
+            print(f"  [sentinel1] pad {pad_id} cache corrupt ({type(e).__name__}); refetching")
 
     try:
         import pystac_client
         import planetary_computer
         import rioxarray  # noqa
         import numpy as np
+        import random
     except ImportError:
         return []
 
-    catalog = pystac_client.Client.open(
-        "https://planetarycomputer.microsoft.com/api/stac/v1",
-        modifier=planetary_computer.sign_inplace,
-    )
     aoi = [lon - aoi_buffer_deg, lat - aoi_buffer_deg,
            lon + aoi_buffer_deg, lat + aoi_buffer_deg]
-    search = catalog.search(
-        collections=["sentinel-1-rtc"],
-        bbox=aoi,
-        datetime=f"{start_date.isoformat()}/{end_date.isoformat()}",
-        limit=max_scenes,
-    )
-    items = list(search.items())
+
+    # Open the STAC client with an explicit 45s HTTP timeout (Codex Round-4
+    # finding: pystac_client honours `timeout=` directly in Client.open via
+    # its internal StacApiIO; the older requests.Session-monkeypatch approach
+    # was dead code). Catch any open-time error too — DNS/network errors
+    # should not crash the cell.
+    try:
+        try:
+            catalog = pystac_client.Client.open(
+                "https://planetarycomputer.microsoft.com/api/stac/v1",
+                modifier=planetary_computer.sign_inplace,
+                timeout=45,
+            )
+        except TypeError:
+            # Pre-0.9 pystac_client: no `timeout` kwarg
+            catalog = pystac_client.Client.open(
+                "https://planetarycomputer.microsoft.com/api/stac/v1",
+                modifier=planetary_computer.sign_inplace,
+            )
+    except Exception as e:
+        print(f"  [sentinel1] pad {pad_id} STAC open failed: {type(e).__name__}: {str(e)[:80]}")
+        return []
+
+    # STAC search with progressive backoff. Microsoft's official guidance
+    # (github.com/microsoft/PlanetaryComputer discussion #246) is that 503/504
+    # responses are transient backend overload, NOT per-IP rate limits. The
+    # recommended pattern is retry-with-backoff. Empirically, ~30% of queries
+    # succeed under heavy load, so 4 attempts with growing backoff catches
+    # most pads while bounding worst-case latency.
+    BACKOFFS = [30, 60, 120]  # seconds; 4 attempts total = 1 initial + 3 retries
+    import time as _t
+    items: list = []
+    last_err: Exception | None = None
+    for attempt in range(len(BACKOFFS) + 1):
+        try:
+            search = catalog.search(
+                collections=["sentinel-1-rtc"],
+                bbox=aoi,
+                datetime=f"{start_date.isoformat()}/{end_date.isoformat()}",
+                limit=max_scenes,
+            )
+            items = list(search.items())
+            last_err = None
+            break
+        except Exception as e:
+            last_err = e
+            if attempt < len(BACKOFFS):
+                wait = BACKOFFS[attempt] + random.uniform(0, 10)
+                print(f"  [sentinel1] pad {pad_id} STAC attempt {attempt+1} failed "
+                      f"({type(e).__name__}); retry in {wait:.0f}s")
+                _t.sleep(wait)
+                continue
+    if last_err is not None:
+        print(f"  [sentinel1] pad {pad_id} STAC failed after {len(BACKOFFS)+1} attempts: "
+              f"{type(last_err).__name__}: {str(last_err)[:80]}")
+        return []
 
     obs: list[SarObservation] = []
     for item in items:

@@ -1,0 +1,9 @@
+{
+  "ticker": "SM",
+  "prev_earnings_date": "2019-10-31",
+  "T_minus_14": "2020-02-05",
+  "n_articles": 20,
+  "fetch_status": "ok",
+  "fetch_error": null,
+  "query_term": "SM Energy"
+}

@@ -1,0 +1,9 @@
+{
+  "ticker": "MTDR",
+  "prev_earnings_date": "2019-10-29",
+  "T_minus_14": "2020-02-11",
+  "n_articles": 20,
+  "fetch_status": "ok",
+  "fetch_error": null,
+  "query_term": "Matador Resources"
+}

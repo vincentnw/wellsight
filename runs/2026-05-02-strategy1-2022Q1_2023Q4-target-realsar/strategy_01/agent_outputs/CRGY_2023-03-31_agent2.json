@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 531039000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 531039000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 17482.361395302072,
+    "wti_avg": 76.73538461538462,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows no active drilling sites at decision date, with satellite data indicating zero newly or continuously active pads and a 30% decline in relative activity. This suggests minimal near-term production growth into Q1 2023. The company's realized price remains below WTI average, and its revenue contribution is limited to 20% of a broader segment. Despite stable WTI prices around $76.74/boe, lack of observable drilling momentum supports a revenue forecast of $531.04M, anchored to prior consensus.",
+  "key_drivers": [
+    "no_active_drilling",
+    "negative_drilling_delta",
+    "low_segment_exposure",
+    "stable_wti",
+    "consensus_anchored_forecast"
+  ]
+}
