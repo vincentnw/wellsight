@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T21:11:55.418134",
+  "generated_at": "2026-05-03T21:17:32.397717",
   "strategy1_baseline": {
     "n_trades": 10,
     "hit_rate": 0.5,
@@ -115,6 +115,15 @@
       "max_drawdown_pct": NaN
     }
   ],
+  "revenue_diagnostic_summary": {
+    "n_cells": 200,
+    "n_cells_with_actual_and_consensus": 199,
+    "n_long_trades_with_actual": 10,
+    "long_trade_actual_revenue_beat_rate": 0.8,
+    "long_trade_win_rate_when_actual_revenue_beat": 0.375,
+    "diagnostic_revenue_direction_accuracy_non_neutral": 0.42528735632183906,
+    "generated_at": "2026-05-03T21:17:32.397717"
+  },
   "headline_summary": [
     {
       "n_trades": 10,

@@ -29,6 +29,10 @@ from fin580.inference.pnl import (
     compute_pnl_strategy1_combined,
     strategy_metrics,
 )
+from fin580.inference.revenue_diagnostics import (
+    build_revenue_diagnostics,
+    revenue_diagnostic_summary,
+)
 
 OUT_DIR = Path(__file__).resolve().parents[2] / "runs" / "inference"
 
@@ -104,7 +108,19 @@ def main() -> None:
         ablation = pd.DataFrame()
         print(f"Warning: ablation_table build failed: {e}")
 
-    # 5. Top-level summary
+    # 5. Revenue-mechanism diagnostics. Diagnostic only: does not affect H1,
+    # trade eligibility, or sizing.
+    try:
+        revenue_diag = build_revenue_diagnostics()
+        revenue_diag.to_parquet(OUT_DIR / "revenue_diagnostics.parquet")
+        revenue_diag.to_csv(OUT_DIR / "revenue_diagnostics.csv", index=False)
+        revenue_diag_summary = revenue_diagnostic_summary(revenue_diag)
+    except Exception as e:
+        revenue_diag = pd.DataFrame()
+        revenue_diag_summary = {"error": str(e)[:200]}
+        print(f"Warning: revenue_diagnostics build failed: {e}")
+
+    # 6. Top-level summary
     pack = {
         "generated_at": datetime.now().isoformat(),
         "strategy1_baseline": {
@@ -125,6 +141,7 @@ def main() -> None:
         "ablation_summary": (
             ablation.to_dict(orient="records") if len(ablation) else []
         ),
+        "revenue_diagnostic_summary": revenue_diag_summary,
         "headline_summary": (
             headline.to_dict(orient="records") if len(headline) else []
         ),
