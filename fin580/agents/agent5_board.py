@@ -26,9 +26,9 @@ PROMPTS_DIR = Path(__file__).parent / "prompts"
 # DeepSeek R1 design choice. Provider diversity is still real (HF + Groq +
 # HF=2-platform vs ideal 3-platform). Model diversity is preserved (Qwen /
 # vanilla Llama / DeepSeek-R1-distilled Llama — three distinct model lineages).
-MODEL_BULL = "qwen-3-235b-a22b-instruct-2507"  # Cerebras (DL #54: HF free tier exhausted)
-MODEL_BEAR = "llama3.1-8b"  # Cerebras (DL #57: Groq 100k TPD/free hit at M3)
-MODEL_ARBITER = "qwen-3-235b-a22b-instruct-2507"  # Cerebras (DL #60: max_retries=2 keeps stalls fast; qwen-3 acceptable since stalls error in ~2 min not 17)
+MODEL_BULL = "gpt-4o-mini"  # v2.5: OpenAI mini tier (was Cerebras qwen-3-235b)
+MODEL_BEAR = "gpt-4o-mini"  # v2.5: OpenAI mini tier (was Cerebras llama3.1-8b)
+MODEL_ARBITER = "gpt-5-mini"  # v2.5: OpenAI 5.x reasoning-mini tier (was Cerebras qwen-3-235b)
 
 CONVICTION_TO_SIZE = {"high": 0.15, "medium": 0.10, "low": 0.05, "none": 0.0}
 

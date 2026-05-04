@@ -99,6 +99,7 @@ def main():
     print()
 
     os.environ["FIN580_SAR_PADS_PER_OP"] = str(args.pads_per_firm)
+    pads_per_op = int(args.pads_per_firm)
 
     n_done = 0
     n_skipped = 0
@@ -117,6 +118,7 @@ def main():
             try:
                 sig = aggregate_firm_quarter(
                     ticker=ticker, fiscal_quarter_end=fpe, decision_date_T=T,
+                    pads_per_op=pads_per_op,
                 )
                 elapsed = time.time() - cell_t0
                 print(

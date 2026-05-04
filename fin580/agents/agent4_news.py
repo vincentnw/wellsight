@@ -10,7 +10,7 @@ from fin580.agents.llm_client import chat
 from fin580.agents.schemas import Agent3Out, Agent4Out
 from fin580.data.gdelt_loader import fetch_articles
 
-MODEL_ID = "llama3.1-8b"  # Cerebras (DL #57: Groq 100k TPD/free hit at M3)
+MODEL_ID = "gpt-4o-mini"  # v2.5: OpenAI mini tier (was Cerebras llama3.1-8b)
 PROMPT_PATH = Path(__file__).parent / "prompts" / "agent4_news.txt"
 
 

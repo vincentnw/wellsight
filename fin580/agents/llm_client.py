@@ -22,6 +22,7 @@ CACHE_ROOT.mkdir(parents=True, exist_ok=True)
 
 PROVIDER_MIN_INTERVAL_SECONDS = {
     "cerebras": float(os.environ.get("CEREBRAS_MIN_INTERVAL_SECONDS", "2.0")),
+    "openai": float(os.environ.get("OPENAI_MIN_INTERVAL_SECONDS", "0.5")),
 }
 _provider_last_call_at: dict[str, float] = {}
 _provider_rate_lock = threading.Lock()
@@ -69,6 +70,9 @@ def _route_provider(model_id: str) -> str:
         return "huggingface"
     if m.startswith("llama-") or m.startswith("groq/"):
         return "groq"
+    # OpenAI: gpt-* (mini, full, reasoning, etc.) and o1-/o3- reasoning models
+    if m.startswith("gpt-") or m.startswith("o1-") or m.startswith("o3-"):
+        return "openai"
     # Cerebras free tier (DL #53): bare model IDs without org prefix
     if (
         m.startswith("deepseek-r1")  # Cerebras-style (no org prefix)
@@ -81,7 +85,8 @@ def _route_provider(model_id: str) -> str:
     raise ValueError(
         f"Cannot route model_id={model_id!r}. "
         "Supported prefixes: qwen/, mistralai/, meta-llama/, deepseek-ai/ (HF); "
-        "llama-, groq/ (Groq); deepseek-r1*, gpt-oss*, qwen-3*, zai-*, llama3.1-* (Cerebras)."
+        "llama-, groq/ (Groq); gpt-*, o1-*, o3-* (OpenAI); "
+        "deepseek-r1*, gpt-oss*, qwen-3*, zai-*, llama3.1-* (Cerebras)."
     )
 
 
@@ -172,6 +177,46 @@ def _call_cerebras(prompt: str, input_json: dict, model_id: str,
     return json.loads(_extract_json(text))
 
 
+def _call_openai(prompt: str, input_json: dict, model_id: str,
+                  temperature: float) -> dict:
+    """OpenAI Chat Completions API. v2.5 stack uses gpt-4o-mini for Agents 3,
+    4, 5 Bull/Bear and gpt-5.4-mini for the Arbiter.
+
+    Two API quirks:
+      - gpt-5.* and o-series reasoning models require `max_completion_tokens`
+        (they spend tokens on reasoning before output); gpt-4o family uses
+        legacy `max_tokens`.
+      - Reasoning models often reject the `temperature` param outright; we
+        retry without it if the first call fails.
+    """
+    from openai import OpenAI  # type: ignore
+    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    full_prompt = f"{prompt}\n\nINPUT:\n{_canonical_json(input_json)}"
+
+    is_reasoning_model = (
+        model_id.startswith("gpt-5") or model_id.startswith("o1") or model_id.startswith("o3")
+    )
+    kwargs: dict = {
+        "model": model_id,
+        "messages": [{"role": "user", "content": full_prompt}],
+    }
+    if is_reasoning_model:
+        kwargs["max_completion_tokens"] = 3000
+    else:
+        kwargs["max_tokens"] = 3000
+        kwargs["temperature"] = temperature
+    kwargs["response_format"] = {"type": "json_object"}
+
+    try:
+        resp = client.chat.completions.create(**kwargs)
+    except Exception:
+        kwargs.pop("response_format", None)
+        kwargs.pop("temperature", None)
+        resp = client.chat.completions.create(**kwargs)
+    text = resp.choices[0].message.content
+    return json.loads(_extract_json(text))
+
+
 def chat(*, prompt: str, input_json: dict, model_id: str,
           model_version: str = "", temperature: float = 0.0,
           max_retries: int = 2) -> dict:
@@ -189,6 +234,7 @@ def chat(*, prompt: str, input_json: dict, model_id: str,
         "huggingface": _call_huggingface,
         "groq": _call_groq,
         "cerebras": _call_cerebras,
+        "openai": _call_openai,
     }
     last_err = None
     for attempt in range(max_retries):
