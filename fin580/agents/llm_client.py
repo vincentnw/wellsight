@@ -140,7 +140,7 @@ def _call_huggingface(prompt: str, input_json: dict, model_id: str,
     resp = client.chat_completion(
         messages=[{"role": "user", "content": full_prompt}],
         temperature=temperature,
-        max_tokens=1500,
+        max_tokens=3000,
     )
     text = resp.choices[0].message.content
     return json.loads(_extract_json(text))
@@ -155,7 +155,7 @@ def _call_groq(prompt: str, input_json: dict, model_id: str,
         model=model_id,
         messages=[{"role": "user", "content": full_prompt}],
         temperature=temperature,
-        max_tokens=1500,
+        max_tokens=3000,
         response_format={"type": "json_object"},
     )
     text = resp.choices[0].message.content
@@ -171,7 +171,7 @@ def _call_cerebras(prompt: str, input_json: dict, model_id: str,
         model=model_id,
         messages=[{"role": "user", "content": full_prompt}],
         temperature=temperature,
-        max_tokens=1500,
+        max_tokens=3000,
     )
     text = resp.choices[0].message.content
     return json.loads(_extract_json(text))
@@ -193,7 +193,7 @@ def _call_gemini(prompt: str, input_json: dict, model_id: str,
         resp = client.models.generate_content(
             model=model_id,
             contents=full_prompt,
-            config={"temperature": temperature, "max_output_tokens": 1500},
+            config={"temperature": temperature, "max_output_tokens": 3000},
         )
         text = resp.text
         return json.loads(_extract_json(text))
@@ -205,7 +205,7 @@ def _call_gemini(prompt: str, input_json: dict, model_id: str,
         model = genai_old.GenerativeModel(model_id)
         resp = model.generate_content(
             full_prompt,
-            generation_config={"temperature": temperature, "max_output_tokens": 1500},
+            generation_config={"temperature": temperature, "max_output_tokens": 3000},
         )
         text = resp.text
         return json.loads(_extract_json(text))
