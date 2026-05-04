@@ -133,6 +133,73 @@ def compute_pnl_for_strategy(strategy_id: int, window: str | None = None) -> pd.
     return pd.DataFrame(rows)
 
 
+STRATEGY1_YEARLY_RUNS = [
+    "2026-05-03-strategy1-2019Q1_2019Q4-target-realsar",
+    "2026-05-03-strategy1-2020Q1_2020Q4-target-realsar",
+    "2026-05-03-strategy1-2021Q1_2021Q4-target-realsar",
+    "2026-05-03-strategy1-2022Q1_2023Q4-target-realsar",
+    "2026-04-30-strategy1-2024Q1_2024Q4-target-realsar",
+]
+
+
+def compute_pnl_strategy1_combined() -> pd.DataFrame:
+    """Strategy 1 P&L unioned across the 5 yearly run dirs covering 2019-2024.
+
+    This is the headline H1 trade ledger reported in the paper. Per-trade rows
+    are deduped on (ticker, fiscal_quarter_end) keeping the latest attempt.
+    Strategies 2-10 stay on the 2024 sub-window via compute_pnl_for_strategy.
+    """
+    crsp = load_combined()
+    eds = _earnings_dates()
+    cell_parts = []
+    for run_name in STRATEGY1_YEARLY_RUNS:
+        p = RUNS_DIR / run_name / "strategy_01" / "cell_results.parquet"
+        if not p.exists():
+            continue
+        cell_parts.append(pd.read_parquet(p))
+    if not cell_parts:
+        return pd.DataFrame()
+    cells = pd.concat(cell_parts, ignore_index=True).drop_duplicates(
+        subset=["ticker", "fiscal_quarter_end"], keep="last"
+    )
+    longs = cells[cells["decision"] == "long"]
+    rows = []
+    for _, r in longs.iterrows():
+        ticker = r["ticker"]
+        fpe = datetime.strptime(r["fiscal_quarter_end"], "%Y-%m-%d").date()
+        T = datetime.strptime(r["decision_date_T"], "%Y-%m-%d").date()
+        size = float(r.get("size_pct", r.get("final_size_pct", 0.10)))
+        ed = eds.get((ticker, fpe))
+        if ed is None:
+            continue
+        series = crsp.get(ticker, [])
+        if not series:
+            continue
+        entry_p = price_at(series, T)
+        exit_p = _exit_price(series, ed, days_after=2)
+        if entry_p is None or exit_p is None:
+            continue
+        pnl = compute_trade_pnl(
+            entry_price=entry_p, exit_price=exit_p, size_pct=size,
+            capital_usd=1_000_000, cost_bps=30,
+        )
+        rows.append({
+            "strategy": 1,
+            "ticker": ticker,
+            "fiscal_quarter_end": fpe.isoformat(),
+            "entry_date_T": T.isoformat(),
+            "exit_date": (ed + timedelta(days=2)).isoformat(),
+            "entry_price": entry_p,
+            "exit_price": exit_p,
+            "size_pct": size,
+            "gross_return_pct": pnl["gross_return_pct"],
+            "net_return_pct": pnl["net_return_pct"],
+            "gross_pnl_usd": pnl["gross_pnl_usd"],
+            "net_pnl_usd": pnl["net_pnl_usd"],
+        })
+    return pd.DataFrame(rows).sort_values("entry_date_T").reset_index(drop=True)
+
+
 def strategy_metrics(trades: pd.DataFrame) -> dict:
     """Hit rate, mean / median return, Sharpe, max drawdown over trades."""
     if len(trades) == 0:
@@ -167,10 +234,17 @@ def strategy_metrics(trades: pd.DataFrame) -> dict:
 
 
 def build_headline_table() -> pd.DataFrame:
-    """Compute per-strategy metrics across all 10 strategies."""
+    """Compute per-strategy metrics across all 10 strategies.
+
+    Strategy 1 row uses the full 2019-2024 ledger (n=10 trades). Strategies
+    2-10 use the 2024 sub-window (only window for which baseline runs exist).
+    """
     rows = []
     for s in [1, 2, 3, 4, 5, 6, 8, 9, 10]:  # skip 7 (handled separately)
-        trades = compute_pnl_for_strategy(s)
+        trades = (
+            compute_pnl_strategy1_combined() if s == 1
+            else compute_pnl_for_strategy(s)
+        )
         m = strategy_metrics(trades)
         m["strategy"] = s
         rows.append(m)

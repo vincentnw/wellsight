@@ -26,6 +26,7 @@ from fin580.inference.h2_test import quarter_block_diff
 from fin580.inference.pnl import (
     build_headline_table,
     compute_pnl_for_strategy,
+    compute_pnl_strategy1_combined,
     strategy_metrics,
 )
 
@@ -35,15 +36,27 @@ OUT_DIR = Path(__file__).resolve().parents[2] / "runs" / "inference"
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # 1. Strategy 1 baseline trades + metrics
-    s1_trades = compute_pnl_for_strategy(1)
+    # 1. Strategy 1 trades — H1 headline uses combined 2019-2024 ledger;
+    # H2 vs Strategy 3 uses 2024 sub-window only because Strategies 3-10 only
+    # have 2024 runs.
+    s1_trades = compute_pnl_strategy1_combined()
     s1_trades.to_csv(OUT_DIR / "strategy01_trades.csv", index=False)
     s1_metrics = strategy_metrics(s1_trades)
+    # 2024 sub-window slice from the same combined ledger (avoids picking up
+    # experimental run dirs like *-alpha020 / *-redesign via reverse-glob).
+    s1_trades_2024 = (
+        s1_trades[s1_trades["fiscal_quarter_end"].str.startswith("2024-")]
+        .reset_index(drop=True) if len(s1_trades) else pd.DataFrame()
+    )
+    s1_trades_2024.to_csv(OUT_DIR / "strategy01_trades_2024.csv", index=False)
 
-    # 2. Bootstrap primary test + sensitivity + H2
+    # 2. Bootstrap primary test (full window) + sensitivity + H2 (2024 only)
     primary = primary_test(s1_trades, n_iter=1000, seed=0) if len(s1_trades) else {}
     s3_trades = compute_pnl_for_strategy(3)
-    h2 = quarter_block_diff(s1_trades, s3_trades) if len(s1_trades) and len(s3_trades) else {}
+    h2 = (
+        quarter_block_diff(s1_trades_2024, s3_trades)
+        if len(s1_trades_2024) and len(s3_trades) else {}
+    )
     fc_hit = firm_clustered_bootstrap(s1_trades, n_iter=1000, metric="hit_rate", seed=0)
     fc_mean = firm_clustered_bootstrap(s1_trades, n_iter=1000, metric="mean_return", seed=0)
     qb_hit = quarter_block_bootstrap(s1_trades, n_iter=1000, metric="hit_rate", seed=0)
@@ -65,11 +78,19 @@ def main() -> None:
     bootstrap_df.to_parquet(OUT_DIR / "bootstrap_table.parquet")
     bootstrap_df.to_csv(OUT_DIR / "bootstrap_table.csv", index=False)
 
-    # 3. Headline strategy table
+    # 3. Headline strategy table — full window for Strategy 1, 2024 for the rest.
+    # Also write a 2024-only slice (used by the dashboard's Section 6 baseline
+    # comparison where every strategy is restricted to the 2024 sub-window).
     try:
         headline = build_headline_table()
         headline.to_parquet(OUT_DIR / "headline_table.parquet")
         headline.to_csv(OUT_DIR / "headline_table.csv", index=False)
+        s1_2024_metrics = strategy_metrics(s1_trades_2024)
+        headline_2024 = headline.copy()
+        headline_2024.loc[headline_2024["strategy"] == 1, list(s1_2024_metrics)] = list(
+            s1_2024_metrics.values()
+        )
+        headline_2024.to_csv(OUT_DIR / "headline_table_2024.csv", index=False)
     except Exception as e:
         headline = pd.DataFrame()
         print(f"Warning: headline_table build failed: {e}")

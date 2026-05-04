@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-01T09:38:26.645020",
+  "generated_at": "2026-05-03T21:11:55.418134",
   "strategy1_baseline": {
-    "n_trades": 2,
+    "n_trades": 10,
     "hit_rate": 0.5,
-    "mean_net_return_pct": 0.003138441603719934,
-    "median_net_return_pct": 0.003138441603719934,
-    "sharpe_quarterly": 0.03120471901706749,
-    "max_drawdown_pct": 0.0
+    "mean_net_return_pct": -0.020622921899483965,
+    "median_net_return_pct": -0.002061216251569856,
+    "sharpe_quarterly": -0.19197138191234656,
+    "max_drawdown_pct": -0.2725184387861562
   },
   "primary_test_H1": {
-    "p_value_one_sided": 0.26,
+    "p_value_one_sided": 0.606,
     "reject_50": false,
     "ci_95": [
-      0.0,
-      1.0
+      0.25,
+      0.6666666666666666
     ],
     "n_iter": 1000
   },
@@ -60,7 +60,7 @@
       "primary_reject_50": true,
       "mean_net_return_pct": 0.025383127355958438,
       "median_net_return_pct": 0.027152829409335003,
-      "sharpe_quarterly": 0.2952698404126695,
+      "sharpe_quarterly": 0.29526984041266946,
       "max_drawdown_pct": -0.1667243047158405
     },
     {
@@ -117,12 +117,12 @@
   ],
   "headline_summary": [
     {
-      "n_trades": 2,
+      "n_trades": 10,
       "hit_rate": 0.5,
-      "mean_net_return_pct": 0.003138441603719934,
-      "median_net_return_pct": 0.003138441603719934,
-      "sharpe_quarterly": 0.03120471901706749,
-      "max_drawdown_pct": 0.0,
+      "mean_net_return_pct": -0.020622921899483965,
+      "median_net_return_pct": -0.002061216251569856,
+      "sharpe_quarterly": -0.19197138191234656,
+      "max_drawdown_pct": -0.2725184387861562,
       "strategy": 1
     },
     {
@@ -166,7 +166,7 @@
       "hit_rate": 0.325,
       "mean_net_return_pct": -0.019865174873440007,
       "median_net_return_pct": -0.03411197115397857,
-      "sharpe_quarterly": -0.2945912454404233,
+      "sharpe_quarterly": -0.29459124544042325,
       "max_drawdown_pct": -0.6207905218618027,
       "strategy": 6
     },
