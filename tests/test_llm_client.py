@@ -68,5 +68,20 @@ def test_route_provider_meta_llama_to_hf():
 
 def test_route_provider_unknown_raises():
     import pytest
+    # An entirely unknown model_id should raise. (`gpt-4` was used as the
+    # unknown sentinel before v2.5; it is now a real OpenAI model.)
     with pytest.raises(ValueError):
-        _route_provider("gpt-4")
+        _route_provider("totally-unknown-model-xyz")
+
+
+def test_route_provider_openai_models():
+    """v2.5 routing: gpt-4*, gpt-5*, o1-*, o3-* go to OpenAI.
+    gpt-oss-* must continue to route to Cerebras (it's their hosted
+    open-source GPT model, not OpenAI's namespace)."""
+    assert _route_provider("gpt-4o-mini") == "openai"
+    assert _route_provider("gpt-4") == "openai"
+    assert _route_provider("gpt-5-mini") == "openai"
+    assert _route_provider("o1-mini") == "openai"
+    assert _route_provider("o3-mini") == "openai"
+    # gpt-oss must stay on Cerebras even though name starts with "gpt-"
+    assert _route_provider("gpt-oss-120b") == "cerebras"

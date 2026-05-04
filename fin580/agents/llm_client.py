@@ -70,22 +70,33 @@ def _route_provider(model_id: str) -> str:
         return "huggingface"
     if m.startswith("llama-") or m.startswith("groq/"):
         return "groq"
-    # OpenAI: gpt-* (mini, full, reasoning, etc.) and o1-/o3- reasoning models
-    if m.startswith("gpt-") or m.startswith("o1-") or m.startswith("o3-"):
-        return "openai"
-    # Cerebras free tier (DL #53): bare model IDs without org prefix
+    # Cerebras free tier (DL #53): bare model IDs without org prefix.
+    # Important: this check runs BEFORE the OpenAI check because Cerebras
+    # hosts a model called "gpt-oss-120b" whose name starts with "gpt-",
+    # which would otherwise be claimed by the OpenAI branch.
     if (
-        m.startswith("deepseek-r1")  # Cerebras-style (no org prefix)
+        m.startswith("deepseek-r1")
         or m.startswith("gpt-oss")
         or m.startswith("qwen-3")
         or m.startswith("zai-")
         or m.startswith("llama3.1-")
     ):
         return "cerebras"
+    # OpenAI: gpt-3.5-/gpt-4*/gpt-5*/o1-/o3-. Note "gpt-" alone would
+    # over-match Cerebras' gpt-oss; the more specific prefixes above
+    # capture the real OpenAI namespace without ambiguity.
+    if (
+        m.startswith("gpt-3.")
+        or m.startswith("gpt-4")
+        or m.startswith("gpt-5")
+        or m.startswith("o1-")
+        or m.startswith("o3-")
+    ):
+        return "openai"
     raise ValueError(
         f"Cannot route model_id={model_id!r}. "
         "Supported prefixes: qwen/, mistralai/, meta-llama/, deepseek-ai/ (HF); "
-        "llama-, groq/ (Groq); gpt-*, o1-*, o3-* (OpenAI); "
+        "llama-, groq/ (Groq); gpt-3.*, gpt-4*, gpt-5*, o1-*, o3-* (OpenAI); "
         "deepseek-r1*, gpt-oss*, qwen-3*, zai-*, llama3.1-* (Cerebras)."
     )
 

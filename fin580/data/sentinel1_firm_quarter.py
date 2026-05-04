@@ -17,6 +17,7 @@ from fin580.data.sentinel1_sar import (
     SAR_CACHE_DIR,
     SarObservation,
     _open_stac_catalog,
+    _pad_key,
     batch_read_pads_from_items,
     classify_pad_from_sar,
     fetch_pad_backscatter,
@@ -75,13 +76,26 @@ def _select_representative_pads(
     recent.sort(key=lambda p: p.pad_id)
     older.sort(key=lambda p: p.pad_id)
 
-    # Round-robin from cohorts until we hit n_pads
+    # Round-robin from cohorts until we hit n_pads, deduping by
+    # (pad_id, rounded coords). FracFocus occasionally lists the same well
+    # twice (re-frac filings) and even re-emits identical pad_id rows with
+    # micro-perturbed coordinates (~10-20m). Without dedup, the new batch-
+    # read path's pad_id-keyed dict would collide and either waste a slot
+    # (exact dup) or silently merge observations from two distinct wells
+    # under one identity (coord-perturbed dup). Dedup at selection time
+    # makes "25 pads" mean 25 actually-distinct radar-target panels.
+    seen: set[tuple[str, float, float]] = set()
     out: list[Permit] = []
     cohorts = [active, recent, older]
     while len(out) < n_pads and any(cohorts):
         for c in cohorts:
             if c:
-                out.append(c.pop(0))
+                p = c.pop(0)
+                key = (p.pad_id, round(p.latitude, 4), round(p.longitude, 4))
+                if key in seen:
+                    continue
+                seen.add(key)
+                out.append(p)
                 if len(out) >= n_pads:
                     break
     return out[:n_pads]
@@ -173,7 +187,10 @@ def aggregate_firm_quarter(
     #
     # Pads with prior per-pad cache hits skip both fetches entirely.
     AOI_BUFFER_DEG = 0.005
-    cached_obs: dict[str, list] = {}
+    # Composite-key dicts (pad_id, rounded lat, rounded lon) — same identity
+    # we dedup on in _select_representative_pads, so two FracFocus rows with
+    # the same pad_id but different coords stay distinct.
+    cached_obs: dict[tuple[str, float, float], list] = {}
     pads_needing_fetch = []
     for permit in representative:
         cache_key = (
@@ -181,10 +198,11 @@ def aggregate_firm_quarter(
             f"{fetch_start.isoformat()}_{fetch_end.isoformat()}"
         )
         cache_path_pad = SAR_CACHE_DIR / f"{cache_key}.json"
+        permit_key = _pad_key(permit.pad_id, permit.latitude, permit.longitude)
         if cache_path_pad.exists():
             try:
                 data = json.loads(cache_path_pad.read_text())
-                cached_obs[permit.pad_id] = [
+                cached_obs[permit_key] = [
                     SarObservation(
                         pad_id=d["pad_id"], lat=d["lat"], lon=d["lon"],
                         scene_id=d["scene_id"],
@@ -196,12 +214,11 @@ def aggregate_firm_quarter(
                     for d in data
                 ]
             except (json.JSONDecodeError, KeyError, ValueError):
-                # Corrupt cache — re-fetch fresh
                 pads_needing_fetch.append(permit)
         else:
             pads_needing_fetch.append(permit)
 
-    fresh_obs: dict[str, list] = {}
+    fresh_obs: dict[tuple[str, float, float], list] = {}
     if pads_needing_fetch:
         lats = [p.latitude for p in pads_needing_fetch]
         lons = [p.longitude for p in pads_needing_fetch]
@@ -231,11 +248,15 @@ def aggregate_firm_quarter(
             )
         else:
             # STAC search returned no items — every uncached pad gets empty obs
-            fresh_obs = {p.pad_id: [] for p in pads_needing_fetch}
+            fresh_obs = {
+                _pad_key(p.pad_id, p.latitude, p.longitude): []
+                for p in pads_needing_fetch
+            }
 
     pad_obs_pairs: list[tuple] = []
     for permit in representative:
-        obs = cached_obs.get(permit.pad_id, fresh_obs.get(permit.pad_id, []))
+        k = _pad_key(permit.pad_id, permit.latitude, permit.longitude)
+        obs = cached_obs.get(k, fresh_obs.get(k, []))
         pad_obs_pairs.append((permit, obs))
 
     for permit, obs in pad_obs_pairs:

@@ -252,6 +252,15 @@ def fetch_pad_backscatter(
     return obs
 
 
+def _pad_key(pad_id: str, lat: float, lon: float) -> tuple[str, float, float]:
+    """Composite identity for a pad. Same `pad_id` can appear in FracFocus
+    with slightly different coordinates (~10-20m); keying by pad_id alone
+    would silently merge observations from physically distinct wells. We
+    round to 4 decimal places (~10m at the Permian latitude) so floating-
+    point representation jitter doesn't fragment one pad into many keys."""
+    return (pad_id, round(lat, 4), round(lon, 4))
+
+
 def batch_read_pads_from_items(
     *,
     items: list,
@@ -260,7 +269,7 @@ def batch_read_pads_from_items(
     end_date: date,
     aoi_buffer_deg: float = 0.005,
     label: str = "",
-) -> tuple[dict[str, list[SarObservation]], dict[str, int]]:
+) -> tuple[dict[tuple[str, float, float], list[SarObservation]], dict[str, int]]:
     """v2.5 optimization #3: open each scene ONCE per firm-quarter, clip
     a small window for every pad from the in-memory raster, and accumulate
     per-pad observations.
@@ -288,15 +297,17 @@ def batch_read_pads_from_items(
     counters = {"n_scenes": len(items), "n_scene_reads": 0,
                 "n_pad_samples": 0, "n_pad_skips_offscene": 0}
     if not items or not pads:
-        return ({pad_id: [] for pad_id, _, _ in pads}, counters)
+        return ({_pad_key(pid, lat, lon): [] for pid, lat, lon in pads}, counters)
 
     try:
         import rioxarray  # noqa
         import numpy as np
     except ImportError:
-        return ({pad_id: [] for pad_id, _, _ in pads}, counters)
+        return ({_pad_key(pid, lat, lon): [] for pid, lat, lon in pads}, counters)
 
-    per_pad: dict[str, list[SarObservation]] = {pad_id: [] for pad_id, _, _ in pads}
+    per_pad: dict[tuple[str, float, float], list[SarObservation]] = {
+        _pad_key(pid, lat, lon): [] for pid, lat, lon in pads
+    }
 
     for item in items:
         try:
@@ -333,7 +344,7 @@ def batch_read_pads_from_items(
                 counters["n_pad_skips_offscene"] += 1
                 continue
             mean_db = 10.0 * float(np.log10(mean_lin))
-            per_pad[pad_id].append(
+            per_pad[_pad_key(pad_id, lat, lon)].append(
                 SarObservation(
                     pad_id=pad_id, lat=lat, lon=lon,
                     scene_id=item.id,
@@ -346,7 +357,9 @@ def batch_read_pads_from_items(
             counters["n_pad_samples"] += 1
 
     # Persist per-pad cache files atomically (backward-compat with
-    # fetch_pad_backscatter readers).
+    # fetch_pad_backscatter readers). The on-disk cache key embeds lat/lon
+    # to 4 decimal places already, so the disk format is consistent with
+    # the in-memory composite key.
     import os as _os
     for pad_id, lat, lon in pads:
         cache_key = (
@@ -364,7 +377,7 @@ def batch_read_pads_from_items(
                 "vv_mean_linear": o.vv_mean_linear,
                 "vv_mean_db": o.vv_mean_db,
                 "vh_mean_linear": o.vh_mean_linear,
-            } for o in per_pad[pad_id]],
+            } for o in per_pad[_pad_key(pad_id, lat, lon)]],
             indent=2,
         )
         tmp_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
