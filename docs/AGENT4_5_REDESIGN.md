@@ -69,6 +69,8 @@ Removed:
 
 ### Agent 4 — News Intelligence (rewrite)
 
+**News source: GDELT 2.0** (locked decision — see Appendix C for why not NewsAPI).
+
 **Inputs:**
 - GDELT articles for firm in `[T-30, T-14]` window (existing cache;
   hard cutoff at T-14 for leakage discipline)
@@ -371,6 +373,34 @@ GEMINI_MIN_INTERVAL_SECONDS=4.0
 | "Conviction tiers must be monotonic" | Section 6 metric #2 |
 | "No calibrated predictive target" | Documented as future work in Section 8.5 |
 | "Recalibrate Agent 3 instead of remove" | Rejected — audit shows directional inversion, not just threshold issue |
+
+---
+
+## Appendix C — Why GDELT, not NewsAPI
+
+User initially proposed NewsAPI.org. We evaluated and locked in GDELT
+because of a hard blocker on NewsAPI's free tier:
+
+| Source | Historical coverage | Free RPD | Cost for 2019-2024 backtest |
+|---|---|---:|---|
+| **GDELT 2.0** | full back to 2015 | unlimited, no auth | $0 (already cached for 78 windows) |
+| NewsAPI free | **current month only** | 100 | unusable for historical backtest |
+| NewsAPI Business | full | unlimited | $449/month |
+| NewsAPI Advanced | full | unlimited | $599/month |
+
+NewsAPI's developer (free) plan returns articles "up to a month old" only.
+That makes it incompatible with backfilling news for 2019-2023 cells. The
+paid tiers solve this but are out of scope for a student project budget.
+
+GDELT 2.0 has full historical coverage, no API key, no rate limit, and
+strong global news indexing including Reuters, Bloomberg-syndicated, and
+regional press relevant to Permian E&P. The current Agent 4 *underuses*
+GDELT by only asking a yes/no novelty question — the rewrite extracts
+substantive structured catalysts from the same articles.
+
+**If a future demo requires real-time news**, NewsAPI's free tier could
+be added as a forward-only data source for live trading paper-trading
+demos (post-paper). It would not affect the 2019-2024 backtest results.
 
 ---
 
