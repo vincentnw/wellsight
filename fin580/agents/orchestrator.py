@@ -282,6 +282,7 @@ def run_cell(
             },
             decision_date_T=decision_date_T,
             prev_earnings_date=prev_earnings_date,
+            agent2_out=a2,  # Redesigned Agent 4: forecast context informs catalyst extraction
         )
         _persist(a4, run_dir, ticker, fiscal_quarter_end, "agent4")
 
