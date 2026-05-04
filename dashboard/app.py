@@ -30,12 +30,14 @@ PHASE1_OUTPUT = ROOT / "phase1" / "output"
 # headline; 2019-2023 were added afterward.  Section 6 (baselines vs S2-S10)
 # uses HEADLINE_RUN only because those baseline runs only cover 2024.
 HEADLINE_RUN = RUNS_DIR / "2026-04-30-strategy1-2024Q1_2024Q4-target-realsar"
+_RUN_2022_2023 = RUNS_DIR / "2026-05-03-strategy1-2022Q1_2023Q4-target-realsar"
 WINDOW_RUNS = {
-    "2019":     RUNS_DIR / "2026-05-03-strategy1-2019Q1_2019Q4-target-realsar",
-    "2020":     RUNS_DIR / "2026-05-03-strategy1-2020Q1_2020Q4-target-realsar",
-    "2021":     RUNS_DIR / "2026-05-03-strategy1-2021Q1_2021Q4-target-realsar",
-    "2022-23":  RUNS_DIR / "2026-05-03-strategy1-2022Q1_2023Q4-target-realsar",
-    "2024":     HEADLINE_RUN,
+    "2019":  RUNS_DIR / "2026-05-03-strategy1-2019Q1_2019Q4-target-realsar",
+    "2020":  RUNS_DIR / "2026-05-03-strategy1-2020Q1_2020Q4-target-realsar",
+    "2021":  RUNS_DIR / "2026-05-03-strategy1-2021Q1_2021Q4-target-realsar",
+    "2022":  _RUN_2022_2023,
+    "2023":  _RUN_2022_2023,
+    "2024":  HEADLINE_RUN,
 }
 
 
@@ -44,7 +46,8 @@ def _window_for_fpe(fpe: str) -> str:
     if y == 2019: return "2019"
     if y == 2020: return "2020"
     if y == 2021: return "2021"
-    if y in (2022, 2023): return "2022-23"
+    if y == 2022: return "2022"
+    if y == 2023: return "2023"
     return "2024"
 
 
@@ -84,14 +87,18 @@ st.sidebar.markdown(
 def load_all_cells():
     """Cell results across all 5 windows, deduped (last attempt wins)."""
     parts = []
-    for label, run in WINDOW_RUNS.items():
+    seen: set[Path] = set()
+    for run in WINDOW_RUNS.values():
+        if run in seen:
+            continue
+        seen.add(run)
         p = run / "strategy_01" / "cell_results.parquet"
         if not p.exists():
             continue
         df = pd.read_parquet(p).drop_duplicates(
             subset=["ticker", "fiscal_quarter_end"], keep="last"
         )
-        df["window"] = label
+        df["window"] = df["fiscal_quarter_end"].apply(_window_for_fpe)
         parts.append(df)
     return pd.concat(parts, ignore_index=True) if parts else pd.DataFrame()
 
@@ -139,7 +146,7 @@ def load_all_trades():
             capital_usd=1_000_000, cost_bps=30,
         )
         rows.append({
-            "window": r["window"],
+            "window": _window_for_fpe(fpe_str),
             "strategy": 1,
             "ticker": ticker,
             "fiscal_quarter_end": fpe_str,
@@ -329,7 +336,7 @@ provenance_df = pd.DataFrame([
      "Where it comes from": "Ben-David 2021, Glaeser et al. 2020 literature",
      "Status": "🟡 Calibration parameter (not data)"},
 ])
-st.dataframe(provenance_df, hide_index=True, width="stretch")
+st.dataframe(provenance_df, hide_index=True, use_container_width=True)
 
 st.divider()
 
@@ -369,7 +376,7 @@ agents_df = pd.DataFrame([
             "tier; deterministic lookup → size (high=15%, medium=10%, low=5%, none=0%).",
      "LLM?": "Yes (debate only — size in code)"},
 ])
-st.dataframe(agents_df, hide_index=True, width="stretch")
+st.dataframe(agents_df, hide_index=True, use_container_width=True)
 
 st.info(
     "**Why this design?**  An LLM is good at reading news and debating; an LLM is "
@@ -481,7 +488,7 @@ else:
             if sig and "pad_classifications" in sig:
                 st.markdown("**Per-pad classifications from real radar pixels:**")
                 pads_df = pd.DataFrame(sig["pad_classifications"])
-                st.dataframe(pads_df, hide_index=True, width="stretch")
+                st.dataframe(pads_df, hide_index=True, use_container_width=True)
                 st.caption(
                     f"This cell read **{sig['n_observations_total']} real Sentinel-1 "
                     f"acquisitions** across {sig['n_pads_sampled']} representative pads."
@@ -657,7 +664,7 @@ else:
         yaxis_title="Growth factor (start = 1.0)",
         height=420,
     )
-    st.plotly_chart(fig, width="stretch")
+    st.plotly_chart(fig, use_container_width=True)
 
     # Per-window summary table
     st.markdown("**Per-window summary:**")
@@ -681,7 +688,7 @@ else:
     st.dataframe(
         win_summary[["window", "n_trades", "wins", "losses",
                      "hit_rate", "mean_net_return", "total_pnl_usd"]],
-        hide_index=True, width="stretch",
+        hide_index=True, use_container_width=True,
     )
 
 st.divider()
@@ -775,7 +782,7 @@ else:
                 {"Strategy": "VOO buy-and-hold (S&P 500)", **voo_m},
             ]
         )
-        st.dataframe(summary_df, hide_index=True, width="stretch")
+        st.dataframe(summary_df, hide_index=True, use_container_width=True)
 
         # Equity curve plot
         fig = go.Figure()
@@ -808,7 +815,7 @@ else:
             hovermode="x unified",
             yaxis=dict(tickformat="$,.0f"),
         )
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(fig, use_container_width=True)
 
         st.markdown(
             f"""
