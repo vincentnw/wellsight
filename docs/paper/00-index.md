@@ -29,28 +29,32 @@
 
 ## How to regenerate every result
 
-The headline empirical window is **Q1 2024 – Q4 2024 with real Sentinel-1 SAR**. Strategy 1 must run with `FIN580_SAR_MODE=real_sentinel1` so Agent 1 ingests real Microsoft Planetary Computer Sentinel-1 RTC backscatter (rather than the legacy synthetic-SAR generator, which is retained in the codebase only for backwards-compatibility).
+The headline empirical window is **Q1 2019 – Q4 2024 with real Sentinel-1 SAR** (six full calendar years, 200 firm-quarter cells, 10 long trades). Strategy 1 must run with `FIN580_SAR_MODE=real_sentinel1` so Agent 1 ingests real Microsoft Planetary Computer Sentinel-1 RTC backscatter (rather than the legacy synthetic-SAR generator, which is retained in the codebase only for backwards-compatibility).
 
 ```bash
-# Strategy 1 — full multi-agent system, real Sentinel-1 SAR, 2024 window
+# Strategy 1 — full multi-agent system, real Sentinel-1 SAR
+# Run per-year (each year ~30-60 min wall time on free-tier LLM throughput)
 FIN580_SAR_MODE=real_sentinel1 \
-    python -m fin580.backtest.runner --strategy 1 --window 2024Q1-2024Q4 \
+    python -m fin580.backtest.runner --strategy 1 --window 2019Q1-2019Q4 \
         --cm-label target --run-suffix realsar
+# (repeat for 2020, 2021; 2022-2023 as a single run; 2024)
 
 # Strategies 3-10 — deterministic baselines on real EIA / FracFocus / IBES
+# Currently scoped to the 2024 sub-window; extension to 2019-2024 is documented
+# as future work in §12.9.
 python -m fin580.backtest.runner --strategies 3,4,5,6,7,8,9,10 --window 2024Q1-2024Q4
 
-# Strategy 2 — no-news ablation (Agent 4 stubbed), real Sentinel-1 SAR
+# Strategy 2 — no-news ablation (Agent 4 stubbed), real Sentinel-1 SAR, 2024 sub-window
 FIN580_SAR_MODE=real_sentinel1 \
     python -m fin580.backtest.runner --strategy 2 --window 2024Q1-2024Q4 \
         --cm-label target --run-suffix realsar
 
-# M7 ablations (mechanically guaranteed zero-trade results — no run needed)
-# Documented in §11.1 / §11.2.
+# Mechanical ablations (α=0, no-satellite) produce zero trades by construction
+# and do not require a separate run — documented in §11.1 / §11.2.
 
 # Inference rollups
 python -m fin580.inference.build_evidence_pack
 python -m fin580.inference.equity_curves
 ```
 
-The legacy synthetic-SAR pipeline + 2021–2025 backtest is retained in the codebase for future-work reproducibility but is not part of the paper's empirical claims.
+The legacy synthetic-SAR pipeline is retained in the codebase for backwards-compatibility but is not part of the paper's empirical claims.
