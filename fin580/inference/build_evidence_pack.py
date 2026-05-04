@@ -37,6 +37,11 @@ from fin580.inference.signal_confidence import (
     attach_signal_confidence,
     signal_confidence_summary,
 )
+from fin580.inference.wti_veto import (
+    apply_wti_veto,
+    kept_trade_ledger,
+    wti_veto_summary,
+)
 
 OUT_DIR = Path(__file__).resolve().parents[2] / "runs" / "inference"
 
@@ -145,7 +150,24 @@ def main() -> None:
         sc_summary = {"error": str(e)[:200]}
         print(f"Warning: signal_confidence build failed: {e}")
 
-    # 6. Top-level summary
+    # 6. WTI stress-veto sensitivity. This writes additional post-veto
+    # ledgers; it does not replace strategy01_trades.csv or headline H1.
+    try:
+        wti_veto_ledger = apply_wti_veto(s1_trades)
+        wti_veto_ledger.to_csv(OUT_DIR / "strategy01_trades_wti_veto.csv", index=False)
+        wti_veto_kept = kept_trade_ledger(wti_veto_ledger)
+        wti_veto_kept.to_csv(
+            OUT_DIR / "strategy01_trades_wti_veto_kept.csv", index=False
+        )
+        wti_summary = wti_veto_summary(
+            baseline_trades=s1_trades,
+            veto_ledger=wti_veto_ledger,
+        )
+    except Exception as e:
+        wti_summary = {"error": str(e)[:200]}
+        print(f"Warning: wti_veto build failed: {e}")
+
+    # 7. Top-level summary
     pack = {
         "generated_at": datetime.now().isoformat(),
         "strategy1_baseline": {
@@ -168,6 +190,7 @@ def main() -> None:
         ),
         "revenue_diagnostic_summary": revenue_diag_summary,
         "signal_confidence_summary": sc_summary,
+        "wti_veto_summary": wti_summary,
         "headline_summary": (
             headline.to_dict(orient="records") if len(headline) else []
         ),
