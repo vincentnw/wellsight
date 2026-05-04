@@ -127,6 +127,10 @@ def _append_cell_result(cell: CellResult, run_dir: Path) -> None:
         "final_size_pct": cell.final_size_pct,
         "low_quality_flag": cell.low_quality_flag,
         "error": cell.error or "",
+        # Agent 4+5 redesign: persist conviction_score (0-100) so the
+        # trade-selection layer in fin580/backtest/runner.py can rank cells
+        # by score and apply top-K-per-cycle budget.
+        "conviction_score": cell.conviction_score,
     }])
     if results_path.exists():
         df = pd.read_parquet(results_path)
