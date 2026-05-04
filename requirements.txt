@@ -9,6 +9,7 @@ requests>=2.31
 huggingface_hub>=0.23
 groq>=0.9
 cerebras_cloud_sdk>=1.0
+openai>=1.40
 yfinance>=0.2.40
 python-dotenv>=1.0
 tabulate>=0.9

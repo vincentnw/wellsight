@@ -20,12 +20,19 @@ density attribution test.
    | Agent 4 (GDELT news) | llama3.1-8b | gpt-4o-mini | OpenAI |
    | Agent 5 Bull | qwen-3-235b | gpt-4o-mini | OpenAI |
    | Agent 5 Bear | llama3.1-8b | gpt-4o-mini | OpenAI |
-   | Agent 5 Arbiter | qwen-3-235b | gpt-5.4-mini | OpenAI |
+   | Agent 5 Arbiter | qwen-3-235b | gpt-5-mini | OpenAI |
 
    Motivation: v1 hit Cerebras free-tier 429 rate limits multiple times
    mid-run, requiring multi-account key rotation and 12s throttling. The
    reliability cost was non-trivial (multi-day re-runs). OpenAI mini tier
    is ~$0.50-0.75 for the full 2019-2024 sweep with no rate-limit pain.
+
+   Note on Arbiter model name: `gpt-5-mini` is the correct OpenAI API
+   identifier (the "5-series mini reasoning model"). Earlier informal
+   notes referenced it as "5.4 mini"; the API call uses `gpt-5-mini`,
+   which dispatches to a reasoning model that requires
+   `max_completion_tokens` instead of `max_tokens` (handled in
+   `_call_openai`).
 
 **What is unchanged from v1:**
 
