@@ -20,7 +20,7 @@ from fin580.agents.llm_client import chat
 from fin580.agents.schemas import Agent2Out, Agent3Out, Agent4Out
 from fin580.data.gdelt_loader import fetch_articles
 
-MODEL_ID = "llama3.1-8b"  # Cerebras (DL #57)
+MODEL_ID = "gpt-4o-mini"  # OpenAI (Agent 4+5 redesign cost-optimized stack)
 PROMPT_PATH = Path(__file__).parent / "prompts" / "agent4_news.txt"
 MAX_ARTICLES_TO_LLM = 30  # token-budget cap; orchestrator pre-filters by recency
 

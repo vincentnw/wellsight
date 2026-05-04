@@ -23,6 +23,7 @@ CACHE_ROOT.mkdir(parents=True, exist_ok=True)
 PROVIDER_MIN_INTERVAL_SECONDS = {
     "cerebras": float(os.environ.get("CEREBRAS_MIN_INTERVAL_SECONDS", "2.0")),
     "gemini": float(os.environ.get("GEMINI_MIN_INTERVAL_SECONDS", "4.0")),
+    "openai": float(os.environ.get("OPENAI_MIN_INTERVAL_SECONDS", "0.5")),
 }
 _provider_last_call_at: dict[str, float] = {}
 _provider_rate_lock = threading.Lock()
@@ -115,6 +116,9 @@ def _route_provider(model_id: str) -> str:
     # Gemini via Google AI Studio (added by Agent 4+5 redesign for cross-provider Arbiter)
     if m.startswith("gemini-") or m.startswith("models/gemini-"):
         return "gemini"
+    # OpenAI: gpt-* (mini, full, etc.)
+    if m.startswith("gpt-") or m.startswith("o1-") or m.startswith("o3-"):
+        return "openai"
     # Cerebras free tier (DL #53): bare model IDs without org prefix
     if (
         m.startswith("deepseek-r1")  # Cerebras-style (no org prefix)
@@ -128,6 +132,7 @@ def _route_provider(model_id: str) -> str:
         f"Cannot route model_id={model_id!r}. "
         "Supported prefixes: qwen/, mistralai/, meta-llama/, deepseek-ai/ (HF); "
         "llama-, groq/ (Groq); gemini-* (Google AI Studio); "
+        "gpt-*, o1-*, o3-* (OpenAI); "
         "deepseek-r1*, gpt-oss*, qwen-3*, zai-*, llama3.1-* (Cerebras)."
     )
 
@@ -231,6 +236,51 @@ def _call_cerebras(prompt: str, input_json: dict, model_id: str,
     return json.loads(_extract_json(text))
 
 
+def _call_openai(prompt: str, input_json: dict, model_id: str,
+                  temperature: float) -> dict:
+    """OpenAI Chat Completions API. Used for gpt-4o-mini (Agent 2/4/Bull/Bear)
+    and gpt-5.4-mini (Arbiter) per docs/AGENT4_5_REDESIGN.md cost-optimized
+    stack. Per-request rate limits are typically high enough that the
+    OPENAI_MIN_INTERVAL_SECONDS throttle (default 0.5s) is enough.
+
+    Two API quirks handled:
+      - gpt-5.* and o-series models require `max_completion_tokens` (because
+        they spend tokens on reasoning before output); gpt-4o family uses
+        legacy `max_tokens`.
+      - Reasoning models don't accept the `temperature` param at all on some
+        SDK versions; we drop it on retry if rejected.
+    """
+    from openai import OpenAI  # type: ignore
+    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    full_prompt = f"{prompt}\n\nINPUT:\n{_canonical_json(input_json)}"
+
+    is_reasoning_model = (
+        model_id.startswith("gpt-5") or model_id.startswith("o1") or model_id.startswith("o3")
+    )
+    kwargs: dict = {
+        "model": model_id,
+        "messages": [{"role": "user", "content": full_prompt}],
+    }
+    # Token budget — different param name for reasoning vs legacy chat models.
+    if is_reasoning_model:
+        kwargs["max_completion_tokens"] = 3000
+    else:
+        kwargs["max_tokens"] = 3000
+        kwargs["temperature"] = temperature  # reasoning models often reject this
+    # Strict JSON output mode reduces parse failures on mini-tier models.
+    kwargs["response_format"] = {"type": "json_object"}
+
+    try:
+        resp = client.chat.completions.create(**kwargs)
+    except Exception:
+        # If the model rejects response_format or temperature, retry without those.
+        kwargs.pop("response_format", None)
+        kwargs.pop("temperature", None)
+        resp = client.chat.completions.create(**kwargs)
+    text = resp.choices[0].message.content
+    return json.loads(_extract_json(text))
+
+
 def _call_gemini(prompt: str, input_json: dict, model_id: str,
                   temperature: float) -> dict:
     """Google AI Studio Gemini API. Free tier limits as of 2026:
@@ -283,6 +333,7 @@ def chat(*, prompt: str, input_json: dict, model_id: str,
         "groq": _call_groq,
         "cerebras": _call_cerebras,
         "gemini": _call_gemini,
+        "openai": _call_openai,
     }
     last_err = None
     for attempt in range(max_retries):

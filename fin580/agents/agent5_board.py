@@ -31,9 +31,12 @@ from fin580.agents.schemas import (
 PROMPTS_DIR = Path(__file__).parent / "prompts"
 
 # Model stack — see docs/AGENT4_5_REDESIGN.md Section 2 for rationale.
-MODEL_BULL = "qwen-3-235b-a22b-instruct-2507"   # Cerebras, advocacy
-MODEL_BEAR = "llama3.1-8b"                       # Cerebras, skepticism
-MODEL_ARBITER = "gemini-2.5-flash"               # Google AI Studio (free tier 250 RPD / 10 RPM)
+# Switched from Cerebras+Gemini free tier to OpenAI mini-tier paid:
+# free-tier rate limits made Phase 1 untenable (~75% 429 error rate);
+# OpenAI mini at ~$3 for full project is the value-rational choice.
+MODEL_BULL = "gpt-4o-mini"          # OpenAI ($0.15/M in, $0.60/M out)
+MODEL_BEAR = "gpt-4o-mini"          # OpenAI (same — speed + structured-output)
+MODEL_ARBITER = "gpt-5.4-mini"      # OpenAI ($0.25/M in, $2.00/M out — stronger reasoner for the decisive role)
 
 CONVICTION_TO_SIZE = {"high": 0.15, "medium": 0.10, "low": 0.05, "none": 0.0}
 
