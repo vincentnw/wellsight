@@ -17,6 +17,7 @@ from fin580.data.sentinel1_sar import (
     SAR_CACHE_DIR,
     SarObservation,
     _open_stac_catalog,
+    batch_read_pads_from_items,
     classify_pad_from_sar,
     fetch_pad_backscatter,
     stac_search_with_retry,
@@ -162,26 +163,45 @@ def aggregate_firm_quarter(
     fetch_start = fiscal_quarter_end - timedelta(days=365)
     fetch_end = min(fiscal_quarter_end, decision_date_T)
 
-    # v2.5 optimization #2: do ONE STAC search per firm-quarter at the
-    # union bbox of all representative pads, then pass the items list to
-    # each pad's processor. STAC search is the failure-prone step under MS
-    # Planetary Computer load (4-attempt backoff, 30s server-side deadline).
-    # Cutting 25 search calls down to 1 directly reduces the timeout
-    # exposure and per-cell wall-clock.
+    # v2.5 optimizations #2 + #3:
+    #   #2 — do ONE STAC search per firm-quarter at the union bbox of all
+    #        non-cached pads (was 25 per-pad searches; STAC is the failure-
+    #        prone step under MS Planetary Computer load).
+    #   #3 — open each scene ONCE per firm-quarter, clip windows for every
+    #        non-cached pad from the in-memory raster (was 25 × ~150 = ~3750
+    #        COG opens per cell; now ~150).
     #
-    # Skip the search entirely if every pad's per-(pad,date) cache is hit
-    # — there's nothing to fetch and we'd waste a STAC call.
+    # Pads with prior per-pad cache hits skip both fetches entirely.
     AOI_BUFFER_DEG = 0.005
+    cached_obs: dict[str, list] = {}
     pads_needing_fetch = []
     for permit in representative:
         cache_key = (
             f"{permit.pad_id}_{permit.latitude:.4f}_{permit.longitude:.4f}_"
             f"{fetch_start.isoformat()}_{fetch_end.isoformat()}"
         )
-        if not (SAR_CACHE_DIR / f"{cache_key}.json").exists():
+        cache_path_pad = SAR_CACHE_DIR / f"{cache_key}.json"
+        if cache_path_pad.exists():
+            try:
+                data = json.loads(cache_path_pad.read_text())
+                cached_obs[permit.pad_id] = [
+                    SarObservation(
+                        pad_id=d["pad_id"], lat=d["lat"], lon=d["lon"],
+                        scene_id=d["scene_id"],
+                        acquisition_date=date.fromisoformat(d["acquisition_date"]),
+                        vv_mean_linear=d["vv_mean_linear"],
+                        vv_mean_db=d["vv_mean_db"],
+                        vh_mean_linear=d.get("vh_mean_linear"),
+                    )
+                    for d in data
+                ]
+            except (json.JSONDecodeError, KeyError, ValueError):
+                # Corrupt cache — re-fetch fresh
+                pads_needing_fetch.append(permit)
+        else:
             pads_needing_fetch.append(permit)
 
-    shared_items = None
+    fresh_obs: dict[str, list] = {}
     if pads_needing_fetch:
         lats = [p.latitude for p in pads_needing_fetch]
         lons = [p.longitude for p in pads_needing_fetch]
@@ -192,24 +212,30 @@ def aggregate_firm_quarter(
             max(lats) + AOI_BUFFER_DEG,
         ]
         catalog = _open_stac_catalog()
+        items = []
         if catalog is not None:
-            shared_items = stac_search_with_retry(
+            items = stac_search_with_retry(
                 catalog=catalog, bbox=union_bbox,
                 start_date=fetch_start, end_date=fetch_end,
-                max_scenes=200,  # union bbox covers ~50-100 km, more scenes than per-pad
+                max_scenes=200,
                 label=f"{ticker} {fiscal_quarter_end.isoformat()}",
             )
+        if items:
+            fresh_obs, _counters = batch_read_pads_from_items(
+                items=items,
+                pads=[(p.pad_id, p.latitude, p.longitude) for p in pads_needing_fetch],
+                start_date=fetch_start,
+                end_date=fetch_end,
+                aoi_buffer_deg=AOI_BUFFER_DEG,
+                label=f"{ticker} {fiscal_quarter_end.isoformat()}",
+            )
+        else:
+            # STAC search returned no items — every uncached pad gets empty obs
+            fresh_obs = {p.pad_id: [] for p in pads_needing_fetch}
 
     pad_obs_pairs: list[tuple] = []
     for permit in representative:
-        obs = fetch_pad_backscatter(
-            pad_id=permit.pad_id,
-            lat=permit.latitude,
-            lon=permit.longitude,
-            start_date=fetch_start,
-            end_date=fetch_end,
-            prefetched_items=shared_items,  # one shared list for all pads
-        )
+        obs = cached_obs.get(permit.pad_id, fresh_obs.get(permit.pad_id, []))
         pad_obs_pairs.append((permit, obs))
 
     for permit, obs in pad_obs_pairs:

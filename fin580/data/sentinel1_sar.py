@@ -252,6 +252,133 @@ def fetch_pad_backscatter(
     return obs
 
 
+def batch_read_pads_from_items(
+    *,
+    items: list,
+    pads: list[tuple[str, float, float]],  # [(pad_id, lat, lon), ...]
+    start_date: date,
+    end_date: date,
+    aoi_buffer_deg: float = 0.005,
+    label: str = "",
+) -> tuple[dict[str, list[SarObservation]], dict[str, int]]:
+    """v2.5 optimization #3: open each scene ONCE per firm-quarter, clip
+    a small window for every pad from the in-memory raster, and accumulate
+    per-pad observations.
+
+    Previously each pad iterated all ~50-200 scenes individually with its own
+    `rioxarray.open_rasterio` call → 25 pads × ~150 scenes ≈ 3,750 COG opens
+    per cell. This function collapses that to one open per scene (~50-200 per
+    cell) and clips per-pad in memory. Per-pad clips are nearly free
+    (numpy/xarray slicing), so the dominant cost becomes the per-scene COG
+    open.
+
+    Per-pad cache files are written after the batch completes for backward
+    compatibility — `fetch_pad_backscatter` callers still get cache hits.
+    Pads passed in here are assumed to have NO existing cache (caller filters
+    with the per-pad cache check first); we don't double-check.
+
+    Returns:
+        (per_pad_obs, counters)
+        per_pad_obs: {pad_id: [SarObservation, ...]}
+        counters:    {"n_scenes": int, "n_scene_reads": int,
+                      "n_pad_samples": int, "n_pad_skips_offscene": int}
+
+    Per-pad cache files are written before return.
+    """
+    counters = {"n_scenes": len(items), "n_scene_reads": 0,
+                "n_pad_samples": 0, "n_pad_skips_offscene": 0}
+    if not items or not pads:
+        return ({pad_id: [] for pad_id, _, _ in pads}, counters)
+
+    try:
+        import rioxarray  # noqa
+        import numpy as np
+    except ImportError:
+        return ({pad_id: [] for pad_id, _, _ in pads}, counters)
+
+    per_pad: dict[str, list[SarObservation]] = {pad_id: [] for pad_id, _, _ in pads}
+
+    for item in items:
+        try:
+            vv = rioxarray.open_rasterio(
+                item.assets["vv"].href, masked=True
+            ).squeeze()
+            counters["n_scene_reads"] += 1
+        except Exception:
+            continue
+        acq_dt_str = item.properties.get("datetime", "")
+        try:
+            acq_d = datetime.fromisoformat(acq_dt_str.replace("Z", "+00:00")).date()
+        except Exception:
+            continue
+
+        # Clip a small AOI window for each pad from the same in-memory raster.
+        # Pads outside the scene's data extent yield empty / non-finite arrays
+        # and are skipped without re-opening the COG.
+        for pad_id, lat, lon in pads:
+            aoi = [lon - aoi_buffer_deg, lat - aoi_buffer_deg,
+                   lon + aoi_buffer_deg, lat + aoi_buffer_deg]
+            try:
+                vv_clip = vv.rio.clip_box(*aoi, crs="EPSG:4326")
+                arr = vv_clip.values
+            except Exception:
+                counters["n_pad_skips_offscene"] += 1
+                continue
+            if arr.size == 0:
+                counters["n_pad_skips_offscene"] += 1
+                continue
+            with np.errstate(all="ignore"):
+                mean_lin = float(np.nanmean(arr))
+            if not np.isfinite(mean_lin) or mean_lin <= 0:
+                counters["n_pad_skips_offscene"] += 1
+                continue
+            mean_db = 10.0 * float(np.log10(mean_lin))
+            per_pad[pad_id].append(
+                SarObservation(
+                    pad_id=pad_id, lat=lat, lon=lon,
+                    scene_id=item.id,
+                    acquisition_date=acq_d,
+                    vv_mean_linear=mean_lin,
+                    vv_mean_db=mean_db,
+                    vh_mean_linear=None,
+                )
+            )
+            counters["n_pad_samples"] += 1
+
+    # Persist per-pad cache files atomically (backward-compat with
+    # fetch_pad_backscatter readers).
+    import os as _os
+    for pad_id, lat, lon in pads:
+        cache_key = (
+            f"{pad_id}_{lat:.4f}_{lon:.4f}_"
+            f"{start_date.isoformat()}_{end_date.isoformat()}"
+        )
+        cache_path = SAR_CACHE_DIR / f"{cache_key}.json"
+        if cache_path.exists():
+            continue  # someone else wrote it (race-safe)
+        payload = json.dumps(
+            [{
+                "pad_id": o.pad_id, "lat": o.lat, "lon": o.lon,
+                "scene_id": o.scene_id,
+                "acquisition_date": o.acquisition_date.isoformat(),
+                "vv_mean_linear": o.vv_mean_linear,
+                "vv_mean_db": o.vv_mean_db,
+                "vh_mean_linear": o.vh_mean_linear,
+            } for o in per_pad[pad_id]],
+            indent=2,
+        )
+        tmp_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
+        tmp_path.write_text(payload)
+        _os.replace(tmp_path, cache_path)
+
+    if label:
+        print(f"  [sentinel1] {label} batch-read: {counters['n_scenes']} items, "
+              f"{counters['n_scene_reads']} COG opens, "
+              f"{counters['n_pad_samples']} pad samples, "
+              f"{counters['n_pad_skips_offscene']} pad-clips skipped")
+    return (per_pad, counters)
+
+
 def classify_pad_from_sar(
     *,
     pad_id: str,
