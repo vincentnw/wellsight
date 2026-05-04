@@ -14,9 +14,12 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from fin580.data.sentinel1_sar import (
+    SAR_CACHE_DIR,
     SarObservation,
+    _open_stac_catalog,
     classify_pad_from_sar,
     fetch_pad_backscatter,
+    stac_search_with_retry,
 )
 from fin580.data.trc_permits import Permit, load_permit_dump
 
@@ -159,10 +162,44 @@ def aggregate_firm_quarter(
     fetch_start = fiscal_quarter_end - timedelta(days=365)
     fetch_end = min(fiscal_quarter_end, decision_date_T)
 
-    # Sequential fetch — earlier ThreadPoolExecutor + rasterio combination
-    # deadlocked on macOS, leaving sockets in CLOSE_WAIT and all threads in
-    # pthread_cond_wait. Sequential is slower but reliable. Each pad's full
-    # 1-year fetch is cached to disk on first call; subsequent runs hit cache.
+    # v2.5 optimization #2: do ONE STAC search per firm-quarter at the
+    # union bbox of all representative pads, then pass the items list to
+    # each pad's processor. STAC search is the failure-prone step under MS
+    # Planetary Computer load (4-attempt backoff, 30s server-side deadline).
+    # Cutting 25 search calls down to 1 directly reduces the timeout
+    # exposure and per-cell wall-clock.
+    #
+    # Skip the search entirely if every pad's per-(pad,date) cache is hit
+    # — there's nothing to fetch and we'd waste a STAC call.
+    AOI_BUFFER_DEG = 0.005
+    pads_needing_fetch = []
+    for permit in representative:
+        cache_key = (
+            f"{permit.pad_id}_{permit.latitude:.4f}_{permit.longitude:.4f}_"
+            f"{fetch_start.isoformat()}_{fetch_end.isoformat()}"
+        )
+        if not (SAR_CACHE_DIR / f"{cache_key}.json").exists():
+            pads_needing_fetch.append(permit)
+
+    shared_items = None
+    if pads_needing_fetch:
+        lats = [p.latitude for p in pads_needing_fetch]
+        lons = [p.longitude for p in pads_needing_fetch]
+        union_bbox = [
+            min(lons) - AOI_BUFFER_DEG,
+            min(lats) - AOI_BUFFER_DEG,
+            max(lons) + AOI_BUFFER_DEG,
+            max(lats) + AOI_BUFFER_DEG,
+        ]
+        catalog = _open_stac_catalog()
+        if catalog is not None:
+            shared_items = stac_search_with_retry(
+                catalog=catalog, bbox=union_bbox,
+                start_date=fetch_start, end_date=fetch_end,
+                max_scenes=200,  # union bbox covers ~50-100 km, more scenes than per-pad
+                label=f"{ticker} {fiscal_quarter_end.isoformat()}",
+            )
+
     pad_obs_pairs: list[tuple] = []
     for permit in representative:
         obs = fetch_pad_backscatter(
@@ -171,6 +208,7 @@ def aggregate_firm_quarter(
             lon=permit.longitude,
             start_date=fetch_start,
             end_date=fetch_end,
+            prefetched_items=shared_items,  # one shared list for all pads
         )
         pad_obs_pairs.append((permit, obs))
 

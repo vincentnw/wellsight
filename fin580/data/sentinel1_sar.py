@@ -64,6 +64,73 @@ class SarObservation:
     vh_mean_linear: float | None
 
 
+def _open_stac_catalog():
+    """Open the Microsoft Planetary Computer STAC catalog with a 45s HTTP
+    timeout. Returns the catalog or None on open-time failure."""
+    try:
+        import pystac_client
+        import planetary_computer
+    except ImportError:
+        return None
+    try:
+        try:
+            return pystac_client.Client.open(
+                "https://planetarycomputer.microsoft.com/api/stac/v1",
+                modifier=planetary_computer.sign_inplace,
+                timeout=45,
+            )
+        except TypeError:
+            return pystac_client.Client.open(
+                "https://planetarycomputer.microsoft.com/api/stac/v1",
+                modifier=planetary_computer.sign_inplace,
+            )
+    except Exception as e:
+        print(f"  [sentinel1] STAC open failed: {type(e).__name__}: {str(e)[:80]}")
+        return None
+
+
+def stac_search_with_retry(
+    *,
+    catalog,
+    bbox: list[float],
+    start_date: date,
+    end_date: date,
+    max_scenes: int = 50,
+    label: str = "",
+) -> list:
+    """STAC search with progressive backoff. Returns items list or [] on
+    persistent failure. Microsoft Planetary Computer (discussion #246) does
+    NOT publish per-IP rate limits; 503/504 / timeouts are transient backend
+    overload, so retry-with-backoff is the recommended pattern.
+
+    `label` is used only in log messages (e.g. "FANG 2024Q3" or "pad 4200347...").
+    """
+    import random as _r
+    import time as _t
+    BACKOFFS = [30, 60, 120]  # seconds; 4 attempts total = 1 + 3 retries
+    last_err: Exception | None = None
+    for attempt in range(len(BACKOFFS) + 1):
+        try:
+            search = catalog.search(
+                collections=["sentinel-1-rtc"],
+                bbox=bbox,
+                datetime=f"{start_date.isoformat()}/{end_date.isoformat()}",
+                limit=max_scenes,
+            )
+            return list(search.items())
+        except Exception as e:
+            last_err = e
+            if attempt < len(BACKOFFS):
+                wait = BACKOFFS[attempt] + _r.uniform(0, 10)
+                print(f"  [sentinel1] {label} STAC attempt {attempt+1} failed "
+                      f"({type(e).__name__}); retry in {wait:.0f}s")
+                _t.sleep(wait)
+                continue
+    print(f"  [sentinel1] {label} STAC failed after {len(BACKOFFS)+1} attempts: "
+          f"{type(last_err).__name__}: {str(last_err)[:80]}")
+    return []
+
+
 def fetch_pad_backscatter(
     *,
     pad_id: str,
@@ -73,12 +140,19 @@ def fetch_pad_backscatter(
     end_date: date,
     aoi_buffer_deg: float = 0.005,  # ~500m at Permian latitude
     max_scenes: int = 50,
+    prefetched_items: list | None = None,
 ) -> list[SarObservation]:
     """Fetch Sentinel-1 backscatter time series at a pad location.
 
     Caches per (pad_id, start, end) under phase1/output/sentinel1_cache/.
     Returns an empty list on network failure (PIT-safe: if real SAR is
-    unavailable, the orchestrator can fall back to synthetic radar)."""
+    unavailable, the orchestrator can fall back to synthetic radar).
+
+    `prefetched_items` is an optimization: when fetching multiple pads for the
+    same firm-quarter the caller can run ONE STAC search at a union bbox and
+    pass the resulting items list here. We then skip the per-pad STAC search
+    (which is the failure-prone step under MS Planetary Computer load).
+    """
     cache_key = (
         f"{pad_id}_{lat:.4f}_{lon:.4f}_"
         f"{start_date.isoformat()}_{end_date.isoformat()}"
@@ -105,77 +179,37 @@ def fetch_pad_backscatter(
             print(f"  [sentinel1] pad {pad_id} cache corrupt ({type(e).__name__}); refetching")
 
     try:
-        import pystac_client
-        import planetary_computer
         import rioxarray  # noqa
         import numpy as np
-        import random
     except ImportError:
         return []
 
     aoi = [lon - aoi_buffer_deg, lat - aoi_buffer_deg,
            lon + aoi_buffer_deg, lat + aoi_buffer_deg]
 
-    # Open the STAC client with an explicit 45s HTTP timeout (Codex Round-4
-    # finding: pystac_client honours `timeout=` directly in Client.open via
-    # its internal StacApiIO; the older requests.Session-monkeypatch approach
-    # was dead code). Catch any open-time error too — DNS/network errors
-    # should not crash the cell.
-    try:
-        try:
-            catalog = pystac_client.Client.open(
-                "https://planetarycomputer.microsoft.com/api/stac/v1",
-                modifier=planetary_computer.sign_inplace,
-                timeout=45,
-            )
-        except TypeError:
-            # Pre-0.9 pystac_client: no `timeout` kwarg
-            catalog = pystac_client.Client.open(
-                "https://planetarycomputer.microsoft.com/api/stac/v1",
-                modifier=planetary_computer.sign_inplace,
-            )
-    except Exception as e:
-        print(f"  [sentinel1] pad {pad_id} STAC open failed: {type(e).__name__}: {str(e)[:80]}")
-        return []
-
-    # STAC search with progressive backoff. Microsoft's official guidance
-    # (github.com/microsoft/PlanetaryComputer discussion #246) is that 503/504
-    # responses are transient backend overload, NOT per-IP rate limits. The
-    # recommended pattern is retry-with-backoff. Empirically, ~30% of queries
-    # succeed under heavy load, so 4 attempts with growing backoff catches
-    # most pads while bounding worst-case latency.
-    BACKOFFS = [30, 60, 120]  # seconds; 4 attempts total = 1 initial + 3 retries
-    import time as _t
-    items: list = []
-    last_err: Exception | None = None
-    for attempt in range(len(BACKOFFS) + 1):
-        try:
-            search = catalog.search(
-                collections=["sentinel-1-rtc"],
-                bbox=aoi,
-                datetime=f"{start_date.isoformat()}/{end_date.isoformat()}",
-                limit=max_scenes,
-            )
-            items = list(search.items())
-            last_err = None
-            break
-        except Exception as e:
-            last_err = e
-            if attempt < len(BACKOFFS):
-                wait = BACKOFFS[attempt] + random.uniform(0, 10)
-                print(f"  [sentinel1] pad {pad_id} STAC attempt {attempt+1} failed "
-                      f"({type(e).__name__}); retry in {wait:.0f}s")
-                _t.sleep(wait)
-                continue
-    if last_err is not None:
-        print(f"  [sentinel1] pad {pad_id} STAC failed after {len(BACKOFFS)+1} attempts: "
-              f"{type(last_err).__name__}: {str(last_err)[:80]}")
-        return []
+    # Source the STAC items: caller-provided (one search per firm-quarter,
+    # the v2.5 optimization) or fall back to a per-pad search (legacy path,
+    # used when the function is called directly).
+    if prefetched_items is not None:
+        items = prefetched_items
+    else:
+        catalog = _open_stac_catalog()
+        if catalog is None:
+            return []
+        items = stac_search_with_retry(
+            catalog=catalog, bbox=aoi,
+            start_date=start_date, end_date=end_date,
+            max_scenes=max_scenes, label=f"pad {pad_id}",
+        )
+        if not items:
+            return []
 
     obs: list[SarObservation] = []
     for item in items:
         try:
-            import rioxarray
+            # v2.5 optimization #1: classifier uses VV only, so we no longer
+            # read VH. Halves per-scene raster I/O and matches the documented
+            # change-detection rule which is purely VV-based.
             vv = rioxarray.open_rasterio(item.assets["vv"].href, masked=True).squeeze()
             vv_clip = vv.rio.clip_box(*aoi, crs="EPSG:4326")
             arr = vv_clip.values
@@ -183,16 +217,6 @@ def fetch_pad_backscatter(
             if not np.isfinite(mean_lin) or mean_lin <= 0:
                 continue
             mean_db = 10.0 * float(np.log10(mean_lin))
-            vh_mean_lin = None
-            try:
-                vh = rioxarray.open_rasterio(item.assets["vh"].href, masked=True).squeeze()
-                vh_clip = vh.rio.clip_box(*aoi, crs="EPSG:4326")
-                vh_arr = vh_clip.values
-                vh_mean_lin = float(np.nanmean(vh_arr))
-                if not np.isfinite(vh_mean_lin):
-                    vh_mean_lin = None
-            except Exception:
-                pass
             acq_dt_str = item.properties.get("datetime", "")
             acq_d = datetime.fromisoformat(acq_dt_str.replace("Z", "+00:00")).date()
             obs.append(
@@ -202,14 +226,15 @@ def fetch_pad_backscatter(
                     acquisition_date=acq_d,
                     vv_mean_linear=mean_lin,
                     vv_mean_db=mean_db,
-                    vh_mean_linear=vh_mean_lin,
+                    vh_mean_linear=None,  # not read in v2.5+; classifier is VV-only
                 )
             )
         except Exception as e:
             continue
 
-    # Persist cache
-    cache_path.write_text(json.dumps(
+    # Persist cache atomically so a concurrent reader (or another fetch shell
+    # racing on the same pad-year) never sees a half-written file.
+    payload = json.dumps(
         [{
             "pad_id": o.pad_id, "lat": o.lat, "lon": o.lon,
             "scene_id": o.scene_id,
@@ -219,7 +244,11 @@ def fetch_pad_backscatter(
             "vh_mean_linear": o.vh_mean_linear,
         } for o in obs],
         indent=2,
-    ))
+    )
+    tmp_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
+    tmp_path.write_text(payload)
+    import os as _os
+    _os.replace(tmp_path, cache_path)
     return obs
 
 
