@@ -217,60 +217,12 @@ def run_cell(
         )
         _persist(a3, run_dir, ticker, fiscal_quarter_end, "agent3")
 
-        # DL #61 — Agent 3 gated execution. The spec-locked rule in Agent 5
-        # forces no_trade when divergence_class is not modest_beat or
-        # strong_beat (DL #56). Bull/Bear/Arbiter LLM calls cannot affect that
-        # outcome, so we short-circuit Agent 4 and Agent 5 for these cells.
-        # Synthetic agent4.json and agent5.json are persisted with explicit
-        # `short_circuit_no_beat_divergence` reason fields so the audit trail
-        # records the orchestration choice transparently.
-        if a3.divergence_class not in ("modest_beat", "strong_beat"):
-            a4_synth = Agent4Out(
-                ticker=ticker, n_articles_in_window=0, gdelt_disclosed=False,
-                matching_article_ids=[], conviction_modifier="none",
-                reasoning="short_circuit_no_beat_divergence (DL #61): Agent 3 "
-                         "classified as " + a3.divergence_class
-                         + "; Agent 4 LLM call skipped because the locked "
-                           "guardrail forces no_trade regardless.",
-            )
-            _persist(a4_synth, run_dir, ticker, fiscal_quarter_end, "agent4")
-            placeholder_member = BoardMemberOpinion(
-                role="bull", direction="no_trade", confidence="low",
-                key_evidence=[], counter_evidence=[],
-                reasoning_short="short_circuit_no_beat_divergence",
-            )
-            a5_synth = Agent5Out(
-                ticker=ticker, decision="no_trade", conviction_tier="none",
-                final_size_pct=0.0,
-                bull_opinion=placeholder_member,
-                bear_opinion=placeholder_member.model_copy(update={"role": "bear"}),
-                arbiter_reasoning=(
-                    "short_circuit_no_beat_divergence (DL #61): "
-                    f"Agent 3 emitted divergence_class={a3.divergence_class}; "
-                    "Investment Board LLM calls skipped because the locked "
-                    "guardrail forces no_trade regardless of LLM debate."
-                ),
-                upstream_agent_summary=UpstreamAgentSummary(
-                    agent2_decisive=False, agent3_decisive=True,
-                    agent4_decisive=False,
-                    agent2_weight=0.0, agent3_weight=1.0, agent4_weight=0.0,
-                ),
-            )
-            _persist(a5_synth, run_dir, ticker, fiscal_quarter_end, "agent5")
-            _persist_agent5_components(a5_synth, run_dir, ticker, fiscal_quarter_end)
-
-            cell = CellResult(
-                ticker=ticker, fiscal_quarter_end=fiscal_quarter_end,
-                decision_date_T=decision_date_T,
-                decision="no_trade", conviction_tier="none",
-                final_size_pct=0.0, low_quality_flag=False, error=None,
-            )
-            _append_cell_result(cell, run_dir)
-            _append_quality_log(
-                run_dir, ticker, fiscal_quarter_end, False,
-                f"short_circuit_{a3.divergence_class}",
-            )
-            return cell
+        # DL #61 short-circuit REMOVED in the Agent 4+5 redesign branch.
+        # Per docs/AGENT4_5_REDESIGN.md, Agent 3's divergence_class is now
+        # informational only — Agent 4 (catalyst brief) and Agent 5 (Bull/Bear/
+        # Arbiter with conviction_score) run on EVERY cell. The mechanical
+        # trade-selection layer in fin580/backtest/runner.py applies the
+        # top-K-per-cycle budget to actually fire trades.
 
         a4 = agent4_news.run(
             agent3_out=a3,
@@ -297,6 +249,7 @@ def run_cell(
             decision=a5.decision,
             conviction_tier=a5.conviction_tier,
             final_size_pct=a5.final_size_pct,
+            conviction_score=a5.conviction_score,
         )
         _append_cell_result(cell, run_dir)
         _append_quality_log(run_dir, ticker, fiscal_quarter_end, False, "ok")

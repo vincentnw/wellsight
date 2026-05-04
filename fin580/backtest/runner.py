@@ -1,4 +1,11 @@
-"""Strategy × universe × quarter loop (spec Section 6, M1-M3 acceptance)."""
+"""Strategy × universe × quarter loop (spec Section 6, M1-M3 acceptance).
+
+Trade-selection layer (per docs/AGENT4_5_REDESIGN.md): after Agent 5 scores
+every cell with conviction_score 0-100, an explicit per-quarter budget
+selects the top K cells to actually fire as `long`. Cells outside the
+top-K are forced to `no_trade` regardless of Agent 5's raw decision.
+This is the mechanical replacement for the removed DL #56/#61 gates.
+"""
 
 from __future__ import annotations
 
@@ -16,6 +23,21 @@ PHASE1_OUTPUT = Path(__file__).resolve().parents[2] / "phase1" / "output"
 RUNS_DIR = Path(__file__).resolve().parents[2] / "runs"
 
 UNIVERSE = ["FANG", "EOG", "DVN", "CTRA", "OXY", "MTDR", "PR", "OVV", "SM", "CRGY"]
+
+# Trade-selection parameters — PRE-REGISTERED before 2024 final eval.
+# See docs/AGENT4_5_REDESIGN.md Section 5.
+TRADE_BUDGET_K_PER_CYCLE = int(
+    # Default 4 cells per earnings cycle. Override via FIN580_K_PER_CYCLE env var
+    # for ablation runs (e.g., K=8 for "looser" sensitivity).
+    __import__("os").environ.get("FIN580_K_PER_CYCLE", "4")
+)
+TRADE_BUDGET_MIN_SCORE = float(
+    # Minimum conviction_score to fire long even if cell is in top-K.
+    # Default 45 = the "low" tier threshold. Below this, score-derived tier
+    # is "none" so size would be 0 anyway, but enforcing here is explicit.
+    __import__("os").environ.get("FIN580_MIN_SCORE", "45")
+)
+MAX_SIMULTANEOUS_POSITIONS = 8  # Legacy rule from DL #16
 
 
 def _load_earnings_dates() -> dict[tuple[str, date], date]:
@@ -140,6 +162,103 @@ def run_single_cell(
     return run_dir
 
 
+def _apply_trade_budget(
+    *,
+    run_dir: Path,
+    k_per_cycle: int,
+    min_score: float,
+    max_simultaneous: int,
+) -> None:
+    """Trade-selection layer per docs/AGENT4_5_REDESIGN.md.
+
+    Reads cell_results.parquet (which contains Agent 5's per-cell
+    conviction_score), groups by fiscal_quarter_end, sorts each group
+    descending by score, picks top K, and overrides decisions for cells
+    outside the top K to no_trade. Preserves the raw Agent 5 output in
+    a sidecar `cell_results_pre_budget.parquet` for audit.
+
+    The 8-position simultaneous cap is enforced AFTER per-cycle selection:
+    if multiple cycles would have overlapping holding windows that exceed
+    8 concurrent positions, the lowest-score positions are dropped.
+    """
+    cell_path = run_dir / "strategy_01" / "cell_results.parquet"
+    if not cell_path.exists():
+        return
+
+    df = pd.read_parquet(cell_path)
+    if "conviction_score" not in df.columns or len(df) == 0:
+        # Old runs without scores or empty parquets — skip trade budget.
+        return
+
+    # Save the raw (pre-budget) snapshot so the budget can be re-applied later
+    # with different K without losing Agent 5's original outputs.
+    sidecar = run_dir / "strategy_01" / "cell_results_pre_budget.parquet"
+    if not sidecar.exists():
+        df.to_parquet(sidecar, index=False)
+
+    # Group by fiscal_quarter_end (one budget cycle per earnings quarter)
+    df["_score"] = df["conviction_score"].fillna(-1.0)
+    df["_rank_in_cycle"] = (
+        df.groupby("fiscal_quarter_end")["_score"]
+          .rank(method="first", ascending=False)
+    )
+    in_top_k = df["_rank_in_cycle"] <= k_per_cycle
+    above_threshold = df["_score"] >= min_score
+    eligible = in_top_k & above_threshold
+
+    # Per-cell override: any cell that isn't eligible becomes no_trade
+    n_overridden = 0
+    for idx in df.index:
+        if not eligible[idx]:
+            if df.at[idx, "decision"] == "long":
+                n_overridden += 1
+            df.at[idx, "decision"] = "no_trade"
+            df.at[idx, "conviction_tier"] = "none"
+            df.at[idx, "final_size_pct"] = 0.0
+
+    # Simultaneous-position cap (8): for cells that survived the per-cycle
+    # filter, sort by entry date and drop overlapping ones beyond the cap.
+    long_cells = df[df["decision"] == "long"].copy()
+    if len(long_cells) > 0 and "decision_date_T" in long_cells.columns:
+        long_cells = long_cells.sort_values(
+            ["decision_date_T", "_score"], ascending=[True, False]
+        )
+        # Approximate exit date as decision_date_T + 30 days (T-14 to T+~14
+        # given typical earnings cycle); good enough for overlap detection.
+        for idx in long_cells.index:
+            entry = pd.to_datetime(long_cells.at[idx, "decision_date_T"])
+            window_open = entry
+            window_close = entry + pd.Timedelta(days=30)
+            # Count concurrently open longs at this point
+            concurrent = (
+                (pd.to_datetime(long_cells["decision_date_T"]) >= window_open
+                 - pd.Timedelta(days=30))
+                & (pd.to_datetime(long_cells["decision_date_T"]) <= window_close)
+                & (long_cells.index <= idx)
+                & (long_cells["decision"] == "long")
+            ).sum()
+            if concurrent > max_simultaneous:
+                # Drop this position
+                long_cells.at[idx, "decision"] = "no_trade"
+                long_cells.at[idx, "conviction_tier"] = "none"
+                long_cells.at[idx, "final_size_pct"] = 0.0
+                df.at[idx, "decision"] = "no_trade"
+                df.at[idx, "conviction_tier"] = "none"
+                df.at[idx, "final_size_pct"] = 0.0
+                n_overridden += 1
+
+    df = df.drop(columns=["_score", "_rank_in_cycle"])
+    df.to_parquet(cell_path, index=False)
+
+    n_long_final = int((df["decision"] == "long").sum())
+    print(
+        f"[trade-budget] K_PER_CYCLE={k_per_cycle}, min_score={min_score}, "
+        f"max_simultaneous={max_simultaneous}: "
+        f"{n_overridden} cells overridden to no_trade; "
+        f"{n_long_final} long trades remain after budget"
+    )
+
+
 def run_window(
     *,
     strategy: int,
@@ -216,6 +335,29 @@ def run_window(
                 cells_done_in_session += 1
                 if cells_done_in_session % 10 == 0:
                     print(f"[strat={strategy}] {cells_done_in_session} fresh cells done", flush=True)
+
+    # Apply the trade-selection layer (Agent 4+5 redesign): for Strategy 1,
+    # read the per-cell parquet (which now includes Agent 5's conviction_score),
+    # group by earnings cycle, pick top K_PER_CYCLE cells per cycle, and
+    # override decisions in place. Strategies 2-10 don't use the multi-agent
+    # pipeline so the budget layer is a no-op for them.
+    if strategy == 1:
+        _apply_trade_budget(
+            run_dir=run_dir,
+            k_per_cycle=TRADE_BUDGET_K_PER_CYCLE,
+            min_score=TRADE_BUDGET_MIN_SCORE,
+            max_simultaneous=MAX_SIMULTANEOUS_POSITIONS,
+        )
+        # After budget application, re-read cell_results.parquet (which has the
+        # FINAL post-budget decisions) and rebuild the summary from it. This
+        # keeps cell_results_summary.parquet consistent with cell_results.parquet.
+        post_budget = run_dir / "strategy_01" / "cell_results.parquet"
+        if post_budget.exists():
+            pb_df = pd.read_parquet(post_budget)
+            cell_records = pb_df[
+                ["ticker", "fiscal_quarter_end", "decision_date_T",
+                 "decision", "final_size_pct"]
+            ].rename(columns={"decision": "direction", "final_size_pct": "size_pct"}).to_dict("records")
 
     if cell_records:
         df = pd.DataFrame(cell_records)

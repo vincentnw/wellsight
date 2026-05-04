@@ -211,6 +211,12 @@ class CellResult(BaseModel):
     low_quality_flag: bool = False
     error: str | None = None
 
+    # Added by Agent 4+5 redesign — Arbiter's 0-100 conviction score, used
+    # by the trade-selection layer in fin580/backtest/runner.py to apply
+    # top-K-per-cycle budget. Optional for backward-compat with existing runs.
+    # See docs/AGENT4_5_REDESIGN.md.
+    conviction_score: float | None = Field(default=None, ge=0.0, le=100.0)
+
 
 class TradeDecision(BaseModel):
     ticker: str
