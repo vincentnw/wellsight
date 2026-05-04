@@ -33,6 +33,10 @@ from fin580.inference.revenue_diagnostics import (
     build_revenue_diagnostics,
     revenue_diagnostic_summary,
 )
+from fin580.inference.signal_confidence import (
+    attach_signal_confidence,
+    signal_confidence_summary,
+)
 
 OUT_DIR = Path(__file__).resolve().parents[2] / "runs" / "inference"
 
@@ -120,6 +124,27 @@ def main() -> None:
         revenue_diag_summary = {"error": str(e)[:200]}
         print(f"Warning: revenue_diagnostics build failed: {e}")
 
+    # 5b. Signal-confidence score. Diagnostic only: does not affect H1, trade
+    # eligibility, or sizing. Composes revenue_diag features (SAR + analyst)
+    # into a 0-100 annotation per cell. WTI / regime risk lives in v2.4.
+    try:
+        sc_diag = attach_signal_confidence(revenue_diag)
+        sc_cols = [
+            "ticker", "fiscal_quarter_end", "decision", "divergence_class",
+            "sc_activity_strength", "sc_newness", "sc_qoq_delta",
+            "sc_dispersion", "sc_analyst_breadth",
+            "signal_confidence_score", "signal_confidence_tier",
+        ]
+        sc_existing = [c for c in sc_cols if c in sc_diag.columns]
+        sc_out = sc_diag[sc_existing] if sc_existing else pd.DataFrame()
+        sc_out.to_csv(OUT_DIR / "signal_confidence.csv", index=False)
+        if "signal_confidence_score" in sc_diag.columns:
+            sc_diag.to_parquet(OUT_DIR / "revenue_diagnostics_with_sc.parquet")
+        sc_summary = signal_confidence_summary(sc_diag)
+    except Exception as e:
+        sc_summary = {"error": str(e)[:200]}
+        print(f"Warning: signal_confidence build failed: {e}")
+
     # 6. Top-level summary
     pack = {
         "generated_at": datetime.now().isoformat(),
@@ -142,6 +167,7 @@ def main() -> None:
             ablation.to_dict(orient="records") if len(ablation) else []
         ),
         "revenue_diagnostic_summary": revenue_diag_summary,
+        "signal_confidence_summary": sc_summary,
         "headline_summary": (
             headline.to_dict(orient="records") if len(headline) else []
         ),
