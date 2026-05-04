@@ -46,7 +46,7 @@ Agent 4  News Intelligence  Cerebras llama3.1-8b — GDELT-backed structured new
 Agent 5  Decision Board     Runs on ALL cells. Outputs a SCORE not a binary call.
             Bull:    Cerebras qwen-3-235b
             Bear:    Cerebras llama3.1-8b
-            Arbiter: Gemini 2.0 Flash (free tier, 1500 RPD limit)
+            Arbiter: Gemini 2.5 Flash (free tier, 250 RPD / 10 RPM)
             Output:  conviction_score [0-100] + tier (high/medium/low/none)
 
 Trade Selection (NEW — replaces Agent 3 gate + Agent 5 hard guardrail):
@@ -136,7 +136,7 @@ BEAR (Cerebras llama3.1-8b):
   Use SAR risks, news negative catalysts, divergence_class concerns.
   Same output schema.
 
-ARBITER (Gemini 2.0 Flash):
+ARBITER (Gemini 2.5 Flash):
   Read both Bull and Bear opinions plus all upstream agent outputs.
   Output:
     decision: long | no_trade
@@ -222,7 +222,7 @@ behavior. **NOT performance evaluation.**
 - Verify: all agents produce valid JSON; Gemini Arbiter rate limits respected;
   trade-count is in expected range (2-6); approval rate < 30%
 - Cost estimate: ~200 LLM calls (40 cells × 5 calls), ~2-3 hr at current
-  Cerebras throttle, ~40 Gemini calls (well under 1500 RPD limit)
+  Cerebras throttle, ~40 Gemini calls (well under 250 RPD limit on gemini-2.5-flash)
 - If approval rate is uncontrolled (>30% trades), tune K_PER_CYCLE BEFORE
   running on full 2019-2023 history
 

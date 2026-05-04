@@ -22,6 +22,7 @@ CACHE_ROOT.mkdir(parents=True, exist_ok=True)
 
 PROVIDER_MIN_INTERVAL_SECONDS = {
     "cerebras": float(os.environ.get("CEREBRAS_MIN_INTERVAL_SECONDS", "2.0")),
+    "gemini": float(os.environ.get("GEMINI_MIN_INTERVAL_SECONDS", "4.0")),
 }
 _provider_last_call_at: dict[str, float] = {}
 _provider_rate_lock = threading.Lock()
@@ -69,6 +70,9 @@ def _route_provider(model_id: str) -> str:
         return "huggingface"
     if m.startswith("llama-") or m.startswith("groq/"):
         return "groq"
+    # Gemini via Google AI Studio (added by Agent 4+5 redesign for cross-provider Arbiter)
+    if m.startswith("gemini-") or m.startswith("models/gemini-"):
+        return "gemini"
     # Cerebras free tier (DL #53): bare model IDs without org prefix
     if (
         m.startswith("deepseek-r1")  # Cerebras-style (no org prefix)
@@ -81,7 +85,8 @@ def _route_provider(model_id: str) -> str:
     raise ValueError(
         f"Cannot route model_id={model_id!r}. "
         "Supported prefixes: qwen/, mistralai/, meta-llama/, deepseek-ai/ (HF); "
-        "llama-, groq/ (Groq); deepseek-r1*, gpt-oss*, qwen-3*, zai-*, llama3.1-* (Cerebras)."
+        "llama-, groq/ (Groq); gemini-* (Google AI Studio); "
+        "deepseek-r1*, gpt-oss*, qwen-3*, zai-*, llama3.1-* (Cerebras)."
     )
 
 
@@ -172,6 +177,40 @@ def _call_cerebras(prompt: str, input_json: dict, model_id: str,
     return json.loads(_extract_json(text))
 
 
+def _call_gemini(prompt: str, input_json: dict, model_id: str,
+                  temperature: float) -> dict:
+    """Google AI Studio Gemini API. Free tier limits as of 2026:
+        gemini-2.0-flash:  15 RPM, 1500 RPD
+        gemini-2.5-flash:  10 RPM,  250 RPD
+        gemini-2.5-pro:     5 RPM,  100 RPD
+    For the Agent 5 Arbiter role we default to gemini-2.0-flash (1500 RPD
+    fits the 200-cell ablation matrix comfortably)."""
+    try:
+        # Newer SDK (recommended as of 2025+). Requires `pip install google-genai`.
+        from google import genai
+        client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        full_prompt = f"{prompt}\n\nINPUT:\n{_canonical_json(input_json)}"
+        resp = client.models.generate_content(
+            model=model_id,
+            contents=full_prompt,
+            config={"temperature": temperature, "max_output_tokens": 1500},
+        )
+        text = resp.text
+        return json.loads(_extract_json(text))
+    except ImportError:
+        # Older SDK fallback. Requires `pip install google-generativeai`.
+        import google.generativeai as genai_old  # type: ignore
+        genai_old.configure(api_key=os.environ["GEMINI_API_KEY"])
+        full_prompt = f"{prompt}\n\nINPUT:\n{_canonical_json(input_json)}"
+        model = genai_old.GenerativeModel(model_id)
+        resp = model.generate_content(
+            full_prompt,
+            generation_config={"temperature": temperature, "max_output_tokens": 1500},
+        )
+        text = resp.text
+        return json.loads(_extract_json(text))
+
+
 def chat(*, prompt: str, input_json: dict, model_id: str,
           model_version: str = "", temperature: float = 0.0,
           max_retries: int = 2) -> dict:
@@ -189,6 +228,7 @@ def chat(*, prompt: str, input_json: dict, model_id: str,
         "huggingface": _call_huggingface,
         "groq": _call_groq,
         "cerebras": _call_cerebras,
+        "gemini": _call_gemini,
     }
     last_err = None
     for attempt in range(max_retries):

@@ -99,13 +99,39 @@ class Agent3Out(BaseModel):
         return self
 
 
+class CatalystRef(BaseModel):
+    """A single positive or negative catalyst extracted from a news article.
+
+    Added by the Agent 4 redesign (docs/AGENT4_5_REDESIGN.md). The Bull/Bear
+    debate uses these as evidence; the article reference enables audit-trail
+    sourcing back to GDELT."""
+    summary: str = Field(max_length=300)
+    article_id: str | None = None
+    article_date: str | None = None  # ISO date string; T-14 cutoff enforced upstream
+
+
 class Agent4Out(BaseModel):
+    """Agent 4 output schema. Backward-compatible: legacy fields are kept
+    optional so existing run dirs (using the novelty-check Agent 4) still
+    validate. The new redesign populates the catalyst-brief fields instead.
+
+    See docs/AGENT4_5_REDESIGN.md."""
     ticker: str
     n_articles_in_window: int
-    gdelt_disclosed: bool
-    matching_article_ids: list[str]
-    conviction_modifier: Literal["none", "downgrade_one_tier"]
-    reasoning: str = Field(max_length=1500)
+    fallback_used: bool = False
+
+    # Legacy novelty-check fields (kept optional for backward-compat with old runs)
+    gdelt_disclosed: bool | None = None
+    matching_article_ids: list[str] | None = None
+    conviction_modifier: Literal["none", "downgrade_one_tier"] | None = None
+    reasoning: str | None = Field(default=None, max_length=1500)
+
+    # New catalyst-brief fields (populated by the redesigned Agent 4)
+    positive_catalysts: list[CatalystRef] | None = Field(default=None, max_length=5)
+    negative_catalysts: list[CatalystRef] | None = Field(default=None, max_length=5)
+    overall_sentiment: Literal["bullish", "neutral", "bearish"] | None = None
+    sar_complement: str | None = Field(default=None, max_length=600)
+    novelty_assessment: Literal["yes", "no", "partial"] | None = None
 
 
 class BoardMemberOpinion(BaseModel):
@@ -140,6 +166,12 @@ class Agent5Out(BaseModel):
     bear_opinion: BoardMemberOpinion
     arbiter_reasoning: str = Field(max_length=3000)
     upstream_agent_summary: UpstreamAgentSummary
+
+    # New (Agent 4+5 redesign): conviction_score 0-100 from the Arbiter,
+    # used by the trade-selection layer to rank cells and pick top K per cycle.
+    # Optional for backward-compat with existing run dirs (None on old cells).
+    # See docs/AGENT4_5_REDESIGN.md.
+    conviction_score: float | None = Field(default=None, ge=0.0, le=100.0)
 
     @field_validator("final_size_pct")
     @classmethod
