@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T21:21:15.438134",
+  "generated_at": "2026-05-03T21:27:11.738504",
   "strategy1_baseline": {
     "n_trades": 10,
     "hit_rate": 0.5,
@@ -122,7 +122,7 @@
     "long_trade_actual_revenue_beat_rate": 0.8,
     "long_trade_win_rate_when_actual_revenue_beat": 0.375,
     "diagnostic_revenue_direction_accuracy_non_neutral": 0.42528735632183906,
-    "generated_at": "2026-05-03T21:21:15.427451"
+    "generated_at": "2026-05-03T21:27:11.727496"
   },
   "signal_confidence_summary": {
     "n_cells": 200,
@@ -143,7 +143,7 @@
       }
     },
     "scope": "diagnostic_only",
-    "generated_at": "2026-05-03T21:21:15.438134"
+    "generated_at": "2026-05-03T21:27:11.738504"
   },
   "headline_summary": [
     {

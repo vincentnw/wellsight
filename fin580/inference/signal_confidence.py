@@ -31,10 +31,10 @@ import pandas as pd
 def _bin_score(value: float | None, edges: list[float], scores: list[float]) -> float:
     """Discrete tier scorer. `edges` are the upper bounds of each tier (last
     bin is open-ended). Returns the matching score, or the midpoint of the
-    range if value is missing/NaN.
+    score range (min+max)/2 if value is missing/NaN.
     """
     if value is None or pd.isna(value):
-        return float(sum(scores)) / len(scores) / 2.0  # neutral fallback
+        return (float(min(scores)) + float(max(scores))) / 2.0
     for edge, s in zip(edges, scores[:-1]):
         if value <= edge:
             return float(s)
