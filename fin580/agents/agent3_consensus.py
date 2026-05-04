@@ -9,7 +9,7 @@ from fin580.agents.llm_client import chat
 from fin580.agents.schemas import Agent2Out, Agent3Out
 from fin580.data.ibes_pit import consensus_at_T
 
-MODEL_ID = "llama3.1-8b"  # Cerebras (DL #57: Groq 100k TPD/free hit at M3)
+MODEL_ID = "gpt-4o-mini"  # OpenAI (Agent 4+5 redesign cost-optimized stack)
 PROMPT_PATH = Path(__file__).parent / "prompts" / "agent3_consensus.txt"
 
 
