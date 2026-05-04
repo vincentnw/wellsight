@@ -28,6 +28,48 @@ _provider_last_call_at: dict[str, float] = {}
 _provider_rate_lock = threading.Lock()
 
 
+def _cerebras_keys() -> list[str]:
+    """Collect all configured Cerebras keys for round-robin rotation.
+
+    Reads CEREBRAS_API_KEY (primary) and any CEREBRAS_API_KEY_2,
+    CEREBRAS_API_KEY_3, etc. Returns the keys in deterministic order.
+    Round-robin across multiple keys halves per-account 429 contention
+    on free tier without changing model quality."""
+    keys = []
+    primary = os.environ.get("CEREBRAS_API_KEY", "").strip()
+    if primary:
+        keys.append(primary)
+    # Discover numbered fallback keys
+    i = 2
+    while True:
+        k = os.environ.get(f"CEREBRAS_API_KEY_{i}", "").strip()
+        if not k:
+            break
+        keys.append(k)
+        i += 1
+    return keys
+
+
+# Round-robin counter for Cerebras key rotation (thread-safe).
+_cerebras_call_counter = 0
+_cerebras_key_lock = threading.Lock()
+
+
+def _next_cerebras_key() -> str:
+    """Pick the next Cerebras key in round-robin order.
+    Falls back to single-key mode if only one is configured."""
+    global _cerebras_call_counter
+    keys = _cerebras_keys()
+    if not keys:
+        raise RuntimeError("No CEREBRAS_API_KEY configured.")
+    if len(keys) == 1:
+        return keys[0]
+    with _cerebras_key_lock:
+        idx = _cerebras_call_counter % len(keys)
+        _cerebras_call_counter += 1
+    return keys[idx]
+
+
 def _canonical_json(obj: Any) -> str:
     return json.dumps(obj, sort_keys=True, separators=(",", ":"), default=str)
 
@@ -90,19 +132,24 @@ def _route_provider(model_id: str) -> str:
     )
 
 
-def _throttle_provider(provider: str) -> None:
-    """Apply provider-scoped minimum request spacing for uncached LLM calls."""
+def _throttle_provider(provider: str, *, scope_key: str | None = None) -> None:
+    """Apply minimum request spacing for uncached LLM calls.
+
+    `scope_key` is an optional sub-key (e.g., individual Cerebras account ID)
+    so multiple keys in a round-robin pool can each have independent throttle
+    timing. Without scope_key, throttling is per-provider (legacy behaviour)."""
     min_interval = PROVIDER_MIN_INTERVAL_SECONDS.get(provider, 0.0)
     if min_interval <= 0:
         return
 
+    key = f"{provider}:{scope_key}" if scope_key else provider
     with _provider_rate_lock:
         now = time.monotonic()
-        next_allowed_at = _provider_last_call_at.get(provider, 0.0) + min_interval
+        next_allowed_at = _provider_last_call_at.get(key, 0.0) + min_interval
         if now < next_allowed_at:
             time.sleep(next_allowed_at - now)
             now = time.monotonic()
-        _provider_last_call_at[provider] = now
+        _provider_last_call_at[key] = now
 
 
 def _extract_json(text: str) -> str:
@@ -164,8 +211,15 @@ def _call_groq(prompt: str, input_json: dict, model_id: str,
 
 def _call_cerebras(prompt: str, input_json: dict, model_id: str,
                     temperature: float) -> dict:
+    """Round-robin across configured Cerebras keys (CEREBRAS_API_KEY,
+    CEREBRAS_API_KEY_2, ...). With N keys, effective throughput on free
+    tier is roughly N× since each account has its own queue. Per-key
+    throttling ensures each key independently respects CEREBRAS_MIN_INTERVAL_SECONDS."""
     from cerebras.cloud.sdk import Cerebras  # type: ignore
-    client = Cerebras(api_key=os.environ["CEREBRAS_API_KEY"])
+    api_key = _next_cerebras_key()
+    # Per-key throttle (each Cerebras account has its own queue/rate window)
+    _throttle_provider("cerebras", scope_key=api_key[-12:])  # tail of key as scope id
+    client = Cerebras(api_key=api_key)
     full_prompt = f"{prompt}\n\nINPUT:\n{_canonical_json(input_json)}"
     resp = client.chat.completions.create(
         model=model_id,
@@ -233,7 +287,11 @@ def chat(*, prompt: str, input_json: dict, model_id: str,
     last_err = None
     for attempt in range(max_retries):
         try:
-            _throttle_provider(provider)
+            # Cerebras handles its own per-key throttling inside _call_cerebras
+            # (each rotating key has independent rate timing). Other providers
+            # use the simpler provider-level throttle here.
+            if provider != "cerebras":
+                _throttle_provider(provider)
             response = callers[provider](prompt, input_json, model_id, temperature)
             payload = json.dumps(
                 {
