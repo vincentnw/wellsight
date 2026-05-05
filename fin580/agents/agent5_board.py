@@ -34,9 +34,12 @@ CONVICTION_TO_SIZE = {"high": 0.15, "medium": 0.10, "low": 0.05, "none": 0.0}
 
 
 def _build_board_input(
-    agent2: Agent2Out, agent3: Agent3Out, agent4: Agent4Out
+    agent2: Agent2Out,
+    agent3: Agent3Out,
+    agent4: Agent4Out,
+    brief: dict | None = None,
 ) -> dict:
-    return {
+    out = {
         "ticker": agent2.ticker,
         "agent2_summary": {
             "revenue_forecast_usd": agent2.revenue_forecast_usd,
@@ -55,6 +58,18 @@ def _build_board_input(
             "conviction_modifier": agent4.conviction_modifier,
         },
     }
+    # v2.6: pass the Investment Committee Brief alongside the upstream agent
+    # outputs. The board reads the brief's enumerated tags to decide whether
+    # to veto / downgrade an otherwise-eligible trade. Strip the heavy
+    # `_evidence_packet` field before sending — the LLM only needs the
+    # interpretive summary tags.
+    if brief is not None:
+        slim_brief = {
+            k: v for k, v in brief.items()
+            if k != "_evidence_packet"
+        }
+        out["agent5_brief_summary"] = slim_brief
+    return out
 
 
 def run(
@@ -62,8 +77,9 @@ def run(
     agent2: Agent2Out,
     agent3: Agent3Out,
     agent4: Agent4Out,
+    brief: dict | None = None,
 ) -> Agent5Out:
-    board_input = _build_board_input(agent2, agent3, agent4)
+    board_input = _build_board_input(agent2, agent3, agent4, brief=brief)
 
     def _coerce_member(resp: dict, role: str) -> BoardMemberOpinion:
         # Truncate lists to schema-allowed max of 3 (LLMs sometimes return more)

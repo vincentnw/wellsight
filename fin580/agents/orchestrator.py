@@ -21,6 +21,7 @@ from fin580.agents import (
     agent3_consensus,
     agent4_news,
     agent5_board,
+    agent5_brief,
 )
 from fin580.agents.schemas import (
     Agent1Out,
@@ -47,6 +48,17 @@ def _persist(obj, run_dir: Path, ticker: str, q_end: date, name: str) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     p = out_dir / f"{ticker}_{q_end.isoformat()}_{name}.json"
     p.write_text(obj.model_dump_json(indent=2))
+    return p
+
+
+def _persist_brief(brief: dict, run_dir: Path, ticker: str, q_end: date) -> Path:
+    """v2.6: persist the Investment Committee Brief as a plain dict (not a
+    pydantic schema). Stored alongside the agent JSONs for audit."""
+    import json
+    out_dir = run_dir / "strategy_01" / "agent_outputs"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    p = out_dir / f"{ticker}_{q_end.isoformat()}_agent5_brief.json"
+    p.write_text(json.dumps(brief, indent=2, default=str))
     return p
 
 
@@ -285,9 +297,34 @@ def run_cell(
         )
         _persist(a4, run_dir, ticker, fiscal_quarter_end, "agent4")
 
-        a5 = agent5_board.run(agent2=a2, agent3=a3, agent4=a4)
+        # v2.6 Investment Committee Brief — runs between Agent 4 and the
+        # Bull/Bear/Arbiter board. The brief is a pure-context layer:
+        # deterministic PIT features (reaction history, fundamentals,
+        # regime, positioning) summarized by an LLM into enumerated tags.
+        # The brief does not vote on the trade; the board does.
+        brief = agent5_brief.run(
+            ticker=ticker,
+            fiscal_quarter_end=fiscal_quarter_end,
+            decision_date_T=decision_date_T,
+            agent3_out=a3,
+        )
+        _persist_brief(brief, run_dir, ticker, fiscal_quarter_end)
+
+        a5 = agent5_board.run(agent2=a2, agent3=a3, agent4=a4, brief=brief)
         _persist(a5, run_dir, ticker, fiscal_quarter_end, "agent5")
         _persist_agent5_components(a5, run_dir, ticker, fiscal_quarter_end)
+
+        # v2.6 hard invariant: the system stays revenue-signal-led. Agent 5
+        # may veto a trade or downgrade conviction, but cannot upgrade a
+        # non-beat cell to a long. This is enforced at the orchestrator
+        # level (not just in the prompt) so it cannot be silently bypassed.
+        if a5.decision == "long" and a3.divergence_class not in {"modest_beat", "strong_beat"}:
+            raise RuntimeError(
+                f"v2.6 invariant violated: Agent 5 selected long but "
+                f"Agent 3 divergence_class is {a3.divergence_class!r}. "
+                f"Agent 5 may not initiate a long without a positive "
+                f"revenue-surprise signal from Agent 3."
+            )
 
         cell = CellResult(
             ticker=ticker,

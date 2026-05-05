@@ -38,8 +38,8 @@ then consume alongside the existing Agents 1–4 outputs.
 | Section | PIT inputs | Purpose |
 |---|---|---|
 | `reaction_history` | Prior 8 earnings dates for this ticker (from `earnings_dates.csv`); for each, the 2-trading-day post-earnings stock return (from CRSP); the IBES point-in-time consensus revenue at the time + Compustat actual `saleq` if reported by T-14 | Tells the board whether revenue surprises historically moved this stock, recent earnings volatility, and whether prior trades around earnings were positive/negative for the same ticker |
-| `eps_context` | IBES point-in-time EPS consensus at T-14; recent EPS revision direction (3-month and 6-month); operating margin trend from Compustat (last 4 quarters of `oibdpq / saleq`); capex/cost intensity (`capxq / saleq`) | Catches cases where revenue may beat but stock can fall on EPS / margin / capex risk |
-| `regime` | WTI 4-week and 12-week return at T (already implemented in `wti_veto.py`); XLE 4-week return at T (from `benchmark_prices.csv`); rolling 60-day stock beta to WTI returns | Tells whether the trade is a real company-specific bet or just oil beta |
+| `fundamentals` | Compustat-only (the IBES pull on file is restricted to the SAL measure and does not include EPS): operating-margin trend (last 4 quarters of `oibdpq / saleq`), net-income trend (`niq`), and capex intensity (quarterly `capxy` diff divided by `saleq`). All Compustat rows used must have `rdq ≤ T` (the actual reporting date, more principled than a generic 60-day buffer). | Catches cases where revenue may beat but stock can fall on margin / capex / earnings deterioration risk. The IBES-EPS-consensus and EPS-revision fields originally specified are dropped because the data is unavailable; this is documented honestly rather than substituted with synthetic placeholders. |
+| `regime` | WTI 4-week and 12-week return at T (already implemented in `wti_veto.py`, extended to 84-day lookback); **XES** 4-week return at T (from `benchmark_prices.csv`; we use XES rather than XLE because XES is the energy-services ETF in our benchmark file and is the same one the dashboard uses for sector comparison); rolling 60-day stock beta to WTI returns. | Tells whether the trade is a real company-specific bet or just oil/services-sector beta. |
 | `positioning` | Trailing 3-month stock momentum (from CRSP); current price relative to 52-week high and low (from CRSP); EV/EBITDA snapshot if available point-in-time (Compustat) | Catches extended, crowded, or mechanically-overbought setups |
 
 All four sections are populated by **deterministic Python feature
@@ -130,14 +130,17 @@ These rules apply uniformly across every section of the brief:
   REVDATS == ANNDATS)`. The 2-trading-day post-earnings stock return
   is computed from CRSP using the same `_exit_price` logic as the
   primary backtest.
-- **IBES EPS consensus** (`eps_context`): same point-in-time filter as
-  the revenue consensus, applied to IBES measure code `EPS` rather
-  than `SAL`.
-- **Compustat fundamentals** (`eps_context.margin_trend`,
-  `eps_context.capex_intensity`): only rows where
-  `datadate ≤ T − 60 calendar days` are considered, applying a
-  conservative 60-day reporting lag. The brief uses the four most
-  recent quarters that satisfy this rule.
+- **IBES EPS consensus**: not used. Our IBES pull on file is the
+  `tr_ibes` SAL-only query; EPS measure rows are not present. Rather
+  than substitute a placeholder, the brief explicitly drops the EPS
+  consensus / revision fields and reports
+  `eps_data_available = false`. The brief still has access to net-
+  income trend from Compustat as a directional EPS proxy.
+- **Compustat fundamentals** (`fundamentals.margin_trend`,
+  `fundamentals.netincome_trend`, `fundamentals.capex_intensity`):
+  only rows where `rdq ≤ T` are considered (the Compustat report
+  date, more principled than a generic reporting-lag buffer). The
+  brief uses the four most recent quarters that satisfy this rule.
 - **WTI / XLE regime** (`regime`): uses the same weekly-spot-on-or-before
   logic as `fin580/inference/wti_veto.py::wti_4w_return_at_T`. XLE 4-week
   return uses daily prices from `phase1/output/benchmark_prices.csv`,
