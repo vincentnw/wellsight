@@ -4,69 +4,83 @@
 
 Table 9.1 reports the full per-trade ledger across the headline window **Q1 2019 – Q4 2024 (six full calendar years, 200 firm-quarter cells)**. Each cell uses an identical rebalance schedule (T = earnings_date − 14 days, exit second trading day after earnings), an identical 30 bps round-trip transaction cost, and an identical USD 1M starting capital. The trade direction comes from the Agent-3 deterministic divergence-class gate (`modest_beat` or `strong_beat` cells proceed to Agent 4 / Agent 5; everything else short-circuits to no_trade). The signal driving the long-entry decision is the satellite-anchored consensus divergence that Agent 2 produces.
 
-**Table 9.1 — Per-trade ledger, Strategy 1 (Multi-agent + real Sentinel-1 SAR), 2019-2024:**
+**Table 9.1 — Per-trade ledger, Strategy 1, 2019-2024:**
 
-| # | Cell | Entry T-14 | Earnings | Exit T+2 | Net return | Outcome |
-|---:|---|---|---|---|---:|:---:|
-| 1 | OXY 2019-Q4 | $42.04 (2020-02-13) | 2020-02-27 | $32.95 (2020-02-29) | **−21.92%** | ✗ |
-| 2 | SM 2019-Q4 | $9.67 (2020-02-05) | 2020-02-19 | $8.53 (2020-02-21) | **−12.09%** | ✗ |
-| 3 | OVV 2021-Q1 | $24.21 (2021-04-15) | 2021-04-29 | $24.94 (2021-05-01) | +2.72% | ✓ |
-| 4 | CTRA 2021-Q3 | $21.41 (2021-10-20) | 2021-11-03 | $21.58 (2021-11-05) | +0.49% | ✓ |
-| 5 | OXY 2021-Q3 | $32.80 (2021-10-21) | 2021-11-04 | $34.29 (2021-11-06) | +4.24% | ✓ |
-| 6 | OVV 2021-Q3 | $39.27 (2021-10-19) | 2021-11-02 | $35.74 (2021-11-04) | −9.29% | ✗ |
-| 7 | CTRA 2022-Q3 | (CRSP) | 2022-11-03 | (CRSP) | −0.91% | ✗ |
-| 8 | OVV 2023-Q2 | (CRSP) | 2023-07-27 | (CRSP) | **+15.50%** | ✓ |
-| 9 | FANG 2024-Q2 | $204.68 (2024-07-22) | 2024-08-05 | $191.38 (2024-08-07) | −6.80% | ✗ |
-| 10 | PR 2024-Q3 | $13.85 (2024-10-23) | 2024-11-06 | $14.92 (2024-11-08) | +7.43% | ✓ |
+| # | Cell | Size | Entry T-14 | Earnings | Exit T+2 | Net return | Outcome |
+|---:|---|---:|---|---|---|---:|:---:|
+|  1 | FANG 2019-Q2 | 0.05 | $104.44 (2019-07-23) | 2019-08-06 | $95.20 (2019-08-08) | −9.15% | ✗ |
+|  2 | FANG 2019-Q3 | 0.10 | $85.69 (2019-10-22) | 2019-11-05 | $75.56 (2019-11-07) | −12.12% | ✗ |
+|  3 | **SM 2020-Q1** | 0.10 | $1.73 (2020-04-15) | 2020-04-29 | $3.31 (2020-05-01) | **+91.03%** | ✓ |
+|  4 | OVV 2020-Q1 | 0.10 | $5.00 (2020-04-23) | 2020-05-07 | $5.86 (2020-05-09) | +16.90% | ✓ |
+|  5 | MTDR 2020-Q3 | 0.05 | $8.77 (2020-10-13) | 2020-10-27 | $6.91 (2020-10-29) | −21.51% | ✗ |
+|  6 | OVV 2021-Q1 | 0.10 | $24.21 (2021-04-15) | 2021-04-29 | $24.94 (2021-05-01) | +2.72% | ✓ |
+|  7 | MTDR 2021-Q2 | 0.10 | $35.54 (2021-07-13) | 2021-07-27 | $30.90 (2021-07-29) | −13.36% | ✗ |
+|  8 | MTDR 2021-Q3 | 0.10 | $42.39 (2021-10-12) | 2021-10-26 | $42.32 (2021-10-28) | −0.47% | ✗ |
+|  9 | FANG 2021-Q3 | 0.10 | $109.26 (2021-10-18) | 2021-11-01 | $111.81 (2021-11-03) | +2.03% | ✓ |
+| 10 | OVV 2021-Q3 | 0.10 | $39.27 (2021-10-19) | 2021-11-02 | $35.74 (2021-11-04) | −9.29% | ✗ |
+| 11 | CTRA 2021-Q3 | 0.10 | $21.41 (2021-10-20) | 2021-11-03 | $21.58 (2021-11-05) | +0.49% | ✓ |
+| 12 | OXY 2021-Q3 | 0.10 | $32.80 (2021-10-21) | 2021-11-04 | $34.29 (2021-11-06) | +4.24% | ✓ |
+| 13 | DVN 2021-Q4 | 0.10 | $52.56 (2022-02-01) | 2022-02-15 | $55.25 (2022-02-17) | +4.82% | ✓ |
+| 14 | MTDR 2022-Q3 | 0.10 | $60.09 (2022-10-11) | 2022-10-25 | $66.04 (2022-10-27) | +9.60% | ✓ |
+| 15 | DVN 2022-Q3 | 0.10 | $69.77 (2022-10-18) | 2022-11-01 | $70.73 (2022-11-03) | +1.08% | ✓ |
+| 16 | OVV 2022-Q4 | 0.05 | $48.38 (2023-02-13) | 2023-02-27 | $45.21 (2023-03-01) | −6.85% | ✗ |
+| 17 | CTRA 2023-Q1 | 0.10 | $25.56 (2023-04-20) | 2023-05-04 | $24.86 (2023-05-06) | −3.04% | ✗ |
+| 18 | DVN 2023-Q2 | 0.10 | $50.51 (2023-07-18) | 2023-08-01 | $50.83 (2023-08-03) | +0.33% | ✓ |
+| 19 | OVV 2023-Q2 | 0.10 | $39.80 (2023-07-13) | 2023-07-27 | $46.09 (2023-07-29) | **+15.50%** | ✓ |
+| 20 | EOG 2023-Q3 | 0.10 | $136.23 (2023-10-19) | 2023-11-02 | $126.42 (2023-11-04) | −7.50% | ✗ |
+| 21 | FANG 2023-Q3 | 0.10 | $165.32 (2023-10-23) | 2023-11-06 | $155.97 (2023-11-08) | −5.96% | ✗ |
+| 22 | FANG 2024-Q2 | 0.10 | $204.68 (2024-07-22) | 2024-08-05 | $191.38 (2024-08-07) | −6.80% | ✗ |
+| 23 | FANG 2024-Q3 | 0.10 | $182.41 (2024-10-21) | 2024-11-04 | $183.62 (2024-11-06) | +0.36% | ✓ |
 
 **Table 9.2 — Aggregate metrics, full sample 2019-2024:**
 
 | Metric | Value |
 |---|---:|
 | Universe-quarter cells evaluated | 200 |
-| Long trades fired | **10** |
-| Wins / Losses | **5W / 5L** |
-| Hit rate | **50.0%** |
-| Mean net return per trade | **−2.06%** |
-| Median net return per trade | +0.49% |
-| Total net P&L on $1M starting capital | **−\$20,623** (−2.06%) |
-| Best trade | OVV 2023-Q2 (+15.50%) |
-| Worst trade | OXY 2019-Q4 (−21.92%) |
+| Long trades fired | **23** |
+| Wins / Losses | **12W / 11L** |
+| Hit rate | **52.2%** |
+| Mean net return per trade | **+2.31%** |
+| Median net return per trade | +0.33% |
+| Total net P&L on $1M starting capital | **+\$71,833** (+7.18%) |
+| Best trade | SM 2020-Q1 (+91.03% / +\$91,029) |
+| Worst trade | MTDR 2020-Q3 (−21.51% / −\$10,754) |
+| Per-trade Sharpe (quarterly) | 0.108 |
+| Max drawdown | −35.6% |
 
 **Per-year summary:**
 
-| Year | Cells | Trades | W / L | Hit rate | Total P&L on $1M |
+| Year | Eligible cells | Trades | W / L | Hit rate | Total P&L on $1M |
 |---|---:|---:|---|---:|---:|
-| 2019 | 24 | 2 | 0 / 2 | 0.0% | **−\$34,011** |
-| 2020 | 28 | **0** | — | — | $0 (system mechanically held flat through COVID collapse) |
-| 2021 | 30 | 4 | 3 / 1 | 75.0% | −\$1,837 |
-| 2022-2023 | 78 | 2 | 1 / 1 | 50.0% | **+\$14,598** |
-| 2024 | 40 | 2 | 1 / 1 | 50.0% | +\$628 |
-| **Total** | **200** | **10** | **5 / 5** | **50.0%** | **−\$20,623** |
+| 2019 | 24 | 2 | 0 / 2 | 0.0% | **−\$16,696** |
+| 2020 | 28 | 3 | 2 / 1 | 66.7% | **+\$97,175** |
+| 2021 | 30 | 8 | 5 / 3 | 62.5% | −\$8,807 |
+| 2022 | 38 | 3 | 2 / 1 | 66.7% | +\$7,252 |
+| 2023 | 40 | 5 | 2 / 3 | 40.0% | −\$658 |
+| 2024 | 40 | 2 | 1 / 1 | 50.0% | −\$6,435 |
+| **Total** | **200** | **23** | **12 / 11** | **52.2%** | **+\$71,833** |
 
-The aggregate result is a 50.0% hit rate at −2.06% mean net return per trade. The dominant loss driver is the 2019-Q4 cohort: both 2019-Q4 trades (OXY and SM) opened in early-mid February 2020 and exited 2 trading days after their February-2020 earnings reports — directly into the early-COVID Permian oil-price crash. WTI fell from \$53 on 2020-02-05 to \$45 on 2020-02-21 and continued to \$20 by mid-March 2020. The trade exits captured the first leg of that crash, producing −21.9% (OXY) and −12.1% (SM) realisations on what had been mechanically valid SAR-driven `modest_beat` signals at T-14.
+**Honest disclosure on the 2020-Q1 cohort.** The aggregate P&L is dominated by the SM 2020-Q1 trade (+91.03% / +\$91,029), entered on 2020-04-15 with WTI in the immediate aftermath of the negative-pricing crisis (4-week WTI return of −24.6% at decision date T) and exited two trading days after SM's late-May 2020 earnings, by which time WTI had partially recovered into the $30s. The OVV 2020-Q1 trade (+16.90% / +\$16,900) entered eight days later under similar regime conditions (4-week WTI return of −16.8% at T) and contributed an additional +\$16,900. Together these two cells contributed +\$107,929 to the +\$71,833 aggregate.
 
-**With the two COVID-exit-window trades (2019-Q4 OXY and SM) excluded as a regime-mismatch event, the remaining 8 trades yield 5W / 3L (62.5% hit rate), +\$13,389 net P&L (+1.34% on \$1M), and +0.17% mean per-trade net return. We report the full ten-trade sample as the headline rather than excluding the COVID tail, but flag the 2020-Q1 dislocation explicitly in §12 (Limitations) since it is the single largest contributor to negative aggregate P&L.**
-
-A second observable pattern is **Agent 3's behaviour through 2020**. Across all 28 cells in the 2020 trade-eligible universe, the SAR-anchored Agent-2 forecast did not produce any `modest_beat` or `strong_beat` divergence — Agent 1's pad-classifications correctly registered the COVID drilling collapse, Agent 2's consensus-anchored forecast tracked downward consensus revisions, and Agent 3 short-circuited every cell to no_trade. The system mechanically held flat through 2020. We treat this as the strongest possible behavioural validation of the gating logic on a real out-of-sample regime: the system did not "blindly fire" through a market dislocation it had no way to predict.
+**Excluding the SM 2020-Q1 trade alone**, the remaining 22 trades produce 11W / 11L (50.0% hit rate), aggregate −\$19,196 (−1.92% of $1M), and mean −0.83% per trade. **Excluding both 2020-Q1 trades**, the remaining 21 trades produce 9W / 12L (42.9%), −\$36,096 aggregate, and −1.72% mean per trade. We report the full 23-trade sample as the headline rather than excluding the COVID-window cohort, but flag this regime concentration prominently in §12 (Limitations) because the system's largest gains came from a single calendar quarter in which the universe was trading at multi-year lows under an oil-price dislocation. The system's pre-earnings entry mechanism captured those lows mechanically — Agent 1's SAR-derived drilling activity remained elevated in the months prior to the COVID crash, which fed Agent 2's revenue forecast above heavily-revised-down consensus, which fed Agent 3's `modest_beat` divergence class — but the regime-conditional payoff is much larger than what we should expect from the same mechanism in non-dislocation regimes.
 
 ## 9.2 Primary test (H1)
 
-The pre-registered primary test is a one-sided 5%-level firm-clustered bootstrap of the hit rate against H0 = 50%, null-centered under H0 before the p-value computation. The observed hit rate on Strategy 1's full 2019-2024 trade set is 0.500 (5 wins, 5 losses out of 10 long entries). The exact one-sided binomial test (5 wins of 10, p = 0.5) yields **p = 0.623** (cumulative right-tail at 5/10) and the firm-clustered bootstrap p-value is **p = 0.50**; both **fail to reject H0 = 50%**. The 95% exact-binomial confidence interval on the hit rate is [18.7%, 81.3%], which is wide but informative: with n = 10 we can rule out hit rates below 18.7% and above 81.3% at the 95% level, but we cannot make a sharp claim about the true value of the rate.
+The pre-registered primary test is a one-sided 5%-level firm-clustered bootstrap of the hit rate against H0 = 50%, null-centered under H0 before the p-value computation. The observed hit rate is **0.522 (12 wins, 11 losses out of 23 long entries)**. The firm-clustered bootstrap p-value is **p = 0.408**, and the 95% bootstrap confidence interval on the hit rate is **[35.0%, 76.5%]**; the test **fails to reject H0 = 50%** at any conventional significance level.
 
-The interpretation we attach to this result is conservative. The firm-clustered bootstrap is non-parametric and does not require a Gaussian return distribution, but with n = 10 trades and 5 wins, the test has limited power. The headline finding is that **after extending the empirical window from one year (2024-only, n = 2 trades) to six years (2019-2024, n = 10 trades), the hit rate stays at 50% and the test continues to fail to reject the coin-flip null**. This is the most honest framing of the data.
+The interpretation is conservative. The firm-clustered bootstrap is non-parametric and accommodates within-firm dependence across the system's ~2-3 trades per firm over six years, but n = 23 is still a small sample. The test cannot distinguish a true 50% process from a true 60-65% process at this n. **The honest reading is: the directional point estimate (52.2%) is slightly above the coin-flip null, but the data do not support a sharp claim of beating coin-flip under the pre-registered test.** A non-trivial fraction of the directional improvement comes from the 2020-Q1 cohort identified above; if that cohort represents an unrepeatable regime, the underlying process rate is lower than 52.2%.
 
 ## 9.3 Quarter-block sensitivity
 
-We re-run the same bootstrap but resample fiscal quarters rather than firms. The quarter-block 95% interval is wider (the procedure absorbs cross-sectional and time-series dependence), and the one-sided p-value at H0 = 50% is reported in the supplementary inference table. The directional conclusion is unchanged: cannot reject H0 = 50%.
+We re-run the same bootstrap but resample fiscal quarters rather than firms. The quarter-block 95% interval is wider (the procedure absorbs both cross-sectional and time-series dependence). The directional conclusion is unchanged: cannot reject H0 = 50% at conventional significance levels. The supplementary inference table at `runs/inference/bootstrap_table.csv` reports both interval estimates.
 
 ## 9.4 H2 — full-system versus analyst-revision baseline
 
-The pre-registered secondary test compares Strategy 1 (full multi-agent, 50.0% hit rate over 10 trades) against Strategy 3 (analyst-revision follower, 27.8% hit rate over 18 trades on the 2024 sub-window). The pre-registered threshold is +3 percentage points. We use Strategy 3's 2024 sample as the baseline because the deterministic single-signal baselines (Strategies 3-10 in §10) were run on the 2024 window only; extending those baselines to 2019-2024 is a future-work item documented in §12.9. The observed gap is +22.2 percentage points; the one-sided p-value (null-centered under H0: diff ≤ 3pp) is p = 0.284 — directionally supportive but not statistically significant at 5% with this sample size. The directional pattern holds against every deterministic baseline (Strategies 3-10 range from 18.8% to 33.3% hit rate; Strategy 1's 50% on 2024-only would have been 50% (1W/1L) and on the full 2019-2024 sample is 50% (5W/5L) — at least the equal-best, ahead of all deterministic baselines by 17 percentage points). The cleaner internal counterfactual is the α=0 ablation reported in Section 11.1, which is mechanically guaranteed to produce zero long entries.
+The pre-registered secondary test compares Strategy 1 against Strategy 3 (analyst-revision follower). Strategy 3 was run on the 2024 sub-window only, so the like-for-like H2 comparison restricts Strategy 1 to its 2024 trades (n = 2, 1W / 1L, 50.0%). Strategy 3 on 2024 is 27.8% hit rate over 18 trades. The pre-registered threshold is +3 percentage points; observed gap is +22.2 pp. The one-sided p-value (null-centered under H0: diff ≤ 3pp) is p = 0.284 — directionally supportive but not statistically significant at 5%. We retain Strategy 1's full 2019-2024 sample as the primary headline; the directional pattern holds against every deterministic baseline reported in §10.
 
 ## 9.5 SAR change-detection threshold sensitivity (RQ1, deferred)
 
-The original spec called for a confusion-matrix sweep over the synthetic-SAR generator. With the project's pivot to real Sentinel-1 RTC backscatter, the analogous sensitivity is a sweep of the change-detection threshold (≥1.5 dB activation, ≥0.5 dB sustained) and the trailing-baseline coefficient (30% of pads sampled). Sweeping these would re-run the multi-agent pipeline at multiple threshold settings and compare trade counts and hit rates; we leave this as future work because each additional setting would require ~30 min of LLM agent runtime per year of backtest under the project's free-tier rate limits — the full 2019-2024 window at five threshold settings would be 25-30 hours of additional runtime. The threshold values were chosen ex ante from the published Permian-pad SAR change-detection literature (Ben-David et al. 2021; Glaeser, Olsen & Welch 2020) — they are not in-sample-tuned on any year of the 2019-2024 data.
+The original spec called for a confusion-matrix sweep over the synthetic-SAR generator. With the project's pivot to real Sentinel-1 RTC backscatter, the analogous sensitivity is a sweep of the change-detection threshold (≥1.5 dB activation, ≥0.5 dB sustained) and the trailing-baseline coefficient. Sweeping these would re-run the multi-agent pipeline at multiple threshold settings and compare trade counts and hit rates; we leave this as future work because each additional setting would require ~30 min of LLM agent runtime per year of backtest, and the full 2019-2024 window at five threshold settings would be 25-30 hours of additional runtime. The threshold values were chosen ex ante from the published Permian-pad SAR change-detection literature (Ben-David et al. 2021; Glaeser, Olsen & Welch 2020) — they are not in-sample-tuned on any year of the 2019-2024 data.
 
 ## 9.6 Per-trade ledger
 

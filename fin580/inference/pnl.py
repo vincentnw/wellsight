@@ -134,11 +134,12 @@ def compute_pnl_for_strategy(strategy_id: int, window: str | None = None) -> pd.
 
 
 STRATEGY1_YEARLY_RUNS = [
-    "2026-05-03-strategy1-2019Q1_2019Q4-target-realsar",
-    "2026-05-03-strategy1-2020Q1_2020Q4-target-realsar",
-    "2026-05-03-strategy1-2021Q1_2021Q4-target-realsar",
-    "2026-05-03-strategy1-2022Q1_2023Q4-target-realsar",
-    "2026-04-30-strategy1-2024Q1_2024Q4-target-realsar",
+    "2026-05-04-strategy1-2019Q1_2019Q4-target-realsar-v2_5",
+    "2026-05-04-strategy1-2020Q1_2020Q4-target-realsar-v2_5",
+    "2026-05-04-strategy1-2021Q1_2021Q4-target-realsar-v2_5",
+    "2026-05-04-strategy1-2022Q1_2022Q4-target-realsar-v2_5",
+    "2026-05-04-strategy1-2023Q1_2023Q4-target-realsar-v2_5",
+    "2026-05-04-strategy1-2024Q1_2024Q4-target-realsar-v2_5",
 ]
 
 

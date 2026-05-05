@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-03T21:29:56.465098",
+  "generated_at": "2026-05-05T08:14:34.077687",
   "strategy1_baseline": {
-    "n_trades": 10,
-    "hit_rate": 0.5,
-    "mean_net_return_pct": -0.020622921899483965,
-    "median_net_return_pct": -0.002061216251569856,
-    "sharpe_quarterly": -0.19197138191234656,
-    "max_drawdown_pct": -0.2725184387861562
+    "n_trades": 23,
+    "hit_rate": 0.5217391304347826,
+    "mean_net_return_pct": 0.023077778530585135,
+    "median_net_return_pct": 0.003335379132844987,
+    "sharpe_quarterly": 0.10830579592719851,
+    "max_drawdown_pct": -0.3564592069482593
   },
   "primary_test_H1": {
-    "p_value_one_sided": 0.606,
+    "p_value_one_sided": 0.408,
     "reject_50": false,
     "ci_95": [
-      0.25,
-      0.6666666666666666
+      0.34994565217391305,
+      0.7647058823529411
     ],
     "n_iter": 1000
   },
@@ -118,85 +118,90 @@
   "revenue_diagnostic_summary": {
     "n_cells": 200,
     "n_cells_with_actual_and_consensus": 199,
-    "n_long_trades_with_actual": 10,
-    "long_trade_actual_revenue_beat_rate": 0.8,
-    "long_trade_win_rate_when_actual_revenue_beat": 0.375,
-    "diagnostic_revenue_direction_accuracy_non_neutral": 0.42528735632183906,
-    "generated_at": "2026-05-03T21:29:53.852058"
+    "n_long_trades_with_actual": 23,
+    "long_trade_actual_revenue_beat_rate": 0.8260869565217391,
+    "long_trade_win_rate_when_actual_revenue_beat": 0.5263157894736842,
+    "diagnostic_revenue_direction_accuracy_non_neutral": 0.4935064935064935,
+    "generated_at": "2026-05-05T08:14:30.409861"
   },
   "signal_confidence_summary": {
     "n_cells": 200,
-    "score_mean_all_cells": 38.46,
-    "score_mean_long_trades": 58.4,
+    "score_mean_all_cells": 43.46,
+    "score_mean_long_trades": 64.0,
     "tier_counts_all_cells": {
-      "low": 136,
-      "medium": 56,
-      "high": 8
+      "low": 97,
+      "medium": 91,
+      "high": 12
     },
     "tier_counts_long_trades": {
-      "medium": 10
+      "medium": 18,
+      "high": 5
     },
     "long_trade_win_rate_by_tier": {
+      "high": {
+        "n_trades": 5,
+        "win_rate": 0.6
+      },
       "medium": {
-        "n_trades": 10,
+        "n_trades": 18,
         "win_rate": 0.5
       }
     },
     "scope": "diagnostic_only",
-    "generated_at": "2026-05-03T21:29:53.862618"
+    "generated_at": "2026-05-05T08:14:30.422923"
   },
   "wti_veto_summary": {
     "scope": "sensitivity_only",
     "threshold_wti_4w_return_pct": -10.0,
-    "baseline_n_trades": 10,
-    "baseline_hit_rate": 0.5,
-    "baseline_total_net_pnl_usd": -20622.92189948396,
-    "post_veto_n_trades": 8,
-    "post_veto_hit_rate": 0.625,
-    "post_veto_mean_net_return_pct": 0.016735476091468207,
-    "post_veto_total_net_pnl_usd": 13388.380873174567,
+    "baseline_n_trades": 23,
+    "baseline_hit_rate": 0.5217391304347826,
+    "baseline_total_net_pnl_usd": 71832.96323514443,
+    "post_veto_n_trades": 21,
+    "post_veto_hit_rate": 0.47619047619047616,
+    "post_veto_mean_net_return_pct": -0.026119328165923984,
+    "post_veto_total_net_pnl_usd": -36096.51653364172,
     "n_vetoed": 2,
     "vetoed_trades": [
       {
         "ticker": "SM",
-        "fiscal_quarter_end": "2019-12-31",
-        "entry_date_T": "2020-02-05",
-        "wti_4w_return_pct": -15.123208246094377,
-        "baseline_net_pnl_usd": -12089.038262668051
+        "fiscal_quarter_end": "2020-03-31",
+        "entry_date_T": "2020-04-15",
+        "wti_4w_return_pct": -24.637233714109296,
+        "baseline_net_pnl_usd": 91029.47976878614
       },
       {
-        "ticker": "OXY",
-        "fiscal_quarter_end": "2019-12-31",
-        "entry_date_T": "2020-02-13",
-        "wti_4w_return_pct": -17.225509533201844,
-        "baseline_net_pnl_usd": -21922.264509990477
+        "ticker": "OVV",
+        "fiscal_quarter_end": "2020-03-31",
+        "entry_date_T": "2020-04-23",
+        "wti_4w_return_pct": -16.82513435303845,
+        "baseline_net_pnl_usd": 16900.000000000007
       }
     ],
     "post_veto_primary_test_H1": {
-      "p_value_one_sided": 0.121,
+      "p_value_one_sided": 0.554,
       "reject_50": false,
       "ci_95": [
-        0.3333333333333333,
-        0.8571428571428571
+        0.3125,
+        0.7142857142857143
       ],
       "n_iter": 1000
     },
     "post_veto_firm_clustered_hit_rate_ci": {
-      "mean": 0.6328894827394828,
-      "ci_low": 0.3333333333333333,
-      "ci_high": 0.8571428571428571,
+      "mean": 0.4814965997259717,
+      "ci_low": 0.3125,
+      "ci_high": 0.7142857142857143,
       "n_iter": 1000
     },
-    "generated_at": "2026-05-03T21:29:56.465098"
+    "generated_at": "2026-05-05T08:14:34.077687"
   },
   "headline_summary": [
     {
-      "n_trades": 10,
-      "hit_rate": 0.5,
-      "mean_net_return_pct": -0.020622921899483965,
-      "median_net_return_pct": -0.002061216251569856,
-      "sharpe_quarterly": -0.19197138191234656,
-      "max_drawdown_pct": -0.2725184387861562,
+      "n_trades": 23,
+      "hit_rate": 0.5217391304347826,
+      "mean_net_return_pct": 0.023077778530585135,
+      "median_net_return_pct": 0.003335379132844987,
+      "sharpe_quarterly": 0.10830579592719851,
+      "max_drawdown_pct": -0.3564592069482593,
       "strategy": 1
     },
     {
