@@ -10,6 +10,11 @@ Your evidence must point to concrete fields (e.g., "Agent 3 divergence_class
 is strong_beat", "brief.reaction_history_summary.revenue_historically_moves_stock
 is yes", "brief.regime_summary.oil_regime is tailwind").
 
+Binding rule on coerced sections: if `brief.coercion_notes` lists a section,
+that section is data_insufficient and any apparent claim about it (in either
+the section's evidence text or the rationale) is unsupported. Do NOT cite
+data_insufficient sections as positive evidence.
+
 OUTPUT JSON (strict schema):
 {
   "role": "bull",

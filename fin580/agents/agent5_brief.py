@@ -51,38 +51,56 @@ def _load_prompt() -> str:
     return PROMPT_PATH.read_text()
 
 
+_NEUTRAL_EVIDENCE_TEXT = (
+    "Insufficient point-in-time observations to characterize this dimension; "
+    "do not infer."
+)
+
+
 def _coerce_brief(brief: dict, packet: dict) -> dict:
     """Enforce the brief contract on the LLM output.
 
-    Three guardrails (binding per pre-reg):
+    Five guardrails (binding per pre-reg):
       (1) For any section whose evidence packet says
           `data_sufficient: False`, force every interpretive (non-
           `evidence`) field in the corresponding brief section to
           `"data_insufficient"`.
-      (2) Drop overall_risk_flags whose underlying section is marked
+      (2) For those same sections, REPLACE the `evidence` free-text
+          with a neutral disclaimer so the board cannot read an
+          unsupported LLM claim about a dimension that has no data.
+      (3) Drop overall_risk_flags whose underlying section is marked
           insufficient (e.g. "weak-revenue-reaction-history" when
           reaction_history.data_sufficient is False).
-      (3) If `tradable_setup` was set to a real value but every
+      (4) If `tradable_setup` was set to a real value but every
           informative section is insufficient, downgrade
-          `tradable_setup` to `"data_insufficient"` so it does not
-          create a false signal for the board.
+          `tradable_setup` to `"data_insufficient"`.
+      (5) PREPEND a binding coercion notice to the overall `rationale`
+          listing which sections were coerced. The board's prompt is
+          instructed to treat this notice as overriding any claim in
+          the rationale that depends on a coerced section.
     """
     if not isinstance(brief, dict):
         return brief
 
     insufficient_sections: set[str] = set()
+    insufficient_brief_keys: list[str] = []
     for brief_key, packet_key in _BRIEF_TO_PACKET_SECTION.items():
         section = packet.get(packet_key, {})
         if not isinstance(section, dict):
             continue
         if section.get("data_sufficient") is False:
             insufficient_sections.add(packet_key)
+            insufficient_brief_keys.append(brief_key)
             if isinstance(brief.get(brief_key), dict):
+                # (1) interpretive enums -> data_insufficient
                 for k in list(brief[brief_key].keys()):
                     if k == "evidence":
                         continue
                     brief[brief_key][k] = "data_insufficient"
+                # (2) free-text evidence -> neutral disclaimer
+                brief[brief_key]["evidence"] = _NEUTRAL_EVIDENCE_TEXT
 
+    # (3) drop dependent risk flags
     flags = brief.get("overall_risk_flags")
     if isinstance(flags, list):
         kept = []
@@ -92,13 +110,26 @@ def _coerce_brief(brief: dict, packet: dict) -> dict:
                 kept.append(flag)
         brief["overall_risk_flags"] = kept
 
-    # If reaction_history + fundamentals + positioning are ALL insufficient,
-    # tradable_setup cannot be meaningfully judged from PIT context. Force
-    # it to data_insufficient so the board doesn't read a stale verdict.
+    # (4) downgrade tradable_setup if EVERY informative section is insufficient
     informative_sections = set(_BRIEF_TO_PACKET_SECTION.values())
     if informative_sections.issubset(insufficient_sections):
         if brief.get("tradable_setup") not in (None, "data_insufficient"):
             brief["tradable_setup"] = "data_insufficient"
+
+    # (5) prepend coercion notice to rationale
+    if insufficient_brief_keys:
+        brief["coercion_notes"] = sorted(insufficient_brief_keys)
+        rationale = str(brief.get("rationale") or "").strip()
+        notice = (
+            f"[COERCION OVERRIDE — BINDING]: The following sections were "
+            f"flagged data_insufficient by the deterministic evidence packet "
+            f"and have been coerced: {', '.join(sorted(insufficient_brief_keys))}. "
+            f"Ignore any claim in the rationale below that depends on these "
+            f"sections; treat them as data_insufficient regardless of phrasing."
+        )
+        brief["rationale"] = (
+            f"{notice} {rationale}" if rationale else notice
+        )
 
     return brief
 

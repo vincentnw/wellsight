@@ -67,10 +67,14 @@ def test_insufficient_section_coerces_interpretive_fields():
     assert brief["positioning_summary"]["extended_or_overbought"] == "yes"
 
 
-def test_evidence_field_is_preserved_during_coercion():
+def test_evidence_field_neutralized_for_insufficient_sections():
+    """Updated v2.6.1: insufficient sections have their evidence text
+    replaced with a neutral disclaimer (was: preserved verbatim, but that
+    let the LLM's unsupported free-text claims influence the board)."""
     packet = _packet(reaction_ok=False)
     brief = _coerce_brief(_full_brief(), packet)
-    assert brief["reaction_history_summary"]["evidence"] == "fabricated by LLM despite no data"
+    assert "Insufficient" in brief["reaction_history_summary"]["evidence"]
+    assert "fabricated" not in brief["reaction_history_summary"]["evidence"]
 
 
 def test_risk_flag_dependent_on_insufficient_section_is_stripped():
@@ -119,3 +123,59 @@ def test_all_sufficient_passes_through_unchanged():
 def test_non_dict_brief_input_returns_as_is():
     out = _coerce_brief("not a dict", _packet())
     assert out == "not a dict"
+
+
+def test_insufficient_section_neutralizes_evidence_text():
+    """Free-text evidence in an insufficient section is replaced with a
+    neutral disclaimer so the board cannot read an unsupported LLM claim."""
+    packet = _packet(reaction_ok=False)
+    brief = _coerce_brief(_full_brief(), packet)
+    assert brief["reaction_history_summary"]["evidence"].startswith(
+        "Insufficient point-in-time observations"
+    )
+    # Sufficient sections retain their original evidence text.
+    assert brief["regime_summary"]["evidence"] == "real"
+
+
+def test_coercion_notes_field_lists_coerced_sections():
+    packet = _packet(reaction_ok=False, positioning_ok=False)
+    brief = _coerce_brief(_full_brief(), packet)
+    assert sorted(brief.get("coercion_notes", [])) == [
+        "positioning_summary",
+        "reaction_history_summary",
+    ]
+
+
+def test_no_coercion_notes_when_all_sufficient():
+    packet = _packet()
+    brief = _coerce_brief(_full_brief(), packet)
+    # Either absent or empty list — both acceptable
+    assert not brief.get("coercion_notes")
+
+
+def test_rationale_prefixed_with_binding_coercion_notice():
+    brief_in = _full_brief()
+    brief_in["rationale"] = "Reaction history is weak; recommend no_trade."
+    packet = _packet(reaction_ok=False)
+    brief = _coerce_brief(brief_in, packet)
+    assert brief["rationale"].startswith("[COERCION OVERRIDE — BINDING]")
+    assert "reaction_history_summary" in brief["rationale"]
+    # Original rationale text is preserved at the end (for audit) but the
+    # binding override comes first.
+    assert "Reaction history is weak" in brief["rationale"]
+
+
+def test_rationale_unchanged_when_all_sufficient():
+    brief_in = _full_brief()
+    brief_in["rationale"] = "Original rationale text."
+    packet = _packet()
+    brief = _coerce_brief(brief_in, packet)
+    assert brief["rationale"] == "Original rationale text."
+
+
+def test_empty_rationale_still_gets_coercion_notice():
+    brief_in = _full_brief()
+    brief_in["rationale"] = ""
+    packet = _packet(fundamentals_ok=False)
+    brief = _coerce_brief(brief_in, packet)
+    assert brief["rationale"].startswith("[COERCION OVERRIDE — BINDING]")

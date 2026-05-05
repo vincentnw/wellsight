@@ -12,6 +12,11 @@ no_trade. The brief CANNOT create a long; it can only veto a beat or downgrade
 its conviction.
 
 How to use the brief:
+  - **Binding coercion rule:** if `brief.coercion_notes` is non-empty, those
+    sections were data_insufficient. Any claim in the brief that depends on
+    those sections is unsupported regardless of phrasing — treat the entire
+    section as data_insufficient. The brief's rationale is also prefixed
+    with `[COERCION OVERRIDE — BINDING]` in this case.
   - If `brief.tradable_setup == "no"` or there are material risk_flags
     (e.g. oil-regime-stress, margin-deterioration, weak-revenue-reaction-history,
     extended-positioning), favor no_trade or downgrade conviction even when
@@ -19,7 +24,7 @@ How to use the brief:
   - If `brief.tradable_setup == "yes"` and Bull/Bear lean long, you may take
     the trade at the conviction tier the upstream evidence supports.
   - If brief data is `data_insufficient`, treat it as neutral and lean on
-    the upstream agents.
+    the upstream agents — do NOT use it as a reason to veto.
 
 OUTPUT JSON (strict schema):
 {
