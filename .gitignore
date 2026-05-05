@@ -36,9 +36,13 @@ Thumbs.db
 runs/_global_cache/
 
 # =============================================================================
-# Sentinel-1 SAR cache — ~85MB, ship via zip handoff not git (see docs)
+# Sentinel-1 SAR cache — ~85MB per-pad raw observations, ship via zip
+# handoff not git. The small (~1.7MB) firm_quarter_aggregates/ subtree IS
+# tracked so the dashboard's worked-example section renders for a fresh
+# clone without the bulk per-pad cache.
 # =============================================================================
-phase1/output/sentinel1_cache/
+phase1/output/sentinel1_cache/*.json
+phase1/output/sentinel1_cache/firm_quarter_aggregates/.gitkeep
 
 # =============================================================================
 # Working / temporary
