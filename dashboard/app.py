@@ -26,17 +26,17 @@ import streamlit as st
 RUNS_DIR = ROOT / "runs"
 PHASE1_OUTPUT = ROOT / "phase1" / "output"
 
-# Per-window run dirs across 2019-2024.  2024 is the original published
-# headline; 2019-2023 were added afterward.  Section 6 (baselines vs S2-S10)
-# uses HEADLINE_RUN only because those baseline runs only cover 2024.
-HEADLINE_RUN = RUNS_DIR / "2026-04-30-strategy1-2024Q1_2024Q4-target-realsar"
-_RUN_2022_2023 = RUNS_DIR / "2026-05-03-strategy1-2022Q1_2023Q4-target-realsar"
+# Per-window run dirs across 2019-2024 — canonical 25-pad / all-OpenAI
+# Strategy 1 ledger that produces the n=23 headline result. Section 6
+# (baselines vs S2-S10) restricts to 2024 only because the deterministic
+# baselines were run on 2024.
+HEADLINE_RUN = RUNS_DIR / "2026-05-04-strategy1-2024Q1_2024Q4-target-realsar-v2_5"
 WINDOW_RUNS = {
-    "2019":  RUNS_DIR / "2026-05-03-strategy1-2019Q1_2019Q4-target-realsar",
-    "2020":  RUNS_DIR / "2026-05-03-strategy1-2020Q1_2020Q4-target-realsar",
-    "2021":  RUNS_DIR / "2026-05-03-strategy1-2021Q1_2021Q4-target-realsar",
-    "2022":  _RUN_2022_2023,
-    "2023":  _RUN_2022_2023,
+    "2019":  RUNS_DIR / "2026-05-04-strategy1-2019Q1_2019Q4-target-realsar-v2_5",
+    "2020":  RUNS_DIR / "2026-05-04-strategy1-2020Q1_2020Q4-target-realsar-v2_5",
+    "2021":  RUNS_DIR / "2026-05-04-strategy1-2021Q1_2021Q4-target-realsar-v2_5",
+    "2022":  RUNS_DIR / "2026-05-04-strategy1-2022Q1_2022Q4-target-realsar-v2_5",
+    "2023":  RUNS_DIR / "2026-05-04-strategy1-2023Q1_2023Q4-target-realsar-v2_5",
     "2024":  HEADLINE_RUN,
 }
 
@@ -604,30 +604,29 @@ else:
         "days strictly after the announcement."
     )
 
-    # Per-trade cards, grouped by year
-    for window_label in sorted(all_trades["window"].unique()):
-        window_trades = all_trades[all_trades["window"] == window_label]
-        st.markdown(f"#### Window: {window_label}  ({len(window_trades)} trade{'s' if len(window_trades)!=1 else ''})")
-        for _, t in window_trades.iterrows():
-            outcome = "✅ WIN" if t["net_return_pct"] > 0 else "❌ LOSS"
-            month = int(t["fiscal_quarter_end"][5:7])
-            year = t["fiscal_quarter_end"][:4]
-            quarter_label = f"{_MONTH_TO_QUARTER.get(month, month)} {year}"
-            st.markdown(f"**{t['ticker']} — {quarter_label} → {outcome}**")
-            cols = st.columns(5)
-            cols[0].metric("Entry T-14", f"${t['entry_price']:.2f}")
-            cols[1].metric("Exit (T+2)", f"${t['exit_price']:.2f}")
-            cols[2].metric(
-                "Net return",
-                f"{t['net_return_pct']*100:+.2f}%",
-                delta=f"{t['gross_return_pct']*100:+.2f}% gross",
-            )
-            cols[3].metric("Position size", f"{t['size_pct']:.0%}")
-            cols[4].metric("$ P&L (on $1M)", f"${t['net_pnl_usd']:,.0f}")
-            st.caption(
-                f"Entry date: {t['entry_date_T']} • Exit date: {t['exit_date']}"
-            )
-            st.markdown("")
+    # Per-trade table — one row per long trade, sorted chronologically
+    sorted_t = all_trades.sort_values("entry_date_T").reset_index(drop=True)
+    table = pd.DataFrame({
+        "#": range(1, len(sorted_t) + 1),
+        "Ticker": sorted_t["ticker"],
+        "Quarter": [
+            f"{_MONTH_TO_QUARTER.get(int(fpe[5:7]), fpe[5:7])} {fpe[:4]}"
+            for fpe in sorted_t["fiscal_quarter_end"]
+        ],
+        "Window": sorted_t["window"],
+        "Entry date": sorted_t["entry_date_T"],
+        "Exit date": sorted_t["exit_date"],
+        "Entry $": sorted_t["entry_price"].map(lambda x: f"${x:,.2f}"),
+        "Exit $": sorted_t["exit_price"].map(lambda x: f"${x:,.2f}"),
+        "Size %": sorted_t["size_pct"].map(lambda x: f"{x:.0%}"),
+        "Gross %": sorted_t["gross_return_pct"].map(lambda x: f"{x*100:+.2f}%"),
+        "Net %": sorted_t["net_return_pct"].map(lambda x: f"{x*100:+.2f}%"),
+        "$ P&L": sorted_t["net_pnl_usd"].map(lambda x: f"${x:+,.0f}"),
+        "Outcome": sorted_t["net_return_pct"].map(
+            lambda r: "✅ WIN" if r > 0 else "❌ LOSS"
+        ),
+    })
+    st.dataframe(table, hide_index=True, use_container_width=True)
 
     # Aggregate metrics (incl. Sharpe) — across the full 5-year ledger
     from fin580.inference.pnl import strategy_metrics
@@ -645,8 +644,7 @@ else:
     )
     mc[3].metric("Max drawdown", f"{(m['max_drawdown_pct'] or 0)*100:+.2f}%")
 
-    # Cumulative equity curve across 2019-2024
-    sorted_t = all_trades.sort_values("entry_date_T").reset_index(drop=True)
+    # Cumulative equity curve across 2019-2024 (reuses sorted_t from the table above)
     sorted_t["cum_growth"] = (1.0 + sorted_t.net_return_pct).cumprod()
     fig = go.Figure()
     fig.add_trace(go.Scatter(
@@ -706,10 +704,22 @@ st.markdown(
     - **XES** — SPDR S&P Oil & Gas Equipment & Services ETF (sector benchmark)
     - **VOO** — Vanguard S&P 500 ETF (broad market benchmark)
 
-    Each starts at $1M on the day of our system's first trade entry and
-    holds through the day of our system's last trade exit. The system's
-    equity curve compounds the per-trade net-of-cost P&L, holding cash
-    (0% return) between trades.
+    Both start at $1M on the day of the system's first trade entry and hold
+    through the day of the system's last trade exit (always 100% deployed).
+    The system holds **cash at 0% between trades** and only the position
+    size during each trade — it is in the market roughly 10% of trading
+    days. A direct cumulative-P&L comparison therefore gives the passive
+    benchmarks ~6× more time-in-market than the system. The three panels
+    below report the comparison in three different ways:
+
+    1. **Absolute cumulative P&L** (with cash leg) — the chart immediately below.
+       Honest "investable strategy" view, but the system loses against
+       always-deployed benchmarks during long out-of-market stretches.
+    2. **Risk-adjusted (annualized Sharpe)** — same units, accounts for
+       time-in-market implicitly via the variance.
+    3. **Return on capital deployed (annualized)** — only counts the days
+       the system actually had a position. Answers "when actually trading,
+       what does the system earn per unit of risk-on capital?"
     """
 )
 
@@ -817,13 +827,126 @@ else:
         )
         st.plotly_chart(fig, use_container_width=True)
 
+        # ---------------------------------------------------------------
+        # Fair-comparison panel: time-in-market + return on capital deployed
+        # ---------------------------------------------------------------
+        st.markdown("### Fair-comparison metrics")
+
+        # Time-in-market fraction (trading days with at least one open position)
+        all_dates = pd.to_datetime(win["date"])
+        trades_dt = all_trades.copy()
+        trades_dt["entry_dt"] = pd.to_datetime(trades_dt["entry_date_T"])
+        trades_dt["exit_dt"] = pd.to_datetime(trades_dt["exit_date"])
+        in_market_mask = pd.Series(False, index=all_dates.index)
+        for _, tr in trades_dt.iterrows():
+            in_market_mask |= (all_dates >= tr["entry_dt"]) & (all_dates <= tr["exit_dt"])
+        n_in_market = int(in_market_mask.sum())
+        n_total_days = len(all_dates)
+        time_in_market_pct = (n_in_market / n_total_days) if n_total_days else 0.0
+
+        # Capital-years deployed = sum across trades of (size_pct × holding_years)
+        trades_dt["holding_calendar_days"] = (
+            trades_dt["exit_dt"] - trades_dt["entry_dt"]
+        ).dt.days
+        trades_dt["capital_years_deployed"] = (
+            trades_dt["size_pct"] * trades_dt["holding_calendar_days"] / 365.25
+        )
+        total_capital_years = float(trades_dt["capital_years_deployed"].sum())
+        total_pnl = float(trades_dt["net_pnl_usd"].sum())
+        rcd_annualized = (
+            total_pnl / (total_capital_years * START_CAPITAL)
+            if total_capital_years > 0 else 0.0
+        )
+
+        # Benchmark annualized returns (XES, VOO) — same window
+        n_years = (win["date"].iloc[-1] - win["date"].iloc[0]).days / 365.25
+        xes_total = win["XES_value"].iloc[-1] / win["XES_value"].iloc[0] - 1.0
+        voo_total = win["VOO_value"].iloc[-1] / win["VOO_value"].iloc[0] - 1.0
+        xes_ann = (
+            (1.0 + xes_total) ** (1 / n_years) - 1.0 if n_years > 0 else 0.0
+        )
+        voo_ann = (
+            (1.0 + voo_total) ** (1 / n_years) - 1.0 if n_years > 0 else 0.0
+        )
+
+        fc_cols = st.columns(4)
+        fc_cols[0].metric(
+            "Time in market",
+            f"{time_in_market_pct:.1%}",
+            help=f"{n_in_market} of {n_total_days} trading days had at least "
+                 "one open position. Cash held the rest of the time."
+        )
+        fc_cols[1].metric(
+            "Capital-years deployed",
+            f"{total_capital_years:.2f}",
+            help=f"Σ (size_pct × holding_years) across all {len(all_trades)} "
+                 f"trades. Equivalent to holding {total_capital_years:.2f} years "
+                 "at $1M full-size exposure."
+        )
+        fc_cols[2].metric(
+            "Return on capital deployed (ann.)",
+            f"{rcd_annualized:+.1%}",
+            help="Total $ P&L divided by capital-years deployed. The system's "
+                 "return rate on the days it was actually in the market, "
+                 "annualized. Compare to XES/VOO annualized return below."
+        )
+        fc_cols[3].metric(
+            "Window length",
+            f"{n_years:.2f} yrs",
+            help=f"From {win['date'].iloc[0].date()} to "
+                 f"{win['date'].iloc[-1].date()}."
+        )
+
+        # Side-by-side strategy comparison: total + annualized + Sharpe
+        fc_summary = pd.DataFrame([
+            {
+                "Strategy": "System (multi-agent, when deployed)",
+                "Time in market": f"{time_in_market_pct:.1%}",
+                "Total return on $1M (cash leg)": (
+                    f"{(win['System_value'].iloc[-1]/START_CAPITAL - 1):+.2%}"
+                ),
+                "Annualized return on capital deployed": f"{rcd_annualized:+.2%}",
+                "Annualized Sharpe (daily)": sys_m["Sharpe (daily, ann.)"],
+            },
+            {
+                "Strategy": "XES (always deployed)",
+                "Time in market": "100.0%",
+                "Total return on $1M (cash leg)": f"{xes_total:+.2%}",
+                "Annualized return on capital deployed": f"{xes_ann:+.2%}",
+                "Annualized Sharpe (daily)": xes_m["Sharpe (daily, ann.)"],
+            },
+            {
+                "Strategy": "VOO (always deployed)",
+                "Time in market": "100.0%",
+                "Total return on $1M (cash leg)": f"{voo_total:+.2%}",
+                "Annualized return on capital deployed": f"{voo_ann:+.2%}",
+                "Annualized Sharpe (daily)": voo_m["Sharpe (daily, ann.)"],
+            },
+        ])
+        st.dataframe(fc_summary, hide_index=True, use_container_width=True)
+
+        st.info(
+            f"**How to read these three columns together.** "
+            f"On a cash-leg basis the system makes "
+            f"{(win['System_value'].iloc[-1]/START_CAPITAL - 1):+.1%} vs "
+            f"VOO's {voo_total:+.1%} — VOO wins because it's deployed 10× as "
+            f"long. But on a per-unit-of-deployed-capital basis the system "
+            f"earns **{rcd_annualized:+.1%}** annualized vs VOO's "
+            f"**{voo_ann:+.1%}** and XES's **{xes_ann:+.1%}** — a meaningful "
+            f"per-trade signal that gets diluted by long out-of-market stretches. "
+            f"The Sharpe ratios anchor a risk-adjusted comparison: the system's "
+            f"low Sharpe (because cash days inflate the denominator and shrink "
+            f"the numerator) is the cleanest single-number summary of the "
+            f"asymmetry."
+        )
+
         st.markdown(
             f"""
-            **Reading this chart:**
+            **Reading this chart (absolute, cash-leg cumulative):**
 
             - **Multi-agent system** is mostly flat — it holds cash between trades
-              (the system is in-position only ~5% of trading days over this window).
-              The visible jumps are the 10 trade exits.
+              ({time_in_market_pct:.0%} time in market). The visible jumps are
+              the 23 trade exits.
             - **VOO** crushes both — the broad market roughly tripled over this window.
               An honest Permian-equity strategy needs to either (a) generate enough
               alpha to beat VOO net of risk, or (b) provide a diversification benefit
@@ -831,10 +954,10 @@ else:
             - **XES is a tough sector benchmark.** Oil services have *lost* ~13% over
               this window. If our system can match or beat XES, that's a real
               sector-relative result; matching VOO would require dramatically more
-              signal than 5 pads/firm-quarter currently provide.
-            - Even with the COVID-distorted 2019 trades stripped out, the system
-              produces ~+1.3% over 5 years — nowhere near VOO's compounding,
-              but in the same ballpark as XES.
+              persistent signal than the system currently produces.
+            - The headline +$71,833 is dominated by SM 2020-Q1 (+$91K). Strip that
+              single trade and the remaining 22 are roughly flat-to-negative — the
+              system's aggregate is regime-conditional, not a steady-state edge.
             """
         )
 
@@ -852,32 +975,36 @@ _hit_rate_5y = (
 _mean_ret_5y = all_trades.net_return_pct.mean() if _n_trades_5y else None
 
 st.warning(
-    f"**The most honest framing (5-year extension):** "
+    f"**The most honest framing (full 2019-2024 window):** "
     f"With **n = {_n_trades_5y} trades** across 2019-2024, the hit rate is "
     f"**{(_hit_rate_5y or 0)*100:.1f}%** and mean net return is "
-    f"**{(_mean_ret_5y or 0)*100:+.2f}%**. With n=10, exact-binomial p-value for "
-    f"H0=50% is 0.754 — we **still cannot reject the coin-flip null**. The 5-year "
-    f"sample is bigger than 2024-only but still small for inference."
+    f"**{(_mean_ret_5y or 0)*100:+.2f}%**. The firm-clustered bootstrap p-value "
+    f"vs H0 = 50% is 0.408 — we **still cannot reject the coin-flip null**. "
+    f"The headline aggregate is dominated by a single 2020-Q1 trade in SM Energy "
+    f"(+91% / +\\$91K). Excluding that trade alone leaves the remaining 22 trades "
+    f"at 50.0% hit rate and roughly −\\$19K aggregate."
 )
 
 st.markdown(
     """
-    **Why is the sample still small after extending to 5 years?**
+    **Why is the sample size what it is?**
 
     1. **Most cells short-circuit** — the Agent 3 gate only opens on `modest_beat` /
-       `strong_beat` divergence (≥+5%). Across all years, only 10-15% of cells
+       `strong_beat` divergence (±5% boundary). Across all years, ~11% of cells
        cleared the gate; the rest correctly produced `no_trade`.
     2. **Real data only** — no synthetic substitutes. Real Sentinel-1 SAR ingestion
-       is bandwidth-limited via cloud-optimised GeoTIFF range-reads.
-    3. **5 pads per firm-quarter** — sampling sparsity is the primary methodological
-       constraint (paper §12.3). A higher pad count (10-50) is documented as the
-       most impactful future-work lever.
+       is bandwidth-limited via cloud-optimised GeoTIFF range-reads from Microsoft
+       Planetary Computer (free, no auth).
+    3. **25 pads per firm-quarter** — deduplicated by `(pad_id, rounded coords)`.
+       Increasing toward the operator's full FracFocus history is documented as
+       future work (paper §13).
 
-    **2019 is heavily distorted by COVID:** both 2019Q4 trades (OXY, SM) had exits
-    on Feb 21 / Feb 29 2020 — directly into the COVID oil crash. Strip those two
-    trades and the remaining 8 trades show 5W/3L (62.5% hit rate) and a positive
-    aggregate P&L. That's a regime-mismatch story, not a signal-failure story —
-    documented in the regime-split robustness checks.
+    **The aggregate is regime-concentrated.** SM 2020-Q1 contributes +$91,029 of
+    the +$71,833 total. Excluding both 2020-Q1 trades (SM and OVV) leaves 21
+    trades at 47.6% hit rate and −$36,096 — the system's largest gains came from
+    a specific COVID-bottom mean-reversion that we should not project forward.
+    The pre-registered WTI stress veto (paper §11.9) would have removed exactly
+    those two trades; we report it as observed under pre-registration discipline.
 
     **What we *can* claim is mechanical:** the α=0 ablation and no-satellite
     ablation both produce **zero long entries** by construction. So whatever signal
