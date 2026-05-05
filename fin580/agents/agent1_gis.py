@@ -4,6 +4,8 @@ normalization (spec Section 4.3, Section 3.4, Section 3.6)."""
 from __future__ import annotations
 
 from datetime import date, timedelta
+import json
+import re
 
 from fin580.agents.schemas import Agent1Out, PadClassification
 from fin580.data.synthetic_sar import (
@@ -11,6 +13,12 @@ from fin580.data.synthetic_sar import (
     classify_pads,
 )
 from fin580.data.trc_permits import load_permit_dump
+
+
+_SAR_CACHE_RE = re.compile(
+    r"^(?P<ticker>[^_]+)_(?P<fpe>\d{4}-\d{2}-\d{2})_"
+    r"(?P<T>\d{4}-\d{2}-\d{2})_n(?P<n>\d+)\.json$"
+)
 
 
 def _prior_quarter_end(q_end: date, k: int = 1) -> date:
@@ -24,6 +32,47 @@ def _prior_quarter_end(q_end: date, k: int = 1) -> date:
     m_back = {1: 3, 2: 6, 3: 9, 4: 12}[q_idx]
     d_back = {3: 31, 6: 30, 9: 30, 12: 31}[m_back]
     return date(y, m_back, d_back)
+
+
+def _cached_prior_sar_active_counts(
+    *,
+    ticker: str,
+    fiscal_quarter_end: date,
+    decision_date_T: date,
+    current_n_pads: int,
+    sar_firm_cache,
+) -> list[float]:
+    """Read cached prior-quarter SAR active counts for real-Sentinel mode.
+
+    Firm-quarter aggregate cache names include the decision date T. That date is
+    not necessarily current_T - 91*k, so exact filename construction can miss a
+    valid prior-quarter cache. Match by ticker, fiscal quarter end, and pad count
+    instead, keeping only cache files whose own T is point-in-time before the
+    current decision date.
+    """
+    out: list[float] = []
+    for k in range(1, 5):
+        prior_q_end = _prior_quarter_end(fiscal_quarter_end, k=k)
+        matches = []
+        for cache_path in sar_firm_cache.glob(
+            f"{ticker}_{prior_q_end.isoformat()}_*_n{current_n_pads}.json"
+        ):
+            m = _SAR_CACHE_RE.match(cache_path.name)
+            if not m:
+                continue
+            cache_T = date.fromisoformat(m.group("T"))
+            if cache_T <= decision_date_T:
+                matches.append((cache_T, cache_path))
+        if not matches:
+            continue
+        _, cache_path = max(matches, key=lambda item: item[0])
+        d = json.loads(cache_path.read_text())
+        n_pads = int(d.get("n_pads_sampled", 0) or 0)
+        if n_pads <= 0:
+            continue
+        active = float(d.get("n_newly_active", 0) + d.get("n_continuously_active", 0))
+        out.append(active)
+    return out
 
 
 def _trailing_4_quarter_active_avg(
@@ -100,22 +149,14 @@ def run(
         # pad is active for only a fraction of the year). The 0.3 coefficient
         # is an ex-ante calibration parameter, not in-sample-tuned. Threshold
         # sensitivity is discussed in paper §11.5 / §12.2.
-        import json
         from fin580.data.sentinel1_firm_quarter import SAR_FIRM_CACHE
-        trailing_actives: list[int] = []
-        for k in range(1, 5):
-            prior_q_end = _prior_quarter_end(fiscal_quarter_end, k=k)
-            prior_T = decision_date_T - timedelta(days=91 * k)
-            cache_key = (
-                f"{ticker}_{prior_q_end.isoformat()}_{prior_T.isoformat()}_n5.json"
-            )
-            cache_path = SAR_FIRM_CACHE / cache_key
-            if cache_path.exists():
-                d = json.loads(cache_path.read_text())
-                if d.get("n_pads_sampled", 0) > 0:
-                    trailing_actives.append(
-                        d.get("n_newly_active", 0) + d.get("n_continuously_active", 0)
-                    )
+        trailing_actives = _cached_prior_sar_active_counts(
+            ticker=ticker,
+            fiscal_quarter_end=fiscal_quarter_end,
+            decision_date_T=decision_date_T,
+            current_n_pads=total,
+            sar_firm_cache=SAR_FIRM_CACHE,
+        )
         if trailing_actives:
             trailing_avg = sum(trailing_actives) / len(trailing_actives)
         else:
