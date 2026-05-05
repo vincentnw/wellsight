@@ -46,7 +46,9 @@ def _persist(obj, run_dir: Path, ticker: str, q_end: date, name: str) -> Path:
     out_dir = run_dir / "strategy_01" / "agent_outputs"
     out_dir.mkdir(parents=True, exist_ok=True)
     p = out_dir / f"{ticker}_{q_end.isoformat()}_{name}.json"
-    p.write_text(obj.model_dump_json(indent=2))
+    # Force UTF-8: LLM output occasionally contains Unicode chars (e.g., U+2248 ≈,
+    # U+2011 non-breaking hyphen) that fail under Windows' default cp1252 codec.
+    p.write_text(obj.model_dump_json(indent=2), encoding="utf-8")
     return p
 
 
@@ -310,7 +312,8 @@ def run_cell(
         )
         err_path.parent.mkdir(parents=True, exist_ok=True)
         err_path.write_text(
-            json.dumps({"error": str(e), "type": type(e).__name__}, indent=2)
+            json.dumps({"error": str(e), "type": type(e).__name__}, indent=2),
+            encoding="utf-8",
         )
         cell = CellResult(
             ticker=ticker,

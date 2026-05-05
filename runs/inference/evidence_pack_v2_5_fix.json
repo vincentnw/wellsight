@@ -1,0 +1,32 @@
+{
+  "version": "v2.5_fix",
+  "computed_at": "2026-05-05T16:44:24",
+  "n_trades": 51,
+  "wins": 27,
+  "losses": 24,
+  "hit_rate": 0.5294117647058824,
+  "mean_net_return_pct": 0.0017966385910595985,
+  "median_net_return_pct": 0.0087811501597444,
+  "total_pnl_usd": 6634.261951692135,
+  "sharpe_quarterly": 0.020754965160416153,
+  "max_drawdown_pct": -0.47058878094436307,
+  "primary_test": {
+    "hit_rate_obs": 0.5294117647058824,
+    "p_value_one_sided": 0.328,
+    "p_value_exact_binomial": 0.3898839652765371,
+    "reject_50_at_5pct": false,
+    "ci_95_low": 0.3952865448504983,
+    "ci_95_high": 0.6511627906976745,
+    "n_iter": 1000
+  },
+  "quarter_block_bootstrap_hit_rate": {
+    "mean": 0.5233201734561828,
+    "ci_low": 0.3333333333333333,
+    "ci_high": 0.678038225748287
+  },
+  "firm_clustered_mean_return": {
+    "mean": 0.0014883010514622245,
+    "ci_low": -0.018301879148059794,
+    "ci_high": 0.015254477995203089
+  }
+}

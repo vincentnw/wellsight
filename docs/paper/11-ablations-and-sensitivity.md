@@ -4,7 +4,7 @@ The two pre-registered ablations (§§11.1–11.2) are mechanically guaranteed b
 
 ## 11.1 RQ2 — α = 0 ablation
 
-Setting α to zero makes Agent 2's forecast equal IBES consensus exactly. Agent 3 classifies every such cell as `in_line`; the gate short-circuits to `no_trade`. **Result: zero long trades** across 2019–2024. With α = 0, Agents 4 and 5 never fire, so the marginal contribution of the satellite-anchored α = 0.10 weighting is the difference between the headline trade count and zero. RQ2 confirms the system's edge is, in a strict mechanical sense, attributable to the satellite signal, and rules out the failure mode where Agents 4–5 generate spurious "long" signals from qualitative inputs alone.
+Setting α to zero makes Agent 2's forecast equal IBES consensus exactly. Agent 3 classifies every such cell as `in_line`; the gate short-circuits to `no_trade`. **Result: zero long trades** across 2019–2024. With α = 0, Agents 4 and 5 never fire, so the marginal contribution of the satellite-anchored α = 0.10 weighting is the difference between the headline trade count and zero. RQ2 confirms the system's trade-firing mechanism is, in a strict mechanical sense, attributable to the satellite signal, and rules out the failure mode where Agents 4–5 generate spurious "long" signals from qualitative inputs alone.
 
 ## 11.2 RQ3 — no-satellite ablation
 
@@ -16,20 +16,20 @@ Agent 3 computes class, percentage, and confidence deterministically in Python a
 
 ## 11.4 Defensive fallbacks and provider routing
 
-Agent 4 includes a defensive fallback (permissive default on JSON/runtime errors); a small subset of the 23 trades hit it. The headline routes every LLM call through OpenAI (`gpt-4o-mini` for Agents 2/3/4 and Bull/Bear; `gpt-5-mini` for the Arbiter); total cost ~\$1.00–\$1.50 with caching. The deterministic core is provider-independent. The original spec's confusion-matrix sweep over synthetic-SAR no longer applies after the pivot to real Sentinel-1 RTC; the analogous threshold sensitivity is deferred.
+Agent 4 has a defensive fallback (permissive default on JSON/runtime errors). The headline routes every LLM call through OpenAI (`gpt-4o-mini` for Agents 2/3/4 and Bull/Bear; `gpt-5-mini` for the Arbiter); total cost ~\$1.00–\$2.00 with caching. The deterministic core is provider-independent. Threshold sensitivity over the SAR change-detection rule is deferred.
 
-## 11.5 Revenue-mechanism diagnostic and confidence score
+## 11.5 Revenue-mechanism diagnostic
 
-Joining each cell's Agent-3 class with Compustat `saleq` actual revenue: **19 of 23 long trades (82.6%) corresponded to actual revenue beats**; only 10 of those 19 became stock wins (52.6%). A correctly-forecast revenue beat is necessary but not sufficient for a positive 2-trading-day exit, since the stock reaction integrates EPS, capex guidance, hedge-book commentary, and the oil-price regime. A 0–100 deterministic signal-confidence score (Appendix B) shows high-tier (n=5) at 60.0% vs medium-tier (n=18) at 50.0% — directionally consistent but within bootstrap noise. Neither diagnostic enters H1.
+Joining each cell's Agent-3 class with Compustat `saleq` actual revenue: **41 of 51 long trades (80.4%) corresponded to actual revenue beats**; 22 of those 41 became stock-return wins (53.7%). The 10 cells where the satellite-anchored forecast was directionally wrong on revenue produced 5W / 5L. A correctly-forecast revenue beat is necessary but not sufficient for a positive 2-trading-day exit, since the stock reaction integrates EPS, capex guidance, hedge-book commentary, and the prevailing oil-price regime. The diagnostic does not change H1.
 
 ## 11.6 WTI stress-veto sensitivity
 
 A pre-registered point-in-time veto: for each long trade with entry date T, **block the entry if `wti_4w_return(T) ≤ −10.0%`**. Sizing, costs, and exit are unchanged.
 
-**The veto blocks exactly two trades** — both 2020-Q1 entries during the COVID oil-price collapse: SM 2020-Q1 (4w WTI = −24.6%, baseline +\$91,029) and OVV 2020-Q1 (4w WTI = −16.8%, baseline +\$16,900). These are the system's two largest gains. Post-veto: 21 trades, 10W / 11L (47.6%), mean −2.61%, total **−\$36,096** (vs +\$71,833 baseline); bootstrap p = 0.554.
+**The veto blocks one trade** — OVV 2020-Q1 (4w WTI = −16.8%, baseline +\$16,900). Post-veto: 50 trades, 26W / 24L (52.0%), total **-\$10,266** (vs +\$6,634 baseline); bootstrap p = 0.384; 95% CI on hit rate [38.1%, 64.8%].
 
-**Interpretation.** The pre-registered veto is **not protective**. The −10% threshold is misaligned with the system's signal direction in the 2020-Q1 dislocation: both trades opened *after* the WTI negative-pricing event of 2020-04-20 and exited in early May once oil had partially recovered, capturing a regime-conditional mean-reversion the veto would have foreclosed. We do not retune; doing so would constitute curve-fitting on the 2020-Q1 cohort.
+**Interpretation.** The pre-registered veto is **not protective**. The −10% threshold is misaligned with the system's signal direction in the 2020-Q1 dislocation: OVV 2020-Q1 opened *after* the WTI negative-pricing event of 2020-04-20 and exited in early May as oil partially recovered, capturing a regime-conditional mean-reversion the veto would have foreclosed. We do not retune. The qualitative finding ("a single-threshold WTI guardrail removes a gain, not a loss") survives the bug correction at smaller magnitude than earlier reported — one trade and ~\$17K, rather than two trades and ~\$108K, because the corrected gate no longer surfaces the bug-driven SM 2020-Q1 entry.
 
 ## 11.7 Summary
 
-(i) Remove the satellite (or set α = 0) and the system mechanically stops trading. (ii) The Agent-3 deterministic gate eliminates LLM boundary noise. (iii) The deterministic core is provider-independent. (iv) The satellite-driven revenue mechanism was directionally correct on 82.6% of traded cells, but the trade-monetisation layer adds substantial regime-conditional variance. (v) The pre-registered WTI stress veto would have **removed the two largest gains rather than the largest losses**, shifting the aggregate from +\$71,833 to −\$36,096. The constellation argues for caution about the +\$71,833 headline.
+(i) Remove the satellite (or set α = 0) → system mechanically stops trading. (ii) The Agent-3 gate eliminates LLM boundary noise. (iii) The deterministic core is provider-independent. (iv) Revenue mechanism directionally correct on 80% of traded cells; trade-monetisation adds variance independent of revenue accuracy. (v) Pre-registered WTI veto **removes a gain, not a loss**, shifting aggregate from +\$6,634 to -\$10,266. The constellation argues for caution about the +\$6,634 headline; mean return per trade (+0.18%) is within transaction-cost noise.

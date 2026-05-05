@@ -27,16 +27,16 @@ RUNS_DIR = ROOT / "runs"
 PHASE1_OUTPUT = ROOT / "phase1" / "output"
 
 # Per-window run dirs across 2019-2024 — canonical 25-pad / all-OpenAI
-# Strategy 1 ledger that produces the n=23 headline result. Section 6
+# Strategy 1 ledger after the Agent-1 trailing-baseline cache fix. Section 6
 # (baselines vs S2-S10) restricts to 2024 only because the deterministic
 # baselines were run on 2024.
-HEADLINE_RUN = RUNS_DIR / "2026-05-04-strategy1-2024Q1_2024Q4-target-realsar-v2_5"
+HEADLINE_RUN = RUNS_DIR / "2026-05-05-strategy1-2024Q1_2024Q4-target-realsar-v2_5_fix"
 WINDOW_RUNS = {
-    "2019":  RUNS_DIR / "2026-05-04-strategy1-2019Q1_2019Q4-target-realsar-v2_5",
-    "2020":  RUNS_DIR / "2026-05-04-strategy1-2020Q1_2020Q4-target-realsar-v2_5",
-    "2021":  RUNS_DIR / "2026-05-04-strategy1-2021Q1_2021Q4-target-realsar-v2_5",
-    "2022":  RUNS_DIR / "2026-05-04-strategy1-2022Q1_2022Q4-target-realsar-v2_5",
-    "2023":  RUNS_DIR / "2026-05-04-strategy1-2023Q1_2023Q4-target-realsar-v2_5",
+    "2019":  RUNS_DIR / "2026-05-05-strategy1-2019Q1_2019Q4-target-realsar-v2_5_fix",
+    "2020":  RUNS_DIR / "2026-05-05-strategy1-2020Q1_2020Q4-target-realsar-v2_5_fix",
+    "2021":  RUNS_DIR / "2026-05-05-strategy1-2021Q1_2021Q4-target-realsar-v2_5_fix",
+    "2022":  RUNS_DIR / "2026-05-05-strategy1-2022Q1_2022Q4-target-realsar-v2_5_fix",
+    "2023":  RUNS_DIR / "2026-05-05-strategy1-2023Q1_2023Q4-target-realsar-v2_5_fix",
     "2024":  HEADLINE_RUN,
 }
 
@@ -980,9 +980,10 @@ else:
               this window. If our system can match or beat XES, that's a real
               sector-relative result; matching VOO would require dramatically more
               persistent signal than the system currently produces.
-            - The headline +\$71,833 is dominated by SM 2020-Q1 (+\$91K). Strip that
-              single trade and the remaining 22 are roughly flat-to-negative — the
-              system's aggregate is regime-conditional, not a steady-state edge.
+            - The headline +\$6,634 is small in magnitude (+0.66% of capital). No
+              single trade dominates: largest single contributor is SM 2021-Q3
+              (+\$24K). The aggregate is statistically indistinguishable from zero
+              and well within the 30 bps round-trip cost band.
             """
         )
 
@@ -1004,10 +1005,10 @@ st.warning(
     f"With **n = {_n_trades_6y} trades** across 2019-2024, the hit rate is "
     f"**{(_hit_rate_6y or 0)*100:.1f}%** and mean net return is "
     f"**{(_mean_ret_6y or 0)*100:+.2f}%**. The firm-clustered bootstrap p-value "
-    f"vs H0 = 50% is 0.408 — we **still cannot reject the coin-flip null**. "
-    f"The headline aggregate is dominated by a single 2020-Q1 trade in SM Energy "
-    f"(+91% / +\\$91K). Excluding that trade alone leaves the remaining 22 trades "
-    f"at 50.0% hit rate and roughly −\\$19K aggregate."
+    f"vs H0 = 50% is **0.328** — we **cannot reject the coin-flip null**. "
+    f"The 95% CI on hit rate is [39.5%, 65.1%] and the firm-clustered 95% CI on "
+    f"mean return [-1.83%, +1.53%] straddles zero. No single trade dominates the "
+    f"aggregate; the largest single contributor is SM 2021-Q3 (+\\$24K)."
 )
 
 st.markdown(
@@ -1015,7 +1016,7 @@ st.markdown(
     **Why is the sample size what it is?**
 
     1. **Most cells short-circuit** — the Agent 3 gate only opens on `modest_beat` /
-       `strong_beat` divergence (±5% boundary). Across all years, ~11% of cells
+       `strong_beat` divergence (±5% boundary). Across all years, ~25% of cells
        cleared the gate; the rest correctly produced `no_trade`.
     2. **Real data only** — no synthetic substitutes. Real Sentinel-1 SAR ingestion
        is bandwidth-limited via cloud-optimised GeoTIFF range-reads from Microsoft
@@ -1024,17 +1025,24 @@ st.markdown(
        Increasing toward the operator's full FracFocus history is documented as
        future work (paper §13).
 
-    **The aggregate is regime-concentrated.** SM 2020-Q1 contributes +\$91,029 of
-    the +\$71,833 total. Excluding both 2020-Q1 trades (SM and OVV) leaves 21
-    trades at 47.6% hit rate and −\$36,096 — the system's largest gains came from
-    a specific COVID-bottom mean-reversion that we should not project forward.
-    The pre-registered WTI stress veto (paper §11.9) would have removed exactly
-    those two trades; we report it as observed under pre-registration discipline.
+    **2021 over-firing is the dominant structural pattern.** The system fires
+    **16 long trades in 2021** (vs 2-9 in every other year), of which **13
+    clip at `drilling_signal = +1.0`** and reach an identical +10.0%
+    divergence number. The clip is functioning as designed but collapses signal
+    differentiation across the post-COVID recovery cohort: the gate cannot
+    distinguish a modest recovery from an explosive one when trailing baselines
+    are depressed by a prior dislocation. Disclosed in paper §12.4 rather than
+    tuned post-hoc.
+
+    **The pre-registered WTI stress veto** would block one 2020-Q1 entry (OVV,
+    +\$16,900), shifting the aggregate from +\$13,432 to -\$3,468. The
+    qualitative finding "macro-stress veto removes a gain rather than a loss"
+    survives at smaller magnitude than earlier reported.
 
     **What we *can* claim is mechanical:** the α=0 ablation and no-satellite
-    ablation both produce **zero long entries** by construction. So whatever signal
-    the system did produce 2019-2024 is mechanically traceable to the satellite
-    input — not to the LLM scaffolding.
+    ablation both produce **zero long entries** by construction. So whatever
+    trade-firing signal the system did produce 2019-2024 is mechanically traceable
+    to the satellite input — not to the LLM scaffolding.
     """
 )
 
