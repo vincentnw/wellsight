@@ -1,0 +1,14 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 0,
+  "fallback_used": true,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [],
+  "negative_catalysts": [],
+  "overall_sentiment": "neutral",
+  "sar_complement": "No GDELT-indexed articles in window — agent runs blind on news.",
+  "novelty_assessment": "partial"
+}

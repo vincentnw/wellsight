@@ -1,0 +1,3 @@
+ticker,fiscal_quarter_end,low_quality_flag,reason
+FANG,2024-06-30,True,No JSON object found in response:  {   "ticker": "FANG";   "decision": "no_trade
+FANG,2024-06-30,False,ok

@@ -1,0 +1,36 @@
+{
+  "ticker": "PR",
+  "n_articles_in_window": 10,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Permian Resources announces strong fourth quarter 2023 results and provides highly capital efficient full year 2024 plan",
+      "article_id": "ghly-Capital-Efficient-46042378/",
+      "article_date": "2024-02-27"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Permian Resources announces full redemption of 6.875% senior notes due 2027",
+      "article_id": "-Senior-Notes-Due-2027-46104135/",
+      "article_date": "2024-03-06"
+    },
+    {
+      "summary": "Permian Resources Corporation announces pricing of secondary public offering of Class A common stock",
+      "article_id": "announces-pricing-143000319.html",
+      "article_date": "2024-03-04"
+    },
+    {
+      "summary": "Permian Resources Corporation announces pricing of secondary public offering of Class A common stock",
+      "article_id": "f-Class-A-Common-Stock-46086253/",
+      "article_date": "2024-03-04"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news highlights strong Q4 results and a capital-efficient plan for 2024, which aligns with the SAR signal of no new activity. However, the redemption of senior notes and the pricing of secondary offerings may indicate financial maneuvering that could affect liquidity and investor sentiment.",
+  "novelty_assessment": "partial"
+}

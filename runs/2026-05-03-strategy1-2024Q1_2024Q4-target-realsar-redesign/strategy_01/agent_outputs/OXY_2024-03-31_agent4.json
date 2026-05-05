@@ -1,0 +1,36 @@
+{
+  "ticker": "OXY",
+  "n_articles_in_window": 67,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Occidental Petroleum beats profit estimates as production rises",
+      "article_id": "://biztoc.com/x/232a3957a9b7e775",
+      "article_date": "2024-02-14"
+    },
+    {
+      "summary": "Permian, Texas buck national trend with drilling activity gains",
+      "article_id": "onal-trend-drilling-19388105.php",
+      "article_date": "2024-04-07"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Occidental Petroleum cuts two Permian rigs as it targets flat shale production",
+      "article_id": "t-targets-flat-shale-production/",
+      "article_date": "2024-02-15"
+    },
+    {
+      "summary": "Drilling activity continued to slow across US, Texas, Permian",
+      "article_id": "nued-slow-across-us-19375605.php",
+      "article_date": "2024-03-30"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news confirms the SAR signal of no newly active drilling but highlights a mixed operational outlook. While profit estimates were beaten and production rose, the cut in rigs and slowing drilling activity suggest potential challenges ahead. The overall operational environment appears stable but cautious.",
+  "novelty_assessment": "partial"
+}

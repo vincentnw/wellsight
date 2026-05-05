@@ -1,0 +1,14 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 9,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [],
+  "negative_catalysts": [],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news does not provide any new insights beyond the SAR signal, which indicates no current drilling activity. The articles primarily discuss future events and general industry trends without specific operational updates or catalysts for SM Energy.",
+  "novelty_assessment": "no"
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2273177000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2273177000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 172373.11467841838,
+    "wti_avg": 80.50999999999999,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "OVV's drilling activity remains stagnant with no active sites reported as of the decision date, indicating a lack of new production growth for the upcoming quarter. The average WTI price of approximately $80.51 per barrel, combined with a realized price difference of $0.90, supports a stable revenue environment. However, the absence of drilling activity suggests that the company may struggle to increase production levels, leading to a revenue forecast of $2.27B that reflects these challenges.",
+  "key_drivers": [
+    "no_active_drilling",
+    "stable_wti",
+    "realized_price_diff",
+    "low_production_growth",
+    "segment_fraction"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ticker": "PR",
+  "n_articles_in_window": 9,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Permian Resources Corporation is highlighted as one of the best natural gas and oil dividend stocks to buy now.",
+      "article_id": "idend-stocks-to-buy-now-1448157/",
+      "article_date": "2025-02-10"
+    },
+    {
+      "summary": "Permian Resources is discussed as a top high growth energy stock to invest in.",
+      "article_id": "ergy-stock-to-invest-in-1409864/",
+      "article_date": "2024-12-18"
+    },
+    {
+      "summary": "Permian Resource's strategic moves are noted for unlocking potential in oil and gas.",
+      "article_id": "otential-in-oil-and-gas-1414063/",
+      "article_date": "2024-12-27"
+    },
+    {
+      "summary": "The shale outlook indicates that the Permian region continues to deliver strong results.",
+      "article_id": "ure-king-keeps-delivering-211633",
+      "article_date": "2025-01-11"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news reinforces the SAR signal by highlighting Permian Resources' strong positioning in the dividend and growth sectors of the oil and gas market. There are no negative catalysts identified in the articles, suggesting a favorable outlook.",
+  "novelty_assessment": "no"
+}

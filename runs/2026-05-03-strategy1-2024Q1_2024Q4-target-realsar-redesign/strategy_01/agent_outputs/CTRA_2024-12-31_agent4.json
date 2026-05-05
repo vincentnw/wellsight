@@ -1,0 +1,36 @@
+{
+  "ticker": "CTRA",
+  "n_articles_in_window": 14,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Coterra Energy closes deal to buy Permian assets for $3.9 billion",
+      "article_id": "-permian-assets-for-3-9-billion/",
+      "article_date": "2025-01-28"
+    },
+    {
+      "summary": "Coterra completes $3.9 billion Permian acquisitions",
+      "article_id": "ions-28-jan-2025-179450-article/",
+      "article_date": "2025-01-28"
+    },
+    {
+      "summary": "Coterra buys more Permian acreage, automates fracking with AI",
+      "article_id": "eage-automates-fracking-with-ai/",
+      "article_date": "2025-01-09"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Coterra floats $1.5 billion in new debt to help buy Permian assets",
+      "article_id": "debt-to-help-buy-permian-assets/",
+      "article_date": "2024-12-04"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news highlights significant acquisitions in the Permian Basin, which aligns with the SAR signal of activity. However, the announcement of new debt raises concerns about financial leverage, which is not captured in the SAR data. Overall, the news provides a mixed view of growth potential versus financial risk.",
+  "novelty_assessment": "partial"
+}

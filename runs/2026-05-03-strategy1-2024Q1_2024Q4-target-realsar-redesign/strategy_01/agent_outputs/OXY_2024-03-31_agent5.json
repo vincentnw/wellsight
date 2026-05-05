@@ -1,0 +1,45 @@
+{
+  "ticker": "OXY",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=neutral with mixed news context — positive earnings beat but offset by rig cuts and slowing drilling activity.",
+      "Agent 3 divergence_class=in_line at 0.0% — no edge in forecast compared to consensus.",
+      "Agent 2's revenue forecast of $6.62B reflects stable WTI but limited production growth due to no active drilling."
+    ],
+    "counter_evidence": [
+      "Agent 4 flagged 2 negative catalysts: rig cuts and slowing drilling activity.",
+      "Agent 2 indicates challenges in scaling production without new drilling activity."
+    ],
+    "reasoning_short": "The evidence does not support a strong long position; the forecast is in line with consensus, and while there are some positive earnings indicators, the overall sentiment is neutral with significant negative catalysts that could hinder growth."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 has 2 negative catalysts: rig cuts targeting flat shale production and slowing drilling activity across the US.",
+      "Agent 3 divergence_class=in_line at 0% — the revenue forecast aligns with consensus, indicating no positive surprise.",
+      "Agent 4 novelty_assessment=partial — while there are some positive catalysts, the overall sentiment remains neutral and does not provide a clear edge."
+    ],
+    "counter_evidence": [
+      "Agent 4 has 2 positive catalysts, including a profit beat and some gains in drilling activity in the Permian, but these are overshadowed by the negative catalysts."
+    ],
+    "reasoning_short": "The case against a long position is strong due to the alignment with consensus forecasts, significant negative catalysts indicating operational challenges, and a lack of a clear information edge given the partial novelty assessment."
+  },
+  "arbiter_reasoning": "Bear prevailed. Agent 3 is in_line at 0%, so there is no SAR edge, and Agent 4 is mixed-to-neutral with two material negative catalysts (rig cuts targeting flat shale production and slowing drilling activity) that offset the positive earnings beat and modest Permian gains. The stock lacks a clear asymmetric upside case, so the score stays in no-trade territory at 33.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.4
+  },
+  "conviction_score": 33.0
+}

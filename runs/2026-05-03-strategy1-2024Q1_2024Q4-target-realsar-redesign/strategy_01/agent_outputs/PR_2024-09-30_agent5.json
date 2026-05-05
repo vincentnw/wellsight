@@ -1,0 +1,42 @@
+{
+  "ticker": "PR",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's deterministic revenue forecast of $1.36B is supported by increased drilling activity and stable WTI prices, indicating strong operational performance.",
+      "Agent 3 divergence_class=modest_beat at +10% — forecast is above consensus, suggesting analysts expect better-than-expected results.",
+      "Agent 4 overall_sentiment=bullish with 2 positive catalysts: divestment of non-core assets (2024-09-11) and improved crude production efficiency (2024-08-13), enhancing operational focus and financial strength."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of a solid revenue forecast driven by increased drilling activity, a modest beat above consensus, and supportive bullish news catalysts strongly advocates for a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=modest_beat at +10% — while this is a beat, it indicates only a modest improvement over consensus, suggesting limited upside potential.",
+      "Agent 4 novelty_assessment=partial — the positive news regarding divestment and production efficiency is not entirely new, indicating a lack of information edge.",
+      "Agent 4 has no negative catalysts listed, but the absence of risks does not warrant a long position in a long-only system without compelling evidence."
+    ],
+    "counter_evidence": [
+      "Agent 4 has 2 positive catalysts (divestment of non-core assets and increased production efficiency) but these have been reported previously and may already be priced in."
+    ],
+    "reasoning_short": "While there are some positive catalysts, the modest divergence from consensus and partial novelty assessment suggest limited upside. The lack of new information and the modest improvement in forecasts lead to a strong recommendation against taking a long position."
+  },
+  "arbiter_reasoning": "Bull prevails on balance: Agent 2 shows a constructive operational setup with higher drilling activity, stable WTI, and a strong revenue forecast, while Agent 3 adds a modest beat rather than a miss. Agent 4 provides partial-novelty bullish catalysts that reinforce, rather than merely repeat, the SAR signal; Bear's main objection is that the edge is not highly unique, so confidence is meaningful but not high.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.35
+  },
+  "conviction_score": 66.0
+}

@@ -1,0 +1,45 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=bullish with 3 positive catalysts: record Q2 results (2024-07-23), increased production guidance (2024-07-25), and strategic acquisition of Ameredev (2024-09-19).",
+      "Agent 2's deterministic revenue forecast of $858.6 million reflects stable production and operational performance, supported by steady drilling activity and stable WTI prices.",
+      "Agent 4's news confirms the SAR signal of increased activity, indicating that the positive developments are aligned with operational improvements."
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=in_line at 0.0% — no edge against consensus.",
+      "Agent 4 novelty_assessment=no — the positive news is not new information."
+    ],
+    "reasoning_short": "While the forecast aligns with consensus and there is no new information, the bullish sentiment and multiple positive catalysts suggest potential upside. The strong operational performance and strategic acquisition support a long position, albeit with moderate confidence due to the lack of divergence from consensus."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=in_line at 0% — the forecast aligns with consensus, indicating no edge.",
+      "Agent 4 novelty_assessment=no — the SAR signal is already disclosed in news, suggesting no information advantage.",
+      "Despite positive catalysts, there are no disclosed negative catalysts, but the lack of divergence indicates a stable outlook that may not support a long position."
+    ],
+    "counter_evidence": [
+      "Agent 4 has multiple positive catalysts, including record results and increased production guidance."
+    ],
+    "reasoning_short": "The lack of divergence from consensus and the absence of novel information suggest that the market has already priced in the positive news. Therefore, I recommend against taking a long position."
+  },
+  "arbiter_reasoning": "Bear prevails: Agent 3 is in_line at 0%, so there is no consensus edge, and Agent 4's bullish items are positive but explicitly not novel, meaning the market likely already has them priced in. Agent 2 supports a stable revenue outlook, but that is not enough to overcome the lack of divergence and weak incremental information, so this stays below the long threshold.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.2,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.35
+  },
+  "conviction_score": 38.0
+}

@@ -1,0 +1,45 @@
+{
+  "ticker": "PR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=neutral with only 1 positive catalyst: strong Q4 results and capital-efficient 2024 plan (2024-02-27)",
+      "Agent 3 divergence_class=in_line at 0.0% — no edge over consensus",
+      "Agent 2 revenue forecast of $1.199B reflects constraints with no active drilling and flat production"
+    ],
+    "counter_evidence": [
+      "Agent 4 flagged multiple negative catalysts: full redemption of senior notes (2024-03-06) and secondary public offering (2024-03-04)",
+      "Agent 2 notes that the absence of new drilling activity suggests limited growth potential"
+    ],
+    "reasoning_short": "The evidence does not support a long position as the forecast is in line with consensus, sentiment is neutral, and there are significant negative catalysts impacting liquidity and growth potential."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 has multiple negative catalysts, including a secondary public offering and full redemption of senior notes, which may signal liquidity concerns.",
+      "Agent 3 divergence_class=in_line at 0% — the revenue forecast aligns with consensus, indicating no positive surprise potential.",
+      "Agent 2's outlook highlights no active drilling and flat production, suggesting limited growth prospects."
+    ],
+    "counter_evidence": [
+      "Agent 4 has a positive catalyst regarding strong Q4 results, but this is overshadowed by the financial concerns raised."
+    ],
+    "reasoning_short": "The case against a long position is strong due to liquidity concerns from negative catalysts, a lack of divergence from consensus forecasts, and a challenging operational outlook with no new drilling activity."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 3 is in_line at 0%, so there is no consensus surprise edge, while Agent 2 points to no active drilling and flat production, limiting near-term growth. Agent 4 has one positive catalyst, but it is outweighed by the secondary offering and debt redemption, which create real financing/liquidity concerns and keep this below any long threshold.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.4
+  },
+  "conviction_score": 18.0
+}

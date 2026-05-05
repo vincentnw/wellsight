@@ -1,0 +1,36 @@
+{
+  "ticker": "CRGY",
+  "n_articles_in_window": 20,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Crescent Energy strikes a $2.1 billion deal for SilverBow, enhancing its position in the Eagle Ford.",
+      "article_id": "-energy-nears-2-1-122742100.html",
+      "article_date": "2024-05-16"
+    },
+    {
+      "summary": "Crescent Energy to acquire SilverBow Resources in a $2.1 billion deal, indicating growth through acquisition.",
+      "article_id": "ent-energy-to-acquire-silverbow/",
+      "article_date": "2024-05-17"
+    },
+    {
+      "summary": "Crescent Energy to acquire SilverBow Resources for $2.1 billion, creating a leading growth company in the Eagle Ford.",
+      "article_id": "premier-eagle-ford-position-0001",
+      "article_date": "2024-05-20"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Crescent Point says no major sales or purchases in near future after deal spree, indicating a pause in growth activities.",
+      "article_id": "9a75-3041-4acb-99d6-609f9704b005",
+      "article_date": "2024-05-12"
+    }
+  ],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news highlights Crescent Energy's significant acquisition of SilverBow, which is a positive development not captured by the SAR signal. However, there is a cautionary note from Crescent Point regarding future sales or purchases, suggesting a potential slowdown in growth activities.",
+  "novelty_assessment": "partial"
+}

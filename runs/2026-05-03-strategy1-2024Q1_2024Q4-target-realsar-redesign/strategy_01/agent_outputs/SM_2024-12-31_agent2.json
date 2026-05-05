@@ -1,0 +1,22 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 869000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 869000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 82921.99950227719,
+    "wti_avg": 71.97615384615384,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "With no active drilling sites reported as of the decision date, SM's production outlook for the upcoming quarter appears stagnant. The average WTI price is stable at approximately $72/boe, and the segment fraction indicates a moderate exposure to market fluctuations. Given these factors, the deterministic revenue forecast remains at $869 million, reflecting a cautious stance in a low-activity environment.",
+  "key_drivers": [
+    "no_active_drilling",
+    "stable_wti",
+    "low_activity",
+    "moderate_segment_fraction"
+  ]
+}

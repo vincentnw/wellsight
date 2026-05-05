@@ -1,0 +1,33 @@
+{
+  "ticker": "PR",
+  "decision_date_T": "2024-07-23",
+  "fiscal_quarter_end": "2024-06-30",
+  "n_newly_active": 0,
+  "n_continuously_active": 1,
+  "n_idle": 4,
+  "absolute_active": 1,
+  "share_active": 0.2,
+  "relative_activity_delta": 1.0,
+  "pad_classifications": [
+    {
+      "pad_id": "30015468030000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015477750000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30025413470000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015468040000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015481620000",
+      "state": "continuously_active"
+    }
+  ]
+}

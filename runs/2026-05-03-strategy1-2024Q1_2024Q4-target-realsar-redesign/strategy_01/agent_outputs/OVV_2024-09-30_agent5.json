@@ -1,0 +1,46 @@
+{
+  "ticker": "OVV",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=neutral but includes a positive catalyst: increased 2024 oil and gas production target due to unexpected Permian success (2024-08-01)",
+      "Agent 4 positive catalyst: Ovintiv attracts 44 hedge funds in Q2 surge due to capital efficiency and growth (2024-09-25)",
+      "Agent 4 sar_complement indicates alignment with SAR signal due to increased production target, despite uncertainty from Uinta Basin sale exploration"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=in_line at -3.33% — forecast is slightly below consensus",
+      "Agent 2 indicates low drilling activity, suggesting limited production growth",
+      "Agent 4 flagged negative catalysts regarding the potential sale of Uinta Basin operations, introducing uncertainty"
+    ],
+    "reasoning_short": "While the forecast is slightly below consensus and drilling activity is low, the positive catalysts from increased production targets and hedge fund interest provide a supportive backdrop. The alignment with SAR signals suggests potential upside, warranting a cautious long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 has 2 negative catalysts: exploration of sale of Uinta Basin oil operations and weighing sale for up to $2bn, indicating potential divestment and operational uncertainty.",
+      "Agent 3 divergence_class=in_line at -3.33% — the revenue forecast is essentially aligned with consensus, suggesting no edge.",
+      "Agent 2 indicates low drilling activity and reduced operational momentum, which may hinder future production growth."
+    ],
+    "counter_evidence": [
+      "Agent 4 has positive catalysts related to increased production targets due to Permian success, but these are overshadowed by the negative catalysts."
+    ],
+    "reasoning_short": "The case against a long position is strong due to significant negative catalysts regarding asset sales, a lack of divergence from consensus forecasts, and low drilling activity indicating reduced growth potential."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 3 is in_line at -3.33%, so there is no meaningful consensus divergence edge, and Agent 2 shows low drilling activity that limits near-term production upside. Agent 4 does surface some positive catalysts, but they are offset by the Uinta Basin sale uncertainty and are not strong enough to justify capital deployment, so this remains a no_trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.35
+  },
+  "conviction_score": 34.0
+}

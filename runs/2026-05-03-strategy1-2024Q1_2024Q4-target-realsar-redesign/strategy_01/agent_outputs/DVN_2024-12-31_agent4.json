@@ -1,0 +1,31 @@
+{
+  "ticker": "DVN",
+  "n_articles_in_window": 75,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Devon Energy ups Delaware Basin ante with 21-well pad, secondary zones.",
+      "article_id": "well-pad-secondary-zones-211014",
+      "article_date": "2024-11-10"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Devon Energy CEO Rick Muncrief plans to retire; Clay Gaspar will step into his role.",
+      "article_id": "ceo-rick-muncrief-140508903.html",
+      "article_date": "2024-12-10"
+    },
+    {
+      "summary": "Jim Cramer on Devon Energy: I'm holding off for now because oil is so weak.",
+      "article_id": "-because-oil-is-so-weak-1410350/",
+      "article_date": "2024-12-19"
+    }
+  ],
+  "overall_sentiment": "bearish",
+  "sar_complement": "The news highlights a significant operational development with the new well pad, which could enhance production capacity. However, the CEO's retirement introduces leadership uncertainty, and external commentary on oil weakness suggests a challenging market environment, which is not reflected in the SAR signal.",
+  "novelty_assessment": "partial"
+}

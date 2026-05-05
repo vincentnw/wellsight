@@ -1,0 +1,31 @@
+{
+  "ticker": "PR",
+  "n_articles_in_window": 11,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Permian Resources Corporation announces pricing of secondary public offering of Class A common stock.",
+      "article_id": "f-Class-A-Common-Stock-46706776/",
+      "article_date": "2024-05-13"
+    },
+    {
+      "summary": "Investors are impressed by Permian Resources Corporation's four-pronged bullish case.",
+      "article_id": "ur-pronged-bullish-case-1316587/",
+      "article_date": "2024-06-22"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Lawmakers are examining shale collusion allegations affecting oil and gas leases on federal lands.",
+      "article_id": "eye-shale-collusion-allegations/",
+      "article_date": "2024-07-16"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news confirms ongoing investor interest in Permian Resources, as indicated by the secondary offering and bullish investor sentiment. However, the scrutiny over shale collusion allegations introduces potential regulatory risks that are not reflected in the SAR signal.",
+  "novelty_assessment": "partial"
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 558450000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 620500000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 47189.27831204597,
+    "wti_avg": 81.27923076923078,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity has shown a significant decline, with no active sites reported at the decision date, reflecting a relative activity delta of -1.5. This lack of drilling activity, combined with a WTI average price of approximately $81.28/boe and a segment fraction of 0.55, suggests that revenue for the upcoming quarter is likely to be constrained. The deterministic revenue forecast of $558.45 million indicates a cautious outlook, as the company navigates through a period of reduced operational activity.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "low_production",
+    "segment_fraction_effect",
+    "no_active_sites"
+  ]
+}

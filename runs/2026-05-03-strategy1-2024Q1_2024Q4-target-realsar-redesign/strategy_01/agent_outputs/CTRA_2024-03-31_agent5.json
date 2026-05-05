@@ -1,0 +1,45 @@
+{
+  "ticker": "CTRA",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=neutral with only 2 positive catalysts: new public well installation (2024-03-20) and 30 permits approved (2024-03-19)",
+      "Agent 3 divergence_class=in_line at 0.0% — no edge against consensus",
+      "Agent 2's revenue forecast of $1.41B reflects a challenging environment with no active drilling and limited production growth"
+    ],
+    "counter_evidence": [
+      "Agent 4 flagged a significant negative catalyst: Coterra Energy slashing Marcellus budget by 55% and production by 6% (2024-02-26)",
+      "The lack of new drilling activity suggests limited growth potential for the upcoming quarter"
+    ],
+    "reasoning_short": "The evidence indicates a neutral sentiment with no divergence from consensus and significant operational challenges, including a major budget cut. The positive catalysts do not outweigh the negative outlook, leading to a decision against advocating a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 has a significant negative catalyst: Coterra Energy is slashing its Marcellus budget by 55% and reducing production by 6%, indicating operational challenges.",
+      "Agent 3 divergence_class=in_line at 0% — the revenue forecast aligns with consensus, suggesting no positive surprise potential.",
+      "Agent 4 novelty_assessment=partial — while there are some positive catalysts, the major negative news regarding budget cuts undermines any potential upside."
+    ],
+    "counter_evidence": [
+      "Agent 4 has positive catalysts such as new well installations and permit approvals, but these do not offset the significant budget cuts."
+    ],
+    "reasoning_short": "The case against a long position is strong due to the substantial budget cuts and production reductions, the lack of divergence from consensus forecasts, and the partial novelty of the news, which indicates limited information edge."
+  },
+  "arbiter_reasoning": "Bear prevails: Agent 3 is in_line at 0% with no SAR edge, and Agent 4's positive catalysts are only partial/neutral while the major disclosed catalyst is negative (55% Marcellus budget cut and 6% production reduction). Agent 2 also points to no active drilling and limited near-term growth, so there is insufficient asymmetric upside to justify capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.45
+  },
+  "conviction_score": 18.0
+}

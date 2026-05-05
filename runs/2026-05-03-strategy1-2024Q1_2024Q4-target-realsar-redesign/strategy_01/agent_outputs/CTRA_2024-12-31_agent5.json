@@ -1,0 +1,46 @@
+{
+  "ticker": "CTRA",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=neutral but includes 3 positive catalysts: acquisition of Permian assets for $3.9 billion (2025-01-28), completion of the same acquisition (2025-01-28), and automation of fracking with AI (2025-01-09).",
+      "Agent 4 sar_complement indicates that the acquisitions align with SAR signals of activity, suggesting potential growth despite current challenges.",
+      "Agent 3 divergence_class=modest_miss at -10% — while this indicates a miss, it is not a significant deviation that would suggest a drastic downturn."
+    ],
+    "counter_evidence": [
+      "Agent 2 revenue forecast of $1.28B reflects a challenging drilling environment with declining drilling activity and no active sites.",
+      "Agent 4 flagged a negative catalyst: Coterra's $1.5 billion new debt to finance acquisitions, raising concerns about financial leverage.",
+      "Agent 3 confidence is medium, indicating uncertainty in the forecast accuracy."
+    ],
+    "reasoning_short": "While there are challenges indicated by Agent 2's revenue forecast and concerns about new debt, the positive catalysts from Agent 4 regarding significant acquisitions and technological advancements suggest potential for growth. The modest miss in forecast divergence does not negate the overall positive outlook from the acquisitions, supporting a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=modest_miss at -10% — the revenue forecast is below consensus, indicating weaker performance expectations.",
+      "Agent 4 has a significant negative catalyst: Coterra's announcement of $1.5 billion in new debt, which raises concerns about financial leverage.",
+      "Agent 2's outlook indicates a challenging drilling environment with no active drilling sites, suggesting constrained revenue potential."
+    ],
+    "counter_evidence": [
+      "Agent 4 has several positive catalysts related to acquisitions, but these are overshadowed by the financial risks and lack of immediate production activity."
+    ],
+    "reasoning_short": "The case against a long position is strong due to a modest miss in revenue forecasts, significant new debt raising financial concerns, and a challenging operational environment with no active drilling sites. Overall, the risks outweigh the potential positives."
+  },
+  "arbiter_reasoning": "Bear prevails: Agent 3 is a modest_miss at -10%, Agent 2 points to declining drilling activity and no active sites, and Agent 4's most important novelty is mixed rather than cleanly bullish because the acquisition catalysts are offset by the $1.5B debt raise. The positive Permian deal/news flow is real, but it looks more like strategic repositioning than an immediate, risk-adjusted edge, so this stays below the threshold for capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.3
+  },
+  "conviction_score": 32.0
+}

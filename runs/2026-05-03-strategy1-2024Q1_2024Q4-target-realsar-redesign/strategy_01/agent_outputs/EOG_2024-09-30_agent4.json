@@ -1,0 +1,36 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 20,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "EOG tells conference attendees it is now ramping up Ohio Utica drilling.",
+      "article_id": "-ramping-up-ohio-utica-drilling/",
+      "article_date": "2024-09-04"
+    },
+    {
+      "summary": "EOG wins contract to frack under OH Keen Wildlife Area for $212K.",
+      "article_id": "ohs-keen-wildlife-area-for-212k/",
+      "article_date": "2024-08-13"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "EOG Resources reports second quarter 2024 results, indicating a modest miss in revenue forecasts.",
+      "article_id": "rter-2024-results-302212832.html",
+      "article_date": "2024-08-01"
+    },
+    {
+      "summary": "EOG's revenue forecast shows a divergence of -10% from consensus estimates.",
+      "article_id": "rter-2024-results-302212832.html",
+      "article_date": "2024-08-01"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news indicates EOG is ramping up drilling activity in Ohio, which aligns with the SAR signal of reduced activity. However, the revenue miss and divergence from consensus forecasts suggest operational challenges that are not captured by the SAR alone.",
+  "novelty_assessment": "partial"
+}

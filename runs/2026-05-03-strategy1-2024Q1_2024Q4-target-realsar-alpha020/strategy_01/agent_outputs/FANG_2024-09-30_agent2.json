@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 2248766400.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.2,
+    "consensus_anchor_usd": 2342465000.0,
+    "drilling_signal_raw": -0.2,
+    "drilling_signal_clipped": -0.2,
+    "production_boe_d": 358794.1197475078,
+    "wti_avg": 74.05846153846154,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback Energy's drilling activity as of October 2024 shows only 2 active sites, with no newly active pads and a relative activity delta of -0.5, indicating a notable decline in operational momentum heading into the September 2024 quarter. Despite full exposure to the Permian segment and stable realized pricing at a 7% discount to WTI, the low and stagnant satellite-derived activity suggests constrained production growth. This aligns with the deterministic revenue forecast of $2.25B, which reflects reduced drilling intensity compared to recent trends.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "no_new_pads",
+    "stable_wti",
+    "pure_play_permian"
+  ]
+}

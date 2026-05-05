@@ -1,0 +1,31 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 11,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Ovintiv explores $2 billion Uinta basin business sale to focus on Permian shale operations",
+      "article_id": "cus-on-permian-shale-operations/",
+      "article_date": "2024-08-21"
+    },
+    {
+      "summary": "US oil, gas M & A nears 2023 record, focus shifts away from Permian, Rystad says",
+      "article_id": "s-away-from-permian-rystad-says/",
+      "article_date": "2024-09-05"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Ovintiv weighs sale of Uinta Basin oil operations for up to $2bn",
+      "article_id": "ntiv-weighs-oil-operations-sale/",
+      "article_date": "2024-08-22"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news indicates that Ovintiv is considering divesting its Uinta Basin operations, which may reflect a strategic shift towards the Permian. This aligns with the SAR signal showing reduced activity but adds context regarding potential asset sales that could impact future operations. The M&A activity reported is positive but does not directly relate to SM's operations.",
+  "novelty_assessment": "partial"
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 578000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.2,
+    "consensus_anchor_usd": 578000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 18136.24452063027,
+    "wti_avg": 80.50999999999999,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY shows no active drilling sites at decision date, with a 30% decline in relative activity compared to recent trends, indicating stalled operational momentum heading into Q1 2024. Despite a stable WTI environment near $80.50 and a realized price discount typical for its segment, the lack of current drilling activity suggests limited near-term production growth. With only 20% exposure to the actively monitored segment, the deterministic revenue forecast holds at $578M, anchored to consensus expectations rather than current drilling signals.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "low_segment_exposure",
+    "stable_wti",
+    "consensus_anchored_forecast"
+  ]
+}

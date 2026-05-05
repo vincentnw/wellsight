@@ -1,0 +1,22 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1225000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1225000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 178086.97747627142,
+    "wti_avg": 81.27923076923078,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "With only one active drilling site and a relative activity delta indicating no new activity, PR's production outlook remains stable but limited. The average WTI price of approximately $81.28 per barrel supports a solid revenue forecast of $1.23 billion, reflecting the company's full exposure to the segment. The lack of new drilling signals suggests a cautious approach to expansion, which may stabilize revenues but limit growth potential in the upcoming quarter.",
+  "key_drivers": [
+    "limited_drilling_activity",
+    "stable_wti",
+    "single_active_site",
+    "full_segment_exposure"
+  ]
+}

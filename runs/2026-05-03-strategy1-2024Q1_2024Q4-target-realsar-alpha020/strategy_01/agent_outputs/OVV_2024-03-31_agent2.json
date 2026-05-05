@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2273177000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.2,
+    "consensus_anchor_usd": 2273177000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 172373.11467841838,
+    "wti_avg": 80.50999999999999,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows zero active drilling sites in the satellite-derived SAR summary as of the decision date, with no newly or continuously active pads, indicating a pause in drilling activity heading into Q1 2024. Despite this inactivity, the deterministic revenue forecast holds at $2.27B, supported by stable WTI prices near $80.50 and a realized price differential at a 10% discount to benchmark. With only half of production exposed to current drilling dynamics—segment_fraction of 0.5—revenue remains anchored to prior performance rather than near-term operational changes. The lack of current drilling momentum suggests limited production growth in the near term.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "stable_wti",
+    "half_segment_exposure",
+    "paused_operations",
+    "consensus_anchored_forecast"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "OVV",
+  "n_articles_in_window": 11,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [],
+  "negative_catalysts": [
+    {
+      "summary": "CEO states Ovintiv passes on Permian prices for more Montney condensate",
+      "article_id": "s-more-montney-condensate-211096",
+      "article_date": "2024-11-17"
+    }
+  ],
+  "overall_sentiment": "bearish",
+  "sar_complement": "The news indicates a strategic decision by Ovintiv to forgo potentially lucrative Permian prices, which may suggest operational challenges or a shift in focus that is not captured by the SAR signal alone. This could imply a negative outlook on their current operational strategy.",
+  "novelty_assessment": "yes"
+}

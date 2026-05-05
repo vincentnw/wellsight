@@ -1,0 +1,46 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 36,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Diamondback Acquires Endeavor In $26B Permian Oil Deal, With Read-Through For Vital Energy",
+      "article_id": "l-deal-read-through-vital-energy",
+      "article_date": "2024-02-20"
+    },
+    {
+      "summary": "US Shale Drillers Seek to Power Oil Patch With Small Nuclear Reactors",
+      "article_id": "small-nuclear-reactors-1.2053759",
+      "article_date": "2024-04-01"
+    },
+    {
+      "summary": "U.S. shale producers to reduce Permian drilling emissions, increase reliability with nuclear reactors",
+      "article_id": "liability-with-nuclear-reactors",
+      "article_date": "2024-04-01"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Is U.S. Shale Production Finally Nearing Its Peak?",
+      "article_id": "on-Finally-Nearing-Its-Peak.html",
+      "article_date": "2024-03-22"
+    },
+    {
+      "summary": "America Oil Power Might Be Near Its Peak",
+      "article_id": "il-power-might-be-near-its-peak/",
+      "article_date": "2024-02-21"
+    },
+    {
+      "summary": "$200 Billion of M&A Wasn't Enough in US Oil Patch",
+      "article_id": "-a-wasn-t-enough-in-us-oil-patch",
+      "article_date": "2024-04-10"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news highlights a significant acquisition by Diamondback, which could enhance its market position, alongside initiatives to reduce emissions through nuclear power. However, concerns about the peak of U.S. shale production and the inadequacy of M&A activity to stimulate growth introduce negative sentiment. The SAR signal indicates a decline in activity, which aligns with the concerns raised in the news.",
+  "novelty_assessment": "partial"
+}

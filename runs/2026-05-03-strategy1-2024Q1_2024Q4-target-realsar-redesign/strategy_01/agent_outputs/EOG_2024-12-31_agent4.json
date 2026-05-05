@@ -1,0 +1,14 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 10,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [],
+  "negative_catalysts": [],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news does not provide any clear positive or negative catalysts beyond the SAR signal, which indicates no current activity. The revenue forecast shows a modest miss compared to consensus, but this is not elaborated upon in the articles.",
+  "novelty_assessment": "no"
+}

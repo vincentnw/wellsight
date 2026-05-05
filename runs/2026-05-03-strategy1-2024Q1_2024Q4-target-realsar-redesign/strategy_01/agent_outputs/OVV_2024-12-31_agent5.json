@@ -1,0 +1,42 @@
+{
+  "ticker": "OVV",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 2 revenue forecast of $2.06B is based on stable drilling activity and favorable pricing conditions.",
+      "Agent 3 divergence_class=in_line at +3.33% — forecast is only slightly above consensus."
+    ],
+    "counter_evidence": [
+      "Agent 4 overall_sentiment=bearish with no positive catalysts identified.",
+      "Agent 4 flagged a negative catalyst: CEO's statement about passing on Permian prices for Montney condensate, indicating potential operational challenges."
+    ],
+    "reasoning_short": "While there is a stable revenue forecast based on operational activity, the overall sentiment is bearish with no positive catalysts and a concerning operational strategy shift. The evidence does not support a strong long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 has a negative catalyst: CEO states Ovintiv passes on Permian prices for more Montney condensate, indicating potential operational challenges.",
+      "Agent 3 divergence_class=in_line at +3.33% — the forecast is essentially aligned with consensus, providing no edge for a long position.",
+      "Agent 4 overall_sentiment is bearish, which contradicts the bullish outlook suggested by the revenue forecast."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The case for a long position is weak due to a significant negative catalyst regarding operational strategy, a consensus divergence that offers no edge, and an overall bearish sentiment. Strong recommendation against taking a long position."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 3 is only in_line at +3.33%, so there is no SAR edge, and Agent 4 is explicitly bearish with a novel negative catalyst: management is passing on Permian prices for Montney condensate, suggesting a potentially adverse strategic tradeoff. Agent 2's stable drilling and favorable pricing help the revenue case, but they are not enough to overcome the lack of divergence and the new negative news flow.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.45
+  },
+  "conviction_score": 22.0
+}

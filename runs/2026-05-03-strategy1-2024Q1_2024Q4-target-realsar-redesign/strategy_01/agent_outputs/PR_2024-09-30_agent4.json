@@ -1,0 +1,25 @@
+{
+  "ticker": "PR",
+  "n_articles_in_window": 9,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "APA to divest non-core assets in Permian Basin for $950m",
+      "article_id": "t-non-core-assets-083627077.html",
+      "article_date": "2024-09-11"
+    },
+    {
+      "summary": "US shale companies produce more crude using fewer rigs",
+      "article_id": "uce-more-crude-using-fewer-rigs/",
+      "article_date": "2024-08-13"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news supports the SAR signal of increased activity, particularly with the divestment of non-core assets which may enhance operational focus and financial strength. The report on increased crude production efficiency adds a positive operational context that is not captured by satellite data alone.",
+  "novelty_assessment": "partial"
+}

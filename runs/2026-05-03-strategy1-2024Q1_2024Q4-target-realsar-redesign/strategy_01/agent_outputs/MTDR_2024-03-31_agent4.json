@@ -1,0 +1,36 @@
+{
+  "ticker": "MTDR",
+  "n_articles_in_window": 8,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Matador Resources Stock shows profitable oil growth and raises target.",
+      "article_id": "growth-raising-target-mtdr-stock",
+      "article_date": "2024-04-09"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Matador Resources announces pricing of public offering of common stock.",
+      "article_id": "ng+of+Common+Stock/22975838.html",
+      "article_date": "2024-03-26"
+    },
+    {
+      "summary": "Matador Resources prices upsized offering of $900 million of senior notes due 2032.",
+      "article_id": "-Senior-Notes-Due-2032-46292656/",
+      "article_date": "2024-03-26"
+    },
+    {
+      "summary": "Matador Resources announces expiration and results of cash tender offer for outstanding senior notes due 2026.",
+      "article_id": "r-for-Any-and-All-of-I-46337029/",
+      "article_date": "2024-04-02"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news indicates a positive outlook on profitable oil growth, which aligns with the SAR signal. However, the announcements regarding public offerings and senior notes suggest potential dilution and increased debt, which could be seen as negative factors not captured by the SAR alone.",
+  "novelty_assessment": "partial"
+}

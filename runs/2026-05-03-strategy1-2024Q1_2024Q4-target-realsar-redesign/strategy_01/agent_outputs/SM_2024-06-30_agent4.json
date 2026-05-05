@@ -1,0 +1,35 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 21,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "SM Energy partners with Northern Oil and Gas to acquire XCL Resource assets for $2.55 billion.",
+      "article_id": "-northern-oil-gas-132605715.html",
+      "article_date": "2024-06-28"
+    },
+    {
+      "summary": "SM Energy nears acquisition of XCL Resources, valued at approximately $3 billion.",
+      "article_id": "deal-for-xcl-resources-1.2090002",
+      "article_date": "2024-06-27"
+    },
+    {
+      "summary": "SM Energy announces a private offering of $750 million of senior notes due 2029 and $750 million due 2032.",
+      "article_id": "DUE-2029-AND-750-MILLI-47416683/",
+      "article_date": "2024-07-18"
+    },
+    {
+      "summary": "NOG announces joint acquisition with SM Energy, entering the Uinta Basin with the largest transaction in company history.",
+      "article_id": "lezard.com/en/news-21433992.html",
+      "article_date": "2024-06-27"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news highlights significant acquisition activity by SM Energy, indicating growth potential that is not captured by the SAR signal alone. The private offering of senior notes suggests a strategy to finance expansion, which is a positive development. There are no negative catalysts identified in the news.",
+  "novelty_assessment": "yes"
+}

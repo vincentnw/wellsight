@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 804000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.2,
+    "consensus_anchor_usd": 804000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 117627.12038977764,
+    "wti_avg": 81.64307692307692,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources shows zero active drilling sites at decision date, with a 70% decline in relative activity compared to recent quarters, indicating a significant drawdown in operational momentum heading into Q2 2024. Despite stable WTI prices near $81.64 and full exposure to the liquids-rich segment, the absence of newly or continuously active pads suggests constrained production growth. Revenue is forecast at $804M, anchored to consensus estimates, but near-term drilling inactivity presents a headwind to volume expansion.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "negative_drilling_delta",
+    "stable_wti",
+    "full_segment_exposure",
+    "production_momentum_pause"
+  ]
+}

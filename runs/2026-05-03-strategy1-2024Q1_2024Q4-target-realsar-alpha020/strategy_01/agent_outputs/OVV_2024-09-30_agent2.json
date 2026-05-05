@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1836800000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.2,
+    "consensus_anchor_usd": 1968000000.0,
+    "drilling_signal_raw": -0.3333333333333333,
+    "drilling_signal_clipped": -0.3333333333333333,
+    "production_boe_d": 151416.52933002802,
+    "wti_avg": 74.05846153846154,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "Ovintiv shows minimal satellite-detected drilling activity with only one continuously active pad and no new activity at decision date, reflecting a 50% drop in relative activity. This suggests constrained near-term production growth, particularly in non-Permian segments where the company has partial exposure. With WTI averaging around $74 and realized prices at a 10% discount, revenue is expected to reflect stable but limited output. The deterministic forecast of $1.84B aligns with reduced operational momentum and moderate commodity conditions.",
+  "key_drivers": [
+    "negative_drilling_delta",
+    "low_absolute_activity",
+    "partial_segment_exposure",
+    "moderate_wti",
+    "no_new_pads"
+  ]
+}

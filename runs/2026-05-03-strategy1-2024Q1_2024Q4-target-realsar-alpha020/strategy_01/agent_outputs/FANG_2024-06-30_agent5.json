@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags stable_drilling_activity with 3 continuously active sites indicating sustained production",
+      "Agent 2 reports deterministic revenue forecast of $2.39B for June 2024, above consensus implied by Agent 3's modest_beat at +10%",
+      "Agent 4 reports gdelt_disclosed=false with n_articles=0, indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Agent 2 notes no new pad activation and activity delta of 1.0, suggesting lack of growth acceleration"
+    ],
+    "reasoning_short": "Stable drilling operations in the high-margin Permian basin under strong WTI pricing support reliable earnings delivery. A clean news environment and a modest expected beat against consensus justify a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's stable drilling activity and consistent production suggest a stable, but not growing, operation, which may not justify a long position",
+      "Agent 2's full Permian exposure and favorable WTI environment are already priced in, with no new pad activation to drive growth",
+      "Agent 3's medium confidence and modest beat divergence class indicate a cautious outlook, with only 10% above consensus"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Stable operations and favorable environment are already reflected in the price, with no catalyst for growth. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull prevailed with evidence of stable drilling activity, a deterministic revenue forecast above consensus (modest_beat at +10%), and no GDELT disclosure, supporting a clean news environment. However, conviction is tempered to medium due to Agent 3's medium confidence and lack of growth catalysts (no new pad activation, activity delta of 1.0), which aligns with the modest_beat classification. No strong contrary GDELT signal from Bear prevents downgrade to low.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.1
+  }
+}

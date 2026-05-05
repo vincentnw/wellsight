@@ -1,0 +1,35 @@
+{
+  "ticker": "CRGY",
+  "n_articles_in_window": 8,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Pembina Gas Infrastructure signs $400M deal to buy midstream assets from Veren",
+      "article_id": "a-gas-infrastructure-veren-deal/",
+      "article_date": "2024-09-09"
+    },
+    {
+      "summary": "Pembina signs $400M deal to buy midstream assets from Veren",
+      "article_id": "ream-assets-from-veren-1.7031042",
+      "article_date": "2024-09-09"
+    },
+    {
+      "summary": "Pembina Gas Infrastructure signs $400M deal to buy midstream assets from Veren",
+      "article_id": "stream-assets-from-veren-9493239",
+      "article_date": "2024-09-09"
+    },
+    {
+      "summary": "Pembina Gas Infrastructure signs $400M deal to buy midstream assets from Veren",
+      "article_id": "stream-assets-from-veren-9493237",
+      "article_date": "2024-09-09"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news highlights a significant acquisition by Pembina Gas Infrastructure, which is a positive development not reflected in the SAR signal. The acquisition could enhance operational capacity and market position. The SAR indicates a decline in activity, but the acquisition suggests strategic growth despite this.",
+  "novelty_assessment": "yes"
+}

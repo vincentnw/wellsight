@@ -1,0 +1,45 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=bullish with 3 positive catalysts: acquisition of XCL Resource assets (2024-06-28), nearing acquisition of XCL Resources (2024-06-27), and a private offering of senior notes (2024-07-18).",
+      "Agent 4 novelty_assessment=yes — the acquisition activity indicates growth potential not captured by the SAR signal.",
+      "Agent 2 revenue forecast of $558.45 million, while cautious, reflects a strategic positioning that could benefit from the acquisitions."
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=modest_miss at -10% — forecast is below consensus, indicating potential revenue challenges.",
+      "Agent 2 notes declining drilling activity and no active sites, which could constrain revenue growth."
+    ],
+    "reasoning_short": "Despite a modest miss in revenue forecast and declining drilling activity, the bullish sentiment and significant acquisition activity suggest growth potential. The positive catalysts from Agent 4 indicate a strategic shift that could enhance long-term value, warranting a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=modest_miss at -10% — the revenue forecast is significantly below consensus, indicating potential weakness.",
+      "Agent 2 highlights declining drilling activity and no active sites, suggesting constrained revenue growth.",
+      "Agent 4 novelty_assessment=yes — while there are positive catalysts, they do not provide a clear edge as the market may have already priced in these developments."
+    ],
+    "counter_evidence": [
+      "Agent 4 has several positive catalysts related to acquisitions and financing, but these may not translate into immediate revenue growth."
+    ],
+    "reasoning_short": "The modest miss in revenue forecast and declining operational activity raise significant concerns. Despite some positive news, the overall outlook remains cautious, warranting a recommendation against a long position."
+  },
+  "arbiter_reasoning": "Bull prevails, but only moderately: Agent 4 brings 3 substantive and novel positive catalysts around the XCL acquisition and financing, which create real growth optionality not captured by SAR. However, Agent 3 is still a modest_miss at -10% and Agent 2 flags declining drilling activity and no active sites, so the near-term fundamental setup is mixed rather than clean. Score 63 reflects a medium-conviction long driven primarily by the news-driven catalyst stack, with the bear case still materially limiting upside confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.2,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.55
+  },
+  "conviction_score": 63.0
+}

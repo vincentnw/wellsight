@@ -1,0 +1,45 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 3 divergence_class=modest_miss at -10% — forecast below consensus",
+      "Agent 4 overall_sentiment=neutral with no strong positive catalysts",
+      "Agent 2's deterministic revenue forecast of $1.89B reflects a cautious outlook due to declining drilling activity"
+    ],
+    "counter_evidence": [
+      "Agent 4 flagged multiple negative catalysts regarding U.S. shale production peaking",
+      "Agent 2 notes production constraints and no new drilling sites, limiting growth potential"
+    ],
+    "reasoning_short": "The evidence indicates a modest miss in forecast compared to consensus and a neutral sentiment with no strong positive catalysts. The declining drilling activity and concerns about U.S. shale production peak further weaken the long case. Therefore, I recommend no trade."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=modest_miss at -10% — the forecast is significantly below consensus, indicating weaker expected performance.",
+      "Agent 4 has multiple negative catalysts, including concerns about U.S. shale production nearing its peak and inadequate M&A activity to stimulate growth.",
+      "Agent 4 novelty_assessment=partial — while there are some new developments, the overall sentiment remains neutral, suggesting no strong edge."
+    ],
+    "counter_evidence": [
+      "Agent 4 has positive catalysts related to acquisitions and emissions reduction initiatives, but these do not outweigh the negative sentiment regarding production peaks."
+    ],
+    "reasoning_short": "The bearish case is strong due to a significant miss in forecast divergence, multiple negative catalysts regarding production peaks, and a lack of a clear information edge. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 3 shows a modest_miss (-10%), Agent 2 points to declining drilling activity with no new sites and constrained production, and Agent 4 is only partially novel with mixed-to-neutral sentiment plus multiple negative peak-production headlines. The positive M&A/nuclear items are not strong enough to offset the operational slowdown, so this stays below the threshold for capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.25
+  },
+  "conviction_score": 22.0
+}

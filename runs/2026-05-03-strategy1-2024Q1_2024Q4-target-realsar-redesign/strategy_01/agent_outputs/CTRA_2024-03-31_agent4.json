@@ -1,0 +1,31 @@
+{
+  "ticker": "CTRA",
+  "n_articles_in_window": 10,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "PA Water planning to install new public well in Susquehanna County",
+      "article_id": "ng-install-public-212334524.html",
+      "article_date": "2024-03-20"
+    },
+    {
+      "summary": "30 permits approved for shale gas well pads",
+      "article_id": "e53b-11ee-8c98-138b0319041e.html",
+      "article_date": "2024-03-19"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Coterra Energy Slashing Marcellus Budget 55 %, Production by 6 %",
+      "article_id": "ellus-budget-55-production-by-6/",
+      "article_date": "2024-02-26"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news indicates new well installations and permit approvals, which could support future production. However, the significant budget cut and production reduction in the Marcellus region presents a negative outlook that is not reflected in the SAR data, suggesting operational challenges.",
+  "novelty_assessment": "partial"
+}

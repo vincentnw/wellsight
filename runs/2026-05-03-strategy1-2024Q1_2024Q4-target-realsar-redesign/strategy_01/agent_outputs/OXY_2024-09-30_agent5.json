@@ -1,0 +1,41 @@
+{
+  "ticker": "OXY",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 2 revenue forecast of $6.47B reflects a challenging environment with no active drilling and declining activity."
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=modest_miss at -10% — forecast below consensus.",
+      "Agent 4 overall_sentiment=neutral with no positive catalysts identified."
+    ],
+    "reasoning_short": "The revenue forecast indicates significant challenges with no active drilling and a modest miss compared to consensus. Additionally, the lack of positive news catalysts and neutral sentiment does not support a strong long case. Declining to advocate for a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=modest_miss at -10% — the revenue forecast is significantly below consensus, indicating potential weakness.",
+      "Agent 2 highlights key drivers such as no active drilling and declining activity, which pose serious risks to revenue growth.",
+      "Agent 4 novelty_assessment=partial — the lack of new information suggests no edge in the trade."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The revenue forecast is a modest miss compared to consensus, driven by significant operational challenges like no active drilling and declining activity. The partial novelty assessment indicates that the market may already be aware of these issues, reinforcing a strong recommendation against a long position."
+  },
+  "arbiter_reasoning": "Bear prevails: Agent 3 shows a modest_miss at -10%, while Agent 2 points to no active drilling and declining activity, both consistent with a weaker near-term setup. Agent 4 adds no offsetting catalysts and no news edge, so there is insufficient support for capital deployment. The score is kept very low because the evidence is negative and the signal lacks novelty or upside surprise.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.2
+  },
+  "conviction_score": 12.0
+}

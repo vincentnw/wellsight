@@ -1,0 +1,46 @@
+{
+  "ticker": "EOG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=neutral but includes 2 positive catalysts: new exploration in the Pearsall formation (2024-07-17) and robust rig activity (2024-07-15).",
+      "Agent 2 revenue forecast of $5.96B is stable despite current inactivity, indicating resilience in pricing.",
+      "Agent 4 novelty_assessment=partial — while there are challenges, the new exploration efforts could provide upside potential."
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=in_line at 0.0% — no edge against consensus.",
+      "Agent 2 notes significant activity decline of 70% and no active drilling, which raises concerns about production stagnation.",
+      "Agent 4 flagged multiple negative catalysts indicating industry challenges, including low rig counts and economic pressures."
+    ],
+    "reasoning_short": "While the forecast aligns with consensus and there are notable challenges, the positive catalysts from new exploration efforts and stable pricing conditions suggest potential upside. The case for a long position is supported by the exploration initiatives, despite the overall neutral sentiment."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 has multiple negative catalysts: rising rig count near three-year lows, inflation and interest rates impacting drilling activity, and Texas drilling at a two-year low.",
+      "Agent 3 divergence_class=in_line at 0% — the revenue forecast aligns with consensus, indicating no positive surprise potential.",
+      "Agent 2 highlights a significant activity decline of 70% with no active drilling, suggesting potential production stagnation."
+    ],
+    "counter_evidence": [
+      "Agent 4 has some positive catalysts related to new exploration in the Pearsall formation and robust rig activity, but these are overshadowed by the broader negative context."
+    ],
+    "reasoning_short": "The case against a long position is strong due to significant negative catalysts impacting drilling activity, a lack of divergence from consensus forecasts, and a concerning outlook on production stagnation. Overall sentiment remains neutral, but the risks are pronounced."
+  },
+  "arbiter_reasoning": "Bear prevailed: Agent 3 is in_line at 0%, so there is no consensus surprise, while Agent 2 shows a 70% activity decline and no active drilling, which is a real fundamental headwind. Agent 4 has a couple of positive catalysts, but they are only partial-novelty and are outweighed by multiple negative drilling/activity articles, leaving insufficient edge for capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.35
+  },
+  "conviction_score": 34.0
+}

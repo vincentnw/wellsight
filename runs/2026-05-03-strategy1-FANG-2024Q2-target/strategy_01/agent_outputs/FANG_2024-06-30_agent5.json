@@ -1,0 +1,43 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=neutral with 0 positive catalysts — no supportive news tailwinds"
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=in_line at +5.0% — minimal beat, no material upside surprise priced in",
+      "Agent 2 outlook shows stable_drilling_activity with relative activity delta of 1.0 — no operational expansion signal"
+    ],
+    "reasoning_short": "Forecast is only slightly above consensus (+5.0%, in_line per Agent 3), operations are stable but not expanding (Agent 2), and Agent 4 found no positive news catalysts with neutral sentiment. The SAR signal has partial novelty but lacks corroboration in news or strong fundamentals. No compelling Bull case for long entry."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 novelty_assessment=partial — SAR signal is not entirely novel, but still lacks concrete news coverage",
+      "Agent 3 divergence_class=in_line at +5% — forecast is essentially consensus",
+      "Agent 2 key drivers include moderate WTI environment, which is a tail risk regardless of company-specific signal"
+    ],
+    "counter_evidence": [
+      "Agent 2 has stable drilling activity and continuous operations as key drivers"
+    ],
+    "reasoning_short": "Information edge is questionable: SAR signal is not entirely novel, but still lacks concrete news coverage, and the consensus divergence is in_line. Persistent sector-beta risk exists due to moderate WTI environment."
+  },
+  "arbiter_reasoning": "Agent 3 shows an in_line divergence at +5.0%, indicating no significant SAR-driven edge. Agent 4 found no positive catalysts or news corroboration, despite a partial novelty assessment, severely weakening any bull case. Both the Bull and Bear opinions concur on a no_trade decision, citing a lack of information edge and potential sector-beta risks. The score of 28 reflects a clear no_trade due to insufficient evidence to justify capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.15,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.4
+  },
+  "conviction_score": 28.0
+}

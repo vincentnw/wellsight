@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1410535000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1410535000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 99808.65941226787,
+    "wti_avg": 79.64153846153847,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "CTRA's revenue forecast of $1.41B reflects a challenging drilling environment, with no active drilling sites reported as of the decision date. The lack of new drilling activity suggests limited production growth potential for the upcoming quarter. However, with a stable WTI price around $79.64/boe and a segment fraction of 0.4, the company is positioned to maintain its revenue despite the inactivity in drilling. The consensus-anchored approach indicates a cautious outlook, emphasizing the need for renewed drilling efforts to enhance future revenue prospects.",
+  "key_drivers": [
+    "no_active_drilling",
+    "stable_wti",
+    "low_segment_fraction",
+    "consensus_anchored_forecast",
+    "limited_production_growth"
+  ]
+}

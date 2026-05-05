@@ -1,0 +1,25 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 26,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Diamondback Energy is highlighted as one of the best crude oil stocks to buy right now.",
+      "article_id": "stocks-to-buy-right-now-1400710/",
+      "article_date": "2024-12-01"
+    },
+    {
+      "summary": "Diamondback Energy is noted as among the best American energy stocks to buy according to hedge funds.",
+      "article_id": "ccording-to-hedge-funds-1400345/",
+      "article_date": "2024-11-30"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news reinforces the SAR signal of active trading and interest in Diamondback Energy, particularly highlighting its favorable positioning among investors and hedge funds. No operational issues or negative news were identified in the articles, supporting a positive outlook.",
+  "novelty_assessment": "no"
+}

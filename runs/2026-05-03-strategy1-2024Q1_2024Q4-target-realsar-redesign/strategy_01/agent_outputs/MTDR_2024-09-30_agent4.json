@@ -1,0 +1,30 @@
+{
+  "ticker": "MTDR",
+  "n_articles_in_window": 16,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Matador Resources Company reports record second quarter 2024 results and increases full-year 2024 production guidance",
+      "article_id": "ases-Full-Year-2024-Pr-47448129/",
+      "article_date": "2024-07-23"
+    },
+    {
+      "summary": "Matador Resources increases 2024 oil production plans on Permian drilling surprises",
+      "article_id": "s-on-permian-drilling-surprises/",
+      "article_date": "2024-07-25"
+    },
+    {
+      "summary": "Matador Resources Company closes Ameredev acquisition",
+      "article_id": "s-Ameredev-Acquisition-47899467/",
+      "article_date": "2024-09-19"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news confirms the SAR signal of increased activity, highlighting record results and raised production guidance. The acquisition of Ameredev adds strategic value, which is not captured by satellite data alone.",
+  "novelty_assessment": "no"
+}

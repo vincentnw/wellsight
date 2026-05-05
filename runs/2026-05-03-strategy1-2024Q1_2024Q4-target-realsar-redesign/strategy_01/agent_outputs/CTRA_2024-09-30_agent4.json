@@ -1,0 +1,30 @@
+{
+  "ticker": "CTRA",
+  "n_articles_in_window": 13,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Multiple U.S. shale producers boost 2024 oil and gas production forecasts following unexpected Permian success",
+      "article_id": "wing-unexpected-permian-success/",
+      "article_date": "2024-08-02"
+    },
+    {
+      "summary": "Texas Pacific Land Corporation Acquires Permian Mineral Interests and Surface Acreage in Cash Transactions",
+      "article_id": "urface-acreage-cash-transactions",
+      "article_date": "2024-08-27"
+    },
+    {
+      "summary": "Texas Pacific Land eyes short-term, long-term gains",
+      "article_id": "ic-land-acquisition-19731179.php",
+      "article_date": "2024-09-01"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news highlights positive developments in the shale sector, particularly in the Permian, which aligns with the SAR signal of increased activity. The acquisition of mineral interests by Texas Pacific Land Corporation suggests strategic growth, further supporting the bullish outlook. No negative catalysts were identified in the articles.",
+  "novelty_assessment": "no"
+}

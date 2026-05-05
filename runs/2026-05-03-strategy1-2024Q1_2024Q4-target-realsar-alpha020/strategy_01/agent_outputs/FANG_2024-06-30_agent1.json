@@ -1,0 +1,33 @@
+{
+  "ticker": "FANG",
+  "decision_date_T": "2024-07-22",
+  "fiscal_quarter_end": "2024-06-30",
+  "n_newly_active": 0,
+  "n_continuously_active": 3,
+  "n_idle": 2,
+  "absolute_active": 3,
+  "share_active": 0.6,
+  "relative_activity_delta": 1.0,
+  "pad_classifications": [
+    {
+      "pad_id": "42135437640000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42003483570000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42003478140000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42135439930000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42003483590000",
+      "state": "continuously_active"
+    }
+  ]
+}

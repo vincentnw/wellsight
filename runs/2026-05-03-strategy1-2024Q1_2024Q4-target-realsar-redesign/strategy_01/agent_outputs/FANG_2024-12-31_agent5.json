@@ -1,0 +1,43 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 revenue forecast of $3.52B is supported by stable drilling activity and increased efficiency, indicating solid operational performance.",
+      "Agent 4 overall_sentiment is bullish, with positive catalysts highlighting Diamondback Energy as a top crude oil stock to buy (2024-12-01) and among the best American energy stocks according to hedge funds (2024-11-30).",
+      "Agent 4 sar_complement indicates that the news reinforces the SAR signal of active trading and interest in Diamondback Energy, suggesting strong investor sentiment."
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class is in_line at +3.33%, indicating the forecast is not significantly above consensus.",
+      "Agent 4 novelty_assessment is 'no', suggesting that the positive news may not provide a fresh catalyst for the stock."
+    ],
+    "reasoning_short": "While the revenue forecast is solid and supported by bullish sentiment and positive news catalysts, the in-line divergence and lack of novelty suggest limited upside potential. A cautious long position may be warranted, but the case is not overwhelmingly strong."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=in_line at +3.33% — the forecast is essentially aligned with consensus, indicating no significant edge.",
+      "Agent 4 novelty_assessment=no — the SAR signal is already disclosed in news, suggesting no information advantage.",
+      "Despite bullish sentiment, there are no positive catalysts that significantly alter the risk profile or outlook."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The lack of divergence from consensus forecasts and the absence of novel information indicate that the potential for upside is limited. The bullish sentiment does not outweigh the risks associated with a long position."
+  },
+  "arbiter_reasoning": "Bear prevails because the SAR signal is only in_line (+3.33%) and Agent 4's bullish articles are non-novel, meaning the market likely already has this information. Agent 2 supports a solid operational baseline, but without a meaningful forecast divergence or fresh catalyst the upside edge is too limited to justify capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.25
+  },
+  "conviction_score": 38.0
+}

@@ -1,0 +1,45 @@
+{
+  "ticker": "CTRA",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=bullish with 3 positive catalysts: U.S. shale producers boosting production forecasts (2024-08-02), Texas Pacific Land acquiring Permian interests (2024-08-27), and Texas Pacific Land's focus on gains (2024-09-01).",
+      "Agent 2's revenue forecast of $1.30B aligns with stable drilling activity and a favorable average WTI price of $75/boe.",
+      "Agent 4's news complements the SAR signal, indicating increased activity in the shale sector, which supports a bullish outlook."
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=in_line at 0.0% — no edge against consensus.",
+      "Agent 2 notes a cautious growth approach with no new drilling signals, which may limit upside potential."
+    ],
+    "reasoning_short": "While the forecast aligns with consensus and there are no negative catalysts, the bullish sentiment and positive developments in the shale sector provide a supportive context for a long position. The lack of divergence from consensus tempers confidence, but the overall positive news landscape suggests potential for upside."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=in_line at 0% — the forecast is essentially consensus, indicating no edge.",
+      "Agent 4 novelty_assessment=no — the SAR signal is already disclosed in news, suggesting no information advantage.",
+      "Agent 2's cautious growth outlook and lack of new drilling signals indicate potential stagnation in revenue growth."
+    ],
+    "counter_evidence": [
+      "Agent 4 has several positive catalysts related to the shale sector, but these are already reflected in the current sentiment."
+    ],
+    "reasoning_short": "The lack of divergence from consensus forecasts and the absence of new information undermine the bullish case. Additionally, the cautious growth outlook raises concerns about future performance, leading to a strong recommendation against a long position."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 3 is in_line at 0% divergence, so there is no SAR edge, and Agent 4's bullish articles are explicitly marked novelty_assessment=no, meaning the positive news is already reflected in sentiment and does not create fresh alpha. Agent 2 is constructive on stable operations, but the cautious growth/no new drilling setup limits upside; together this is insufficient for a long.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.25,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.35
+  },
+  "conviction_score": 38.0
+}

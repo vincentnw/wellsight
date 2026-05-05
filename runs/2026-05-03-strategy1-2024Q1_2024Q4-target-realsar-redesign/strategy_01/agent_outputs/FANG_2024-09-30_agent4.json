@@ -1,0 +1,36 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 32,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Diamondback Closes $26B Endeavor Deal, Forming Last Permian Sandbox",
+      "article_id": "ming-last-permian-sandbox-210384",
+      "article_date": "2024-09-11"
+    },
+    {
+      "summary": "Diamondback Energy, Inc. Announces Revised Third Quarter Production and Capital Guidance",
+      "article_id": "production-and-capital-guidance/",
+      "article_date": "2024-10-02"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Diamondback Energy Announces Pricing of Upsized Secondary Common Stock Offering",
+      "article_id": "-Common-Stock-Offering-47904661/",
+      "article_date": "2024-09-20"
+    },
+    {
+      "summary": "Diamondback Energy Announces Pricing of Upsized Secondary",
+      "article_id": "-ndary-Common-Stock-Offering.html",
+      "article_date": "2024-09-20"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news confirms the SAR signal of ongoing activity but adds significant information regarding the completion of a major acquisition and revised production guidance. The secondary stock offerings may indicate dilution concerns, which could be viewed negatively by investors.",
+  "novelty_assessment": "partial"
+}

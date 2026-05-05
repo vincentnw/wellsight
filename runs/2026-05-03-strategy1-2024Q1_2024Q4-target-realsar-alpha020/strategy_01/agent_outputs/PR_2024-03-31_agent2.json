@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1199000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.2,
+    "consensus_anchor_usd": 1199000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 175972.58573134142,
+    "wti_avg": 80.50999999999999,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Parsley Energy's operations show zero active drilling sites at the decision date, with no newly or continuously active pads detected via satellite, indicating a complete pause in drilling activity heading into Q1 2024. Despite stable WTI prices near $80.50 and full exposure to the Permian segment, the lack of current drilling suggests production is likely flat or declining. Revenue is therefore anchored to consensus estimates at approximately $1.199B, supported by price realizations near 93% of WTI with no near-term volume growth signal.",
+  "key_drivers": [
+    "zero_active_drilling",
+    "stable_wti",
+    "pure_play_permian",
+    "no_production_growth_signal",
+    "consensus_anchored_forecast"
+  ]
+}

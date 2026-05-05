@@ -1,0 +1,25 @@
+{
+  "ticker": "MTDR",
+  "n_articles_in_window": 2,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Matador Resources Company announces contribution of Pronto Midstream, LLC to San Mateo Midstream, LLC",
+      "article_id": "-llc-to-san-mateo-midstream-llc/",
+      "article_date": "2024-12-05"
+    },
+    {
+      "summary": "Matador Resources Company Announces Contribution of Pronto Midstream, LLC to San Mateo Midstream, LLC",
+      "article_id": "lezard.com/en/news-21629911.html",
+      "article_date": "2024-12-05"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news highlights Matador's strategic move to contribute Pronto Midstream to San Mateo Midstream, which may enhance operational capabilities. However, there are no operational or financial concerns indicated in the articles, aligning with the SAR signal of no active operations.",
+  "novelty_assessment": "yes"
+}

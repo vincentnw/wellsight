@@ -1,0 +1,31 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 18,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "EOG Resources to increase its T & T natural gas production",
+      "article_id": "d5dd-11ee-9d84-3b3ebf5ea562.html",
+      "article_date": "2024-02-28"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Drilling activity falls, led by decline in natural gas drilling",
+      "article_id": "/drilling-rig-count-19363751.php",
+      "article_date": "2024-03-26"
+    },
+    {
+      "summary": "Drilling activity continued to slow across US, Texas, Permian",
+      "article_id": "nued-slow-across-us-19375605.php",
+      "article_date": "2024-03-30"
+    }
+  ],
+  "overall_sentiment": "bearish",
+  "sar_complement": "The news indicates a mixed outlook for EOG Resources. While there is a positive catalyst regarding an increase in natural gas production, it is overshadowed by negative trends in drilling activity, particularly in natural gas, which may impact future operational performance. The SAR signal shows a significant decline in activity, which is corroborated by the news of slowing drilling across key regions.",
+  "novelty_assessment": "partial"
+}

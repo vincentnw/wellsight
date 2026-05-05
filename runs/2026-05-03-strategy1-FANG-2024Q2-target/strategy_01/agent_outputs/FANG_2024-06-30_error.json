@@ -1,0 +1,4 @@
+{
+  "error": "No JSON object found in response: \n{\n  \"ticker\": \"FANG\",\n  \"decision\": \"no_trade\",\n  \"conviction_score\": 25,\n  \"conviction_tier\": \"none\",\n  \"arbiter_reasoning\": \"Both Bull and Bear",
+  "type": "ValueError"
+}

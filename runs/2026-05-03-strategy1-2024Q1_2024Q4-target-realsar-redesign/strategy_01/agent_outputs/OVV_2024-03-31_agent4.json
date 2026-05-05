@@ -1,0 +1,36 @@
+{
+  "ticker": "OVV",
+  "n_articles_in_window": 11,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Surge of activity ignites the Northern Midland Basin, indicating potential growth opportunities.",
+      "article_id": "es-northern-midland-basin-208678",
+      "article_date": "2024-04-03"
+    },
+    {
+      "summary": "Crude oil pushes higher on global tensions, signs of strong U.S. gasoline demand could benefit oil producers.",
+      "article_id": "gns-of-strong-us-gasoline-demand",
+      "article_date": "2024-04-04"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "ConocoPhillips CEO indicates U.S. crude 2024 output growth likely drops to 300,000 - 400,000 b/d.",
+      "article_id": "0-400000-b-d-conocophillips-ceo/",
+      "article_date": "2024-03-21"
+    },
+    {
+      "summary": "$200 billion of M&A wasn't enough in the U.S. oil patch, suggesting market challenges.",
+      "article_id": "-a-wasn-t-enough-in-us-oil-patch",
+      "article_date": "2024-04-10"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news highlights increased activity in the Northern Midland Basin, which may suggest growth opportunities for OVV. However, the indication of reduced U.S. crude output growth and challenges in the M&A landscape could pose risks. Overall, the news does not contradict the SAR signal but adds context regarding market dynamics.",
+  "novelty_assessment": "partial"
+}

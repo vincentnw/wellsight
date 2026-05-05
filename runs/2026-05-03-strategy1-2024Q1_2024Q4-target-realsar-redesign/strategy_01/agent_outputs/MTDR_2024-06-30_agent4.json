@@ -1,0 +1,30 @@
+{
+  "ticker": "MTDR",
+  "n_articles_in_window": 24,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Matador Resources acquires Permian oil and gas drilling properties in $1.9 billion deal",
+      "article_id": "-properties-in-1-9-billion-deal/",
+      "article_date": "2024-06-13"
+    },
+    {
+      "summary": "Matador Resources increases oil production following surprise Permian success in 2023",
+      "article_id": "urprise-permian-success-in-2023/",
+      "article_date": "2024-04-25"
+    },
+    {
+      "summary": "Matador Resources Company (NYSE: MTDR) Upgraded by Truist Securities",
+      "article_id": "ed-by-truist-securities-1313996/",
+      "article_date": "2024-06-14"
+    }
+  ],
+  "negative_catalysts": [],
+  "overall_sentiment": "bullish",
+  "sar_complement": "The news highlights Matador's recent acquisition and production increases, which align with the SAR signal of activity. The upgrade by Truist Securities adds a positive outlook that is not captured by satellite data alone.",
+  "novelty_assessment": "no"
+}

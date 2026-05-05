@@ -1,0 +1,45 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=neutral with only 2 positive catalysts, which do not strongly indicate immediate revenue growth.",
+      "Agent 3 divergence_class=in_line at -2% — forecast is essentially in line with consensus.",
+      "Agent 2's revenue forecast of $2.30B reflects challenges due to declining drilling activity and limited new sites."
+    ],
+    "counter_evidence": [
+      "Agent 4 flagged 2 negative catalysts: upsized secondary stock offering may indicate dilution concerns.",
+      "Agent 2 notes declining drilling activity and low relative activity levels, suggesting limited growth potential."
+    ],
+    "reasoning_short": "The evidence indicates a neutral sentiment with no significant positive divergence from consensus forecasts, alongside concerns about dilution from stock offerings and declining drilling activity. These factors do not support a strong long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 has 2 negative catalysts: upsized secondary common stock offering, which raises dilution concerns for investors.",
+      "Agent 3 divergence_class=in_line at -2% — the revenue forecast is essentially in line with consensus, indicating no positive surprise.",
+      "Agent 2 highlights declining drilling activity and limited new sites, suggesting production growth challenges."
+    ],
+    "counter_evidence": [
+      "Agent 4 has 2 positive catalysts related to a major acquisition and revised production guidance, but these may not outweigh the dilution concerns."
+    ],
+    "reasoning_short": "The case against a long position is strong due to dilution risks from the secondary offering, lack of positive divergence from consensus forecasts, and declining drilling activity. Overall sentiment remains neutral, indicating no compelling reason to enter a long position."
+  },
+  "arbiter_reasoning": "Bear prevails: Agent 3 is in_line at -2%, Agent 2 shows declining drilling activity and limited new sites, and Agent 4’s negative catalyst of an upsized secondary offering raises real dilution risk. Although Agent 4 also surfaces two positive catalysts tied to the Endeavor deal and revised guidance, the overall news mix is neutral and not enough to justify capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.4
+  },
+  "conviction_score": 32.0
+}

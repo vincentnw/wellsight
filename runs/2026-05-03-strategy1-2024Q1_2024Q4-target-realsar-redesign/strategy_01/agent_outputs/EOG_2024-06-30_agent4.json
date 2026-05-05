@@ -1,0 +1,41 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 29,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "EOG Resources is wildcatting in the Pearsall formation in Western Eagle Ford, indicating potential new exploration activity.",
+      "article_id": "estern-eagle-ford-stepout-209821",
+      "article_date": "2024-07-17"
+    },
+    {
+      "summary": "Esgian Week 28 Report indicates robust rig activity, which may benefit EOG Resources.",
+      "article_id": "eport-rig-activity-robust-515177",
+      "article_date": "2024-07-15"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Rig count rises but remains near three-year lows, suggesting overall industry challenges.",
+      "article_id": "ear-three-year-lows-19556813.php",
+      "article_date": "2024-07-06"
+    },
+    {
+      "summary": "Inflation, interest rates, and fiscal discipline are weighing on drilling activity, which could impact EOG's operations.",
+      "article_id": "al-discipline-weigh-19503694.php",
+      "article_date": "2024-06-08"
+    },
+    {
+      "summary": "Texas drilling falls to a two-year low, indicating potential operational challenges for EOG.",
+      "article_id": "ow-permian-declines-19451466.php",
+      "article_date": "2024-05-11"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news highlights both new exploration efforts in the Pearsall formation and robust rig activity, which align with the SAR signal of declining activity. However, the negative catalysts regarding low rig counts and economic pressures suggest challenges that may offset any potential gains from new projects.",
+  "novelty_assessment": "partial"
+}

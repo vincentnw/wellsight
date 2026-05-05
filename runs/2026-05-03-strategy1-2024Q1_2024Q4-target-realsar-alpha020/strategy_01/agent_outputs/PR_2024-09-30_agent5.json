@@ -1,0 +1,43 @@
+{
+  "ticker": "PR",
+  "decision": "long",
+  "conviction_tier": "high",
+  "final_size_pct": 0.15,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_drilling_delta of +1.5 with a newly_active_pad activation",
+      "Agent 3 divergence_class is strong_beat at +20%",
+      "Agent 4 reports gdelt_disclosed=false indicating no pre-earnings information leakage"
+    ],
+    "counter_evidence": [
+      "Agent 3 confidence is medium, suggesting some analyst forecast dispersion"
+    ],
+    "reasoning_short": "Operational momentum evidenced by active drilling expansion and a newly activated pad supports upward production momentum. This aligns with a strong-beat revenue forecast 20% above consensus, while clean news flow reduces event risk. Favors a high-conviction long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's positive outlook may be overly optimistic given the uncertain realized-price assumption",
+      "Agent 3's strong beat divergence class is not supported by high analyst dispersion, indicating a potential overestimation of future performance",
+      "Agent 4's lack of disclosed news and low conviction modifier suggests a lack of information edge"
+    ],
+    "counter_evidence": [
+      "Agent 2's newly active pad and stable WTI environment are positive indicators"
+    ],
+    "reasoning_short": "While there are some positive indicators, the overall evidence suggests a high risk of overestimation and potential price correction. Recommend no entry."
+  },
+  "arbiter_reasoning": "Bull's case prevailed due to Agent 3's strong_beat divergence_class (+20%) combined with high confidence, Agent 2's positive operational indicators (positive_drilling_delta, newly_active_pad), and Agent 4's gdelt_disclosed=false indicating no pre-earnings news leakage. Bear raised concerns about optimism in price assumptions and medium confidence from Agent 3, but these were outweighed by the strength and alignment of upstream signals. No GDELT disclosure risk present. Conviction tier set to high.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.15
+  }
+}

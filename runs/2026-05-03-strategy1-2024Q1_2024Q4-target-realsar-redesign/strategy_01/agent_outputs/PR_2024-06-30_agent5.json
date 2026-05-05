@@ -1,0 +1,45 @@
+{
+  "ticker": "PR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 2 revenue forecast of $1.23 billion reflects stable exposure to WTI prices around $81.28 per barrel.",
+      "Agent 4 overall_sentiment=neutral with 2 positive catalysts: secondary offering (2024-05-13) and bullish investor sentiment (2024-06-22)."
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=in_line at 0.0% — no edge over consensus.",
+      "Agent 4 flagged 1 negative catalyst: scrutiny over shale collusion allegations (2024-07-16) introduces regulatory risks.",
+      "Agent 2 outlook indicates limited growth potential due to only one active drilling site and no new activity."
+    ],
+    "reasoning_short": "While there is a stable revenue forecast and some positive sentiment, the lack of divergence from consensus and the presence of regulatory risks lead to a low-confidence stance. The evidence does not support a strong long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 has a significant negative catalyst: lawmakers are examining shale collusion allegations affecting oil and gas leases, which could lead to regulatory risks.",
+      "Agent 3 divergence_class=in_line at 0% — the revenue forecast aligns with consensus, indicating no positive surprise potential.",
+      "Agent 4 novelty_assessment=partial — while there is some investor interest, the scrutiny over collusion allegations suggests that the market may not have fully priced in these risks."
+    ],
+    "counter_evidence": [
+      "Agent 4 has positive catalysts related to investor interest and a secondary offering, but these do not outweigh the regulatory risks."
+    ],
+    "reasoning_short": "The case against a long position is strong due to regulatory scrutiny from shale collusion allegations, a consensus revenue forecast with no divergence, and partial novelty indicating limited information edge. Recommend against entry."
+  },
+  "arbiter_reasoning": "Bear prevails: Agent 3 is in_line at 0% with no consensus edge, while Agent 4's positives are generic investor-interest items and are outweighed by a concrete regulatory negative catalyst around shale collusion scrutiny. Agent 2 supports only stable, limited production rather than upside acceleration, so the setup lacks a sufficiently asymmetric long case.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.2,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.45
+  },
+  "conviction_score": 32.0
+}

@@ -1,0 +1,45 @@
+{
+  "ticker": "SM",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 2 revenue forecast of $657 million reflects significant challenges due to halted drilling activity and low production levels.",
+      "Agent 3 divergence_class=in_line at 0.0% — no edge against consensus.",
+      "Agent 4 overall_sentiment=neutral with no strong positive catalysts."
+    ],
+    "counter_evidence": [
+      "Agent 4 has 1 negative catalyst: potential sale of Uinta Basin operations, indicating strategic uncertainty.",
+      "Agent 4's positive catalysts do not directly support SM's operations and are more about broader industry trends."
+    ],
+    "reasoning_short": "The evidence indicates a lack of positive divergence or strong catalysts for a long position. The revenue forecast is constrained, and overall sentiment is neutral, leading to a decision against advocating for a long entry."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 indicates a complete halt in drilling activity, which will constrain revenue generation significantly.",
+      "Agent 3 divergence_class=in_line at 0% — the revenue forecast aligns with consensus, indicating no positive surprise.",
+      "Agent 4 has a negative catalyst regarding the potential sale of Uinta Basin operations, which may signal operational challenges."
+    ],
+    "counter_evidence": [
+      "Agent 4 mentions positive M&A activity, but it does not directly benefit SM's operations."
+    ],
+    "reasoning_short": "The lack of drilling activity and alignment with consensus forecasts suggest no upside potential. The negative catalyst regarding asset sales further supports a bearish outlook, making a long position unwise."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 2 shows a complete halt in drilling and constrained revenue, while Agent 3 is in_line with consensus, giving no SAR edge. Agent 4 adds only weak, indirect industry/M&A context with one negative catalyst and no direct operational upside for SM, so this does not justify deploying capital.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.25
+  },
+  "conviction_score": 22.0
+}

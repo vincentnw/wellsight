@@ -1,0 +1,45 @@
+{
+  "ticker": "CRGY",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 3 divergence_class=in_line at 0.0% — no edge against consensus",
+      "Agent 2's deterministic revenue forecast of $892 million reflects operational challenges with no active drilling",
+      "Agent 4 overall_sentiment=neutral with only 1 positive catalyst that is unrelated to CRGY's operations"
+    ],
+    "counter_evidence": [
+      "Agent 4's positive catalyst about Libyan oil production does not directly impact CRGY's outlook",
+      "Agent 2 highlights declining drilling activity, which could constrain revenue"
+    ],
+    "reasoning_short": "The evidence indicates a challenging operational environment for CRGY, with no active drilling and a revenue forecast in line with consensus. The positive news about Libyan oil production does not provide a direct benefit to CRGY, leading to a decision against advocating for a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 indicates no active drilling and declining activity delta, suggesting constrained revenue potential.",
+      "Agent 3 divergence_class=in_line at 0% — the revenue forecast aligns with consensus, indicating no edge.",
+      "Agent 4 novelty_assessment=partial — the news about Libyan oil production does not provide a direct positive impact on CRGY."
+    ],
+    "counter_evidence": [
+      "Agent 4 has 1 positive catalyst regarding Libyan oil production, but it does not relate to CRGY's operational status."
+    ],
+    "reasoning_short": "The lack of active drilling and declining activity points to revenue constraints, while the consensus forecast shows no divergence. The news about Libyan production is neutral regarding CRGY's situation, leading to a strong recommendation against a long position."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 2 shows no active drilling and declining activity delta, which is a direct operational headwind, while Agent 3 is in_line at 0% so there is no consensus edge to lean on. Agent 4's single positive catalyst is unrelated to CRGY's business and only partial novelty, so it does not overcome the weak fundamental setup.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": false,
+    "agent4_decisive": false,
+    "agent2_weight": 0.55,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.2
+  },
+  "conviction_score": 18.0
+}

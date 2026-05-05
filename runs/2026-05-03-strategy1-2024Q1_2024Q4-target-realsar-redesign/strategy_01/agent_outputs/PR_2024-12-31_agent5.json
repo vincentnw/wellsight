@@ -1,0 +1,45 @@
+{
+  "ticker": "PR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=bullish with 3 positive catalysts: highlighted as a top dividend stock (2025-02-10), discussed as a high growth energy stock (2024-12-18), and strategic moves unlocking potential (2024-12-27).",
+      "Agent 4 sar_complement indicates that the news reinforces the SAR signal, suggesting strong positioning in the market.",
+      "Agent 3 divergence_class=in_line at 0.0% — while not a positive divergence, the consensus forecast aligns with the bullish sentiment from the news."
+    ],
+    "counter_evidence": [
+      "Agent 2's revenue forecast of $1.31B reflects a challenging environment with no active drilling activity and low production growth.",
+      "Agent 3's divergence class indicates no edge over consensus, which may limit upside potential."
+    ],
+    "reasoning_short": "While the revenue forecast is stable and reflects challenges, the bullish sentiment from multiple positive catalysts in the news and the reinforcement of the SAR signal suggest potential for growth. The lack of negative catalysts further supports a long position, albeit with medium confidence due to the in-line forecast."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 highlights no drilling activity, indicating limited production growth and potential revenue stagnation despite stable WTI prices.",
+      "Agent 3 divergence_class=in_line at 0% — the forecast aligns with consensus, indicating no positive surprise potential.",
+      "Agent 4 novelty_assessment=no — the SAR signal is already public, suggesting no information edge for a long position."
+    ],
+    "counter_evidence": [
+      "Agent 4 has several positive catalysts, but they are not new and do not mitigate the lack of operational momentum."
+    ],
+    "reasoning_short": "The lack of drilling activity and in-line forecast with consensus, combined with the absence of new information, strongly argues against a long position. The positive catalysts do not provide sufficient justification given the overall risks."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 3 is in_line at 0% with consensus, so there is no SAR edge, and Agent 2 points to no drilling activity and limited production growth, which caps near-term upside. Agent 4 is bullish but its catalysts are generic, non-novel, and do not offset the operational weakness; this is not enough to justify capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.2
+  },
+  "conviction_score": 33.0
+}

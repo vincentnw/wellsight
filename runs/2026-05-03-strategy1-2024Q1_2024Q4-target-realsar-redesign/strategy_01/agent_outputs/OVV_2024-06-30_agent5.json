@@ -1,0 +1,42 @@
+{
+  "ticker": "OVV",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 2's deterministic revenue forecast of $2.40 billion is solid, supported by stable drilling activity and favorable WTI prices.",
+      "Agent 3 divergence_class=in_line at +3.33% — forecast is only slightly above consensus."
+    ],
+    "counter_evidence": [
+      "Agent 4 overall_sentiment=neutral with 0 positive catalysts.",
+      "Agent 4 novelty_assessment=yes — no new information that could drive a significant price change."
+    ],
+    "reasoning_short": "While the revenue forecast is solid, the lack of positive catalysts and a neutral sentiment in the news, combined with only a slight divergence from consensus, does not support a strong long case. Declining to advocate for a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=in_line at +3.33% — forecast is essentially consensus, indicating no edge.",
+      "Agent 4 novelty_assessment=yes — SAR is novel, but overall sentiment is neutral with no clear positive catalysts.",
+      "Agent 4 reports no negative catalysts, but the lack of positive catalysts suggests a stagnant outlook."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The consensus forecast is in line with expectations, indicating no information edge, and the overall neutral sentiment with no positive catalysts suggests a lack of momentum for a long position."
+  },
+  "arbiter_reasoning": "Bear prevailed. Agent 3 is in_line at +3.33%, so there is no meaningful consensus edge, and Agent 4 adds no positive catalysts despite novelty_assessment=yes. Agent 2's revenue setup is supportive, but not enough to overcome the lack of actionable upside catalysts, so this stays a no-trade with low conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.3
+  },
+  "conviction_score": 29.0
+}

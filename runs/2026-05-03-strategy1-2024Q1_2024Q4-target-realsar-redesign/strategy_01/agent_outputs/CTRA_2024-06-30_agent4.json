@@ -1,0 +1,31 @@
+{
+  "ticker": "CTRA",
+  "n_articles_in_window": 6,
+  "fallback_used": false,
+  "gdelt_disclosed": null,
+  "matching_article_ids": null,
+  "conviction_modifier": null,
+  "reasoning": null,
+  "positive_catalysts": [
+    {
+      "summary": "Coterra Energy Reports First - Quarter 2024 Results, Announces Quarterly Dividend, and Updates 2024 Outlook",
+      "article_id": "ividend-and-updates-2024-outlook",
+      "article_date": "2024-05-02"
+    }
+  ],
+  "negative_catalysts": [
+    {
+      "summary": "Coterra Energy to close GDS facility in Marcellus Business Unit",
+      "article_id": "arcellus-Business-Unit-46878518/",
+      "article_date": "2024-05-31"
+    },
+    {
+      "summary": "Coterra Scales Back in Marcellus in 1Q in Favor of More Oil Drilling",
+      "article_id": "q-in-favor-of-more-oil-drilling/",
+      "article_date": "2024-05-06"
+    }
+  ],
+  "overall_sentiment": "neutral",
+  "sar_complement": "The news provides insights into Coterra's operational adjustments, including the closure of a facility and scaling back in the Marcellus region, which may indicate a strategic shift. The quarterly results and dividend announcement are positive but do not significantly alter the overall operational outlook suggested by the SAR data.",
+  "novelty_assessment": "partial"
+}

@@ -1,0 +1,42 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "no_trade",
+    "confidence": "low",
+    "key_evidence": [
+      "Agent 2's deterministic revenue forecast of $2.28 billion indicates stable operational performance.",
+      "Agent 3 divergence_class=in_line at +5% — only a slight positive deviation from consensus."
+    ],
+    "counter_evidence": [
+      "Agent 4 overall_sentiment=neutral with no positive catalysts identified.",
+      "Agent 4 novelty_assessment=partial — indicates that the SAR signal may not be fully novel."
+    ],
+    "reasoning_short": "While the revenue forecast is stable, the lack of positive catalysts and a neutral sentiment from Agent 4, combined with only a slight positive divergence from consensus, does not support a strong long case. Declining to advocate for a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 3 divergence_class=in_line at +5% — forecast is essentially consensus, indicating no edge.",
+      "Agent 4 novelty_assessment=partial — the information is not fully novel, suggesting limited potential for price movement.",
+      "Overall sentiment is neutral, indicating a lack of strong bullish momentum."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The consensus forecast aligns closely with analyst expectations, and the lack of novel information combined with neutral sentiment suggests no compelling reason to take a long position."
+  },
+  "arbiter_reasoning": "Bear prevails: Agent 3 is only in_line at +5%, which is essentially consensus, and Agent 4 is neutral with no news catalysts and only partial novelty. Agent 2 supports stable operations and favorable WTI, but that is not enough to overcome the lack of incremental upside; this is a hold/no_trade rather than a long.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.25
+  },
+  "conviction_score": 34.0
+}

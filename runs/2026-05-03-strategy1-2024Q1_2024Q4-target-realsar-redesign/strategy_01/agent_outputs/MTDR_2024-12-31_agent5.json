@@ -1,0 +1,45 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 overall_sentiment=bullish with 2 positive catalysts: contribution of Pronto Midstream to San Mateo Midstream (2024-12-05)",
+      "Agent 4 novelty_assessment=yes — the strategic move is a new development that could enhance operational capabilities.",
+      "Agent 2 revenue forecast of $965 million indicates stability despite no new drilling activity, suggesting reliance on existing production is manageable."
+    ],
+    "counter_evidence": [
+      "Agent 3 divergence_class=in_line at 0.0% — no edge against consensus.",
+      "Agent 2 notes no active drilling sites, indicating potential stagnation in production levels."
+    ],
+    "reasoning_short": "While the forecast aligns with consensus and there are no new drilling activities, the bullish sentiment from recent strategic contributions and the novelty of these developments provide a reasonable basis for a long position, albeit with caution due to the lack of new production drivers."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "no_trade",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 indicates no new drilling activity, suggesting stagnation in production levels and reliance on existing production.",
+      "Agent 3 divergence_class=in_line at 0% — the revenue forecast aligns with consensus, indicating no positive surprise.",
+      "Agent 4 novelty_assessment=yes — while there are positive catalysts, they do not provide a significant edge as they are already public."
+    ],
+    "counter_evidence": [
+      "Agent 4 has positive catalysts related to the contribution of Pronto Midstream, but these do not address the lack of new drilling activity."
+    ],
+    "reasoning_short": "The lack of new drilling activity and an in-line revenue forecast indicate a challenging outlook for Matador Resources. The positive news is already public, providing no edge, and the overall sentiment does not outweigh the stagnation risk."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 3 is in_line at 0% so there is no SAR edge, and Agent 2 flags no active drilling activity with reliance on existing production, which limits upside into the quarter. Agent 4's bullish Pronto Midstream contribution is novel, but it is a strategic/structural item that does not directly offset the near-term production stagnation risk, so the setup does not justify capital deployment.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": false,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.2,
+    "agent4_weight": 0.35
+  },
+  "conviction_score": 32.0
+}
