@@ -129,10 +129,18 @@ def run(
     # synthetic SAR generator.
     if os.environ.get("FIN580_SAR_MODE") == "real_sentinel1":
         from fin580.data.sentinel1_firm_quarter import aggregate_firm_quarter
+        # Read FIN580_SAR_PADS_PER_OP at call time, not import time. The default
+        # arg `pads_per_op=PADS_PER_OP_DEFAULT` in aggregate_firm_quarter
+        # captures whatever the env var was when sentinel1_firm_quarter was
+        # imported, which can fall back to 5 if the import happened before the
+        # runner set FIN580_SAR_PADS_PER_OP=25. Reading here makes the call
+        # explicit and immune to import order.
+        pads_per_op = int(os.environ.get("FIN580_SAR_PADS_PER_OP", 5))
         sig = aggregate_firm_quarter(
             ticker=ticker,
             fiscal_quarter_end=fiscal_quarter_end,
             decision_date_T=decision_date_T,
+            pads_per_op=pads_per_op,
         )
         n_active = sig.n_newly_active + sig.n_continuously_active
         total = max(1, sig.n_pads_sampled)
