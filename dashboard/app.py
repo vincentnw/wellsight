@@ -74,7 +74,7 @@ st.sidebar.markdown(
     - [2. Real Data the System Reads](#section-2)
     - [3. The 5 Agents](#section-3)
     - [4. Worked Example: FANG 2024-Q2](#section-4)
-    - [5. The Two Trades](#section-5)
+    - [5. All Long Trades](#section-5)
     - [6. Comparison vs Baselines](#section-6)
     - [7. Honest Limitations](#section-7)
     """
@@ -85,7 +85,7 @@ st.sidebar.markdown(
 # -----------------------------------------------------------------------------
 @st.cache_data
 def load_all_cells():
-    """Cell results across all 5 windows, deduped (last attempt wins)."""
+    """Cell results across all six yearly windows, deduped (last attempt wins)."""
     parts = []
     seen: set[Path] = set()
     for run in WINDOW_RUNS.values():
@@ -235,7 +235,7 @@ def load_sar_aggregate(ticker: str, fpe: str, T: str):
         PHASE1_OUTPUT
         / "sentinel1_cache"
         / "firm_quarter_aggregates"
-        / f"{ticker}_{fpe}_{T}_n5.json"
+        / f"{ticker}_{fpe}_{T}_n25.json"
     )
     return json.loads(p.read_text()) if p.exists() else None
 
@@ -258,8 +258,8 @@ c1.metric("Window", "2019 → 2024")
 c2.metric("Cells evaluated", f"{len(all_cells)}")
 c3.metric("Long trades fired", f"{len(all_trades)}")
 if len(all_trades):
-    wins_5y = (all_trades.net_return_pct > 0).sum()
-    c4.metric("Hit rate (5y)", f"{wins_5y/len(all_trades):.0%}")
+    wins_6y = (all_trades.net_return_pct > 0).sum()
+    c4.metric("Hit rate", f"{wins_6y/len(all_trades):.0%}")
     c5.metric(
         "Mean net return",
         f"{all_trades.net_return_pct.mean()*100:+.2f}%",
@@ -314,8 +314,9 @@ st.markdown(
 
     *Quick glossary:*  **cell** = one (firm × quarter) trade decision.
     **pad** = a real drilling pad in the Permian basin (coordinates from
-    FracFocus). A cell fires a long when **≥3 of 5 sampled pads** show
-    active drilling on Sentinel-1 SAR.
+    FracFocus). Each cell samples **25 representative pads**; a long can fire
+    only when the SAR-driven revenue forecast reaches the `modest_beat` band
+    versus IBES consensus.
     """
 )
 
@@ -332,7 +333,7 @@ st.markdown(
 )
 
 provenance_df = pd.DataFrame([
-    {"Input": "🛰️ Sentinel-1 SAR backscatter (radar pixels, VV+VH)",
+    {"Input": "🛰️ Sentinel-1 SAR backscatter (radar pixels, VV only)",
      "Where it comes from": "Microsoft Planetary Computer (free, no auth)",
      "Status": "✅ REAL"},
     {"Input": "📍 Pad coordinates + completion dates",
@@ -379,7 +380,7 @@ st.markdown(
 
 agents_df = pd.DataFrame([
     {"Step": "1. GIS Detection", "Agent": "🛰️ Agent 1",
-     "Job": "Read real Sentinel-1 radar pixels at 5 representative pads. "
+     "Job": "Read real Sentinel-1 radar pixels at 25 representative pads. "
             "Apply +1.5 dB change-detection rule.",
      "LLM?": "No (pure code)"},
     {"Step": "2. Revenue Forecast", "Agent": "💰 Agent 2",
@@ -416,11 +417,11 @@ st.divider()
 st.header("4. Walk through one cell end-to-end", anchor="section-4")
 
 st.markdown(
-    "Pick a (ticker, quarter) across **any of the 5 windows (2019-2024)** and "
+    "Pick a (ticker, quarter) across **any of the six yearly windows (2019-2024)** and "
     "see what each agent produced. "
-    "**Recommended demo cell:** `FANG / 2024-Q2` — one of the 2024 winners. "
-    "Try also `OVV / 2023-Q2` (the +15.5% standout) or `OXY / 2019-Q4` "
-    "(the COVID-exit-window loser)."
+    "**Recommended demo cell:** `FANG / 2024-Q2` — a 2024 long that lost despite "
+    "passing the revenue-signal gate. Try also `OVV / 2023-Q2` (the +15.5% "
+    "standout) or `SM / 2020-Q1` (the +91% regime-conditional winner)."
 )
 
 if all_cells.empty:
@@ -460,8 +461,7 @@ else:
     n_eligible = len(ticker_options)
     st.caption(
         f"Window: **{cell_row['window']}**  ·  "
-        f"{n_eligible} eligible ticker{'s' if n_eligible!=1 else ''} this quarter  ·  "
-        f"Run dir: `{_run_dir_for_fpe(fpe).name}`"
+        f"{n_eligible} eligible ticker{'s' if n_eligible!=1 else ''} this quarter"
     )
 
     # Look up Agent 1 + Agent 3 numbers so the banner can show why
@@ -489,7 +489,8 @@ else:
         elif n_pads_preview:
             st.info(
                 f"🚫 **NO TRADE** — only {n_active_preview}/{n_pads_preview} pads active "
-                f"({div_preview:+.1f}% divergence; need ≥ 3 active for the gate to open)"
+                f"({div_preview:+.1f}% divergence; need `modest_beat` or better "
+                "for the gate to open)"
             )
         else:
             st.info("🚫 **NO TRADE** — Agent 3 gate fired.")
@@ -652,7 +653,7 @@ else:
     })
     st.dataframe(table, hide_index=True, use_container_width=True)
 
-    # Aggregate metrics (incl. Sharpe) — across the full 5-year ledger
+    # Aggregate metrics (incl. Sharpe) — across the full six-year ledger
     from fin580.inference.pnl import strategy_metrics
     m = strategy_metrics(all_trades)
     st.markdown("**Aggregate metrics across the full 2019-2024 ledger:**")
@@ -728,7 +729,7 @@ st.markdown(
     - **XES** — SPDR S&P Oil & Gas Equipment & Services ETF (sector benchmark)
     - **VOO** — Vanguard S&P 500 ETF (broad market benchmark)
 
-    Both start at $1M on the day of the system's first trade entry and hold
+    Both start at \$1M on the day of the system's first trade entry and hold
     through the day of the system's last trade exit (always 100% deployed).
     The system holds **cash at 0% between trades** and only the position
     size during each trade — it is in the market roughly 10% of trading
@@ -979,7 +980,7 @@ else:
               this window. If our system can match or beat XES, that's a real
               sector-relative result; matching VOO would require dramatically more
               persistent signal than the system currently produces.
-            - The headline +$71,833 is dominated by SM 2020-Q1 (+$91K). Strip that
+            - The headline +\$71,833 is dominated by SM 2020-Q1 (+\$91K). Strip that
               single trade and the remaining 22 are roughly flat-to-negative — the
               system's aggregate is regime-conditional, not a steady-state edge.
             """
@@ -992,17 +993,17 @@ st.divider()
 # =============================================================================
 st.header("7. What we honestly cannot claim", anchor="section-7")
 
-_n_trades_5y = len(all_trades) if len(all_trades) else 0
-_hit_rate_5y = (
-    (all_trades.net_return_pct > 0).mean() if _n_trades_5y else None
+_n_trades_6y = len(all_trades) if len(all_trades) else 0
+_hit_rate_6y = (
+    (all_trades.net_return_pct > 0).mean() if _n_trades_6y else None
 )
-_mean_ret_5y = all_trades.net_return_pct.mean() if _n_trades_5y else None
+_mean_ret_6y = all_trades.net_return_pct.mean() if _n_trades_6y else None
 
 st.warning(
     f"**The most honest framing (full 2019-2024 window):** "
-    f"With **n = {_n_trades_5y} trades** across 2019-2024, the hit rate is "
-    f"**{(_hit_rate_5y or 0)*100:.1f}%** and mean net return is "
-    f"**{(_mean_ret_5y or 0)*100:+.2f}%**. The firm-clustered bootstrap p-value "
+    f"With **n = {_n_trades_6y} trades** across 2019-2024, the hit rate is "
+    f"**{(_hit_rate_6y or 0)*100:.1f}%** and mean net return is "
+    f"**{(_mean_ret_6y or 0)*100:+.2f}%**. The firm-clustered bootstrap p-value "
     f"vs H0 = 50% is 0.408 — we **still cannot reject the coin-flip null**. "
     f"The headline aggregate is dominated by a single 2020-Q1 trade in SM Energy "
     f"(+91% / +\\$91K). Excluding that trade alone leaves the remaining 22 trades "
@@ -1023,9 +1024,9 @@ st.markdown(
        Increasing toward the operator's full FracFocus history is documented as
        future work (paper §13).
 
-    **The aggregate is regime-concentrated.** SM 2020-Q1 contributes +$91,029 of
-    the +$71,833 total. Excluding both 2020-Q1 trades (SM and OVV) leaves 21
-    trades at 47.6% hit rate and −$36,096 — the system's largest gains came from
+    **The aggregate is regime-concentrated.** SM 2020-Q1 contributes +\$91,029 of
+    the +\$71,833 total. Excluding both 2020-Q1 trades (SM and OVV) leaves 21
+    trades at 47.6% hit rate and −\$36,096 — the system's largest gains came from
     a specific COVID-bottom mean-reversion that we should not project forward.
     The pre-registered WTI stress veto (paper §11.9) would have removed exactly
     those two trades; we report it as observed under pre-registration discipline.
@@ -1062,6 +1063,7 @@ st.caption(
     "FIN 580 — Spring 2026 — Vincent N. W. — "
     "Multi-Agent Permian Trading System with Real Sentinel-1 SAR (2019-2024 window). "
     "Reproducibility (per year): "
-    "`FIN580_SAR_MODE=real_sentinel1 python -m fin580.backtest.runner "
+    "`FIN580_SAR_MODE=real_sentinel1 FIN580_SAR_PADS_PER_OP=25 "
+    "python -m fin580.backtest.runner "
     "--strategy 1 --window <YYYY>Q1-<YYYY>Q4 --cm-label target --run-suffix realsar`"
 )
