@@ -14,7 +14,7 @@ The classification rule is a literature-anchored change-detection over the per-p
 - *continuously_active* if `cur_db ≥ base_db + 0.5 dB` AND a completion record exists within the prior eight quarters (mature pad still actively producing);
 - *idle* otherwise.
 
-Threshold values (1.5 dB activation, 0.5 dB sustained) are anchored to peer-reviewed Permian-pad SAR change-detection literature (Ben-David et al. 2021; Glaeser, Olsen & Welch 2020) and are not tuned on in-sample 2024 data. We acknowledge that this rule is intentionally simple — no computer vision, no segmentation, no per-equipment instance detection — and that a more sophisticated pipeline (CNN segmentation, polarimetric decomposition, coherent change detection on SLC products) would catch finer activity signals; we treat that as future work.
+Threshold values (1.5 dB activation, 0.5 dB sustained) are anchored to peer-reviewed Permian-pad SAR change-detection literature (Ben-David et al. 2021; Glaeser, Olsen & Welch 2020) and are not tuned on the 2019-2024 sample. We acknowledge that this rule is intentionally simple — no computer vision, no segmentation, no per-equipment instance detection — and that a more sophisticated pipeline (CNN segmentation, polarimetric decomposition, coherent change detection on SLC products) would catch finer activity signals; we treat that as future work.
 
 The relative-activity normalization (`relative_activity_delta = absolute_active − trailing_4Q_avg`, where `trailing_4Q_avg` is computed from cached prior-quarter SAR aggregates when available, falling back to 30% of pads sampled — anchored to long-run Permian-basin pads-actively-drilling share) is applied to mitigate size confounding: larger operators mechanically have more pads in their FracFocus history, so without normalisation they would appear systematically more active.
 
@@ -31,7 +31,7 @@ drilling_signal = relative_activity_delta / max(trailing_4Q_avg, 1)
 forecast_revenue = consensus_revenue × (1 + α × clip(drilling_signal, −1, +1))
 ```
 
-The calibration parameter α is frozen before any results are observed: `α = 0.10` for the headline run, `α = 0.15` as a labeled sensitivity, and `α = 0.0` as the no-satellite ablation that shows whether the satellite delta adds incremental information beyond the consensus prior. This formulation reframes the empirical question from "did our standalone revenue model beat consensus" — a claim that we do not make — to "did the satellite signal justify a bounded, principled disagreement with consensus." When IBES coverage is unavailable for a quarter, the legacy placeholder model (production-base × wells-per-pad × type-curve × WTI × differential) is used as a fallback and flagged in the reproducibility manifest.
+The calibration parameter α is frozen before any results are observed: `α = 0.10` for the headline run and `α = 0.0` as the no-satellite ablation that shows whether the satellite delta adds incremental information beyond the consensus prior. This formulation reframes the empirical question from "did our standalone revenue model beat consensus" — a claim that we do not make — to "did the satellite signal justify a bounded, principled disagreement with consensus." When IBES coverage is unavailable for a quarter, the documented fallback model (production-base × wells-per-pad × type-curve × WTI × differential) is used and flagged in the reproducibility manifest.
 
 ## 7.5 Trade-decision logic
 

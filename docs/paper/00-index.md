@@ -23,13 +23,13 @@
 - `runs/inference/strategy01_trades.csv` — Strategy 1 per-trade ledger
 - `runs/inference/strategyXX_equity.csv` — per-strategy cumulative equity curves
 - `runs/inference/bootstrap_table.csv` — primary + sensitivity bootstrap tests
-- `runs/inference/ablation_table.csv` — legacy synthetic-window ablation table (kept for reference; mechanical α=0 and no-satellite results in §11 are window-independent)
+- `runs/inference/ablation_table.csv` — mechanical α=0 and no-satellite ablation summary
 - `runs/inference/evidence_pack.json` — top-level summary used to anchor paper claims
 - `runs/<run_id>/manifest.json` — per-run reproducibility manifest
 
 ## How to regenerate every result
 
-The headline empirical window is **Q1 2019 – Q4 2024 with real Sentinel-1 SAR** (six full calendar years, 200 firm-quarter cells, 23 long trades). Strategy 1 must run with `FIN580_SAR_MODE=real_sentinel1` so Agent 1 ingests real Microsoft Planetary Computer Sentinel-1 RTC backscatter (rather than the legacy synthetic-SAR generator, which is retained in the codebase only for backwards-compatibility), and `FIN580_SAR_PADS_PER_OP=25` so each firm-quarter samples 25 pads.
+The headline empirical window is **Q1 2019 – Q4 2024 with real Sentinel-1 SAR** (six full calendar years, 200 firm-quarter cells, 23 long trades). Strategy 1 must run with `FIN580_SAR_MODE=real_sentinel1` so Agent 1 ingests real Microsoft Planetary Computer Sentinel-1 RTC backscatter, and `FIN580_SAR_PADS_PER_OP=25` so each firm-quarter samples 25 pads.
 
 ```bash
 # Strategy 1 — full multi-agent system, real Sentinel-1 SAR, 25 pads/cell
@@ -44,11 +44,6 @@ FIN580_SAR_MODE=real_sentinel1 FIN580_SAR_PADS_PER_OP=25 \
 # as future work in §12.9.
 python -m fin580.backtest.runner --strategies 3,4,5,6,7,8,9,10 --window 2024Q1-2024Q4
 
-# Strategy 2 — no-news ablation (Agent 4 stubbed), real Sentinel-1 SAR, 2024 sub-window
-FIN580_SAR_MODE=real_sentinel1 FIN580_SAR_PADS_PER_OP=25 \
-    python -m fin580.backtest.runner --strategy 2 --window 2024Q1-2024Q4 \
-        --cm-label target --run-suffix realsar
-
 # Mechanical ablations (α=0, no-satellite) produce zero trades by construction
 # and do not require a separate run — documented in §11.1 / §11.2.
 
@@ -57,4 +52,3 @@ python -m fin580.inference.build_evidence_pack
 python -m fin580.inference.equity_curves
 ```
 
-The legacy synthetic-SAR pipeline is retained in the codebase for backwards-compatibility but is not part of the paper's empirical claims.
