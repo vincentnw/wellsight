@@ -2,13 +2,11 @@
 
 Anderson, A.-M., & Akbas, F. (2020). Look-ahead bias in IBES analyst earnings estimates. *Journal of Empirical Finance*, 56, 1–18.
 
-Ben-David, S., Patel, N., & Singh, R. (2021). Synthetic-aperture-radar detection of unconventional drilling activity in the Permian basin: a high-frequency monitoring framework. *Journal of Energy Markets*, 14(2), 1–28.
+Ben-David, S., Patel, N., & Singh, R. (2021). Synthetic-aperture-radar detection of unconventional drilling activity in the Permian basin. *Journal of Energy Markets*, 14(2), 1–28.
 
 Bonaparte, Y. (2017). The relationship between sentiment and asset prices in the GDELT corpus. Working paper, University of Colorado Denver.
 
 Bradshaw, M. T., Drake, M. S., Myers, J. N., & Myers, L. A. (2017). A re-examination of analysts' superiority over time-series forecasts of annual earnings. *Review of Accounting Studies*, 17(4), 944–968.
-
-Diether, K. B., Lee, K.-H., & Werner, I. M. (2009). It's SHO time! Short-sale price tests and market quality. *Journal of Finance*, 64(1), 37–73.
 
 Glaeser, E. L., Olsen, M. P., & Welch, J. R. (2020). Satellite-derived shipping volumes as a leading indicator of trade-dependent earnings. *Review of Financial Studies*, 33(11), 5022–5058.
 
@@ -26,31 +24,14 @@ Ljungqvist, A., Malloy, C., & Marston, F. (2009). Rewriting history. *Journal of
 
 Mukherjee, A., Panayotov, G., & Shon, J. (2021). Eye in the sky: 9 lives of alternative data. *Review of Financial Studies*, 34(11), 5341–5384.
 
-Park, J. S., O'Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: interactive simulacra of human behavior. *UIST '23: Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology*.
+Park, J. S., O'Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: interactive simulacra of human behavior. *UIST '23*.
 
 Rambaccussing, D., & Kwiatkowski, A. (2020). Forecasting with news sentiment: evidence with application to UK Brent crude oil. *International Journal of Forecasting*, 36(4), 1473–1490.
 
 Wang, H., Liu, J., Tang, S., et al. (2024). TradingGPT: a multi-agent LLM framework for stock trading with hierarchical memory. *Quantitative Finance Letters* (forthcoming).
 
-Yang, J., Wang, Z., Zhao, Z., et al. (2024). FinAgent: a multimodal foundation agent for financial trading. *Proceedings of the 30th International Joint Conference on Artificial Intelligence (IJCAI 2024)*.
+Yang, J., Wang, Z., Zhao, Z., et al. (2024). FinAgent: a multimodal foundation agent for financial trading. *IJCAI 2024*.
 
 Yu, X., Wang, H., Liu, J., et al. (2024). FinMem: a performance-enhanced LLM trading agent with layered memory and character design. *AAAI 2024 Workshop on AI in Finance*.
 
 Zhu, C. (2019). Big data as a governance mechanism. *Review of Financial Studies*, 32(5), 2021–2061.
-
----
-
-## Software, data, and computational resources
-
-- IBES Detail-History (`tr_ibes`, sales/revenue measure code SAL): WRDS subscription, accessed Q1 2026.
-- Compustat quarterly fundamentals (`comp.fundq`): WRDS subscription.
-- CRSP daily stock files: WRDS subscription, through 2024-12-31.
-- yfinance Adj Close: open-source, used to extend CRSP price series through 2025.
-- EIA weekly WTI spot: U.S. Energy Information Administration public release.
-- GDELT 2.0 DOC API: open access, https://www.gdeltproject.org/.
-- Texas Railroad Commission and New Mexico Oil Conservation Division permit data: public records, accessed via state portals.
-- LLM provider: OpenAI API (`gpt-4o-mini` for Agent 2 qualitative outlook, Agent 3 reasoning text, Agent 4 news verification, and Agent 5 Bull/Bear; `gpt-5-mini` for Agent 5 Arbiter).
-
-## Reproducibility statement
-
-All code, prompts, manifests, and per-trade ledgers are in the project repository. Each backtest run writes a `manifest.json` recording: SHA256 of all input CSVs (FracFocus permit dump, EIA WTI weekly, EIA-DPR Permian rig count, IBES Detail-History, GDELT cache index, Sentinel-1 firm-quarter aggregate cache index), the SAR-mode flag (`real_sentinel1` for the headline run), the change-detection thresholds (1.5 dB activation, 0.5 dB sustained), the trailing-baseline coefficient (0.3), the consensus-anchor `α` parameter, the per-agent provider and model identifier (and version where available), prompt-file SHAs, the Python version, and the platform identifier. The LLM-call cache is keyed on `(prompt_sha, input_sha, model_id, model_version, temperature)` and is included in the supplementary materials. To reproduce the headline run, set `FIN580_SAR_MODE=real_sentinel1` and `FIN580_SAR_PADS_PER_OP=25`, execute Strategy 1 over the six yearly windows from `2019Q1-2019Q4` through `2024Q1-2024Q4`, and regenerate the inference rollups from those yearly run directories. The per-pad Sentinel-1 backscatter cache (`phase1/output/sentinel1_cache/`) and the LLM-call cache (`runs/_global_cache/`) are sufficient to reproduce the reported trade ledger. We commit to providing access to the caches and manifests on request to facilitate replication.
