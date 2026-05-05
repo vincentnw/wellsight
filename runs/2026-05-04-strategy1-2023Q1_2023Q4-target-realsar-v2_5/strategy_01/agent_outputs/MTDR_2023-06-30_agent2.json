@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 670000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 670000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 109834.32262910975,
+    "wti_avg": 72.86307692307692,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources has seen a total of 5 active drilling sites as of the decision date, with a notable increase in newly active sites. This uptick in drilling activity, combined with a stable WTI price averaging around $72.86 per barrel, supports our revenue forecast of $670 million for the upcoming quarter. The company's full exposure to the segment and a positive realized price differential indicate a solid operational environment, although the drilling signal remains muted.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "full_segment_exposure",
+    "positive_realized_price_diff",
+    "active_drilling_sites"
+  ]
+}

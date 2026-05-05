@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 614086246.6666666,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 662683000.0,
+    "drilling_signal_raw": -0.7333333333333333,
+    "drilling_signal_clipped": -0.7333333333333333,
+    "production_boe_d": 100292.04676818202,
+    "wti_avg": 72.35000000000001,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "PR's drilling activity remains subdued with only 2 active sites, reflecting a relative activity decline of 5.5% compared to previous periods. The average WTI price of $72.35 per barrel, combined with a realized price differential of $0.93, supports a revenue forecast of approximately $614.1 million. The lack of new drilling activity suggests a cautious approach, which may limit production growth in the upcoming quarter.",
+  "key_drivers": [
+    "low_drilling_activity",
+    "stable_wti_prices",
+    "realized_price_diff",
+    "limited_new_sites",
+    "cautious_growth"
+  ]
+}

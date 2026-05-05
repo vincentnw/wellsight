@@ -1,0 +1,11 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 75,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "ay-heats-up-in-West-13964593.php",
+    "rs-so-far-this-year-14074573.php"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (ay-heats-up-in-West-13964593.php, rs-so-far-this-year-14074573.php) describe drilling activity changes in the Spraberry play and top drillers, consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

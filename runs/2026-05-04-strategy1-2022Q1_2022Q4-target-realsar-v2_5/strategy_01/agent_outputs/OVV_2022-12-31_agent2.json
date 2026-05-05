@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2603226999.9999995,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2366569999.9999995,
+    "drilling_signal_raw": 1.0,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 203994.1918052107,
+    "wti_avg": 77.90769230769232,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "OVV's drilling activity shows a robust increase with 15 active sites at the decision date, significantly above the historical average. This uptick, combined with a stable WTI price around $77.91 and a realized price differential of $0.90, supports a solid revenue forecast of approximately $2.60B for the upcoming quarter. The segment fraction indicates a balanced exposure, which should help mitigate risks associated with price fluctuations.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "positive_realized_price_diff",
+    "balanced_segment_fraction",
+    "strong_active_site count"
+  ]
+}

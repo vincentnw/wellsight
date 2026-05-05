@@ -1,0 +1,22 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 1442336000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1534400000.0,
+    "drilling_signal_raw": -0.6,
+    "drilling_signal_clipped": -0.6,
+    "production_boe_d": 217720.74963867833,
+    "wti_avg": 78.27846153846154,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "FANG's drilling activity shows a total of 3 active sites, with no new sites added and a relative activity decline of 4.5%. This suggests a contraction in operational momentum as we approach the end of Q4 2021. Despite a stable WTI average price of approximately $78.28/boe and a favorable realized price difference, the lack of new drilling activity may limit production growth. Consequently, our deterministic revenue forecast remains at $1.44B, reflecting these challenges in maintaining production levels.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "limited_new_sites",
+    "production_constraints"
+  ]
+}

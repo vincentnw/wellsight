@@ -1,0 +1,22 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 524280000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 514000000.0,
+    "drilling_signal_raw": 0.2,
+    "drilling_signal_clipped": 0.2,
+    "production_boe_d": 69190.74033419097,
+    "wti_avg": 89.53461538461536,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "With 9 active drilling sites and a relative activity increase of 1.5, PR is positioned for a solid quarter. The average WTI price of approximately $89.53 per barrel supports favorable realized prices, contributing to our deterministic revenue forecast of $524.28 million. The segment's full exposure and the increase in newly active sites suggest a positive trajectory for production and revenue.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "high_wti_prices",
+    "full_segment_exposure",
+    "positive_activity_delta"
+  ]
+}

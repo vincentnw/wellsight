@@ -1,0 +1,22 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 7082000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7082000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 292441.4578202544,
+    "wti_avg": 84.93153846153845,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental Petroleum's drilling activity remains minimal, with only one active site reported at the decision date, reflecting a share active of just 4%. This limited drilling context, combined with a strong WTI average price of approximately $84.93/boe, supports our revenue forecast of $7.08B for the quarter ending September 30, 2023. The low segment fraction indicates that the company is not fully capitalizing on its production potential, which may constrain revenue growth despite favorable pricing conditions.",
+  "key_drivers": [
+    "minimal_drilling_activity",
+    "high_wti_prices",
+    "low_segment_fraction",
+    "limited_production_growth"
+  ]
+}

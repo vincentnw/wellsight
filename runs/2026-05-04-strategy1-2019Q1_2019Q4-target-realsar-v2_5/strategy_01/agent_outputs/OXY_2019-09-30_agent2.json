@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 5142000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5142000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 325653.13233727583,
+    "wti_avg": 55.37692307692308,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "OXY's drilling activity remains limited with only one active site as of the decision date, reflecting a share active of just 4%. This low level of drilling activity, combined with a WTI average price of approximately $55.38/boe, suggests that revenue may be constrained despite the deterministic forecast of $5.14B. The segment fraction indicates that only 30% of operations are contributing to revenue, which may further limit growth potential in the upcoming quarter.",
+  "key_drivers": [
+    "low_drilling_activity",
+    "stable_wti",
+    "limited_segment_fraction",
+    "single_active_site",
+    "anchored_forecast"
+  ]
+}

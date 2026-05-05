@@ -1,0 +1,22 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 4202500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4202500000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 350132.8903055601,
+    "wti_avg": 79.7176923076923,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a total of 10 active sites, with a notable increase in newly active sites contributing to a relative activity delta of 9.0. This suggests a positive trend in production capacity as we approach the end of Q4 2022. The average WTI price of approximately $79.72 per barrel, combined with a segment fraction of 0.55, supports a robust revenue forecast of $4.20 billion. The current drilling environment indicates a solid operational foundation, which should help maintain revenue stability.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "strong_segment_fraction",
+    "positive_relative_activity"
+  ]
+}

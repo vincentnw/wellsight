@@ -1,0 +1,8 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 0,
+  "gdelt_disclosed": false,
+  "matching_article_ids": [],
+  "conviction_modifier": "none",
+  "reasoning": "short_circuit_no_beat_divergence (DL #61): Agent 3 classified as in_line; Agent 4 LLM call skipped because the locked guardrail forces no_trade regardless."
+}

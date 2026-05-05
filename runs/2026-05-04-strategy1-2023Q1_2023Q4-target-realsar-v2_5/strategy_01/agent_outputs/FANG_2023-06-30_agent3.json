@@ -1,0 +1,11 @@
+{
+  "ticker": "FANG",
+  "our_estimate_usd": 1964425500.0,
+  "consensus_median_usd": 1964425500.0,
+  "consensus_dispersion_usd": 339456315.1612871,
+  "n_analysts_at_T_minus_14": 18,
+  "divergence_pct": 0.0,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our estimate matches the consensus exactly, resulting in a 0% divergence. With 18 analysts and significant dispersion (about 17% of consensus), confidence is medium."
+}

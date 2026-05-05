@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 424563300.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 404346000.0,
+    "drilling_signal_raw": 0.5,
+    "drilling_signal_clipped": 0.5,
+    "production_boe_d": 52419.88176726821,
+    "wti_avg": 55.62692307692308,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows a significant increase with 6 active sites at the decision date, which is a notable rise from previous levels. This uptick in drilling, combined with a WTI average price of approximately $55.63 per barrel and a realized price differential of $0.88, supports a revenue forecast of around $424.56 million for the quarter ending September 30, 2019. The segment fraction of 0.55 indicates a balanced exposure to both production and pricing dynamics, suggesting a stable revenue outlook despite market fluctuations.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "positive_realized_price_diff",
+    "balanced_segment_fraction",
+    "active_site_count"
+  ]
+}

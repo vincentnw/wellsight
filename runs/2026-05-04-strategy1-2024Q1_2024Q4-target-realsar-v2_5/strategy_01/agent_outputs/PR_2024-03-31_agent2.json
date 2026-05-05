@@ -1,0 +1,22 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1199000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1199000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 175972.58573134142,
+    "wti_avg": 80.50999999999999,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "With only one active drilling site and a relative activity delta indicating no new activity, PR's production outlook remains stable but limited. The average WTI price of approximately $80.51/boe supports a solid revenue environment, but the lack of new drilling signals suggests that growth may be constrained. Our deterministic revenue forecast of $1.199B reflects these dynamics, indicating steady performance without significant expansion in drilling activity.",
+  "key_drivers": [
+    "limited_drilling_activity",
+    "stable_wti",
+    "single_active_site",
+    "steady_production"
+  ]
+}

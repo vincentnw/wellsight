@@ -1,0 +1,41 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 15 active sites, significantly above the trailing average",
+      "Agent 2 reports a solid revenue forecast of approximately $2.66B for the upcoming quarter",
+      "Agent 3 divergence_class indicates a modest beat at +10%, suggesting analysts expect positive earnings surprise"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, a strong revenue forecast, and positive analyst sentiment supports a high-confidence long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false, indicating no recent news to support a price increase",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2's revenue forecast relies heavily on stable WTI prices, which are subject to volatility and external market pressures"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and strong active site count, which could indicate growth potential"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of recent news and medium confidence in analyst forecasts suggest significant risks. The reliance on stable WTI prices adds further uncertainty, making a long position inadvisable."
+  },
+  "arbiter_reasoning": "Bull arguments prevail: Agent 2 presents concrete operational improvement (15 active sites) and a $2.66B revenue forecast, supported by Agent 3's modest_beat (+10%) analyst divergence at medium confidence. Agent 4 disclosed no adverse GDELT signal. Bear raised valid WTI-volatility and news-coverage concerns, but they do not outweigh the combined operational and analyst upside. Conviction set to medium (modest_beat + medium confidence, no GDELT downgrade).",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

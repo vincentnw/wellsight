@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 406500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 406500000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 62028.18145518205,
+    "wti_avg": 78.27846153846154,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources is currently experiencing no active drilling activity, as indicated by the absence of newly active or continuously active sites. This lack of drilling suggests a stable but potentially stagnant production outlook for the upcoming quarter. With a WTI average price of approximately $78.28/boe and a realized price difference of $0.92, the revenue forecast remains at $406.5 million, reflecting the current market conditions without the influence of new drilling activity.",
+  "key_drivers": [
+    "no_drilling_activity",
+    "stable_wti",
+    "realized_price_diff",
+    "production_stability",
+    "consensus_forecast"
+  ]
+}

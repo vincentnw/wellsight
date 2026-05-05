@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 814830000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 778500000.0,
+    "drilling_signal_raw": 0.4666666666666667,
+    "drilling_signal_clipped": 0.4666666666666667,
+    "production_boe_d": 122268.14361386295,
+    "wti_avg": 78.74615384615386,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "For the upcoming quarter ending December 31, 2022, PR is positioned for a solid revenue outcome with a forecast of $814.83 million. The company has 11 active drilling sites, with a notable increase in activity relative to previous periods, indicating a positive trend in production. The average WTI price remains stable at approximately $78.75, which supports favorable realized prices. The concentrated drilling activity suggests that operational efficiencies are likely to enhance output, contributing positively to revenue.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "high_segment_fraction",
+    "operational_efficiencies",
+    "positive_relative_activity"
+  ]
+}

@@ -18,6 +18,23 @@ RUNS_DIR = Path(__file__).resolve().parents[2] / "runs"
 UNIVERSE = ["FANG", "EOG", "DVN", "CTRA", "OXY", "MTDR", "PR", "OVV", "SM", "CRGY"]
 
 
+def _preflight_strategy(strategy: int) -> None:
+    """Catch missing provider SDKs/API keys before a long LLM run starts."""
+    if strategy != 1:
+        return
+    from fin580.agents import agent2_revenue, agent3_consensus, agent4_news, agent5_board
+    from fin580.agents.llm_client import preflight_models
+
+    preflight_models([
+        agent2_revenue.MODEL_ID,
+        agent3_consensus.MODEL_ID,
+        agent4_news.MODEL_ID,
+        agent5_board.MODEL_BULL,
+        agent5_board.MODEL_BEAR,
+        agent5_board.MODEL_ARBITER,
+    ])
+
+
 def _load_earnings_dates() -> dict[tuple[str, date], date]:
     out: dict[tuple[str, date], date] = {}
     with open(PHASE1_OUTPUT / "earnings_dates.csv") as f:
@@ -68,6 +85,7 @@ def run_single_cell(
     quarter_label: str,
     cm_label: str = "target",
 ) -> Path:
+    _preflight_strategy(strategy)
     fpe = parse_quarter(quarter_label)
     eds = _load_earnings_dates()
     earnings_date = eds.get((ticker, fpe))
@@ -153,6 +171,7 @@ def run_window(
 
     if strategy not in REGISTRY:
         raise ValueError(f"Unknown strategy {strategy}; available: {sorted(REGISTRY)}")
+    _preflight_strategy(strategy)
 
     eds = _load_earnings_dates()
     quarters = _enumerate_quarters(start_quarter, end_quarter)

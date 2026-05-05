@@ -1,0 +1,13 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 36,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "ian-Is-Slowing-Down-14090615.php",
+    "ermian-is-slowing-down-1.1286299",
+    "mian-slowing-down-100000463.html",
+    "rmian-promise-slowing-shale-boom"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Several GDELT-indexed articles describe a slowdown in drilling activity in the Permian Basin, which is consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

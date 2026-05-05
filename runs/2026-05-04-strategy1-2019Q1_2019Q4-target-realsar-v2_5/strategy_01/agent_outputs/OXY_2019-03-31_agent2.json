@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 3881946666.6666665,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3908000000.0,
+    "drilling_signal_raw": -0.06666666666666667,
+    "drilling_signal_clipped": -0.06666666666666667,
+    "production_boe_d": 235943.70288886505,
+    "wti_avg": 57.70230769230769,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "OXY's drilling activity shows a total of 7 active sites, with no new additions and a relative activity decline of 50% compared to previous periods. This suggests a contraction in operational momentum, which, combined with a WTI average price of approximately $57.70 and a segment fraction of 30%, leads to a revenue forecast of about $3.88B for the upcoming quarter. The current drilling signal indicates a cautious approach, likely impacting production levels.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "low_segment_fraction",
+    "no_new_drilling_sites",
+    "operational_contraction"
+  ]
+}

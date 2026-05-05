@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3163048983.333333,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3184277500.0,
+    "drilling_signal_raw": -0.06666666666666667,
+    "drilling_signal_clipped": -0.06666666666666667,
+    "production_boe_d": 263782.6224117752,
+    "wti_avg": 79.64153846153847,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a decline with 7 active sites at the decision date, which is a significant drop from previous levels, indicating a potential slowdown in production growth for Q1 2024. The average WTI price remains stable at approximately $79.64, and with a segment fraction of 0.55, the revenue forecast of about $3.16B reflects these challenges. The reduced drilling activity suggests that while prices are favorable, the overall production may not meet previous expectations.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "segment_fraction",
+    "production_growth_concerns",
+    "market_conditions"
+  ]
+}

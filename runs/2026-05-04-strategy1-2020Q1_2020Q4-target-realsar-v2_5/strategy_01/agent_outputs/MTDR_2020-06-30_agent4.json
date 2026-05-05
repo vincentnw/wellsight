@@ -1,0 +1,8 @@
+{
+  "ticker": "MTDR",
+  "n_articles_in_window": 17,
+  "gdelt_disclosed": false,
+  "matching_article_ids": [],
+  "conviction_modifier": "none",
+  "reasoning": "Of 20 GDELT articles in the window, none describe a drilling-activity change consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only."
+}

@@ -10,12 +10,12 @@ density attribution test.
    Activated via `FIN580_SAR_PADS_PER_OP=25`. Cache key `..._n25.json` is
    distinct from `..._n5.json`, so v1 cache is preserved.
 
-2. **LLM provider routing for Agents 3, 4, 5:** Cerebras free tier → OpenAI
-   paid tier. Agent 2 stays on Cerebras (qwen-3-235b qualitative outlook).
+2. **LLM provider routing — full migration to OpenAI** (revised mid-v2.5
+   after Cerebras free-tier 429s persisted on Agent 2 even at 20s throttle):
 
    | Agent | v1 model | v2.5 model | Provider |
    |---|---|---|---|
-   | Agent 2 (revenue outlook) | qwen-3-235b | **qwen-3-235b** (unchanged) | Cerebras |
+   | Agent 2 (revenue outlook) | qwen-3-235b | gpt-4o-mini | OpenAI |
    | Agent 3 (divergence reasoning) | llama3.1-8b | gpt-4o-mini | OpenAI |
    | Agent 4 (GDELT news) | llama3.1-8b | gpt-4o-mini | OpenAI |
    | Agent 5 Bull | qwen-3-235b | gpt-4o-mini | OpenAI |
@@ -24,8 +24,16 @@ density attribution test.
 
    Motivation: v1 hit Cerebras free-tier 429 rate limits multiple times
    mid-run, requiring multi-account key rotation and 12s throttling. The
-   reliability cost was non-trivial (multi-day re-runs). OpenAI mini tier
-   is ~$0.50-0.75 for the full 2019-2024 sweep with no rate-limit pain.
+   reliability cost was non-trivial (multi-day re-runs). The original v2.5
+   plan kept Agent 2 on Cerebras to save OpenAI tokens, but the first 2024
+   v2.5 LLM run hit 27 errors (mix of stale-env import and Cerebras 429),
+   needed 4 retry passes, and still left 7-15 cells erroring per pass on
+   Cerebras Agent 2 alone. Migrating Agent 2 to gpt-4o-mini eliminates the
+   Cerebras dependency entirely and roughly doubles per-cell OpenAI tokens.
+
+   Updated cost estimate: **~$1.00-1.50** for the full 2019-2024 sweep
+   (was ~$0.50-0.75 with Agent 2 on Cerebras). Still under $2 — the
+   reliability win dominates.
 
    Note on Arbiter model name: `gpt-5-mini` is the correct OpenAI API
    identifier (the "5-series mini reasoning model"). Earlier informal

@@ -1,0 +1,113 @@
+{
+  "ticker": "MTDR",
+  "decision_date_T": "2021-10-12",
+  "fiscal_quarter_end": "2021-09-30",
+  "n_newly_active": 11,
+  "n_continuously_active": 10,
+  "n_idle": 4,
+  "absolute_active": 21,
+  "share_active": 0.84,
+  "relative_activity_delta": 19.0,
+  "pad_classifications": [
+    {
+      "pad_id": "30015445720000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015445740000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015441670000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015445750000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015449240000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015441730000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015449250000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015459830000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015441740000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015449260000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015459840000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015441870000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015449270000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015459860000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015449850000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015468950000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015459990000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015449860000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015468960000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015460010000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015452690000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015469840000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015461310000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015452700000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015469860000",
+      "state": "newly_active"
+    }
+  ]
+}

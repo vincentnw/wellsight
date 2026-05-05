@@ -1,0 +1,43 @@
+{
+  "ticker": "SM",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights strong drilling activity with 18 active sites and 7 newly active, indicating robust production potential.",
+      "Agent 2 reports a deterministic revenue forecast of approximately $446.72 million for the upcoming quarter, which is a strong indicator of financial performance.",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting analysts expect the company to outperform expectations."
+    ],
+    "counter_evidence": [
+      "Agent 4 indicates a downgrade_one_tier, which may reflect some caution among analysts."
+    ],
+    "reasoning_short": "The strong drilling activity and solid revenue forecast, combined with a modest expected earnings beat, create a compelling case for a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 36 articles indicating that the market may have already priced in the positive news about drilling activity.",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting that expectations may not be as strong as projected.",
+      "Agent 2's outlook, while optimistic, relies heavily on current drilling activity and price environment, which are subject to volatility and external market factors."
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong drilling activity and a positive price environment, which could support revenue growth."
+    ],
+    "reasoning_short": "The market appears to have already priced in the positive news, and the modest analyst divergence suggests that expectations may be overly optimistic. Given the potential for volatility in oil prices and production forecasts, a long position carries significant risk."
+  },
+  "arbiter_reasoning": "Bear prevails. Agent 4's GDELT disclosure (36 articles) and downgrade_one_tier indicate the positive drilling/news flow is likely priced in and reduces the information edge. Although Agent 2 shows strong drilling activity and Agent 3 forecasts a modest_beat (+10%) with medium confidence, the market-signaling from Agent 4 and attendant pricing/volatility risk outweigh the bullish case. Declining to initiate a long.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.15,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.6
+  }
+}

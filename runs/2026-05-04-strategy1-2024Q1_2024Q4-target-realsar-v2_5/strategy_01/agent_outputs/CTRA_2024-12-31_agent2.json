@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1319766543.3333333,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1424208500.0,
+    "drilling_signal_raw": -0.7333333333333333,
+    "drilling_signal_clipped": -0.7333333333333333,
+    "production_boe_d": 103313.7721331342,
+    "wti_avg": 71.98846153846154,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "CTRA's drilling activity shows a total of 2 active sites, with no new additions and a relative activity decline of 5.5%. This suggests a cautious approach to production as we head into Q4 2024. The average WTI price of approximately $72/boe, combined with a segment fraction of 0.4, indicates that while the revenue forecast is set at around $1.32B, the overall drilling environment may limit significant upside potential in the near term.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "limited_new_sites",
+    "segment_fraction_effect",
+    "cautious_production"
+  ]
+}

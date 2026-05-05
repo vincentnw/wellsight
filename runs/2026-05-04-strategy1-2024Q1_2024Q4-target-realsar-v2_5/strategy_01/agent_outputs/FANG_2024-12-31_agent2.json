@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 3478200000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3410000000.0,
+    "drilling_signal_raw": 0.2,
+    "drilling_signal_clipped": 0.2,
+    "production_boe_d": 570909.5627351758,
+    "wti_avg": 71.98846153846154,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Diamondback's drilling activity shows a stable presence with 9 active sites at the decision date, maintaining a strong operational footprint. The relative activity delta of 1.5 indicates a slight increase in drilling intensity compared to previous periods, which should support production levels. With WTI prices averaging around $72/boe and a full segment exposure, the deterministic revenue forecast of approximately $3.48B reflects a solid outlook for the upcoming quarter, driven by consistent production and favorable pricing conditions.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "positive_relative_activity_delta",
+    "favorable_wti_prices",
+    "full_segment_exposure",
+    "consistent_production_levels"
+  ]
+}

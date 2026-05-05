@@ -1,0 +1,22 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 2135000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2135000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 328390.46466066386,
+    "wti_avg": 76.82153846153847,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "FANG's revenue forecast of $2.135B reflects a lack of active drilling sites, with no new or continuously active operations reported as of the decision date. The absence of drilling activity suggests limited production growth potential for the upcoming quarter. However, with a stable WTI average price of approximately $76.82/boe and a realized price differential of 0.93, the company is positioned to maintain its revenue forecast despite the inactivity in drilling.",
+  "key_drivers": [
+    "no_drilling_activity",
+    "stable_wti",
+    "realized_price_diff",
+    "production_levels"
+  ]
+}

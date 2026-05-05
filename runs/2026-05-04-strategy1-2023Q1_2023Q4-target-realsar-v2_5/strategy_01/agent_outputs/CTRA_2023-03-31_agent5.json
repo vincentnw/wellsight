@@ -1,0 +1,41 @@
+{
+  "ticker": "CTRA",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates a positive shift in operational momentum with 3 newly active sites",
+      "Agent 2 revenue forecast of approximately $1.78B suggests strong performance potential",
+      "Agent 3 divergence_class is modest_beat at +6.67%, indicating analysts expect a positive earnings surprise"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, a solid revenue forecast, and analyst expectations for a modest earnings beat strongly supports a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false, indicating no recent news to support a price increase",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +6.67%, suggesting limited upside potential",
+      "Agent 2's outlook acknowledges mixed drilling signals despite a positive operational momentum, indicating uncertainty in future performance"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights newly active sites and stable WTI prices, which could support revenue"
+    ],
+    "reasoning_short": "The lack of recent news and mixed signals in drilling activity suggest that the market may not sustain a long position in CTRA. The modest analyst divergence indicates limited upside, making this a risky investment."
+  },
+  "arbiter_reasoning": "Bull view prevails: Agent 3's modest_beat (+6.67%) at medium confidence combined with Agent 2's operational momentum and $1.78B revenue forecast provide a constructive information edge. Agent 4 disclosed no adverse GDELT signal, so the bear's caution about mixed drilling signals and lack of news does not outweigh the positive analyst and operational evidence. Conviction set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.55,
+    "agent4_weight": 0.1
+  }
+}

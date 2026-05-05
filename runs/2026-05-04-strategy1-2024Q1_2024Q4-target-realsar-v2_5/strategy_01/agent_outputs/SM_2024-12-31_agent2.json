@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 869000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 869000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 82921.99950227719,
+    "wti_avg": 71.97615384615384,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows a modest increase with 2 newly active sites, indicating a potential for stable production levels in the upcoming quarter. The average WTI price of approximately $72/boe, combined with a realized price differential of $0.88, supports a solid revenue outlook. With a segment fraction of 0.55, the company is well-positioned to capitalize on its drilling efforts, leading to a deterministic revenue forecast of $869 million for Q4 2024.",
+  "key_drivers": [
+    "newly_active_sites",
+    "stable_wti",
+    "realized_price_diff",
+    "segment_fraction",
+    "production_levels"
+  ]
+}

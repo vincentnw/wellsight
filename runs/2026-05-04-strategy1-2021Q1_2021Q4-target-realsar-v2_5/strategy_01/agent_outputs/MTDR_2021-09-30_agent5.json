@@ -1,0 +1,41 @@
+{
+  "ticker": "MTDR",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights high drilling activity with 21 active sites, indicating robust operational momentum.",
+      "Agent 2 reports favorable WTI pricing averaging $70.93 per barrel, supporting a solid revenue outlook.",
+      "Agent 3 divergence_class indicates a modest_beat with a divergence_pct of 10%, suggesting analysts expect positive earnings surprise."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Strong operational momentum and favorable pricing conditions position Matador Resources for a significant earnings beat, warranting a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false, indicating no recent news to support a price increase",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2's outlook, while optimistic, relies heavily on high drilling activity and favorable pricing, which are subject to volatility and external market conditions"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong realized price and increased production potential"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of recent news and medium analyst confidence suggest significant risks. The sector's volatility and reliance on external factors make a long position too risky at this time."
+  },
+  "arbiter_reasoning": "Bull evidence prevails: Agent 2's strong operational drivers and revenue forecast (21 active sites, favorable WTI) combined with Agent 3's modest_beat (+10%) and Agent 4's lack of negative GDELT disclosures outweigh the Bear's caution about sector volatility and reliance on external factors. Modest_beat with medium analyst confidence and no negative news yields a medium conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.55,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.15
+  }
+}

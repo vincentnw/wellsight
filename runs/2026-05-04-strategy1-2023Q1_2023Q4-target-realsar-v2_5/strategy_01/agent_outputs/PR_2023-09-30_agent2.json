@@ -1,0 +1,22 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 746000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 746000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 103787.6062600399,
+    "wti_avg": 84.93153846153845,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "With two active drilling sites and no new activity reported, the drilling landscape for PR remains stable but limited. The average WTI price of approximately $84.93/boe supports a favorable pricing environment, while the segment fraction indicates full exposure to this pricing. Our deterministic revenue forecast of $746 million reflects these conditions, suggesting steady revenue generation but with potential constraints on growth due to the lack of new drilling activity.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "favorable_wti_prices",
+    "full_segment_exposure",
+    "limited_growth_potential"
+  ]
+}

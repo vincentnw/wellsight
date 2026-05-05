@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 982236000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 982236000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 194896.5407548613,
+    "wti_avg": 59.55076923076923,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "FANG's drilling activity remains stable with 6 active sites, maintaining a consistent production level. The average WTI price of approximately $59.55 per barrel, combined with a realized price differential of 0.93, supports our revenue forecast of $982.24 million for the quarter ending March 31, 2021. The segment fraction indicates a full exposure to the market, which should help stabilize revenue despite the lack of new drilling activity.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "average_wti_price",
+    "realized_price_diff",
+    "full_segment_exposure",
+    "consistent_production"
+  ]
+}

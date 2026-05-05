@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 3760444000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3760444000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 273610.67421303166,
+    "wti_avg": 71.54076923076924,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG's drilling activity shows a robust presence with 19 active sites at the decision date, significantly above the trailing average, indicating strong operational momentum. The average WTI price of approximately $71.54 per barrel, combined with a realized price differential of $0.95, supports a solid revenue outlook. With a segment fraction of 0.45, the company is well-positioned to capitalize on its production capabilities, leading to a deterministic revenue forecast of $3.76B for the quarter ending September 30, 2021.",
+  "key_drivers": [
+    "high_active_sites",
+    "strong_wti_price",
+    "positive_realized_price_diff",
+    "increased_drilling_activity",
+    "significant_segment_fraction"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ticker": "FANG",
+  "our_estimate_usd": 1043113033.3333331,
+  "consensus_median_usd": 1036204999.9999999,
+  "consensus_dispersion_usd": 97608993.78285214,
+  "n_analysts_at_T_minus_14": 22,
+  "divergence_pct": 0.67,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our estimate of $1.04B is only 0.67% above the $1.04B consensus. With 22 analysts and low dispersion (9.4% of consensus), confidence is high."
+}

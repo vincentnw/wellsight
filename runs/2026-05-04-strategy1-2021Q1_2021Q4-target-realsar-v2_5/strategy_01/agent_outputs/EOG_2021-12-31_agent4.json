@@ -1,0 +1,13 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 71,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "ut-10-in-Major-Lift-16814502.php",
+    "sion-20-jan-2022-167646-article/",
+    "jor-lift-for-u-s-shale-1.1715036",
+    "cent-31-jan-2022-167756-article/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Several GDELT-indexed articles (ut-10-in-Major-Lift-16814502.php, sion-20-jan-2022-167646-article/, jor-lift-for-u-s-shale-1.1715036, cent-31-jan-2022-167756-article/) describe a significant boost in Permian output by EOG consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

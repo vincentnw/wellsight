@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5324000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5324000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 360746.8625502957,
+    "wti_avg": 76.82153846153847,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG Resources is facing a challenging quarter with no active drilling sites as of the decision date, reflecting a significant relative activity decline of 70%. The average WTI price of approximately $76.82 per barrel, combined with a realized price differential of $0.95, suggests that while pricing remains stable, the lack of drilling activity will limit production growth. Consequently, our deterministic revenue forecast remains at $5.32B, indicating a reliance on existing production rather than new contributions from drilling.",
+  "key_drivers": [
+    "no_active_drilling",
+    "significant_activity_decline",
+    "stable_wti",
+    "realized_price_diff",
+    "existing_production_reliance"
+  ]
+}

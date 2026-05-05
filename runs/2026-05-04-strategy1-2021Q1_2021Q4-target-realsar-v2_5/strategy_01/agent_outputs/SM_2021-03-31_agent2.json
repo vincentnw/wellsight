@@ -1,0 +1,22 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 340080000.00000006,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 340080000.00000006,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 39692.91447395451,
+    "wti_avg": 58.844615384615395,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows a total of 7 active sites, with 5 continuously active, indicating a stable operational base. The relative activity delta of 7.0 suggests a slight increase in drilling activity, which, combined with a WTI average price of approximately $58.84 and a segment fraction of 0.55, supports our revenue forecast of around $340.08 million. The lack of significant new drilling signals indicates that while production remains steady, there may be limited upside potential in the near term.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "moderate_wti_prices",
+    "steady_production",
+    "limited_new_drilling"
+  ]
+}

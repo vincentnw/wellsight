@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1564941910.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1596879500.0,
+    "drilling_signal_raw": -0.2,
+    "drilling_signal_clipped": -0.2,
+    "production_boe_d": 118805.96784907667,
+    "wti_avg": 74.23076923076923,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "CTRA's drilling activity shows a total of 6 active sites, with a relative activity delta of -1.5, indicating a decline in drilling momentum compared to previous periods. The average WTI price of approximately $74.23 per barrel, combined with a segment fraction of 0.4, suggests that while there is some production, the overall revenue potential may be limited due to reduced drilling activity. Our deterministic revenue forecast stands at $1.56B, reflecting these dynamics.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "limited_segment_fraction",
+    "active_site_count",
+    "production_levels"
+  ]
+}

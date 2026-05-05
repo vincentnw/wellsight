@@ -1,0 +1,113 @@
+{
+  "ticker": "CTRA",
+  "decision_date_T": "2024-07-18",
+  "fiscal_quarter_end": "2024-06-30",
+  "n_newly_active": 0,
+  "n_continuously_active": 0,
+  "n_idle": 25,
+  "absolute_active": 0,
+  "share_active": 0.0,
+  "relative_activity_delta": 0.0,
+  "pad_classifications": [
+    {
+      "pad_id": "30015480350000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015491550000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015431730000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015482760000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015491590000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015433730000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015495110000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015491700000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015433770000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015495120000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015491940000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015446950000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015499190000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015491950000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015447900000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015542030000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015491960000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015451470000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015548860000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015491970000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015451480000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015548870000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015491990000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015452650000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30025501040000",
+      "state": "idle"
+    }
+  ]
+}

@@ -85,3 +85,32 @@ def test_route_provider_openai_models():
     assert _route_provider("o3-mini") == "openai"
     # gpt-oss must stay on Cerebras even though name starts with "gpt-"
     assert _route_provider("gpt-oss-120b") == "cerebras"
+
+
+def test_preflight_models_reports_missing_sdk(monkeypatch):
+    import importlib
+    import pytest
+
+    from fin580.agents.llm_client import preflight_models
+
+    monkeypatch.setenv("CEREBRAS_API_KEY", "x")
+    real_import = importlib.import_module
+
+    def fake_import(name):
+        if name == "cerebras.cloud.sdk":
+            raise ModuleNotFoundError("No module named 'cerebras'")
+        return real_import(name)
+
+    monkeypatch.setattr(importlib, "import_module", fake_import)
+    with pytest.raises(RuntimeError, match="cerebras"):
+        preflight_models(["qwen-3-235b-a22b-instruct-2507"])
+
+
+def test_preflight_models_reports_missing_key(monkeypatch):
+    import pytest
+
+    from fin580.agents.llm_client import preflight_models
+
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    with pytest.raises(RuntimeError, match="OPENAI_API_KEY"):
+        preflight_models(["gpt-4o-mini"])

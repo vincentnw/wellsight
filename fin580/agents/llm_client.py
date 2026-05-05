@@ -101,6 +101,45 @@ def _route_provider(model_id: str) -> str:
     )
 
 
+def preflight_models(model_ids: list[str]) -> None:
+    """Fail fast if a run's routed providers are missing SDKs or API keys.
+
+    This intentionally does not make network calls; it catches the common
+    long-run failure where cached cells succeed, then the first cache miss
+    crashes because the provider package/key is missing.
+    """
+    provider_to_models: dict[str, list[str]] = {}
+    for model_id in model_ids:
+        provider_to_models.setdefault(_route_provider(model_id), []).append(model_id)
+
+    errors: list[str] = []
+    checks = {
+        "huggingface": ("HF_TOKEN", "huggingface_hub", "InferenceClient"),
+        "groq": ("GROQ_API_KEY", "groq", "Groq"),
+        "cerebras": ("CEREBRAS_API_KEY", "cerebras.cloud.sdk", "Cerebras"),
+        "openai": ("OPENAI_API_KEY", "openai", "OpenAI"),
+    }
+    import importlib
+
+    for provider, models in sorted(provider_to_models.items()):
+        env_key, module_name, attr_name = checks[provider]
+        if not os.environ.get(env_key):
+            errors.append(
+                f"{provider}: {env_key} missing for models {', '.join(models)}"
+            )
+        try:
+            module = importlib.import_module(module_name)
+            getattr(module, attr_name)
+        except Exception as e:
+            errors.append(
+                f"{provider}: cannot import {module_name}.{attr_name} "
+                f"for models {', '.join(models)} ({type(e).__name__}: {e})"
+            )
+
+    if errors:
+        raise RuntimeError("LLM provider preflight failed:\n- " + "\n- ".join(errors))
+
+
 def _throttle_provider(provider: str) -> None:
     """Apply provider-scoped minimum request spacing for uncached LLM calls."""
     min_interval = PROVIDER_MIN_INTERVAL_SECONDS.get(provider, 0.0)

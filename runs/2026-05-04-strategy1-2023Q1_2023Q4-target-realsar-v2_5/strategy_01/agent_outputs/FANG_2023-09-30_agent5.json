@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates robust drilling activity with 8 active sites and a deterministic revenue forecast of $2.43B for the upcoming quarter.",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting analysts expect a positive earnings surprise.",
+      "Agent 4 reports gdelt_disclosed=false, indicating no information leak that could negatively impact the earnings report."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "Strong operational performance and favorable market conditions, combined with analyst expectations for a positive earnings surprise, support a high-confidence long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating new positive developments, suggesting limited market momentum",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst forecasts",
+      "Agent 2's outlook, while positive, relies heavily on stable conditions which may not hold in a volatile market"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong operational efficiency and a favorable revenue forecast of $2.43B"
+    ],
+    "reasoning_short": "Despite a solid revenue forecast, the lack of new positive news and medium analyst confidence raise significant risks. The market may not sustain current valuations, making a long position risky."
+  },
+  "arbiter_reasoning": "Bull view prevails: Agent 2's robust operational metrics and deterministic $2.43B revenue forecast, combined with Agent 3's modest_beat (+10%) analyst divergence and Agent 4's clean GDELT (no disclosure), outweigh the Bear's caution about market volatility. The divergence is modest with medium confidence and no GDELT downgrade, so I open a long with medium conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.2
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6916242666.666667,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7254800000.0,
+    "drilling_signal_raw": -0.4666666666666667,
+    "drilling_signal_clipped": -0.4666666666666667,
+    "production_boe_d": 337002.8671525371,
+    "wti_avg": 71.97615384615384,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "OXY's drilling activity shows a total of 4 active sites, with no new additions and a relative activity decline of 3.5%. This suggests a cautious approach to production growth as we head into Q4 2024. The average WTI price of approximately $72/boe, combined with a segment fraction of 0.3, indicates that while revenue remains robust, it may be tempered by the limited drilling activity. Our deterministic revenue forecast stands at about $6.92B, reflecting these dynamics.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti_prices",
+    "limited_new_sites",
+    "segment_fraction_effect"
+  ]
+}

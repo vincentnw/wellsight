@@ -1,0 +1,22 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 657033000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 657033000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 60172.17719660459,
+    "wti_avg": 74.99461538461539,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows a total of 6 active sites, with 4 continuously active and 2 newly active, indicating a slight increase in operational engagement. The average WTI price of approximately $75/boe, combined with a segment fraction of 0.55, supports a stable revenue outlook. Our deterministic forecast remains at $657 million, reflecting the current drilling dynamics and pricing environment.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "segment_fraction",
+    "active_sites"
+  ]
+}

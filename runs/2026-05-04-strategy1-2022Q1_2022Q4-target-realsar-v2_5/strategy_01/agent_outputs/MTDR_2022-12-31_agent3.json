@@ -1,0 +1,11 @@
+{
+  "ticker": "MTDR",
+  "our_estimate_usd": 705194999.9999999,
+  "consensus_median_usd": 705194999.9999999,
+  "consensus_dispersion_usd": 106558953.80663061,
+  "n_analysts_at_T_minus_14": 12,
+  "divergence_pct": 0.0,
+  "divergence_class": "in_line",
+  "confidence": "medium",
+  "reasoning": "Our estimate matches the consensus exactly, resulting in a 0% divergence. With 12 analysts and a dispersion of approximately 15% of consensus, confidence is high."
+}

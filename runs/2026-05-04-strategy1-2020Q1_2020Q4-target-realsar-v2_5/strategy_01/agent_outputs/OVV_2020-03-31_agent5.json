@@ -1,0 +1,41 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags positive_relative_activity_delta of 7.5, indicating increased production capacity",
+      "Agent 2 reports a revenue forecast of approximately $1.73B, which is supported by stable WTI prices",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting analysts expect a positive earnings surprise"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, a solid revenue forecast, and a positive analyst divergence suggests a strong potential for earnings upside, making a long position favorable ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no recent articles indicating new positive developments, suggesting limited market momentum",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst forecasts",
+      "Agent 2's revenue forecast relies heavily on stable WTI prices, which are currently volatile and could impact profitability"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and a positive relative activity delta, which could suggest potential growth"
+    ],
+    "reasoning_short": "The lack of recent positive news and medium analyst confidence, combined with reliance on unstable WTI prices, presents significant risks for a long position in OVV."
+  },
+  "arbiter_reasoning": "Bull prevailed: Agent 2's operational evidence (7.5 relative activity delta and $1.73B revenue forecast) together with Agent 3's modest_beat (10% divergence, medium confidence) provide a coherent upside case. Bear risks (WTI volatility, limited recent headlines) are real but not decisive because Agent 4 discloses no negative GDELT signal, so no downgrade is applied. Net: favor a long with medium conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.15
+  }
+}

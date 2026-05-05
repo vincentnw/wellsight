@@ -1,0 +1,41 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 12 active sites, indicating strong operational momentum.",
+      "Agent 2 reports a deterministic revenue forecast of approximately $215.14 million, which suggests solid financial performance.",
+      "Agent 3 divergence_class indicates a modest beat of 10%, reflecting positive analyst sentiment."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, a strong revenue forecast, and positive analyst divergence suggests a robust earnings performance ahead, warranting a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 highlights low WTI prices at around $29.95, which could pressure margins and profitability.",
+      "Agent 3's medium confidence and modest beat divergence of only 10% suggest that expectations are not significantly above consensus, indicating limited upside potential.",
+      "Agent 4's lack of conviction and no disclosed news implies that the market may not have strong catalysts to drive the stock higher."
+    ],
+    "counter_evidence": [
+      "Agent 2 mentions increased drilling activity and a strong realized price differential, which could support revenue."
+    ],
+    "reasoning_short": "The low WTI prices pose a significant risk to profitability, and the lack of strong market catalysts combined with only modest analyst expectations suggest that a long position may not be justified."
+  },
+  "arbiter_reasoning": "Bear view prevails. Although Agent 2 projects solid revenue and operational activity, the low WTI environment cited by Bear materially threatens margins; Agent 3's signal is only a modest_beat (10%, medium confidence) and Agent 4 shows no conviction or catalysts to drive upside. The upside evidence is therefore insufficient to overcome macro price risk—declining to trade.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.2,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.4
+  }
+}

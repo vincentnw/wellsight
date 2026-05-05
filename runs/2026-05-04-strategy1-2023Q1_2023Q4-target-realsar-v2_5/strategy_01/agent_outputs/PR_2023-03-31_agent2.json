@@ -1,0 +1,22 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 628290000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 698100000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 96747.58484434738,
+    "wti_avg": 76.73538461538463,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Given the current drilling activity context, with no active drilling sites and a relative activity delta of -7.5%, the outlook for PR in the upcoming quarter appears challenging. The average WTI price of approximately $76.74/boe and a realized price difference of 0.93 suggest stable pricing conditions, but the lack of drilling activity indicates potential production stagnation. As a result, our deterministic revenue forecast remains at $628.29 million, reflecting these constraints.",
+  "key_drivers": [
+    "no_active_drilling",
+    "negative_activity_delta",
+    "stable_wti",
+    "realized_price_stability"
+  ]
+}

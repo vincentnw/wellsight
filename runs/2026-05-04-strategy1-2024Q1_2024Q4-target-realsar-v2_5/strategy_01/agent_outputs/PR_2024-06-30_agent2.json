@@ -1,0 +1,22 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1225000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1225000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 178086.97747627142,
+    "wti_avg": 81.27923076923078,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "With three active drilling sites and a stable WTI price averaging around $81.28, PR is positioned for steady revenue in the upcoming quarter. The lack of new drilling activity suggests a focus on optimizing existing operations rather than expanding, which aligns with the consensus-anchored revenue forecast of $1.225 billion. The segment's full exposure to realized price differentials further supports this outlook, indicating a solid performance despite limited new activity.",
+  "key_drivers": [
+    "stable_wti",
+    "limited_new_drilling",
+    "existing_site_optimization",
+    "full_segment_exposure"
+  ]
+}

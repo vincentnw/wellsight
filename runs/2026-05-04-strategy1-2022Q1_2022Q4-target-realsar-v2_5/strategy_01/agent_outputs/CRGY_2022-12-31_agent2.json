@@ -1,0 +1,22 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 606000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 606000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 19757.44605080197,
+    "wti_avg": 77.48384615384616,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY's revenue forecast of $606 million reflects a challenging drilling environment, with no active drilling sites reported at the decision date and a relative activity delta of -0.3. The average WTI price of approximately $77.48 per barrel, combined with a segment fraction of 0.2, indicates limited production growth potential. The lack of new drilling activity suggests that revenue may be constrained in the upcoming quarter, as operational momentum is currently absent.",
+  "key_drivers": [
+    "no_active_drilling",
+    "negative_activity_delta",
+    "stable_wti",
+    "low_segment_fraction"
+  ]
+}

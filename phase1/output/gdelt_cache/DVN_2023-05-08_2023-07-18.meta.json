@@ -1,0 +1,9 @@
+{
+  "ticker": "DVN",
+  "prev_earnings_date": "2023-05-08",
+  "T_minus_14": "2023-07-18",
+  "n_articles": 0,
+  "fetch_status": "error",
+  "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+  "query_term": "Devon Energy"
+}

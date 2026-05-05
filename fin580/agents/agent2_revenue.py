@@ -23,7 +23,7 @@ from fin580.phase2.revenue_forecast import (
     forecast_revenue,
 )
 
-MODEL_ID = "qwen-3-235b-a22b-instruct-2507"  # Cerebras (DL #54: HF free tier exhausted)
+MODEL_ID = "gpt-4o-mini"  # v2.5 update: all-OpenAI stack (was Cerebras qwen-3-235b)
 PROMPT_PATH = Path(__file__).parent / "prompts" / "agent2_revenue.txt"
 
 # Last-quarter Permian production base per ticker (rough TTM averages, in boe/d).

@@ -1,0 +1,22 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 3646390000.0000005,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3646390000.0000005,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 327015.4982864871,
+    "wti_avg": 74.05846153846154,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's revenue forecast of approximately $3.65B for the upcoming quarter reflects a challenging drilling environment, with no active drilling sites reported at the decision date. The absence of new drilling activity suggests a potential stagnation in production levels, despite a stable WTI price around $74/boe. The segment fraction indicates that only a portion of the company's operations is contributing to revenue, which may limit overall growth in the near term.",
+  "key_drivers": [
+    "no_active_drilling",
+    "stable_wti",
+    "limited_segment_fraction",
+    "production_stagnation"
+  ]
+}

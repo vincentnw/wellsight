@@ -1,0 +1,22 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 5730250000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5730250000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 378784.0951406552,
+    "wti_avg": 78.74615384615386,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG's drilling activity shows 11 active sites as of the decision date, with a relative activity increase of 10% compared to previous periods. This suggests a positive trend in production capacity heading into Q4 2022. With WTI prices averaging around $78.75 and a realized price differential of $0.95, the revenue forecast remains robust at $5.73B. The segment fraction indicates a diversified approach, which may help mitigate risks associated with price fluctuations.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "diversified_segment_fraction",
+    "positive_relative_activity"
+  ]
+}

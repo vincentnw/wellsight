@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 5586166680.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5476634000.0,
+    "drilling_signal_raw": 0.2,
+    "drilling_signal_clipped": 0.2,
+    "production_boe_d": 285903.3816662481,
+    "wti_avg": 68.52461538461537,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "OXY's drilling activity shows a total of 9 active sites, with a notable increase in newly active sites contributing to a relative activity delta of 1.5. This suggests a positive trend in production capacity as we approach the end of Q2 2021. The average WTI price of approximately $68.52 per barrel, combined with a segment fraction of 0.3, supports our deterministic revenue forecast of around $5.59 billion. The drilling signal indicates a stable operational environment, which is likely to enhance revenue generation in the upcoming quarter.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "positive_relative_activity",
+    "production_growth",
+    "segment_fraction"
+  ]
+}

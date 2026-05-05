@@ -1,0 +1,43 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "low",
+  "final_size_pct": 0.05,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 15 active sites, significantly above historical averages",
+      "Agent 2 reports a stable WTI price around $77.91, supporting a solid revenue forecast of approximately $2.60B",
+      "Agent 3 divergence_class indicates a modest beat of 10%, suggesting analysts expect positive earnings performance"
+    ],
+    "counter_evidence": [
+      "Agent 4 indicates a downgrade one tier, which may reflect some caution in the market"
+    ],
+    "reasoning_short": "The combination of increased drilling activity, stable pricing, and a positive revenue forecast strongly supports a long position ahead of earnings, despite some caution from a recent downgrade."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with six articles indicating potential negative sentiment and market awareness of risks",
+      "Agent 4 conviction_modifier indicates a downgrade one tier, suggesting analysts are becoming more cautious",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at only +10%, indicating limited upside potential"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and a stable WTI price, which could support revenue"
+    ],
+    "reasoning_short": "Despite some positive indicators, the downgrade in analyst conviction and the presence of negative sentiment in the news suggest significant risks that could outweigh potential gains. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull's case prevailed: strong operational evidence (Agent 2: increased drilling, robust revenue forecast) plus a modest analyst beat (Agent 3) indicate upside, outweighing Bear's caution. However, Agent 4's GDELT-disclosed negative sentiment and explicit downgrade force a downgrade of conviction to low.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.2
+  }
+}

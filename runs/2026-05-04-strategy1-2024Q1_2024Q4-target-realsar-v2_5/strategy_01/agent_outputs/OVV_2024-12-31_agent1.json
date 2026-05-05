@@ -1,0 +1,113 @@
+{
+  "ticker": "OVV",
+  "decision_date_T": "2025-02-12",
+  "fiscal_quarter_end": "2024-12-31",
+  "n_newly_active": 0,
+  "n_continuously_active": 10,
+  "n_idle": 15,
+  "absolute_active": 10,
+  "share_active": 0.4,
+  "relative_activity_delta": 2.5,
+  "pad_classifications": [
+    {
+      "pad_id": "42227426640000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42003484940000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42173381580000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227426650000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42003484950000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42173381610000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227426660000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42003484970000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42173381620000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227426670000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42003484990000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42227397210000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42317463960000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42003485010000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42227399310000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42317463990000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42003485020000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227399320000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42317464120000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42003485030000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227399330000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42317464130000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42003485040000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227399610000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42317464140000",
+      "state": "continuously_active"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 2033110000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2033110000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 259876.9780514755,
+    "wti_avg": 40.723076923076924,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG's drilling activity remains limited with only 2 active sites as of the decision date, reflecting a relative activity delta of 1.5. The average WTI price is around $40.72, which, combined with a realized price differential of $0.95, suggests a challenging pricing environment. The segment fraction of 0.45 indicates that less than half of the production is from higher-margin segments. Consequently, the deterministic revenue forecast of $2.03B reflects these constraints, with modest production levels and pricing pressures likely impacting overall earnings.",
+  "key_drivers": [
+    "limited_drilling_activity",
+    "low_wti_prices",
+    "realized_price_diff",
+    "segment_fraction",
+    "stable_production"
+  ]
+}

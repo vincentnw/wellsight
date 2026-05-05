@@ -1,0 +1,11 @@
+{
+  "ticker": "MTDR",
+  "n_articles_in_window": 46,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "-stateline-asset-area-2020-09-22",
+    "-basin-boros-well-results-189811"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (-stateline-asset-area-2020-09-22, -basin-boros-well-results-189811) describe drilling activity changes consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

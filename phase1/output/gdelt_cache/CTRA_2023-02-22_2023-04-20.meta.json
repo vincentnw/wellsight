@@ -1,0 +1,9 @@
+{
+  "ticker": "CTRA",
+  "prev_earnings_date": "2023-02-22",
+  "T_minus_14": "2023-04-20",
+  "n_articles": 15,
+  "fetch_status": "ok",
+  "fetch_error": null,
+  "query_term": "Coterra Energy"
+}

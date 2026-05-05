@@ -1,0 +1,43 @@
+{
+  "ticker": "MTDR",
+  "decision": "long",
+  "conviction_tier": "low",
+  "final_size_pct": 0.05,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 11 active sites, indicating strong operational focus and potential production enhancement.",
+      "Agent 2 reports a stable WTI price environment with an average of $40.74 per barrel and a positive realized price difference of $0.92, supporting revenue stability.",
+      "Agent 3 indicates a divergence class of modest_beat at +10%, suggesting analysts expect earnings to exceed current estimates."
+    ],
+    "counter_evidence": [
+      "Agent 4's conviction modifier indicates a downgrade one tier, which may reflect some caution in the market."
+    ],
+    "reasoning_short": "The combination of increased drilling activity, stable pricing, and a positive earnings divergence suggests a strong potential for earnings to exceed expectations, warranting a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 46 articles indicating that the market may have already priced in the recent uptick in drilling activity",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting uncertainty in analyst expectations",
+      "Agent 4 conviction modifier indicates a downgrade one tier, reflecting a bearish sentiment among analysts"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and stable WTI prices, which could support revenue growth"
+    ],
+    "reasoning_short": "Despite positive drilling activity and stable prices, the market appears to have priced in these factors already, and analyst sentiment is mixed with a downgrade, indicating potential risks ahead."
+  },
+  "arbiter_reasoning": "Bull side prevailed: Agent 2's operational evidence (increased drilling, stable realized price) plus Agent 3's modest_beat (+10%, medium confidence) support a long position. however Agent 4's GDELT disclosure (46 articles) and downgrade_one_tier indicate the market may have priced in the upside and warranted lowering conviction — therefore we take the trade but with low conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.2
+  }
+}

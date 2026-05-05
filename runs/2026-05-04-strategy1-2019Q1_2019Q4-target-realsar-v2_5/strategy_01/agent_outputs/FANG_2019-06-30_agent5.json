@@ -1,0 +1,43 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "low",
+  "final_size_pct": 0.05,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights stable drilling activity with 12 active sites, indicating strong operational capacity.",
+      "Agent 2 reports a revenue forecast of $1.15B, which is robust given the current market conditions.",
+      "Agent 3 divergence_class indicates a modest beat of 10%, suggesting analysts expect better-than-expected earnings."
+    ],
+    "counter_evidence": [
+      "Agent 4's conviction modifier shows a downgrade one tier, which may reflect some caution in the market."
+    ],
+    "reasoning_short": "The strong operational performance and solid revenue forecast, combined with a modest earnings beat expectation, support a bullish outlook for FANG ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 75 articles indicating that the market may have already priced in the current operational efficiency and revenue forecasts.",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting that expectations are not significantly above consensus.",
+      "Agent 2 outlook highlights a lack of new active sites, indicating a potential stagnation in growth and reliance on optimizing existing operations rather than expansion."
+    ],
+    "counter_evidence": [
+      "Agent 2 reports stable drilling activity and a solid revenue outlook based on current WTI prices."
+    ],
+    "reasoning_short": "The market appears to have priced in the current operational metrics, and the lack of new growth initiatives raises concerns about future performance. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull side narrowly prevails: Agent 2's operational strength and $1.15B revenue forecast, supported by Agent 3's modest_beat (+10%), outweigh Bear's pricing-in/stagnation concerns. However Agent 4's GDELT disclosure (75 articles) and downgrade_one_tier removes the informational edge, so conviction is lowered to low.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.3
+  }
+}
