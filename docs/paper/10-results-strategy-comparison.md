@@ -21,7 +21,7 @@ For the **Q1 2024 – Q4 2024** real-data sub-window, all signals are computed f
 
 ## 10.2 Risk and drawdown
 
-We do not run a Sharpe-difference test against another strategy; small samples make Sharpe noisy. Strategy 1's 2024 drawdown is driven by a string of eight losing entries; the deeper in-universe baseline drawdowns (Strategy 4: −41%; 5: −10%; 6: −62%; 10: −47%) reflect always-long exposure during a rangebound year. Strategy 1's gating step partially reduces drawdown relative to those baselines, but the corrected gate fires more frequently than the buggy version, so more cells contribute to drawdown.
+We do not run a Sharpe-difference test against another strategy; small samples make Sharpe noisy. Strategy 1's 2024 drawdown is driven by a string of eight losing entries; the deeper in-universe baseline drawdowns (Strategy 4: −41%; 5: −10%; 6: −62%; 10: −47%) reflect always-long exposure during a rangebound year. Strategy 1's gating step partially reduces drawdown relative to those baselines, but it still fires enough 2024 entries for several losing cells to contribute to drawdown.
 
 ## 10.3 Scope of claim
 

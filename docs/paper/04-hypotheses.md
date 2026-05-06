@@ -18,7 +18,7 @@ We pre-register two primary hypotheses and three secondary research questions. E
 
 ## 4.3 Out-of-scope claims
 
-We do not claim a deployable trading product. The 23-trade sample is small; the IBES `ANNDATS_ACT` proxy is documented; the holding-period assumption (T-14 entry, T+2 exit) ignores overnight gap risk and microstructure costs above 30 bps. The paper's claim is methodological: a multi-agent system with a deterministic numerical core can ingest real Sentinel-1 SAR end-to-end across six calendar years and produce gated trade decisions whose component contributions are measurable via mechanical ablations.
+We do not claim a deployable trading product. The 51-trade sample is still small; the IBES `ANNDATS_ACT` proxy is documented; the holding-period assumption (T-14 entry, T+2 exit) ignores overnight gap risk and microstructure costs above 30 bps. The paper's claim is methodological: a multi-agent system with a deterministic numerical core can ingest real Sentinel-1 SAR end-to-end across six calendar years and produce gated trade decisions whose component contributions are measurable via mechanical ablations.
 
 ## 4.4 What would falsify the paper
 

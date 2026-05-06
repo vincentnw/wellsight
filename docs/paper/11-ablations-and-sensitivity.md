@@ -28,7 +28,7 @@ A pre-registered point-in-time veto: for each long trade with entry date T, **bl
 
 **The veto blocks one trade** — OVV 2020-Q1 (4w WTI = −16.8%, baseline +\$16,900). Post-veto: 50 trades, 26W / 24L (52.0%), total **-\$10,266** (vs +\$6,634 baseline); bootstrap p = 0.384; 95% CI on hit rate [38.1%, 64.8%].
 
-**Interpretation.** The pre-registered veto is **not protective**. The −10% threshold is misaligned with the system's signal direction in the 2020-Q1 dislocation: OVV 2020-Q1 opened *after* the WTI negative-pricing event of 2020-04-20 and exited in early May as oil partially recovered, capturing a regime-conditional mean-reversion the veto would have foreclosed. We do not retune. The qualitative finding ("a single-threshold WTI guardrail removes a gain, not a loss") survives the bug correction at smaller magnitude than earlier reported — one trade and ~\$17K, rather than two trades and ~\$108K, because the corrected gate no longer surfaces the bug-driven SM 2020-Q1 entry.
+**Interpretation.** The pre-registered veto is **not protective**. The −10% threshold is misaligned with the system's signal direction in the 2020-Q1 dislocation: OVV 2020-Q1 opened *after* the WTI negative-pricing event of 2020-04-20 and exited in early May as oil partially recovered, capturing a regime-conditional mean-reversion the veto would have foreclosed. We do not retune. The qualitative finding is that a single-threshold WTI guardrail removes a gain, not a loss.
 
 ## 11.7 Summary
 

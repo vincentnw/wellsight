@@ -29,7 +29,7 @@
 
 ## How to regenerate every result
 
-The headline empirical window is **Q1 2019 – Q4 2024 with real Sentinel-1 SAR** (six full calendar years, 200 firm-quarter cells, 23 long trades). Strategy 1 must run with `FIN580_SAR_MODE=real_sentinel1` so Agent 1 ingests real Microsoft Planetary Computer Sentinel-1 RTC backscatter, and `FIN580_SAR_PADS_PER_OP=25` so each firm-quarter samples 25 pads.
+The headline empirical window is **Q1 2019 – Q4 2024 with real Sentinel-1 SAR** (six full calendar years, 200 firm-quarter cells, 51 long trades). Strategy 1 must run with `FIN580_SAR_MODE=real_sentinel1` so Agent 1 ingests real Microsoft Planetary Computer Sentinel-1 RTC backscatter, and `FIN580_SAR_PADS_PER_OP=25` so each firm-quarter samples 25 pads.
 
 ```bash
 # Strategy 1 — full multi-agent system, real Sentinel-1 SAR, 25 pads/cell

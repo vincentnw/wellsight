@@ -26,10 +26,8 @@ import streamlit as st
 RUNS_DIR = ROOT / "runs"
 PHASE1_OUTPUT = ROOT / "phase1" / "output"
 
-# Per-window run dirs across 2019-2024 — canonical 25-pad / all-OpenAI
-# Strategy 1 ledger after the Agent-1 trailing-baseline cache fix. Section 6
-# (baselines vs S2-S10) restricts to 2024 only because the deterministic
-# baselines were run on 2024.
+# Per-window Strategy 1 run dirs across 2019-2024. Section 6 restricts to
+# 2024 because the deterministic baselines were run on that sub-window.
 HEADLINE_RUN = RUNS_DIR / "2026-05-05-strategy1-2024Q1_2024Q4-target-realsar-v2_5_fix"
 WINDOW_RUNS = {
     "2019":  RUNS_DIR / "2026-05-05-strategy1-2019Q1_2019Q4-target-realsar-v2_5_fix",
@@ -423,7 +421,7 @@ st.markdown(
     "passing the revenue-signal gate. Try also `OVV / 2023-Q2` (the +15.5% "
     "standout), `SM / 2021-Q3` (the system's largest single trade, +24.5%), or "
     "`SM / 2020-Q1` to see a 2020-Q1 cell short-circuit to no_trade under the "
-    "corrected gate (its trailing baseline puts the forecast 0.5% below "
+    "gate (its trailing baseline puts the forecast 0.5% below "
     "consensus, classified `in_line`)."
 )
 
@@ -1039,8 +1037,8 @@ st.markdown(
 
     **The pre-registered WTI stress veto** would block one 2020-Q1 entry (OVV,
     +\$16,900), shifting the aggregate from +\$6,634 to -\$10,266. The
-    qualitative finding "macro-stress veto removes a gain rather than a loss"
-    survives at smaller magnitude than earlier reported.
+    qualitative finding is that the macro-stress veto removes a gain rather
+    than a loss in this window.
 
     **What we *can* claim is mechanical:** the α=0 ablation and no-satellite
     ablation both produce **zero long entries** by construction. So whatever

@@ -34,9 +34,9 @@ Across **Q1 2019 – Q4 2024 (six full calendar years, 200 firm-quarter cells)**
 
 ## 9.2 Distribution of returns
 
-The corrected ledger has a diffuse return distribution rather than one dominated by outliers. Largest contributors: SM 2021-Q3 (+\$24,453), OVV 2023-Q2 (+\$15,504), SM 2022-Q3 (+\$12,605), EOG 2022-Q3 (+\$10,605). Largest losses: MTDR 2020-Q3 (−\$21,509), MTDR/OVV 2021-Q2 (−\$13,400 each), EOG 2022-Q4 (−\$10,059). No single trade exceeds 2.5% of capital. Excluding the single best trade leaves 50 trades at -\$17,819; excluding the two best leaves 49 at -\$33,323 — the aggregate is moderately resilient to single-trade exclusion but is not robust beyond that, characteristic of a small-sample result.
+The ledger has a diffuse return distribution rather than one dominated by outliers. Largest contributors: SM 2021-Q3 (+\$24,453), OVV 2023-Q2 (+\$15,504), SM 2022-Q3 (+\$12,605), EOG 2022-Q3 (+\$10,605). Largest losses: MTDR 2020-Q3 (−\$21,509), MTDR/OVV 2021-Q2 (−\$13,400 each), EOG 2022-Q4 (−\$10,059). No single trade exceeds 2.5% of capital. Excluding the single best trade leaves 50 trades at -\$17,819; excluding the two best leaves 49 at -\$33,323 — the aggregate is moderately resilient to single-trade exclusion but is not robust beyond that, characteristic of a small-sample result.
 
-The 2020-Q1 cohort contributes a single trade: OVV 2020-Q1 (+16.90% / +\$16,900). SM 2020-Q1 does not fire under the corrected gate (its 2019 trailing baseline of 9.5 active pads places the satellite-anchored forecast 0.5% *below* consensus, classified `in_line`). The "dominant 2020-Q1 trade" framing carried in earlier versions is no longer applicable.
+The 2020-Q1 cohort contributes a single trade: OVV 2020-Q1 (+16.90% / +\$16,900). SM 2020-Q1 does not fire because its 2019 trailing baseline of 9.5 active pads places the satellite-anchored forecast 0.5% *below* consensus, classified `in_line`.
 
 ## 9.3 Primary test (H1)
 
