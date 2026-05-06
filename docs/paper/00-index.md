@@ -40,8 +40,8 @@ FIN580_SAR_MODE=real_sentinel1 FIN580_SAR_PADS_PER_OP=25 \
 # (repeat for 2020, 2021, 2022, 2023, 2024)
 
 # Strategies 3-10 — deterministic baselines on real EIA / FracFocus / IBES
-# Currently scoped to the 2024 sub-window; extension to 2019-2024 is documented
-# as future work in §12.9.
+# Currently scoped to the 2024 sub-window; extension to 2019-2024 is
+# documented as future work in §12.3.
 python -m fin580.backtest.runner --strategies 3,4,5,6,7,8,9,10 --window 2024Q1-2024Q4
 
 # Mechanical ablations (α=0, no-satellite) produce zero trades by construction
