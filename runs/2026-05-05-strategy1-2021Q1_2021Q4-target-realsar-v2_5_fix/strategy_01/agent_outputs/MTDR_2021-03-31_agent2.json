@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 227298296.77419353,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 248984000.0,
+    "drilling_signal_raw": -0.8709677419354839,
+    "drilling_signal_clipped": -0.8709677419354839,
+    "production_boe_d": 46138.15600387423,
+    "wti_avg": 58.844615384615395,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources has seen a slight uptick in drilling activity with one newly active site, although overall activity remains low with a relative decline of 6.8%. The average WTI price of approximately $58.84 per barrel, combined with a realized price difference of $0.92, supports a revenue forecast of about $227.3 million. The company's focus on a single segment suggests that any fluctuations in drilling efficiency or market conditions could have a pronounced impact on revenue.",
+  "key_drivers": [
+    "low_drilling_activity",
+    "stable_wti",
+    "single_segment_focus",
+    "newly_active_site",
+    "realized_price_support"
+  ]
+}

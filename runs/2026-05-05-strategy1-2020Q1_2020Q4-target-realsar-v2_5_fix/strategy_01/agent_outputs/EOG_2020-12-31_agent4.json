@@ -1,0 +1,13 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 75,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "g-challenging-Biden-15859523.php",
+    "6277-5f54-af18-01aec50c0c78.html",
+    "709b-5e05-96d5-d41a4a2c8dc9.html",
+    "78f3-552b-964c-def3d3603eb3.html"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Several GDELT-indexed articles (g-challenging-Biden-15859523.php, 6277-5f54-af18-01aec50c0c78.html, 709b-5e05-96d5-d41a4a2c8dc9.html, 78f3-552b-964c-def3d3603eb3.html) describe ongoing drilling activities and challenges related to drilling policies, consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

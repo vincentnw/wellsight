@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6508695238.095238,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7082000000.0,
+    "drilling_signal_raw": -0.8095238095238095,
+    "drilling_signal_clipped": -0.8095238095238095,
+    "production_boe_d": 268767.62552051945,
+    "wti_avg": 84.93153846153845,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental Petroleum's drilling activity shows only one active site at the decision date, which is significantly below the trailing average, indicating a decline in operational momentum. The WTI price environment remains favorable at approximately $84.93, but the low segment fraction of 0.3 suggests that only a portion of the company's operations will benefit from this pricing. As a result, our deterministic revenue forecast of approximately $6.51B reflects these challenges, with limited new drilling activity impacting overall production levels.",
+  "key_drivers": [
+    "low_drilling_activity",
+    "favorable_wti_prices",
+    "low_segment_fraction",
+    "limited_new_sites",
+    "declining_relative_activity"
+  ]
+}

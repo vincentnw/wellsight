@@ -1,0 +1,23 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 2384044444.444444,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2212000000.0,
+    "drilling_signal_raw": 0.7777777777777778,
+    "drilling_signal_clipped": 0.7777777777777778,
+    "production_boe_d": 331681.32185849274,
+    "wti_avg": 84.93153846153845,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "FANG's drilling activity remains robust with 8 active sites, maintaining a steady production level. The average WTI price of approximately $84.93 per barrel supports favorable revenue conditions, while the realized price differential indicates strong market positioning. With a revenue forecast of about $2.38B, the company is well-positioned for the upcoming quarter, benefiting from consistent drilling activity and a favorable pricing environment.",
+  "key_drivers": [
+    "steady_drilling_activity",
+    "strong_wti_prices",
+    "positive_realized_price_diff",
+    "consistent_production_levels",
+    "active_site_stability"
+  ]
+}

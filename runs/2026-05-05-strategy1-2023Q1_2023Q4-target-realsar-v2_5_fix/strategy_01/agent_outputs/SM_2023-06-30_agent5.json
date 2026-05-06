@@ -1,0 +1,41 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates stable drilling activity with 8 active sites and a slight increase in intensity, supporting a revenue forecast of approximately $587.63 million.",
+      "Agent 3 divergence_class is modest_beat at +6.84%, suggesting analysts expect the company to outperform expectations.",
+      "Agent 4 reports gdelt_disclosed=false, indicating no information leaks that could negatively impact the earnings report."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of stable drilling activity, favorable pricing conditions, and a positive analyst outlook strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles, indicating lack of recent positive news to support a long position",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +6.84%, suggesting limited upside potential",
+      "Agent 2's outlook, while optimistic, is based on stable conditions that may not account for potential market volatility or external shocks"
+    ],
+    "counter_evidence": [
+      "Agent 2 mentions favorable realized prices and stable drilling activity"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of recent news and medium analyst confidence suggest significant risks. The modest earnings beat does not justify a long position given potential market volatility."
+  },
+  "arbiter_reasoning": "Bull view prevails: Agent 2's operational stability and favorable pricing plus Agent 3's modest_beat (+6.84%) support upside, and Agent 4 shows no negative GDELT signal. Bear concerns about limited news flow and only medium analyst confidence reduce but do not negate the case, so we take a long with medium conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.55,
+    "agent4_weight": 0.1
+  }
+}

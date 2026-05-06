@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6024297400.000001,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 5476634000.0,
+    "drilling_signal_raw": 6.2,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 308327.17630673817,
+    "wti_avg": 68.52461538461537,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "OXY's drilling activity shows a total of 9 active sites, with a notable increase in newly active sites contributing to a relative activity delta of 7.8. This suggests a positive trend in production leading into the target quarter. The average WTI price of approximately $68.52 per barrel, combined with a segment fraction of 0.3, indicates that OXY is well-positioned to capitalize on stable pricing. Our deterministic revenue forecast of around $6.02B reflects these dynamics, suggesting a solid quarter ahead.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "positive_relative_activity",
+    "production_growth",
+    "segment_fraction"
+  ]
+}

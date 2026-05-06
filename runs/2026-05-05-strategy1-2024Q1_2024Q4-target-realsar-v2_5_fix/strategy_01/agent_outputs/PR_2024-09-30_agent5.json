@@ -1,0 +1,41 @@
+{
+  "ticker": "PR",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 reports increased drilling activity with 9 active sites, indicating strong production momentum.",
+      "Agent 2's revenue forecast of $1.36B reflects positive pricing dynamics supported by stable WTI prices around $74/boe.",
+      "Agent 3 divergence_class indicates a modest beat of 10%, suggesting analysts expect better-than-expected earnings."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, strong revenue forecasts, and positive analyst sentiment strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false, indicating no recent news to support a price increase",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2's outlook, while positive, is based on current drilling activity which may not sustain in a volatile market"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong realized price differential and increased drilling activity"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of recent news and medium confidence in analyst forecasts suggest significant risks. The market may not support a long position at this time."
+  },
+  "arbiter_reasoning": "Bull view prevails: Agent 2's strong operational evidence (increased drilling, high continuity, $1.36B revenue forecast) combined with Agent 3's modest_beat (10%) at medium confidence provide a constructive signal ahead of the event. Agent 4 shows no GDELT disclosure and thus does not materially downgrade the information edge. While the Bear raised sustainability and news-coverage concerns with high confidence, the balance of operational and analyst evidence supports a long with medium conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.15
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ticker": "MTDR",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights high drilling activity with 21 active sites, indicating strong production potential.",
+      "Agent 2 reports a revenue forecast of approximately $403.96 million, supported by favorable WTI pricing around $70.93 per barrel.",
+      "Agent 3 divergence_class indicates a modest_beat with a divergence_pct of 10%, suggesting analysts expect positive earnings surprise."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of robust drilling activity, strong revenue forecasts, and positive analyst sentiment strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating new positive developments, suggesting limited market support for further price increases",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst expectations",
+      "Agent 2's outlook, while optimistic, relies heavily on current WTI pricing which is subject to volatility and external market pressures"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong production potential and high drilling activity, which could support revenue growth"
+    ],
+    "reasoning_short": "The lack of new positive news and medium analyst confidence raises concerns about the sustainability of the current price levels. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull prevailed. Agent 2's operational evidence (21 active sites, $403.96M revenue forecast) plus Agent 3's modest_beat (+10%, medium confidence) outweigh Bear concerns about WTI volatility and limited new news. Agent 4 disclosed no GDELT downgrade. Modest beat with medium analyst confidence supports a long at medium conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.15
+  }
+}

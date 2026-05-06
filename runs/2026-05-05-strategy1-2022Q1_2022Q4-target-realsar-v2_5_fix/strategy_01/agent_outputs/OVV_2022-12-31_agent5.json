@@ -1,0 +1,43 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "low",
+  "final_size_pct": 0.05,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 15 active sites, indicating strong operational momentum.",
+      "Agent 2 reports a revenue forecast of approximately $2.60B, driven by favorable WTI prices and strong production capacity.",
+      "Agent 3 divergence_class indicates a modest beat of 10%, suggesting analysts expect positive earnings performance."
+    ],
+    "counter_evidence": [
+      "Agent 4 indicates a downgrade one tier, which may reflect some caution in the market."
+    ],
+    "reasoning_short": "The combination of increased drilling activity, strong revenue forecasts, and a modest earnings beat expectation supports a bullish outlook for OVV ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with six articles indicating potential negative sentiment or market concerns that may have already impacted the stock price",
+      "Agent 4 conviction_modifier indicates a downgrade one tier, suggesting analysts are becoming more cautious about the stock's outlook",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating that while there is some positive sentiment, it is not strong enough to justify a long position"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and favorable WTI prices, which could support revenue growth"
+    ],
+    "reasoning_short": "Despite some positive indicators like increased drilling and favorable prices, the downgrade in analyst conviction and the presence of negative sentiment in the news suggest significant risks that outweigh the potential benefits. Recommend against taking a long position."
+  },
+  "arbiter_reasoning": "Bullish fundamentals (Agent 2: increased drilling, strong production, ~$2.6B revenue forecast) plus Agent 3's modest_beat (+10%) outweigh the negative sentiment flagged by Agent 4, so I favor a long. However Agent 4 disclosed GDELT negative coverage and a one-tier conviction downgrade, so informational risk is elevated — trade with low conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.35
+  }
+}

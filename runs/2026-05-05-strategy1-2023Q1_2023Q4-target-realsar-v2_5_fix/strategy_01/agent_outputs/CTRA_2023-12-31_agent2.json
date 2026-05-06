@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1596879500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1596879500.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 121230.57943783334,
+    "wti_avg": 74.23076923076923,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "CTRA's drilling activity remains stable with 6 active sites, maintaining a share of 24% in the market. The average WTI price of $74.23/boe, combined with a realized price differential of $0.78, supports a solid revenue outlook. The forecast of approximately $1.60B reflects a consistent production level of around 121,231 boe/d, although the lack of new drilling signals suggests limited growth potential in the near term. Overall, the company is positioned to maintain its revenue amidst a steady pricing environment.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "steady_wti_prices",
+    "consistent_production",
+    "realized_price_diff",
+    "market_share"
+  ]
+}

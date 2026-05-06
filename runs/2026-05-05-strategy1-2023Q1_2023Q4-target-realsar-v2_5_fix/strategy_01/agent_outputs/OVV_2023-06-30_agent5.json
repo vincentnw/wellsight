@@ -1,0 +1,41 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates 15 active drilling sites with 6 newly active, suggesting strong operational momentum.",
+      "Agent 2 reports a revenue forecast of $2.66B, supported by stable WTI prices around $72.86/boe and a favorable realized price differential of $0.90.",
+      "Agent 3 divergence_class is modest_beat at +10%, indicating analysts expect OVV to outperform expectations."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of strong drilling activity, solid revenue forecasts, and positive analyst sentiment supports a high-confidence long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent news that could support a price increase",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2's outlook, while positive, relies heavily on stable WTI prices and a narrow realized price differential, which are subject to volatility"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights a strong operational push with 15 active sites and a solid revenue forecast of $2.66B"
+    ],
+    "reasoning_short": "Despite some operational strength, the lack of recent news and medium analyst confidence indicate significant risks, particularly in a volatile sector. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull prevailed. Agent 2's operational evidence (15 active sites, 6 newly active) and a $2.66B revenue forecast, together with Agent 3's modest_beat (+10%, medium confidence) and no adverse GDELT signal from Agent 4, outweigh the Bear's caution about price volatility. The signal is positive but limited (modest_beat + medium confidence), so conviction is medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.2
+  }
+}

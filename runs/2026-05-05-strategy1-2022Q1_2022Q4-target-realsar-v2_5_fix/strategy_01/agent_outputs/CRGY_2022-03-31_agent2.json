@@ -1,0 +1,23 @@
+{
+  "ticker": "CRGY",
+  "revenue_forecast_usd": 400000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 400000000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 10142.990941586402,
+    "wti_avg": 99.62384615384615,
+    "realized_price_diff": 0.87,
+    "segment_fraction": 0.2
+  },
+  "outlook_paragraph": "CRGY's drilling activity has shown a significant decline, with no active sites reported at the decision date and a relative activity delta of -0.3. This lack of drilling activity, combined with a high WTI average price of approximately $99.62, suggests that while the revenue forecast remains at $400 million, the company may face challenges in maintaining production levels. The segment fraction indicates a limited exposure to the market, which could further impact revenue generation in the upcoming quarter.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "high_wti_prices",
+    "limited_segment_fraction",
+    "no_active_sites",
+    "low_production"
+  ]
+}

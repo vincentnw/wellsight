@@ -1,0 +1,41 @@
+{
+  "ticker": "OXY",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights stable drilling activity with 7 active sites and a positive relative activity delta of 5.2%",
+      "Agent 2 reports a robust revenue forecast of approximately $7.91B for the upcoming quarter, supported by favorable WTI prices around $73.47 per barrel",
+      "Agent 3 indicates a divergence class of modest_beat with a divergence percentage of 10%, suggesting analysts expect a positive earnings surprise"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of stable drilling activity, strong revenue forecasts, and positive analyst sentiment strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles, indicating lack of recent positive news to support price movement",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2 outlook, while positive, is based on stable drilling activity which may not be sufficient to counteract broader market volatility"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights favorable WTI prices and a strong revenue forecast"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of recent news and medium analyst confidence suggest significant risks. The modest expected beat does not justify a long position given potential sector volatility."
+  },
+  "arbiter_reasoning": "Bull evidence prevails: Agent 3 signals a modest_beat (+10%) with medium confidence and Agent 2 provides supportive operational and revenue forecasts (~$7.91B) backed by favorable WTI — together they justify a long. Agent 4 provides no GDELT disclosure (no downgrade). Given the modest beat and medium confidence, conviction is set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.15
+  }
+}

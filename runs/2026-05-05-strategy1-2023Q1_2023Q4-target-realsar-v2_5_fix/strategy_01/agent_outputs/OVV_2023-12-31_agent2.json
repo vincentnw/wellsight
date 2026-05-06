@@ -1,0 +1,22 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 2527391428.571429,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2773000000.0,
+    "drilling_signal_raw": -0.8857142857142857,
+    "drilling_signal_clipped": -0.8857142857142857,
+    "production_boe_d": 208481.82814712432,
+    "wti_avg": 74.01,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "OVV's drilling activity shows only one active site as of the decision date, significantly below the historical average, indicating a decline in operational momentum. The WTI price environment remains stable at around $74/boe, but the low drilling activity suggests challenges in production growth. Consequently, our deterministic revenue forecast of approximately $2.53B reflects these constraints, with a segment fraction of 0.5 indicating a balanced exposure to market conditions.",
+  "key_drivers": [
+    "low_drilling_activity",
+    "stable_wti",
+    "limited_growth_potential",
+    "segment_fraction"
+  ]
+}

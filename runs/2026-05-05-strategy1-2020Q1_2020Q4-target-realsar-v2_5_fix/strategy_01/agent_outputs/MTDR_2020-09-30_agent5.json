@@ -1,0 +1,41 @@
+{
+  "ticker": "MTDR",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 11 active sites and 9 newly active sites, indicating strong operational momentum.",
+      "Agent 2 reports a revenue forecast of approximately $203.92 million, reflecting the positive impact of drilling momentum despite a lower price environment.",
+      "Agent 3 divergence_class is modest_beat at +6.92%, suggesting analysts expect a positive earnings surprise."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity and a solid revenue forecast, along with a positive analyst divergence, strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent positive news, suggesting lack of market momentum",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +6.92%, indicating limited upside potential",
+      "Agent 2's outlook highlights stable realized prices in a low price environment, which may not support sustainable revenue growth"
+    ],
+    "counter_evidence": [
+      "Agent 2 reports increased drilling activity and a revenue forecast of approximately $203.92 million"
+    ],
+    "reasoning_short": "Despite increased drilling activity, the lack of recent positive news and medium analyst confidence suggest significant risks. The current price environment may not support long-term growth, making a long position unwise."
+  },
+  "arbiter_reasoning": "Bull prevailed. Agent 2's clear operational momentum (11 active sites, 9 newly active) plus a positive revenue forecast and Agent 3's modest_beat (+6.92%, medium confidence) together outweigh the Bear's concerns about the low price environment and limited news. No GDELT disclosure downgrade applies, but the analyst signal is modest rather than strong, so conviction is set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.2
+  }
+}

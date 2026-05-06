@@ -1,0 +1,22 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 3465000000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3410000000.0,
+    "drilling_signal_raw": 0.16129032258064516,
+    "drilling_signal_clipped": 0.16129032258064516,
+    "production_boe_d": 568742.923028401,
+    "wti_avg": 71.98846153846154,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "FANG's drilling activity remains robust with 9 active sites, maintaining a steady operational presence. The relative activity delta of 1.2 indicates a slight increase in drilling intensity compared to previous periods. With WTI prices averaging around $72/boe and a full segment exposure, the deterministic revenue forecast of $3.47B reflects a solid outlook for the upcoming quarter. The consistent drilling activity suggests that production levels will be sustained, supporting revenue stability.",
+  "key_drivers": [
+    "steady_drilling_activity",
+    "stable_wti_prices",
+    "full_segment_exposure",
+    "increased_drilling_intensity"
+  ]
+}

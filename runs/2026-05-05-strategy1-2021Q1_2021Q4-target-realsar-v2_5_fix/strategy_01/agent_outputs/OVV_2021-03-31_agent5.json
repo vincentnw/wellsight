@@ -1,0 +1,41 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 reports increased drilling activity with 19 active sites, significantly above historical averages, indicating strong operational momentum.",
+      "Agent 2 highlights stable WTI prices around $58.84/boe and a strong realized price differential of $0.90, supporting a solid revenue outlook.",
+      "Agent 3 indicates a divergence class of modest_beat with a 10% divergence percentage, suggesting analysts expect OVV to outperform expectations."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of robust drilling activity, favorable pricing conditions, and positive analyst sentiment strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent positive news, suggesting lack of market momentum",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst expectations",
+      "Agent 2's outlook, while optimistic, relies heavily on stable WTI prices which are subject to volatility and external market pressures"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and operational momentum, which could support short-term performance"
+    ],
+    "reasoning_short": "The lack of recent positive news and medium analyst confidence raises significant risks. The reliance on stable WTI prices adds further uncertainty, making a long position risky."
+  },
+  "arbiter_reasoning": "Bull evidence (Agent 2's strong operational momentum and revenue forecast plus Agent 3's modest_beat analyst divergence) outweighs the Bear's caution around WTI volatility and lack of clear news flow. Agent 2's on-the-ground activity and Agent 3's analyst tilt make a persuasive case to go long, but the divergence is only modest and Agent 3's confidence is medium, so conviction is set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

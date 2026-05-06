@@ -1,0 +1,43 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "low",
+  "final_size_pct": 0.05,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 reports increased drilling activity with 8 active sites, significantly higher than the previous quarter's average",
+      "Agent 2's revenue forecast of approximately $682.55 million indicates strong growth potential",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting analysts expect positive earnings surprise"
+    ],
+    "counter_evidence": [
+      "Agent 4 indicates a downgrade one tier, which may reflect some caution in the market"
+    ],
+    "reasoning_short": "The combination of increased drilling activity and a solid revenue forecast, alongside a modest expected earnings beat, strongly supports a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 21 articles indicating that the market may have already priced in the recent drilling activity and operational focus.",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting that while there is some positive sentiment, it is not strong enough to justify a long position.",
+      "Agent 2's revenue forecast of $682.55 million is based on increased drilling activity, but this may not be sustainable if market conditions change or if operational efficiencies do not materialize as expected."
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and stable WTI prices, which could support revenue in the short term."
+    ],
+    "reasoning_short": "The market appears to have already factored in the positive news regarding drilling activity, and the medium confidence level from analysts suggests potential volatility. Recommend against taking a long position."
+  },
+  "arbiter_reasoning": "Bull evidence (Agent 2's strong operational/revenue forecast and Agent 3's modest_beat +10% with medium confidence) outweighs the Bear's caution, so we take a long stance. However Agent 4's GDELT disclosure (21 articles) indicates the news may be largely priced in and explicitly downgrades conviction one tier, so conviction is reduced to low.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": true,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.3
+  }
+}

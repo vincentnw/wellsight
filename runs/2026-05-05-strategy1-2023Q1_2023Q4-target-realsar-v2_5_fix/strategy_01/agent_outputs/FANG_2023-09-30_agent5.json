@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights steady drilling activity with 8 active sites and consistent production levels",
+      "Agent 2 reports strong WTI prices averaging $84.93 per barrel, supporting favorable revenue conditions",
+      "Agent 3 divergence_class indicates a modest beat of 7.78%, suggesting analysts expect positive earnings performance"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "FANG's strong drilling activity and favorable pricing environment, combined with analyst expectations for a modest earnings beat, create a compelling case for a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating new developments, suggesting the market may not have fresh insights to support a long position",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +7.78%, indicating uncertainty in analyst expectations",
+      "Agent 2 outlook, while positive, relies heavily on steady drilling activity and strong WTI prices, which are subject to volatility and external market pressures"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong WTI prices and consistent production levels, which could support revenue"
+    ],
+    "reasoning_short": "The lack of new information and medium analyst confidence raises concerns about the sustainability of the current positive outlook. Given the potential for market volatility and reliance on external factors, a long position is risky."
+  },
+  "arbiter_reasoning": "Bull's case prevailed: Agent 2's operational fundamentals (steady drilling, consistent production) and favorable WTI pricing support revenue, and Agent 3's analyst divergence shows a modest_beat (+7.78%). Agent 4 disclosed no GDELT issues. Bear concerns about price volatility and medium analyst confidence are noted but do not outweigh the combined fundamental and analyst signal, so I approve a long with medium conviction.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.1
+  }
+}

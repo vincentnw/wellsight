@@ -1,0 +1,22 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 966852000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1074280000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 154363.72667958634,
+    "wti_avg": 74.01,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "With no active drilling sites reported as of the decision date, the outlook for PR in the upcoming quarter appears challenging. The significant relative activity decline of -3.8 suggests a lack of operational momentum, which, combined with a WTI average price of $74.01, leads to a revenue forecast of approximately $966.85 million. The absence of newly active sites indicates that production levels may not see the necessary growth to capitalize on current market conditions.",
+  "key_drivers": [
+    "no_active_drilling",
+    "negative_activity_delta",
+    "stable_wti",
+    "low_production"
+  ]
+}

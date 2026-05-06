@@ -1,0 +1,41 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 22 active sites, significantly above previous levels",
+      "Agent 2 reports a stable WTI price averaging around $67.66, supporting a solid revenue outlook",
+      "Agent 3 divergence_class indicates a modest_beat with a divergence_pct of 10.0%"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, stable oil prices, and a positive revenue forecast positions OVV strongly ahead of earnings, warranting a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating new market-moving information, suggesting potential overvaluation",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst forecasts",
+      "Agent 2's revenue forecast relies heavily on increased drilling activity, which may not be sustainable in a volatile market"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong relative activity delta and stable WTI prices, which could support short-term revenue"
+    ],
+    "reasoning_short": "While there are positive indicators, the lack of new market information and medium analyst confidence suggest risks outweigh potential gains. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull side prevails. Agent 2 presents strong fundamental upside (increased drilling, stable WTI, $1.64B revenue forecast) and Agent 3 shows a modest_beat ( +10%) supporting upside. Agent 4 discloses no adverse GDELT signal, so no downgrade applied. Bear's medium-confidence sustainability concerns are noted but do not outweigh the combined fundamental and analyst tilt; conviction set to medium due to modest_beat and some analyst uncertainty.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": false,
+    "agent4_decisive": false,
+    "agent2_weight": 0.6,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.1
+  }
+}

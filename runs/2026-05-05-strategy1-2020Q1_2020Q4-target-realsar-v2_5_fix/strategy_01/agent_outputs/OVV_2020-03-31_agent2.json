@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1732060000.0000002,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1574600000.0,
+    "drilling_signal_raw": 1.0,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 275288.0331732841,
+    "wti_avg": 38.411538461538456,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "OVV's drilling activity shows a total of 15 active sites, with a notable increase in newly active sites contributing to a relative activity delta of 7.5. This suggests a positive trend in production capacity as we approach the end of Q1 2020. The average WTI price of approximately $38.41 per barrel, combined with a segment fraction of 0.5, supports our deterministic revenue forecast of around $1.73B. The drilling signal indicates a strong operational focus, which may enhance revenue stability despite the current price environment.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "positive_relative_activity_delta",
+    "stable_wti_price",
+    "operational_focus",
+    "segment_fraction_effect"
+  ]
+}

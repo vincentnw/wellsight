@@ -1,0 +1,41 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates steady drilling activity with a relative activity delta of 3.5, suggesting increased drilling intensity.",
+      "Agent 2 reports a revenue forecast of approximately $1.08B, reflecting a stable pricing environment with WTI prices averaging around $59.55/boe.",
+      "Agent 3 divergence_class is modest_beat at +10%, indicating analysts expect the company to outperform expectations."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling intensity, stable pricing, and a positive revenue forecast positions FANG strongly for a favorable earnings report, warranting a long position."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 notes no new drilling sites, indicating potential stagnation in growth opportunities",
+      "Agent 4 gdelt_disclosed=false with no recent news articles suggesting upcoming catalysts for price movement",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating limited upside potential"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights steady drilling activity and stable WTI prices, which could support revenue"
+    ],
+    "reasoning_short": "While there are stable operational metrics, the lack of new drilling sites and no recent news catalysts suggest limited growth potential, making a long position risky."
+  },
+  "arbiter_reasoning": "Bull view prevailed: supportive operational data (steady/increasing drilling intensity and a $1.08B revenue forecast) plus a consensus modest_beat (+10%) from analysts and Bull's high confidence outweigh Bear's caution about lack of new sites and catalysts. GDELT shows no adverse disclosures, so no downgrade; overall evidence supports a medium-conviction long.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.3,
+    "agent3_weight": 0.55,
+    "agent4_weight": 0.15
+  }
+}

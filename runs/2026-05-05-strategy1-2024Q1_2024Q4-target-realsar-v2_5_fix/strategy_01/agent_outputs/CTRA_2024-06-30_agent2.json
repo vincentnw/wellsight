@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1205061300.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1338957000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 83419.52104401315,
+    "wti_avg": 81.4076923076923,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "CTRA's drilling activity has significantly declined, with no active sites reported at the decision date and a relative activity delta of -5.5. This lack of drilling activity, combined with a segment fraction of 0.4, suggests that the company may face challenges in maintaining production levels. Despite a stable WTI price averaging around $81.41, the forecasted revenue of approximately $1.21B reflects the impact of reduced drilling and production capacity.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "low_segment_fraction",
+    "no_active_sites",
+    "production_constraints"
+  ]
+}

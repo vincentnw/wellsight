@@ -1,0 +1,22 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 628290000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 698100000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 96747.58484434738,
+    "wti_avg": 76.73538461538463,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "With no active drilling sites reported as of the decision date, and a relative activity delta of -10%, the outlook for PR in the upcoming quarter appears challenging. The revenue forecast of $628.29 million reflects a consensus anchored approach, but the lack of drilling activity suggests limited production growth. The average WTI price of approximately $76.74 per barrel, combined with a realized price differential of 0.93, indicates that while pricing remains stable, the absence of new drilling will likely constrain revenue potential.",
+  "key_drivers": [
+    "no_active_drilling",
+    "negative_activity_delta",
+    "stable_wti",
+    "realized_price_diff"
+  ]
+}

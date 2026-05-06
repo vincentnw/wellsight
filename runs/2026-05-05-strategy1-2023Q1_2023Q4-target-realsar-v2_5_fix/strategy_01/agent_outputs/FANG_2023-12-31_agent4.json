@@ -1,0 +1,10 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 18,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "ing-opec-strategy-into-question/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "One GDELT-indexed article (ing-opec-strategy-into-question/) describes U.S. shale drillers ramping up oil production, which is consistent with the satellite-detected pattern of increased drilling activity. Determination is about GDELT-indexed news only, not about full market awareness."
+}

@@ -2,7 +2,7 @@
 
 ## A. Per-trade ledger, Strategy 1, 2019–2024
 
-Each row is a single long entry. Entry price = closing price on T-14, exit price = closing price on the second trading day after the earnings announcement. Net return is after the 30 bps round-trip transaction cost. The full machine-readable ledger is at `runs/inference/strategy01_trades_v2_5_fix.csv`.
+Each row is a single long entry. Entry price = closing price on T-14, exit price = closing price on the second trading day after the earnings announcement. Net return is after the 30 bps round-trip transaction cost. The full machine-readable ledger is at `runs/inference/strategy01_trades.csv` (with the pre-fix ledger preserved at `runs/inference/strategy01_trades_v2_5_OLD.csv` for reference).
 
 | # | Cell | Size | Tier | Entry T-14 | Earnings | Exit (~T+2) | Net return | W/L |
 |---:|---|---:|:---|---|---|---|---:|:---:|
@@ -70,7 +70,7 @@ A 0–100 deterministic score composes five 0–20 sub-scores from inputs alread
 
 Tier mapping: `score ≥ 70 → high`, `40 ≤ score < 70 → medium`, `< 40 → low`. WTI/oil-regime is intentionally excluded so that the score and the WTI veto (§11.6) do not double-count.
 
-The score is logged in `runs/inference/signal_confidence_v2_5_fix.csv` for the 200 cells of the corrected v2.5_fix backtest. It does not enter H1 or any pre-registered test; it is preserved in the appendix as a per-cell quality annotation. Under the corrected baseline, the dominant signal-quality story is the 2021 over-firing pattern documented in §12.4 (13 of 16 2021 longs share an identical clipped +1.0 drilling signal and a +10.0% divergence number), which the score's `relative_activity_delta` and `consensus tightness` sub-scores cannot rank-order.
+The score is logged in `runs/inference/signal_confidence.csv` for the 200 cells of the corrected backtest. It does not enter H1 or any pre-registered test; it is preserved in the appendix as a per-cell quality annotation. Under the corrected baseline, the dominant signal-quality story is the 2021 over-firing pattern documented in §12.4 (13 of 16 2021 longs share an identical clipped +1.0 drilling signal and a +10.0% divergence number), which the score's `relative_activity_delta` and `consensus tightness` sub-scores cannot rank-order.
 
 ## C. Software, data, and computational resources
 

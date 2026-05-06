@@ -1,0 +1,22 @@
+{
+  "ticker": "FANG",
+  "revenue_forecast_usd": 1955482000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 2080300000.0000002,
+    "drilling_signal_raw": -0.6,
+    "drilling_signal_clipped": -0.6,
+    "production_boe_d": 293427.038781493,
+    "wti_avg": 78.74615384615386,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "FANG's drilling activity shows a significant decline, with only one active site at the decision date, which is well below the historical average. This reduction in drilling activity, combined with a stable WTI price around $78.75/boe, suggests that production levels may not see substantial growth in the upcoming quarter. The revenue forecast of approximately $1.96B reflects these challenges, as the company navigates a lower activity environment while maintaining a full segment exposure.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "low_active_sites",
+    "production_constraints"
+  ]
+}

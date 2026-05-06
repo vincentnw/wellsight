@@ -1,0 +1,22 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 1295540233.3333333,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1398065000.0,
+    "drilling_signal_raw": -0.7333333333333333,
+    "drilling_signal_clipped": -0.7333333333333333,
+    "production_boe_d": 151520.2597541139,
+    "wti_avg": 56.78846153846155,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a total of 2 active sites at the decision date, which is a decrease compared to previous quarters. This decline in relative activity, coupled with a WTI average price of approximately $56.79/boe, suggests a challenging environment for revenue generation. The forecasted revenue of about $1.30B reflects these conditions, with a segment fraction of 0.55 indicating a mixed operational focus. The current drilling signal indicates a cautious approach, which may limit production growth in the upcoming quarter.",
+  "key_drivers": [
+    "decreased_drilling_activity",
+    "low_wti_prices",
+    "mixed_segment_focus",
+    "cautious_drilling_signal"
+  ]
+}

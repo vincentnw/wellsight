@@ -1,0 +1,41 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates increased drilling activity with 6 active sites and 2 newly active, suggesting a positive operational trend.",
+      "Agent 2 reports a favorable average WTI price of approximately $75/boe, supporting a strong pricing environment.",
+      "Agent 3 divergence_class is modest_beat at +8.46%, indicating analysts expect the company to outperform earnings expectations."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, stable WTI prices, and a positive earnings divergence suggests a strong potential for SM to exceed earnings expectations, warranting a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent news that could support a price increase",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +8.46%, suggesting limited upside potential",
+      "Agent 2's revenue forecast of $712.63 million may already be priced in, given the stable WTI prices and increased drilling activity"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights a positive trend in operations with newly active sites and balanced segment fraction"
+    ],
+    "reasoning_short": "Despite some positive operational indicators, the lack of recent news and moderate analyst confidence suggest that the stock may not have significant upside potential, making a long position risky."
+  },
+  "arbiter_reasoning": "Bull position prevails: operational evidence (Agent 2) showing increased drilling and a favorable WTI environment combined with Agent 3's modest_beat (+8.46%) consensus support a long. Bear concerns about news absence and potential pricing-in are noted (Agent 4 gdelt_disclosed=false), but do not outweigh the operational and analyst-beat signals. Conviction set to medium because the beat is modest and Agent 3's confidence is only medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.15
+  }
+}

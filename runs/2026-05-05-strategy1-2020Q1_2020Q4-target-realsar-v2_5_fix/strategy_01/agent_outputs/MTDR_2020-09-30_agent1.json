@@ -1,0 +1,113 @@
+{
+  "ticker": "MTDR",
+  "decision_date_T": "2020-10-13",
+  "fiscal_quarter_end": "2020-09-30",
+  "n_newly_active": 9,
+  "n_continuously_active": 2,
+  "n_idle": 14,
+  "absolute_active": 11,
+  "share_active": 0.44,
+  "relative_activity_delta": 4.5,
+  "pad_classifications": [
+    {
+      "pad_id": "30015469780000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015441670000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015469800000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015441730000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015469820000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015441740000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015469880000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015441870000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015469900000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015449850000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015469930000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015449860000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015470140000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015452690000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015470150000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015452700000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015470160000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015453680000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015470170000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015453690000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015471260000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "30015455550000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015472430000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "30015455560000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "30015472440000",
+      "state": "continuously_active"
+    }
+  ]
+}

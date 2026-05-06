@@ -1,0 +1,41 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates stable drilling activity with 4 active sites and a slight increase in drilling activity",
+      "Agent 2 reports a strong WTI average price of approximately $90.83 per barrel, supporting robust revenue outlook",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting analysts expect a positive earnings surprise"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of stable drilling activity, high oil prices, and a positive earnings divergence suggests a strong potential for upside in the upcoming earnings report."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent positive news, suggesting lack of market momentum",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst forecasts",
+      "Agent 2's outlook highlights stable drilling activity but lacks new site additions, which may limit future growth potential"
+    ],
+    "counter_evidence": [
+      "Agent 2 mentions high WTI prices supporting revenue outlook"
+    ],
+    "reasoning_short": "Despite high WTI prices, the lack of new drilling sites and uncertain analyst forecasts raise significant risks. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull evidence prevailed: Agent 2 provides a concrete revenue forecast supported by stable drilling activity and high WTI (~$90.8/bbl), and Agent 3 shows a modest_beat (+10%) analyst divergence. Agent 4 is neutral (no GDELT disclosure). Bear concerns about lack of new sites and medium analyst confidence are valid but insufficient to overcome the combined operational and price-driven upside. Conviction set to medium due to modest_beat classification and medium confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.3,
+    "agent4_weight": 0.2
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 8 active sites, indicating strong production growth potential.",
+      "Agent 2 reports a favorable revenue forecast of approximately $446.45 million for the upcoming quarter, supported by favorable WTI prices and a strong realized price differential.",
+      "Agent 3 divergence_class indicates a modest beat expectation of 6%, suggesting analysts anticipate better-than-expected performance."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, strong revenue forecasts, and positive analyst sentiment strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent news support, suggesting lack of market momentum",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at only +6%, indicating limited upside potential",
+      "Agent 2's outlook, while optimistic, relies heavily on increased drilling activity which may not be sustainable in a volatile market"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong realized price differential and favorable WTI prices"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of recent news support and medium analyst confidence suggest significant risks. The modest expected revenue growth may not justify a long position."
+  },
+  "arbiter_reasoning": "Bull view prevailed: Agent 2 provides a concrete, favorable revenue forecast and clear operational drivers (increased drilling, production potential) and Agent 3 indicates a modest_beat (+6%) with medium confidence. Agent 4 discloses no GDELT downgrade, so no news risk adjustment. Bear concerns about sustainability and limited upside temper conviction but do not outweigh the combined quantitative and analyst evidence—hence a medium conviction long.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.15
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ticker": "OVV",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates stable drilling activity with a positive activity delta of 5.2, supporting a revenue forecast of $2.20B",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting analysts expect a positive earnings surprise",
+      "Agent 4 reports gdelt_disclosed=false, indicating no information leak that could negatively impact earnings"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of stable drilling activity, a positive revenue forecast, and a modest expected earnings beat creates a strong case for a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent news that could support a price increase",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2's revenue forecast of $2.20B is based on stable conditions, but any market fluctuations could significantly impact this outlook"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights a positive activity delta of 5.2 and stable drilling activity"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of recent news and medium confidence in analyst forecasts suggest significant risks. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull side prevails: Agent 2's operational metrics and $2.20B revenue forecast plus Agent 3's analyst consensus (modest_beat, +10%, medium confidence) point to a likely upside. Agent 4 shows no GDELT disclosure or adverse news, removing an information-leak concern. Bear raised valid risks (medium analyst confidence and limited recent news), but those do not outweigh the combined positive operational and analyst signals. Conviction set to medium due to the modest_beat classification and only medium analyst confidence.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.35,
+    "agent3_weight": 0.5,
+    "agent4_weight": 0.15
+  }
+}

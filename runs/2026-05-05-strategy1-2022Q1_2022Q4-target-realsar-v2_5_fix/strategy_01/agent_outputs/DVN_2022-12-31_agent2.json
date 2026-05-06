@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 4546340909.090909,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4202500000.0,
+    "drilling_signal_raw": 0.8181818181818182,
+    "drilling_signal_clipped": 0.8181818181818182,
+    "production_boe_d": 378780.1267851059,
+    "wti_avg": 79.7176923076923,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a significant uptick with 10 active sites at the decision date, including 6 newly active sites, indicating a strong operational push. The average WTI price of approximately $79.72/boe, combined with a realized price differential of $0.91, supports a robust revenue environment. With a segment fraction of 0.55, the forecasted revenue of about $4.55B reflects the positive drilling momentum and favorable pricing conditions.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "strong_wti_prices",
+    "newly_active_sites",
+    "positive_realized_price_diff",
+    "segment_fraction_support"
+  ]
+}

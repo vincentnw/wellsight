@@ -1,0 +1,41 @@
+{
+  "ticker": "CTRA",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates stable drilling activity with 9 active sites and a positive activity delta of 3.5",
+      "Agent 2 reports a favorable WTI average price of approximately $84.93, supporting a robust revenue outlook of around $1.45B",
+      "Agent 3 divergence_class is modest_beat at +6.36%, suggesting analysts expect a positive earnings surprise"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of stable drilling activity, favorable pricing conditions, and a positive earnings surprise expectation strongly supports a long position ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles, indicating a lack of recent news support for price movement",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +6.36%, suggesting limited upside potential",
+      "Agent 2's revenue forecast is based on stable drilling activity, but this stability may not translate into significant growth given the current market conditions"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights favorable WTI prices and consistent production as positive drivers"
+    ],
+    "reasoning_short": "The lack of recent news and moderate analyst confidence suggests that the market may not support a long position in CTRA, especially given the modest growth expectations."
+  },
+  "arbiter_reasoning": "Bull evidence wins: Agent 2's stable drilling and $1.45B revenue outlook plus Agent 3's modest_beat (+6.36%) create a positive earnings expectation. Agent 4 shows no negative news (gdelt_disclosed=false) but provides no incremental catalyst. Bear concerns about limited growth and lack of news are valid but do not overcome the operational and analyst upside signal. Modest_beat with medium confidence and no GDELT downgrade supports a medium conviction long.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.4,
+    "agent3_weight": 0.45,
+    "agent4_weight": 0.15
+  }
+}

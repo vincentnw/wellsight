@@ -1,0 +1,23 @@
+{
+  "ticker": "SM",
+  "revenue_forecast_usd": 390500000.00000006,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 355000000.0,
+    "drilling_signal_raw": 6.428571428571429,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 39640.35589223185,
+    "wti_avg": 67.65846153846154,
+    "realized_price_diff": 0.88,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "SM's drilling activity shows a total of 13 active sites, with 4 newly active, indicating a significant uptick in operational engagement. The average WTI price of approximately $67.66 per barrel, combined with a realized price differential of $0.88, supports a stable revenue environment. The segment fraction of 0.55 suggests a balanced exposure to various market segments, contributing to a revenue forecast of around $390.5 million for the quarter ending June 30, 2021. Overall, the drilling activity and pricing environment suggest a positive outlook for the upcoming quarter.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "balanced_segment_exposure",
+    "newly_active_sites",
+    "operational_engagement"
+  ]
+}

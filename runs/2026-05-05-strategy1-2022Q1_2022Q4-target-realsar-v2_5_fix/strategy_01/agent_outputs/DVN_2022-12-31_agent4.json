@@ -1,0 +1,11 @@
+{
+  "ticker": "DVN",
+  "n_articles_in_window": 75,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "rilling-rig-count-130801661.html",
+    "es-after-fall-at-devon-rig-site/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (rilling-rig-count-130801661.html, es-after-fall-at-devon-rig-site/) describe drilling activity changes consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

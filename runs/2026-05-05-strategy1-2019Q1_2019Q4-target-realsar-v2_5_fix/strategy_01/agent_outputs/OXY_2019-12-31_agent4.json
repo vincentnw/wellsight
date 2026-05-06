@@ -1,0 +1,10 @@
+{
+  "ticker": "OXY",
+  "n_articles_in_window": 74,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "-as-permian-boom-slows-pzqdxzzqp"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "One GDELT-indexed article (-as-permian-boom-slows-pzqdxzzqp) describes a slowdown in drilling activity in the Permian Basin, which is consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

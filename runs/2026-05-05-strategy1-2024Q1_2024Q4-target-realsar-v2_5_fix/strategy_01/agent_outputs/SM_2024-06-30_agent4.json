@@ -1,0 +1,11 @@
+{
+  "ticker": "SM",
+  "n_articles_in_window": 21,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "urces-shale-acquisition-in-utah/",
+    "lezard.com/en/news-21433992.html"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (urces-shale-acquisition-in-utah/, lezard.com/en/news-21433992.html) describe a significant acquisition of XCL Resources by SM Energy, indicating a drilling-activity change consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

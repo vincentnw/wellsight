@@ -1,0 +1,11 @@
+{
+  "ticker": "CRGY",
+  "our_estimate_usd": 400000000.0,
+  "consensus_median_usd": 400000000.0,
+  "consensus_dispersion_usd": 0.0,
+  "n_analysts_at_T_minus_14": 1,
+  "divergence_pct": 0.0,
+  "divergence_class": "in_line",
+  "confidence": "low",
+  "reasoning": "Our estimate matches the consensus exactly, resulting in a 0% divergence. However, with only 1 analyst and no dispersion, confidence is low."
+}

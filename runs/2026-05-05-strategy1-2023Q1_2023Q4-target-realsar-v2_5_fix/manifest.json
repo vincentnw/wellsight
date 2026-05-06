@@ -1,0 +1,64 @@
+{
+  "run_id": "2026-05-05-strategy1-2023Q1_2023Q4-target-realsar-v2_5_fix",
+  "started_at": "2026-05-05T23:43:41.617745+00:00",
+  "completed_at": "2026-05-05T23:43:43.607082+00:00",
+  "code_state": {
+    "fin580_dir_sha": "6d99a6475299d6c4616d3438e02ceac4b33f659fe4a4aa6d01d05d9a4c8fb3de",
+    "phase1_dir_sha": "bf09f757e466be8cbc887bc812a6bc7789d3825f5818ab98cb6055613a072bee",
+    "docs_specs_sha": "8a80b6e2a0d0b74ea724d1a31444c8996901461eb1fcc9d3c21535461f3d289e",
+    "docs_plans_sha": "c7e94b6261e937a439e8b92546cdf1bfaaf5e491a42b4c684d239f5f5c2e2ae1",
+    "spec_sha": "eebfd9aac983b4cac0ac9a65d4247ec0eadaf567cd896dba1fe477b0434460a7",
+    "plan_sha": "346851970bd15c02960e64f150fe00aa7e6ec2c429e34d17900ccff1319d7150",
+    "requirements_lock_sha": "679bdc7d0990cd885d1b0143fbdbf161583679fde710489b196f76ecc329a4f4",
+    "modules_used": [
+      "fin580.agents.orchestrator",
+      "fin580.backtest.runner",
+      "fin580.backtest.strategies.s01_full_system"
+    ]
+  },
+  "data_state": {
+    "ibes_revenue_panel_sha": "60a35399687995df8daf5e5e9da4c1f1d1ca16dc171bc199a381d6e28c7b1fed",
+    "ibes_detail_history_sha": "491e8e415dd7af87792e65d19ed6d84dbd37986926d96288a95de4c27a7d184e",
+    "compustat_fundq_sha": "b99c7f2e4c8269b877e2d4833754e98402a05601ce2b799c7279538d6c048b3b",
+    "crsp_daily_sha": "823d3a615c76af136c9a03e4b4c2b9afdb4656b83f0ba0ed6ef4be5ed6d450f2",
+    "permian_fraction_sha": "b69a6826793d2a6babfd11bd0ef18a0b55a8c81a0a72eb2ba33067cb5668be04",
+    "earnings_dates_sha": "34486ba945cede1d67ee6b8520d09b022a4aad33c30d57ff4fad1362de7f5ec5",
+    "fracfocus_permit_dump_sha": "27299e5a4436aabd4d442f5e3eb007b331a3b92af8448be3b83ab16e4ef8f1fa",
+    "fracfocus_permit_dump_provenance": "fracfocus_bulk_csv_2026_04_30",
+    "yahoo_2025_supplement_sha": "7b3afae7f6b9140755cc74482b3aec6fd9a7250ec8d12931fd40bf6be3f864ce",
+    "wti_cache_sha": "3b6aaaffac789d08301fd7d0ff716a94b93e2daff5feb4df000bc7e366d84eff",
+    "wti_provenance": "eia_rwtcw_xls",
+    "bhi_rigcount_sha": "ef1aef44d9cf31f1019d4160c9968ae815caaceed3e6674faeae1d0556e566f7",
+    "bhi_rigcount_provenance": "eia_dpr_permian_monthly_carryforward",
+    "sar_mode": "real_sentinel1",
+    "sar_change_detection_thresholds": {
+      "activation_db": 1.5,
+      "sustained_db": 0.5,
+      "trailing_baseline_coefficient": 0.3
+    },
+    "gdelt_cache_index_sha": "be9dcaa08635c45271116c4f49a43642522cf17cf3694a04cdab150b928f40d7",
+    "sentinel1_firm_quarter_cache_index_sha": "fa6ca0bfb1a568a135401e8c31f29337bc98ff2e52f8dfcfa1a3b8832586be08",
+    "sentinel1_per_pad_cache_index_sha": "7a750e2724a9c1acd28bc3e3ec8d8babc80cd62d917d91872498c5fd245bc3ac",
+    "synthetic_sar_confusion_matrix_label_legacy": "target",
+    "synthetic_sar_seed_function_legacy": "sha256(ticker|q_end|pad_id|cm_label)",
+    "synthetic_sar_seed_function_sha_legacy": "b4357b94455388bffd463c6a40184f3d56e9336095767bcd44e8a6308c1d943b"
+  },
+  "llm_state": {},
+  "prompt_shas": {
+    "agent2_revenue": "15962353e3d025774e2f81db8641dd640b0c21f56a7fc80a3438c10a76cc536f",
+    "agent3_consensus": "1b677a3980559de0ee0792df5eaee9e01ed3dade88a58d14084e16ad33392a93",
+    "agent4_news": "a76a52fa32b4ce7287b33abbb670fc05360399946b451c711a362d96af275f0b",
+    "agent5_arbiter": "dbed4d6441d17cc11ea92abd38a6bef86bece96bb79bdbcfe81f0c50788dbc9e",
+    "agent5_bear": "1a949d296caf26cfd6aa621c98321e5e6b82bf394500fa1fc7281391740ae5a0",
+    "agent5_bull": "6b72da9cec238acd0d6bb977a60a6ab869714ea2093ebe673f8eed5d4b8c2d2b"
+  },
+  "env": {
+    "python_version": "3.11.7 | packaged by Anaconda, Inc. | (main, Dec 15 2023, 18:05:47) [MSC v.1916 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "parameters": {
+    "threshold_pct": 10,
+    "transaction_cost_bps": 30
+  },
+  "warnings": []
+}

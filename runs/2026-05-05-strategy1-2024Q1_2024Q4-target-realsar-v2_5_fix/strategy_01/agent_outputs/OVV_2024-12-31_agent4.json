@@ -1,0 +1,8 @@
+{
+  "ticker": "OVV",
+  "n_articles_in_window": 11,
+  "gdelt_disclosed": false,
+  "matching_article_ids": [],
+  "conviction_modifier": "none",
+  "reasoning": "Of the 10 GDELT articles in the window, none describe a drilling-activity change consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only."
+}

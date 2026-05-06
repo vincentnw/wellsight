@@ -1,0 +1,22 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 761630000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 761630000.0,
+    "drilling_signal_raw": 0.0,
+    "drilling_signal_clipped": 0.0,
+    "production_boe_d": 108237.59303627255,
+    "wti_avg": 46.73538461538462,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity remains stable with 2 active sites at the decision date, reflecting a relative activity increase of 1.5 compared to previous periods. The average WTI price of approximately $46.74 per barrel, combined with a segment fraction of 0.55, suggests that while revenue may be impacted by lower oil prices, the consistent production levels should help maintain the forecasted revenue of $761.63 million for the quarter ending December 31, 2020.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "low_wti_prices",
+    "consistent_production",
+    "segment_fraction"
+  ]
+}

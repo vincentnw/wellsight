@@ -1,0 +1,43 @@
+{
+  "ticker": "FANG",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook flags increased_drilling_activity with 9 newly active drilling sites and a relative activity increase of 4.2",
+      "Agent 2 reports a robust revenue forecast of approximately $2.35B, supported by stable WTI prices averaging $74.23 per barrel",
+      "Agent 3 divergence_class indicates a modest_beat with a divergence_pct of 8.95%"
+    ],
+    "counter_evidence": [
+      "Agent 4 indicates a downgrade_one_tier in conviction"
+    ],
+    "reasoning_short": "The combination of increased drilling activity and a strong revenue forecast, despite a slight downgrade in conviction, suggests a favorable outlook for FANG ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 18 articles indicating that the market may have already priced in the positive news about increased drilling activity.",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +8.95%, suggesting that expectations may not be as strong as projected.",
+      "Agent 4's conviction modifier indicates a downgrade one tier, which raises concerns about the sustainability of the current positive sentiment."
+    ],
+    "counter_evidence": [
+      "Agent 2's outlook highlights strong production potential and operational efficiency due to increased drilling activity."
+    ],
+    "reasoning_short": "Despite positive indicators from increased drilling and revenue forecasts, the market may have already priced in these factors, and the downgrade signals potential risks ahead. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bear position prevails. Although Agent 2 and Agent 3 show positive signals (increased drilling and a modest_beat ~8.95%), Agent 4 disclosed broad GDELT coverage (18 articles) and applied a one‑tier conviction downgrade, indicating the news is likely priced in and reducing the information edge. Given the modest divergence and the GDELT disclosure, I decline to take a long position.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.25,
+    "agent3_weight": 0.15,
+    "agent4_weight": 0.6
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ticker": "EOG",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 11 active sites, indicating strong operational momentum.",
+      "Agent 2 reports a favorable WTI price of approximately $78.75 per barrel, which supports a robust revenue outlook.",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting analysts expect EOG to outperform consensus estimates."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, favorable pricing conditions, and a positive analyst outlook strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent news that could support a price increase",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2's outlook, while positive, is based on current drilling activity and pricing that may already be priced in, with no new catalysts identified"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and favorable WTI prices, which could support revenue growth"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of new news and medium confidence in analyst forecasts suggest that the current price may not have significant upside potential. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull prevailed: Agent 2's operational evidence (increased drilling, favorable realized pricing and a $6.3B revenue forecast) combined with Agent 3's analyst signal (modest_beat +10%, medium confidence) provide a coherent positive case. Bear's main counter — that these factors may be priced in — is credible but not strong enough to outweigh the operational and analyst tilt. Agent 4 discloses no adverse GDELT signal, so no downgrade applies. Given the modest_beat and medium confidence, conviction is set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "ticker": "CTRA",
+  "n_articles_in_window": 75,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "og-to-resume-drilling-in-dimock/",
+    "t-of-coterra-drilling-in-dimock/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (og-to-resume-drilling-in-dimock/, t-of-coterra-drilling-in-dimock/) describe the resumption of drilling activities by Coterra in Dimock, consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

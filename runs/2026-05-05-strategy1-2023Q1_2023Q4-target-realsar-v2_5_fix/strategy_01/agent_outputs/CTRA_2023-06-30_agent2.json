@@ -1,0 +1,23 @@
+{
+  "ticker": "CTRA",
+  "revenue_forecast_usd": 1284434666.6666667,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1270320000.0000002,
+    "drilling_signal_raw": 0.1111111111111111,
+    "drilling_signal_clipped": 0.1111111111111111,
+    "production_boe_d": 100430.95371931797,
+    "wti_avg": 72.0723076923077,
+    "realized_price_diff": 0.78,
+    "segment_fraction": 0.4
+  },
+  "outlook_paragraph": "CTRA's drilling activity shows a significant increase with 5 active sites, including 4 newly active, indicating a strong ramp-up in production potential. The average WTI price of approximately $72/boe, combined with a segment fraction of 0.4, supports a revenue forecast of about $1.28B for the quarter ending June 30, 2023. The positive drilling signal suggests that the company is well-positioned to capitalize on current market conditions, although the realized price differential indicates some pricing challenges.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "newly_active_sites",
+    "production_growth_potential",
+    "realized_price_challenges"
+  ]
+}

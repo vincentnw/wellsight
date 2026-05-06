@@ -1,0 +1,43 @@
+{
+  "ticker": "MTDR",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights consistent drilling activity with 6 active sites, indicating strong operational momentum.",
+      "Agent 2 reports a favorable revenue forecast of nearly $775.71 million, supported by stable realized prices and efficient operations.",
+      "Agent 3 divergence_class indicates a modest beat of 10%, suggesting analysts expect the company to outperform expectations."
+    ],
+    "counter_evidence": [
+      "Agent 4 indicates a downgrade one tier, which may reflect some caution in the market."
+    ],
+    "reasoning_short": "The combination of strong drilling activity, favorable pricing conditions, and a positive revenue forecast supports a high-confidence long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 25 articles indicating potential negative sentiment or market awareness of risks",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2 outlook, while positive, may already be priced in given the favorable WTI prices and strong production capacity"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights consistent drilling activity and strong revenue forecast, which could support a bullish case"
+    ],
+    "reasoning_short": "Despite a seemingly strong outlook, the market may have already priced in the positive factors, and the downgrade from Agent 4 raises concerns about potential headwinds. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bear view prevails. Agent 4's GDELT disclosure (25 articles) and explicit downgrade one tier raise news-driven risk and reduce the information edge; Agent 3 only shows a modest_beat (+10%) at medium confidence and Agent 2's positive forecast appears plausibly priced in. Given the news-sensitivity and limited upside signal, decline to take a long position.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.15,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.6
+  }
+}

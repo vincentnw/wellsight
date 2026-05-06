@@ -1,0 +1,43 @@
+{
+  "ticker": "FANG",
+  "decision": "long",
+  "conviction_tier": "low",
+  "final_size_pct": 0.05,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights 7 newly active drilling sites and a relative activity increase of 2.8, indicating strong production potential.",
+      "Agent 2 reports an average WTI price of approximately $89.53 per barrel, which supports favorable revenue conditions.",
+      "Agent 3 divergence_class indicates a modest_beat with a divergence_pct of 6.47%, suggesting analysts expect a positive earnings surprise."
+    ],
+    "counter_evidence": [
+      "Agent 4 indicates a downgrade_one_tier in conviction, which may reflect some caution among analysts."
+    ],
+    "reasoning_short": "The combination of increased drilling activity, favorable oil prices, and a positive earnings divergence suggests a strong potential for FANG to outperform expectations in the upcoming earnings report."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 39 articles indicating that the market may have already priced in the positive news about drilling activity.",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +6.47%, suggesting limited upside potential.",
+      "Agent 2's revenue forecast of $2.58 billion may be overly optimistic given the current market volatility and potential for price corrections."
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights new drilling activity and high WTI prices as key drivers for potential revenue growth."
+    ],
+    "reasoning_short": "The market appears to have already priced in the positive news regarding drilling activity, and the modest analyst divergence suggests limited upside. Recommend against taking a long position."
+  },
+  "arbiter_reasoning": "Bull wins: tangible operational drivers (Agent 2's new drilling activity and favorable WTI) plus a modest analyst beat (Agent 3) point to upside, so we take a long. However Agent 4's GDELT disclosure and one-tier conviction downgrade indicate the news may be at least partly priced in, so conviction is reduced to low.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.2,
+    "agent4_weight": 0.35
+  }
+}

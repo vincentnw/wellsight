@@ -1,0 +1,41 @@
+{
+  "ticker": "CTRA",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates increased drilling activity with a relative activity delta of 1.8, suggesting a positive trend in production capacity.",
+      "Agent 2 reports a revenue forecast of approximately $1.76B, reflecting a stable pricing environment with WTI prices around $76.82.",
+      "Agent 3 divergence_class is modest_beat at +5.38%, indicating analysts expect a positive earnings surprise."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, stable oil prices, and a positive earnings surprise expectation strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2's outlook suggests a stable pricing environment, but the average WTI price of $76.82 may not sustain due to potential volatility in oil markets.",
+      "Agent 3's medium confidence and modest beat divergence of only 5.38% indicate that analyst expectations are not strongly bullish, suggesting limited upside potential.",
+      "Agent 4's lack of conviction and no disclosed news (gdelt_disclosed=false) implies that there may not be significant catalysts to drive the stock higher."
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and solid production capacity, which could support revenue growth."
+    ],
+    "reasoning_short": "Despite some positive indicators, the overall market conditions and analyst sentiment suggest significant risks that could hinder price appreciation. Recommend against a long position."
+  },
+  "arbiter_reasoning": "Bull evidence prevails: Agent 2's operational read (increased drilling, production capacity and a $1.76B revenue forecast) combined with Agent 3's modest_beat (+5.38%, medium confidence) provide a credible positive earnings/operational signal. Agent 4 is neutral (no disclosed news). Bear concerns about price volatility and limited upside are noted but insufficient to overcome the constructive upstream data and analyst beat signal. No GDELT downgrade applies, so conviction set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

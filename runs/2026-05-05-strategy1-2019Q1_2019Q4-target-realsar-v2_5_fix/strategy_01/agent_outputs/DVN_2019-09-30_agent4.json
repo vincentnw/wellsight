@@ -1,0 +1,11 @@
+{
+  "ticker": "DVN",
+  "n_articles_in_window": 75,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "devon-raises-oil-output-guidance",
+    "devon-energy-delivered-another-gusher-in-q2"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (devon-raises-oil-output-guidance, devon-energy-delivered-another-gusher-in-q2) describe increases in oil output and drilling activity consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

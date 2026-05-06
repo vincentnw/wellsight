@@ -1,0 +1,113 @@
+{
+  "ticker": "SM",
+  "decision_date_T": "2021-04-15",
+  "fiscal_quarter_end": "2021-03-31",
+  "n_newly_active": 2,
+  "n_continuously_active": 5,
+  "n_idle": 18,
+  "absolute_active": 7,
+  "share_active": 0.28,
+  "relative_activity_delta": 4.75,
+  "pad_classifications": [
+    {
+      "pad_id": "42227407910000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227397090000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227395270000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227407920000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227397110000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227395300000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227407970000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227397220000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227395310000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227407980000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227397230000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227395320000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227408120000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42227397240000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227395370000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227408150000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42227397250000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227395380000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227408160000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42227397990000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42227395390000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227408450000",
+      "state": "newly_active"
+    },
+    {
+      "pad_id": "42227398030000",
+      "state": "continuously_active"
+    },
+    {
+      "pad_id": "42227395400000",
+      "state": "idle"
+    },
+    {
+      "pad_id": "42227408500000",
+      "state": "newly_active"
+    }
+  ]
+}

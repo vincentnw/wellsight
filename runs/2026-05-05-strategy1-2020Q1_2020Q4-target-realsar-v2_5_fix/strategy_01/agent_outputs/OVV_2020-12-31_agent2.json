@@ -1,0 +1,23 @@
+{
+  "ticker": "OVV",
+  "revenue_forecast_usd": 1357554600.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1508394000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 177336.27719308145,
+    "wti_avg": 46.73538461538462,
+    "realized_price_diff": 0.9,
+    "segment_fraction": 0.5
+  },
+  "outlook_paragraph": "OVV's drilling activity has significantly declined, with no active sites reported at the decision date and a relative activity delta of -7.7%. This lack of drilling activity, combined with a WTI average price of approximately $46.74 per barrel, suggests a challenging environment for revenue generation. The forecasted revenue of $1.36B reflects these conditions, with a segment fraction of 0.5 indicating a reliance on a less active segment of the market.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "low_wti_prices",
+    "segment_fraction",
+    "no_active_sites",
+    "negative_activity_delta"
+  ]
+}

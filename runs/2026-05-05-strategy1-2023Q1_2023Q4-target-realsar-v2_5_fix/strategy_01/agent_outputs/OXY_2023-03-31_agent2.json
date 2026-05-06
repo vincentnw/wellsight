@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 6881107500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7645675000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 314495.67491792433,
+    "wti_avg": 76.73538461538463,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "OXY's drilling activity has significantly declined, with no active sites reported at the decision date and a relative activity delta of -6.8%. This lack of drilling activity, combined with a WTI average price of approximately $76.74/boe, suggests a challenging environment for revenue generation. Despite the forecasted revenue of $6.88B, the low segment fraction indicates that only a portion of the company's operations is contributing to this figure, which may limit growth potential in the upcoming quarter.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "low_segment_fraction",
+    "no_new_wells",
+    "production_constraints"
+  ]
+}

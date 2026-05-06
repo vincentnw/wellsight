@@ -1,0 +1,11 @@
+{
+  "ticker": "OVV",
+  "n_articles_in_window": 19,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "t-on-unexpected-permian-success/",
+    "wing-unexpected-permian-success/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (t-on-unexpected-permian-success/, wing-unexpected-permian-success/) describe an increase in oil and gas production targets for Ovintiv due to unexpected success in the Permian, which is consistent with the satellite-detected drilling pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

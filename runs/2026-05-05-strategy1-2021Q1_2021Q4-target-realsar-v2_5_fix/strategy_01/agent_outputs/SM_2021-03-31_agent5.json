@@ -1,0 +1,41 @@
+{
+  "ticker": "SM",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook indicates increased drilling activity with 7 active sites and a positive trend in operational engagement",
+      "Agent 2 reports a stable revenue environment with an average WTI price of approximately $58.84/boe and a positive realized price differential of $0.88",
+      "Agent 3 divergence_class is modest_beat at +10%, suggesting analysts expect a positive earnings surprise"
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, stable pricing, and a positive earnings divergence suggests a strong potential for upside in the upcoming earnings report."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating recent news support for price movement",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, suggesting limited upside potential",
+      "Agent 2's revenue forecast of $374.09 million is based on stable WTI prices, which are subject to volatility and external market pressures"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and operational engagement, which could suggest potential growth"
+    ],
+    "reasoning_short": "The lack of recent news and moderate analyst confidence indicate that the market may not support a long position. Additionally, reliance on stable WTI prices poses a risk given market volatility."
+  },
+  "arbiter_reasoning": "Both Bull and Bear ultimately favor a long; the Bull's case (Agent 2 operational uptick and deterministic revenue forecast) plus Agent 3's modest_beat divergence (+10%) outweigh the Bear's caution around WTI volatility and limited news flow. No GDELT disclosure removes a negative-news downgrade, but the divergence and analyst confidence are only modest, so conviction is set to medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "ticker": "OXY",
+  "n_articles_in_window": 75,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "-keep-Permian-Basin-15108698.php",
+    "ing-permits-fall-by-15175831.php",
+    "exas-shale-drillers-15138885.php"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Three GDELT-indexed articles describe drilling activity changes, including a focus on Permian Basin activity and a significant drop in Texas drilling permits, consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

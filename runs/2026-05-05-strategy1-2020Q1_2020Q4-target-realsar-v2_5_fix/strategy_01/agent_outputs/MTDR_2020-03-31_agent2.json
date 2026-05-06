@@ -1,0 +1,23 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 249700000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 253000000.0,
+    "drilling_signal_raw": -0.13043478260869565,
+    "drilling_signal_clipped": -0.13043478260869565,
+    "production_boe_d": 72133.67302698661,
+    "wti_avg": 41.347692307692306,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Matador Resources has seen a significant drop in drilling activity, with 5 active sites at the decision date, reflecting a relative activity delta of -0.8. This decline in drilling is likely to impact production levels, despite a stable realized price of approximately $41.35/boe. The forecasted revenue of $249.7 million suggests that the company is navigating a challenging environment, but the full segment exposure may help mitigate some of the impacts from reduced drilling activity.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_realized_price",
+    "full_segment_exposure",
+    "low_active_sites",
+    "production_constraints"
+  ]
+}

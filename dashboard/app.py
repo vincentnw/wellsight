@@ -419,9 +419,12 @@ st.header("4. Walk through one cell end-to-end", anchor="section-4")
 st.markdown(
     "Pick a (ticker, quarter) across **any of the six yearly windows (2019-2024)** and "
     "see what each agent produced. "
-    "**Recommended demo cell:** `FANG / 2024-Q2` — a 2024 long that lost despite "
+    "**Recommended demo cells:** `FANG / 2024-Q2` — a 2024 long that lost despite "
     "passing the revenue-signal gate. Try also `OVV / 2023-Q2` (the +15.5% "
-    "standout) or `SM / 2020-Q1` (the +91% regime-conditional winner)."
+    "standout), `SM / 2021-Q3` (the system's largest single trade, +24.5%), or "
+    "`SM / 2020-Q1` to see a 2020-Q1 cell short-circuit to no_trade under the "
+    "corrected gate (its trailing baseline puts the forecast 0.5% below "
+    "consensus, classified `in_line`)."
 )
 
 if all_cells.empty:
@@ -971,7 +974,7 @@ else:
 
             - **Multi-agent system** is mostly flat — it holds cash between trades
               ({time_in_market_pct:.0%} time in market). The visible jumps are
-              the 23 trade exits.
+              the 51 trade exits.
             - **VOO** crushes both — the broad market roughly tripled over this window.
               An honest Permian-equity strategy needs to either (a) generate enough
               alpha to beat VOO net of risk, or (b) provide a diversification benefit
@@ -1026,7 +1029,7 @@ st.markdown(
        future work (paper §13).
 
     **2021 over-firing is the dominant structural pattern.** The system fires
-    **16 long trades in 2021** (vs 2-9 in every other year), of which **13
+    **16 long trades in 2021** (vs 2-12 in every other year), of which **13
     clip at `drilling_signal = +1.0`** and reach an identical +10.0%
     divergence number. The clip is functioning as designed but collapses signal
     differentiation across the post-COVID recovery cohort: the gate cannot
@@ -1035,7 +1038,7 @@ st.markdown(
     tuned post-hoc.
 
     **The pre-registered WTI stress veto** would block one 2020-Q1 entry (OVV,
-    +\$16,900), shifting the aggregate from +\$13,432 to -\$3,468. The
+    +\$16,900), shifting the aggregate from +\$6,634 to -\$10,266. The
     qualitative finding "macro-stress veto removes a gain rather than a loss"
     survives at smaller magnitude than earlier reported.
 

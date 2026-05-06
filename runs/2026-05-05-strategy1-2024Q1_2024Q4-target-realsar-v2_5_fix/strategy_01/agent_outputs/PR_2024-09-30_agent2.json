@@ -1,0 +1,23 @@
+{
+  "ticker": "PR",
+  "revenue_forecast_usd": 1359902500.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1236275000.0,
+    "drilling_signal_raw": 5.0,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 216974.52453484506,
+    "wti_avg": 74.05846153846154,
+    "realized_price_diff": 0.93,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "PR's drilling activity shows a total of 9 active sites, with 8 of them continuously active and 1 newly active, indicating a strong relative increase in drilling activity. The average WTI price of approximately $74/boe, combined with a realized price differential of 0.93, supports a robust revenue environment. Given these factors, our deterministic revenue forecast of $1.36B reflects the positive momentum in production and pricing dynamics for the upcoming quarter.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti_prices",
+    "high_continuity_of_active_sites",
+    "strong_realized_price_diff",
+    "positive_relative_activity_delta"
+  ]
+}

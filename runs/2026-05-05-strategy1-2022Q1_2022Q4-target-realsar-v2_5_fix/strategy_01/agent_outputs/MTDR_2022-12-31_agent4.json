@@ -1,0 +1,13 @@
+{
+  "ticker": "MTDR",
+  "n_articles_in_window": 25,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "t-on-Delaware-Basin-Acquisition/",
+    "elaware-basin-acquisition-190324",
+    "ce-energy-16-billion-deal-203840",
+    "n+for+$1.6+Billion/21103370.html"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Four GDELT-indexed articles (t-on-Delaware-Basin-Acquisition/, elaware-basin-acquisition-190324, ce-energy-16-billion-deal-203840, n+for+$1.6+Billion/21103370.html) describe a strategic acquisition and drilling activity changes consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

@@ -1,0 +1,43 @@
+{
+  "ticker": "CTRA",
+  "decision": "no_trade",
+  "conviction_tier": "none",
+  "final_size_pct": 0.0,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "medium",
+    "key_evidence": [
+      "Agent 2 outlook highlights stable drilling activity with 5 active sites and consistent production levels",
+      "Agent 2 reports a favorable WTI price environment averaging $78.75 per barrel, supporting revenue potential",
+      "Agent 3 divergence_class indicates a modest beat expectation of +10% from 15 analysts"
+    ],
+    "counter_evidence": [
+      "Agent 4 indicates a downgrade one tier, which may reflect some caution in the market"
+    ],
+    "reasoning_short": "Despite a downgrade in conviction, the stable drilling activity and favorable pricing environment suggest CTRA is positioned for a modest earnings beat, making a long position reasonable ahead of the earnings event."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 75 articles indicating potential negative sentiment or market awareness of risks",
+      "Agent 4 conviction_modifier indicates a downgrade one tier, suggesting analysts are losing confidence in the stock",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst forecasts"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights stable drilling activity and favorable WTI prices, which could support revenue"
+    ],
+    "reasoning_short": "Despite some positive indicators, the downgrade in analyst conviction and the high number of articles suggesting negative sentiment raise significant concerns about the stock's future performance. Recommend against taking a long position."
+  },
+  "arbiter_reasoning": "Bear view prevailed. Agent 4's gdelt_disclosed=true with 75 articles and a one-tier conviction downgrade materially raises risk and reduces informational edge. Agent 2's stable operations and Agent 3's modest_beat (+10%) with medium confidence do not overcome the heightened negative sentiment and declining analyst conviction; declining to take a long position.",
+  "upstream_agent_summary": {
+    "agent2_decisive": false,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.15,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.6
+  }
+}

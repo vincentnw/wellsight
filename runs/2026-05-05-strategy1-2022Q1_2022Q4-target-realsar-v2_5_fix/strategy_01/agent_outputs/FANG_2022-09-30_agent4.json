@@ -1,0 +1,11 @@
+{
+  "ticker": "FANG",
+  "n_articles_in_window": 39,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "production-guidance-boost-capex/",
+    "as-oilfield-costs-rise-1.1802291"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (production-guidance-boost-capex/, as-oilfield-costs-rise-1.1802291) describe changes in drilling activity and production guidance consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

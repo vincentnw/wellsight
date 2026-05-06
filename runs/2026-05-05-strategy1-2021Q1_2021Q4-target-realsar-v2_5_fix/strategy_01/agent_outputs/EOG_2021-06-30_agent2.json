@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 3074700989.9999995,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 3270958499.9999995,
+    "drilling_signal_raw": -0.6,
+    "drilling_signal_clipped": -0.6,
+    "production_boe_d": 233562.8668053241,
+    "wti_avg": 68.52461538461537,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG's drilling activity shows a significant decline with only 1 active site at the decision date, which is well below the historical average. This reduction in drilling activity, combined with a WTI average price of approximately $68.52/boe and a segment fraction of 0.45, suggests that revenue for the upcoming quarter will be constrained. The forecast of around $3.07B reflects these challenges, as the company navigates a lower production environment.",
+  "key_drivers": [
+    "low_drilling_activity",
+    "declining_active_sites",
+    "stable_wti",
+    "segment_fraction",
+    "realized_price_diff"
+  ]
+}

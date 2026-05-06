@@ -1,0 +1,11 @@
+{
+  "ticker": "EOG",
+  "n_articles_in_window": 52,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "ved-for-93-drilling-permits.html",
+    "new-wells-against-higher-prices/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (ved-for-93-drilling-permits.html, new-wells-against-higher-prices/) describe drilling activity changes consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

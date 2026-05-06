@@ -1,0 +1,41 @@
+{
+  "ticker": "MTDR",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 5 active sites, including 1 newly active site, indicating a relative activity increase of 3.5.",
+      "Agent 2 reports a robust revenue forecast of approximately $944.48 million, supported by stable WTI prices around $75.59 per barrel and a strong realized price differential of $0.92.",
+      "Agent 3 divergence_class indicates a modest beat expectation of 10%, suggesting analysts anticipate better-than-expected performance."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of increased drilling activity, strong revenue forecasts, and positive analyst expectations strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no recent articles indicating new developments, suggesting limited market momentum",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst forecasts",
+      "Agent 2's outlook, while positive, relies heavily on stable WTI prices and realized price differentials, which are subject to volatility"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and strong revenue forecast, which could suggest potential upside"
+    ],
+    "reasoning_short": "The lack of recent news and medium analyst confidence raises concerns about the sustainability of the positive outlook. Given the inherent volatility in oil prices and the modest analyst divergence, a long position carries significant risk."
+  },
+  "arbiter_reasoning": "Bull evidence prevails: Agent 2 provides material operational upside (increased drilling, robust revenue forecast) and Agent 3 shows analyst consensus of a modest beat (+10%) despite only medium confidence. Agent 4 reports no adverse GDELT disclosures, so no downgrade applies. However, analyst confidence is medium and oil-price volatility remains a risk, so conviction is set to medium rather than high.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.5,
+    "agent3_weight": 0.35,
+    "agent4_weight": 0.15
+  }
+}

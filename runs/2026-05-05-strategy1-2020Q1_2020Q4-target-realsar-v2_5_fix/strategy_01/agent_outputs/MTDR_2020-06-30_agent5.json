@@ -1,0 +1,41 @@
+{
+  "ticker": "MTDR",
+  "decision": "long",
+  "conviction_tier": "medium",
+  "final_size_pct": 0.1,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 highlights high drilling activity with 12 active sites, significantly above the trailing average, indicating strong operational push.",
+      "Agent 2's revenue forecast of $215.14 million suggests the company is well-positioned to capitalize on its drilling momentum.",
+      "Agent 3 indicates a divergence_class of modest_beat at +10%, suggesting analysts expect the company to outperform expectations."
+    ],
+    "counter_evidence": [],
+    "reasoning_short": "The combination of robust drilling activity, a solid revenue forecast, and positive analyst sentiment strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=false with no articles indicating new positive developments, suggesting limited market momentum",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating uncertainty in analyst expectations",
+      "Agent 2's outlook, while optimistic, relies heavily on stable realized prices and high drilling activity, which are subject to volatility in the oil market"
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights strong operational push and favorable WTI environment"
+    ],
+    "reasoning_short": "Despite some positive indicators, the lack of new market-moving news and medium analyst confidence suggest significant risks. The reliance on stable prices in a volatile sector raises concerns about the sustainability of the current outlook."
+  },
+  "arbiter_reasoning": "Bull prevailed: Agent 2's strong operational read (12 active rigs + $215.14M revenue forecast) combined with Agent 3's modest_beat (+10%, n=15) provide a coherent upside signal. Agent 4 shows no GDELT disclosure to downgrade confidence. Bear concerns about price volatility and lack of new market-moving headlines are valid but do not outweigh the operational and analyst divergence evidence. Conviction set to medium because the beat is modest and Agent 3's confidence is medium.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": true,
+    "agent4_decisive": false,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.4,
+    "agent4_weight": 0.15
+  }
+}

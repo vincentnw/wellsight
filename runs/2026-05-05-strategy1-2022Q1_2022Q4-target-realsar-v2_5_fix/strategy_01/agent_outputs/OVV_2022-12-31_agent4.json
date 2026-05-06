@@ -1,0 +1,11 @@
+{
+  "ticker": "OVV",
+  "n_articles_in_window": 6,
+  "gdelt_disclosed": true,
+  "matching_article_ids": [
+    "permian-basin-haynesville-shale/",
+    "in-haynesville-shale-properties/"
+  ],
+  "conviction_modifier": "downgrade_one_tier",
+  "reasoning": "Two GDELT-indexed articles (permian-basin-haynesville-shale/, in-haynesville-shale-properties/) describe new drilling activity in the Permian Basin and Haynesville shale consistent with the satellite-detected pattern. Determination is about GDELT-indexed news only, not about full market awareness."
+}

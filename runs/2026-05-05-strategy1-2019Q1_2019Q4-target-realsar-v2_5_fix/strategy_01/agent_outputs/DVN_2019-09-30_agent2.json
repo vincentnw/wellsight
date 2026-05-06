@@ -1,0 +1,23 @@
+{
+  "ticker": "DVN",
+  "revenue_forecast_usd": 1604856000.0000002,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 1458960000.0,
+    "drilling_signal_raw": 5.5,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 192480.6842394603,
+    "wti_avg": 55.37692307692308,
+    "realized_price_diff": 0.91,
+    "segment_fraction": 0.55
+  },
+  "outlook_paragraph": "Devon Energy's drilling activity shows a robust increase with 13 active sites at the decision date, significantly above the trailing average. This uptick, combined with a stable WTI price around $55.38/boe and a segment fraction of 0.55, supports our deterministic revenue forecast of approximately $1.60B for the quarter ending September 30, 2019. The drilling signal indicates strong operational momentum, which should translate into solid production levels.",
+  "key_drivers": [
+    "increased_drilling_activity",
+    "stable_wti",
+    "strong_segment_fraction",
+    "operational_momentum",
+    "positive_activity_delta"
+  ]
+}

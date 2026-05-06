@@ -1,0 +1,43 @@
+{
+  "ticker": "EOG",
+  "decision": "long",
+  "conviction_tier": "low",
+  "final_size_pct": 0.05,
+  "bull_opinion": {
+    "role": "bull",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 2 outlook highlights increased drilling activity with 19 active sites, indicating strong operational momentum.",
+      "Agent 2 reports a revenue forecast of approximately $4.14 billion, significantly above consensus expectations.",
+      "Agent 3 divergence_class indicates a modest beat of 10%, suggesting analysts are optimistic about the earnings results."
+    ],
+    "counter_evidence": [
+      "Agent 4's conviction modifier indicates a downgrade one tier, which may reflect some caution in the market."
+    ],
+    "reasoning_short": "The combination of increased drilling activity, a solid revenue forecast, and positive analyst sentiment strongly supports a long position ahead of earnings."
+  },
+  "bear_opinion": {
+    "role": "bear",
+    "direction": "long",
+    "confidence": "high",
+    "key_evidence": [
+      "Agent 4 gdelt_disclosed=true with 52 articles indicating that the market may have already priced in the recent news and developments.",
+      "Agent 4 conviction_modifier indicates a downgrade one tier, suggesting a loss of confidence in the stock's performance.",
+      "Agent 3 confidence is medium with a divergence class of modest_beat at +10%, indicating that while there may be some positive sentiment, it is not strong enough to justify a long position."
+    ],
+    "counter_evidence": [
+      "Agent 2 highlights increased drilling activity and a strong revenue forecast, which could suggest potential upside."
+    ],
+    "reasoning_short": "Despite some positive indicators from increased drilling and revenue forecasts, the significant media coverage and downgrade signal that the stock may be overvalued and that risks remain high. Recommend against taking a long position."
+  },
+  "arbiter_reasoning": "Bull evidence (Agent 2's strong operational momentum and revenue forecast, supported by Agent 3's modest_beat) outweighs the Bear's caution, so we take a long. However Agent 4's GDELT disclosure (52 articles) and downgrade_one_tier materially reduce the information edge and confidence, so conviction is lowered to 'low'.",
+  "upstream_agent_summary": {
+    "agent2_decisive": true,
+    "agent3_decisive": false,
+    "agent4_decisive": true,
+    "agent2_weight": 0.45,
+    "agent3_weight": 0.25,
+    "agent4_weight": 0.3
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "EOG",
+  "revenue_forecast_usd": 4425828571.428572,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 4624000000.0,
+    "drilling_signal_raw": -0.42857142857142855,
+    "drilling_signal_clipped": -0.42857142857142855,
+    "production_boe_d": 294306.4788121801,
+    "wti_avg": 78.27846153846154,
+    "realized_price_diff": 0.95,
+    "segment_fraction": 0.45
+  },
+  "outlook_paragraph": "EOG's drilling activity shows a total of 4 active sites, with no new sites added, indicating a decline in relative activity compared to previous quarters. The average WTI price remains stable at around $78.28/boe, and with a segment fraction of 0.45, the company is positioned to maintain a solid revenue stream. Our deterministic forecast of approximately $4.43B reflects these dynamics, although the lack of new drilling activity may limit growth potential in the upcoming quarter.",
+  "key_drivers": [
+    "stable_wti",
+    "declining_drilling_activity",
+    "segment_fraction",
+    "active_sites",
+    "realized_price_diff"
+  ]
+}

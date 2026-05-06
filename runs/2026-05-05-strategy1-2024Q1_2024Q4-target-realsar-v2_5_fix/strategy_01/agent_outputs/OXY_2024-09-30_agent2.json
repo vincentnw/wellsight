@@ -1,0 +1,23 @@
+{
+  "ticker": "OXY",
+  "revenue_forecast_usd": 7912850000.000001,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 7193500000.0,
+    "drilling_signal_raw": 3.0,
+    "drilling_signal_clipped": 1.0,
+    "production_boe_d": 377732.1897225046,
+    "wti_avg": 73.46846153846154,
+    "realized_price_diff": 0.94,
+    "segment_fraction": 0.3
+  },
+  "outlook_paragraph": "Occidental Petroleum's drilling activity remains stable with 7 active sites, reflecting a relative activity increase of 5.2%. The average WTI price of approximately $73.47 per barrel, combined with a segment fraction of 0.3, supports a robust revenue forecast of about $7.91B for the upcoming quarter. The current drilling signal indicates a strong operational focus, which should help maintain production levels and revenue stability.",
+  "key_drivers": [
+    "stable_drilling_activity",
+    "positive_relative_activity_delta",
+    "favorable_wti_prices",
+    "strong_segment_fraction",
+    "operational_focus"
+  ]
+}

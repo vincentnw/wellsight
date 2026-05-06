@@ -1,0 +1,22 @@
+{
+  "ticker": "MTDR",
+  "revenue_forecast_usd": 868500000.0,
+  "components": {
+    "mode": "consensus_anchored",
+    "alpha": 0.1,
+    "consensus_anchor_usd": 965000000.0,
+    "drilling_signal_raw": -1.0,
+    "drilling_signal_clipped": -1.0,
+    "production_boe_d": 144129.19711357926,
+    "wti_avg": 71.97615384615384,
+    "realized_price_diff": 0.92,
+    "segment_fraction": 1.0
+  },
+  "outlook_paragraph": "Midland's drilling activity has seen a significant decline, with no active sites reported at the decision date, reflecting a relative activity delta of -1.2. This lack of drilling activity, combined with a WTI average price of approximately $72/boe and a realized price difference of 0.92, suggests that revenue for the upcoming quarter is likely to be constrained. Our deterministic forecast of $868.5 million indicates that without new drilling initiatives, production levels may not meet previous expectations.",
+  "key_drivers": [
+    "declining_drilling_activity",
+    "stable_wti",
+    "no_new_wells",
+    "low_production"
+  ]
+}
