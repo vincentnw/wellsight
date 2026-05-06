@@ -4,7 +4,7 @@ Anderson, A.-M., & Akbas, F. (2020). Look-ahead bias in IBES analyst earnings es
 
 Ben-David, S., Patel, N., & Singh, R. (2021). Synthetic-aperture-radar detection of unconventional drilling activity in the Permian basin. *Journal of Energy Markets*, 14(2), 1–28.
 
-Bonaparte, Y. (2017). The relationship between sentiment and asset prices in the GDELT corpus. Working paper, University of Colorado Denver.
+Bonaparte, Y. (2017). Sentiment and asset prices in the GDELT corpus. Working paper, U. Colorado Denver.
 
 Bradshaw, M. T., Drake, M. S., Myers, J. N., & Myers, L. A. (2017). A re-examination of analysts' superiority over time-series forecasts of annual earnings. *Review of Accounting Studies*, 17(4), 944–968.
 

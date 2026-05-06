@@ -2,7 +2,7 @@
 
 ## 9.1 Aggregate metrics, 2019–2024
 
-Across **Q1 2019 – Q4 2024 (six full calendar years, 200 firm-quarter cells)**, the system produced 51 long entries. All cells use an identical rebalance schedule (T = earnings_date − 14 days, exit second trading day after earnings), 30 bps round-trip cost, and \$1M starting capital. The full per-trade ledger is in Appendix A.
+Across **Q1 2019 – Q4 2024 (200 cells)**, the system produced 51 long entries. Rebalance T = earnings_date − 14 (exit T+2 trading days), 30 bps round-trip, \$1M capital. Full ledger in Appendix A.
 
 **Table 9.1 — Aggregate metrics, 2019–2024:**
 
@@ -34,14 +34,12 @@ Across **Q1 2019 – Q4 2024 (six full calendar years, 200 firm-quarter cells)**
 
 ## 9.2 Distribution of returns
 
-The ledger has a diffuse return distribution rather than one dominated by outliers. Largest contributors: SM 2021-Q3 (+\$24,453), OVV 2023-Q2 (+\$15,504), SM 2022-Q3 (+\$12,605), EOG 2022-Q3 (+\$10,605). Largest losses: MTDR 2020-Q3 (−\$21,509), MTDR/OVV 2021-Q2 (−\$13,400 each), EOG 2022-Q4 (−\$10,059). No single trade exceeds 2.5% of capital. Excluding the single best trade leaves 50 trades at -\$17,819; excluding the two best leaves 49 at -\$33,323 — the aggregate is moderately resilient to single-trade exclusion but is not robust beyond that, characteristic of a small-sample result.
-
-The 2020-Q1 cohort contributes a single trade: OVV 2020-Q1 (+16.90% / +\$16,900). SM 2020-Q1 does not fire because its 2019 trailing baseline of 9.5 active pads places the satellite-anchored forecast 0.5% *below* consensus, classified `in_line`.
+The distribution is diffuse rather than outlier-dominated. Top gains: SM 2021-Q3 (+\$24,453), OVV 2023-Q2 (+\$15,504), SM 2022-Q3 (+\$12,605), EOG 2022-Q3 (+\$10,605). Top losses: MTDR 2020-Q3 (−\$21,509), MTDR/OVV 2021-Q2 (−\$13,400 each), EOG 2022-Q4 (−\$10,059). No single trade exceeds 2.5% of capital. Excluding the single best leaves 50 trades at -\$17,819; the two best, 49 at -\$33,323 — moderately resilient to single-trade exclusion but not beyond, typical of a small-sample result. The 2020-Q1 cohort contributes one trade (OVV 2020-Q1, +\$16,900); SM 2020-Q1 does not fire (2019 trailing baseline of 9.5 active pads puts the forecast 0.5% *below* consensus, `in_line`).
 
 ## 9.3 Primary test (H1)
 
-Pre-registered: one-sided 5%-level firm-clustered bootstrap of hit rate against H0 = 50%. Observed hit rate **0.529**; bootstrap **p = 0.328** (exact-binomial cross-check: 0.390); 95% CI **[39.5%, 65.1%]**. The test **fails to reject H0 = 50%**. The firm-clustered 95% CI on mean net return [-1.83%, +1.53%] straddles zero — the data are also consistent with no average edge. The quarter-block bootstrap yields [33.3%, 67.8%], wider as expected. The directional estimate sits modestly above coin-flip but the test does not support a sharp claim of beating it.
+Pre-registered one-sided 5%-level firm-clustered bootstrap vs H0 = 50%. Observed **0.529**; **p = 0.328** (exact-binomial 0.390); 95% CI **[39.5%, 65.1%]**. **Fails to reject H0.** 95% CI on mean return [-1.83%, +1.53%] straddles zero. Quarter-block bootstrap yields [33.3%, 67.8%]. Directional estimate sits modestly above coin-flip but does not support a sharp claim of beating it.
 
 ## 9.4 Secondary test (H2)
 
-H2 compares Strategy 1 against Strategy 3 (analyst-revision follower). Strategy 3 was run on 2024 only, so the like-for-like comparison restricts Strategy 1 to its 2024 trades (n = 12, **33.3%**, P&L **-\$26,313**). Strategy 3 on 2024 is 27.8% over 18 trades. Pre-registered threshold +3 pp; observed gap +5.5 pp — exceeds the threshold on hit rate. **Caveat**: Strategy 1 exceeds Strategy 3 on hit rate but Strategy 1's 2024 P&L is more negative. H2 is technically supported on the pre-registered metric but does not amount to a positive return claim — both baselines lost money in 2024.
+H2 vs Strategy 3 (analyst-revision follower) was run on 2024 only; restricting S1 to 2024 trades (n = 12, 33.3%, **-\$26,313**) vs S3 (27.8% over 18 trades) — observed gap +5.5 pp exceeds the pre-registered +3 pp threshold on hit rate. Caveat: S1 exceeds S3 on hit rate but its 2024 P&L is more negative; H2 is technically supported on the metric but is not a positive-return claim — both lost money in 2024.
