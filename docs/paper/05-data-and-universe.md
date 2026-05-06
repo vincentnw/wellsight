@@ -24,4 +24,4 @@ A live IBES coverage audit precedes the backtest. Of 200 nominal cells, 186 are 
 
 ## 5.4 Reproducibility footprint
 
-Every run writes `manifest.json` recording SHA256 of input CSVs, SAR-mode flag, change-detection thresholds, α, per-agent provider/model identifiers, prompt SHAs, Python version, platform. LLM-call cache is keyed on `(prompt_sha, input_sha, model_id, model_version, temperature)`. Full material in Appendix C–D.
+Every run writes `manifest.json` recording SHA256 of input CSVs, SAR-mode flag, change-detection thresholds, α, per-agent provider/model identifiers, prompt SHAs, Python runtime, and platform. LLM-call cache is keyed on `(prompt_sha, input_sha, model_id, provider_model_id, temperature)`. Full material in Appendix C–D.

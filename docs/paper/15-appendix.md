@@ -74,4 +74,4 @@ A 0–100 deterministic score composing five 0–20 sub-scores from upstream-age
 
 ## D. Reproducibility
 
-Every run writes `manifest.json` with SHA256 of input CSVs, SAR-mode flag, thresholds (1.5/0.5 dB), trailing-baseline coefficient (0.3), α, per-agent provider/model identifiers, prompt SHAs, Python version, and platform. LLM-call cache keyed on `(prompt_sha, input_sha, model_id, model_version, temperature)`. To reproduce: set `FIN580_SAR_MODE=real_sentinel1`, `FIN580_SAR_PADS_PER_OP=25`, execute Strategy 1 over the six yearly windows 2019Q1–2024Q4, then run `python -m fin580.inference.build_evidence_pack`.
+Every run writes `manifest.json` with SHA256 of input CSVs, SAR-mode flag, thresholds (1.5/0.5 dB), trailing-baseline coefficient (0.3), α, per-agent provider/model identifiers, prompt SHAs, Python runtime, and platform. LLM-call cache keyed on `(prompt_sha, input_sha, model_id, provider_model_id, temperature)`. To reproduce: set `FIN580_SAR_MODE=real_sentinel1`, `FIN580_SAR_PADS_PER_OP=25`, execute Strategy 1 over the six yearly windows 2019Q1–2024Q4, then run `python -m fin580.inference.build_evidence_pack`.

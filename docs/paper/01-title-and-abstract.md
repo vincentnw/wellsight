@@ -3,7 +3,6 @@
 
 **Vincent N. W.**
 **FIN 580 — Spring 2026**
-**Version: 2026-05-05**
 
 ---
 
