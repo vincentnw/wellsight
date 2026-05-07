@@ -1,0 +1,9 @@
+{
+  "ticker": "CRGY",
+  "prev_earnings_date": "2022-11-09",
+  "T_minus_14": "2023-02-21",
+  "n_articles": 20,
+  "fetch_status": "ok",
+  "fetch_error": null,
+  "query_term": "Crescent Energy"
+}

@@ -1,0 +1,9 @@
+{
+  "ticker": "OXY",
+  "prev_earnings_date": "2024-08-07",
+  "T_minus_14": "2024-10-29",
+  "n_articles": 0,
+  "fetch_status": "error",
+  "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+  "query_term": "Occidental Petroleum"
+}

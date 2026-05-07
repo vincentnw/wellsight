@@ -1,0 +1,9 @@
+{
+  "ticker": "CTRA",
+  "prev_earnings_date": "2022-02-23",
+  "T_minus_14": "2022-04-18",
+  "n_articles": 0,
+  "fetch_status": "error",
+  "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+  "query_term": "Coterra Energy"
+}

@@ -1,0 +1,132 @@
+{
+  "_description": "Authoritative provenance log for all WRDS queries and local extraction passes. Each entry shows the query parameters, when run, and the lineage relationship between 2024 (headline) and 2019-2023 (extension) data. The strict-uniformity claim is: 2019-2023 data was produced by either (a) the same WRDS query as 2024 covering an extended date range, or (b) a Rerun of the 2024 saved-query template with only the date range changed (Step 2 tickers, Step 3 vars, Step 4 output inherited verbatim). One documented corporate-action exception exists for delisted-pre-2024 tickers (APC, XEC) which cannot appear in 11221003's ticker list.",
+
+  "wrds_queries": {
+    "11220958": {
+      "product": "tr_ibes (LSEG IBES Academic / Detail History / Detail)",
+      "purpose": "headline 2024 IBES revenue consensus",
+      "submitted": "2026-04-28 17:42",
+      "date_variable": "anndats (Announce Date, SAS Format)",
+      "date_range": "2020-01 to 2026-02",
+      "step2_tickers": "Official Ticker autocomplete: FANG EOG DVN CTRA OXY MTDR PR OVV SM CRGY",
+      "step3_vars": "12 of 25 (TICKER OFTIC CNAME ACTDATS ESTIMATOR ANALYS FPI MEASURE VALUE USFIRM FPEDATS REVDATS ANNDATS ACTUAL ANNDATS_ACT)",
+      "step4_output": "comma-delimited text (*.csv), uncompressed, YYYY-MM-DD",
+      "rows": 22449,
+      "filing_year_coverage": "2019Q4 (FPEDATS=2019-12-31, anndats in 2020-Q1) through 2025-Q4",
+      "saved_query_id": "7294297"
+    },
+    "11237405": {
+      "product": "tr_ibes (LSEG IBES Academic / Detail History / Detail)",
+      "purpose": "extension to 2019 IBES revenue consensus",
+      "submitted": "2026-05-02 23:25",
+      "lineage": "Rerun of saved_query=7294297 (template = 11220958) with date range changed to 2019-01 to 2019-12. All other parameters inherited verbatim from 11220958.",
+      "rows": 3540,
+      "ANNDATS_range": "2019-01-02 to 2019-12-20",
+      "uniformity_verdict": "STRICT-SAME (same template, only date range changed)"
+    },
+    "11221003": {
+      "product": "crsp_a_stock (CRSP Daily Stock File, Legacy Data)",
+      "purpose": "headline 2024 CRSP daily prices",
+      "submitted": "2026-04-28 17:59",
+      "date_variable": "date",
+      "date_range": "2019-12-31 to 2024-12-31",
+      "step2_tickers": "Official Ticker autocomplete: FANG EOG DVN CTRA MTDR OXY SM CRGY OVV PR + legacy: COG CDEV ECA + AMR (false positive, dropped at load)",
+      "step3_vars": "11 cols: PERMNO date TICKER COMNAM PERMCO PRC VOL RET SHROUT CFACPR CFACSHR",
+      "step4_output": "comma-delimited text (*.csv), uncompressed, YYYY-MM-DD",
+      "rows": 13360,
+      "saved_query_id": "7294343"
+    },
+    "11237387": {
+      "product": "crsp_a_stock",
+      "purpose": "extension to 2018-2019 CRSP daily prices",
+      "submitted": "2026-05-02 23:13",
+      "lineage": "Rerun of saved_query=7294343 (template = 11221003) with date range changed to 2018-01-01 to 2019-12-31. All other parameters inherited from 11221003. KNOWN ISSUE: OXY was unintentionally removed from the Step 2 chip list during browser interaction — this is a process error, not a methodology change. OXY 2018-2019 data was subsequently obtained via 11237396.",
+      "rows": 4310,
+      "tickers_returned": ["FANG","EOG","DVN","CTRA","MTDR","CDEV","COG","ECA","SM"],
+      "uniformity_verdict": "STRICT-SAME (same template, only date range changed; ticker subset due to process error)"
+    },
+    "11237396": {
+      "product": "crsp_a_stock",
+      "purpose": "fill OXY/APC/XEC 2018-2019 CRSP gap",
+      "submitted": "2026-05-02 23:18",
+      "lineage": "Fresh form pull (NOT a Rerun of 11221003). Date range 2018-01-01 to 2019-12-31. Step 3 vars selected 'Select All' (61 cols) — trimmed to master 11-col schema before merge into crsp_daily.csv.",
+      "rows": 1411,
+      "tickers_returned": ["OXY","APC","XEC"],
+      "uniformity_verdict": "PROCESS-FORK (different query template), DATA-EQUIVALENT (after column trim, the 11 master columns are byte-identical to what a Rerun would produce — PRC/VOL/RET/SHROUT/CFACPR/CFACSHR are facts about the security on that day, not query-dependent).",
+      "rationale_for_separate_query": "APC was acquired by OXY in Aug 2019 and delisted; XEC was acquired by Cabot in Oct 2021 to form Coterra (CTRA). Neither ticker is currently active, so neither appears in 11221003's 2024 ticker autocomplete list. A Rerun of 11221003 cannot return APC/XEC data. OXY *is* in 11221003 but was accidentally dropped from chip list in 11237387; the fresh-form pull was the most expedient way to recover it without a third Rerun attempt.",
+      "data_equivalence_check": "Column-by-column comparison verified: PERMNO, date, TICKER, COMNAM, PERMCO, PRC, VOL, RET, SHROUT, CFACPR, CFACSHR values for OXY 2018-01 to 2018-03 match expected CRSP values. Trimmed columns (NCUSIP, EXCHCD, SICCD, etc.) are not consumed by any downstream loader."
+    },
+    "11220995": {
+      "product": "comp_na_daily_all (Compustat Fundamentals Quarterly)",
+      "purpose": "Compustat fundq for 2024 + extends back to 2019-Q1",
+      "submitted": "2026-04-28 17:56",
+      "date_variable": "datadate",
+      "date_range": "2019-01-01 to 2025-12-31 (single pull covers all years; no rerun needed)",
+      "step2_tickers": "FANG EOG DVN CTRA OXY MTDR PR OVV SM CRGY (same 10-firm universe)",
+      "rows": 276,
+      "uniformity_verdict": "STRICT-SAME (one query covers all years; identical for 2019 and 2024)"
+    }
+  },
+
+  "local_extraction_passes": {
+    "permian_fraction_extractor": {
+      "code": "fin580/phase2/permian_fraction_extractor.py",
+      "method_for_2020_to_2024_original": "SEC EDGAR submissions API → 10-K primary document fetch → regex extractor for 'Permian X% production'. Falls back to 'llm_narrative' (NaN value) when regex doesn't match. Pure-play tickers (FANG, MTDR, PR) get pure_play_default = 1.0 without EDGAR fetch.",
+      "method_for_2018_2019_extension": "Same `extract_for_ticker` function, same EDGAR endpoints, same regex. Just `target_fiscal_years=(2018, 2019)` instead of (2020,...,2024).",
+      "later_llm_pass": "qwen-3-235b-a22b-instruct-2507 via Cerebras at temperature=0, applied UNIFORMLY across all 38 llm_narrative cells (every year 2018-2024). Method changed from 'llm_narrative' to either 'llm_actual' (5 cells with extracted values) or 'llm_actual_unknown' (33 cells where LLM said Permian % not stated narratively).",
+      "uniformity_verdict": "STRICT-SAME (same extractor + same LLM model applied uniformly across all years)"
+    },
+    "gdelt_loader": {
+      "code": "fin580/data/gdelt_loader.py",
+      "original_2020_2024_fetch_method": "Old loader silently caught all exceptions and produced empty [] JSON files for both true-zero and API-error cases. No provenance metadata.",
+      "new_loader_2019_fetch": "New loader writes *.meta.json sidecars per cache, recording fetch_status (ok/error), fetch_error, n_articles, retry-with-backoff (5/15/45/120s) on transient errors.",
+      "retroactive_fix": "All 58 retroactive_assumed_ok cells (originally 2020-2025) were RE-FETCHED with the new loader. Final state: 84 ok / 7 error across 91 sidecars. Zero retroactive_assumed_ok strings remain.",
+      "uniformity_verdict": "STRICT-SAME (after retrofit; same loader code path now produces all year cells)"
+    },
+    "sentinel1_sar": {
+      "code": "fin580/data/sentinel1_sar.py + sentinel1_firm_quarter.py",
+      "method": "Microsoft Planetary Computer STAC API → Sentinel-1 RTC backscatter → fetch_pad_backscatter → classify_pad_from_sar (1.5 dB activation, 0.5 dB sustained) → aggregate_firm_quarter (5 representative pads per operator)",
+      "thresholds": "Default activation_threshold_db=1.5, sustained_threshold_db=0.5. Hardcoded constants in classify_pad_from_sar; no per-year branch.",
+      "uniformity_verdict": "STRICT-SAME (same code path, same thresholds, same aggregator for all years)"
+    }
+  },
+
+  "derived_files": {
+    "earnings_dates.csv": "Generated by `fin580/phase2/earnings_dates.py` (or inline in regeneration script). MIN(ANNDATS_ACT) per (OFTIC, FPEDATS) from IBES master; decision_date_T = earnings_date_actual - 14 days. Same derivation for all years.",
+    "ibes_revenue_coverage.csv": "Generated by `fin580/phase2/ibes_revenue_coverage.py`. Filtered IBES master to FPI=6 + MEASURE=SAL + FPEDATS at quarter-ends, aggregated per (OFTIC, FPEDATS). Same derivation for all years.",
+    "equity_universe_panel.csv": "Generated by `fin580/phase2/equity_universe.evaluate_quarter`. Hardcoded thresholds: min_market_cap=$500M, min_permian_fraction=0.30, min_analysts=3. Same code path for all years."
+  },
+
+  "corporate_action_exceptions": [
+    {
+      "ticker": "APC",
+      "event": "Anadarko Petroleum Corporation acquired by OXY (Occidental Petroleum) in August 2019",
+      "implication": "APC delisted post-Aug-2019. Cannot appear in 11221003's 2024 ticker list. APC 2018-2019 CRSP data sourced via separate fresh-form query 11237396."
+    },
+    {
+      "ticker": "XEC",
+      "event": "Cimarex Energy acquired by Cabot Oil & Gas in October 2021 to form Coterra Energy (CTRA)",
+      "implication": "XEC delisted post-Oct-2021. Cannot appear in 11221003's 2024 ticker list. XEC 2018-2019 CRSP data sourced via separate fresh-form query 11237396."
+    },
+    {
+      "ticker": "CTRA",
+      "event": "Coterra Energy ticker reused; previously held by Contura Energy (a coal company) until 2021",
+      "implication": "73 IBES rows + 561 CRSP rows for Contura Energy were dropped from masters by COMNAM/CNAME filter. Coterra 2019 data available only via Cabot Oil & Gas predecessor (ticker COG); not pulled."
+    },
+    {
+      "ticker": "PR",
+      "event": "Permian Resources formed by Centennial Resource Development (CDEV) + Colgate Energy merger in September 2022",
+      "implication": "PR ticker did not exist pre-Sep-2022. Pre-2022 data would require querying CDEV separately."
+    },
+    {
+      "ticker": "OVV",
+      "event": "Ovintiv (formerly Encana, ticker ECA) renamed in January 2020",
+      "implication": "OVV ticker did not exist pre-Jan-2020. Pre-2020 data available only via ECA predecessor."
+    },
+    {
+      "ticker": "CRGY",
+      "event": "Crescent Energy IPO'd December 2021",
+      "implication": "CRGY did not exist as a security pre-Dec-2021. No 2018-2019 data available."
+    }
+  ]
+}

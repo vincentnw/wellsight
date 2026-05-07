@@ -1,0 +1,9 @@
+{
+  "ticker": "FANG",
+  "prev_earnings_date": "2023-05-01",
+  "T_minus_14": "2023-07-17",
+  "n_articles": 19,
+  "fetch_status": "ok",
+  "fetch_error": null,
+  "query_term": "Diamondback Energy"
+}

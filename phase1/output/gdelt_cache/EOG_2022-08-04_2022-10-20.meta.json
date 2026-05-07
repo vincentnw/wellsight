@@ -1,0 +1,9 @@
+{
+  "ticker": "EOG",
+  "prev_earnings_date": "2022-08-04",
+  "T_minus_14": "2022-10-20",
+  "n_articles": 37,
+  "fetch_status": "ok",
+  "fetch_error": null,
+  "query_term": "EOG Resources"
+}
