@@ -83,9 +83,9 @@ class Agent3Out(BaseModel):
         p = self.divergence_pct
         if p > 15.0:
             expected = "strong_beat"
-        elif p > 3.0:
+        elif p > 5.0:
             expected = "modest_beat"
-        elif p >= -3.0:
+        elif p >= -5.0:
             expected = "in_line"
         elif p >= -15.0:
             expected = "modest_miss"

@@ -182,7 +182,7 @@ def permian_revenue_from_production(
 # - α=0.15 sensitivity (labeled robustness, never headline)
 # - α=0.0 ablation (pure consensus, no satellite — counterfactual proving the
 #   satellite delta adds information)
-ALPHA_PRIMARY = 0.20
+ALPHA_PRIMARY = 0.15
 ALPHA_SENSITIVITY = 0.15
 ALPHA_ABLATION_NO_SATELLITE = 0.0
 

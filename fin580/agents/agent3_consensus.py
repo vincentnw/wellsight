@@ -55,9 +55,9 @@ def run(
     div_pct = (agent2_out.revenue_forecast_usd - consensus_usd) / consensus_usd * 100.0
     if div_pct > 15.0:
         div_class = "strong_beat"
-    elif div_pct > 3.0:
+    elif div_pct > 5.0:
         div_class = "modest_beat"
-    elif div_pct >= -3.0:
+    elif div_pct >= -5.0:
         div_class = "in_line"
     elif div_pct >= -15.0:
         div_class = "modest_miss"
